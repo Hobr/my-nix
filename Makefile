@@ -1,9 +1,3 @@
-sys:
-	sudo nixos-rebuild switch --flake .#hobr-nixos --show-trace
-
-home:
-	home-manager switch --flake .#hobr@hobr-nixos --show-trace
-
 switch:
 	sudo nixos-rebuild switch --flake .#hobr-nixos --show-trace
 	home-manager switch --flake .#hobr@hobr-nixos --show-trace

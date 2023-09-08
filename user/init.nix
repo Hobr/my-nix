@@ -36,9 +36,6 @@
     homeDirectory = "/home/hobr";
   };
 
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
-
   programs.home-manager.enable = true;
   programs.git.enable = true;
 

@@ -12,15 +12,20 @@
     # flakes
     # inputs.nix-colors.homeManagerModules.default
 
-    ./wm/dunst.nix
     ./wm/hyprland.nix
-    ./wm/rofi.nix
     ./wm/waybar.nix
+    ./wm/dunst.nix
+    ./wm/rofi.nix
 
     ./console/alacritty.nix
     ./console/zsh.nix
 
     ./net/firefox.nix
+
+    ./dev/git.nix
+    ./dev/nvim.nix
+
+    ./tool/gnu.nix
   ];
 
   nixpkgs = {
@@ -41,22 +46,8 @@
     stateVersion = "23.11";
   };
 
-  programs.neovim.enable = true;
+  programs.home-manager.enable = true;
   home.packages = (with pkgs; [ xmake ]) ++ (with pkgs.unstable; [ cmake ]);
 
-  programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "Hobr";
-    userEmail = "mail@hobr.site";
-  };
-
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 1800;
-    enableSshSupport = true;
-  };
-
   systemd.user.startServices = "sd-switch";
-
 }

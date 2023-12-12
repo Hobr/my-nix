@@ -12,13 +12,15 @@
     # flakes
     # inputs.nix-colors.homeManagerModules.default
 
-    ./console/alacritty.nix
-    ./console/zsh.nix
-
     ./wm/dunst.nix
     ./wm/Hyprland.nix
     ./wm/rofi.nix
     ./wm/waybar.nix
+
+    ./console/alacritty.nix
+    ./console/zsh.nix
+
+    ./net/firefox.nix
   ];
 
   nixpkgs = {
@@ -43,7 +45,17 @@
   home.packages = (with pkgs; [ xmake ]) ++ (with pkgs.unstable; [ cmake ]);
 
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "Hobr";
+    userEmail = "mail@hobr.site";
+  };
+
+  services.gpg-agent = {
+    enable = true;
+    defaultCacheTtl = 1800;
+    enableSshSupport = true;
+  };
 
   systemd.user.startServices = "sd-switch";
 

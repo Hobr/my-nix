@@ -7,7 +7,7 @@
     ];
 
   fileSystems =
-    {};
+    { };
 
   swapDevices =
     [

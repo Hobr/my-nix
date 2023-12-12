@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-services.dunst = {
+  services.dunst = {
     enable = true;
     iconTheme = {
       name = "Papirus-Dark";
@@ -56,7 +56,7 @@ services.dunst = {
         word_wrap = "yes";
       };
 
-      fullscreen_delay_everything = {fullscreen = "delay";};
+      fullscreen_delay_everything = { fullscreen = "delay"; };
 
       urgency_critical = {
         background = "#d64e4e";
@@ -73,4 +73,3 @@ services.dunst = {
     };
   };
 }
-

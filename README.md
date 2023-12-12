@@ -6,10 +6,7 @@
 
 ```bash
 sudo -i
-# 我个人有两个硬盘, 一个硬盘上安装了 Windows, 我选择共用 Windows的 EFI分区, 另一个盘就分一个区给 LVM, swap和persit文件交给 lvm btrfs
 parted /dev/nvme0n1 mklabel gpt
-parted /dev/nvme0n1 mkpart Nix 0% 100%
-parted /dev/nvme0n1 print
 
 # 加密
 cryptsetup --verify-passphrase -v luksFormat /dev/nvme0n1
@@ -49,6 +46,8 @@ mount /dev/nvme1n1p4 /mnt/mnt/data
 
 # 部署
 nixos-generate-config --root /mnt
+mkdir /mnt/persist/home/hobr/Docs
+cd /mnt/persist/home/hobr/Docs
 git clone https://github.com/Hobr/my-nix.git
 cd my-nix
 
@@ -71,11 +70,5 @@ make switch
 ## 参考资料
 
 - [NixOS Wiki](https://nixos.wiki/)
-- [Encypted Btrfs Root with Opt-in State on NixOS](https://mt-caret.github.io/blog/posts/2020-06-29-optin-state.html)
 - [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
-- [Ruixi-rebirth/flakes](https://github.com/Ruixi-rebirth/flakes)
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config)
-
-## WIP
-
-- [Disko](https://github.com/nix-community/disko)

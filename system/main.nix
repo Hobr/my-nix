@@ -22,8 +22,11 @@
     ./hardware/bluetooth.nix
     ./hardware/locale.nix
 
+    ./desktop/user.nix
     ./desktop/xdg.nix
     ./desktop/font.nix
+    ./desktop/ssh.nix
+    ./desktop/secure.nix
 
     ./dev/docker.nix
   ];
@@ -36,23 +39,6 @@
     ];
     config = {
       allowUnfree = true;
-    };
-  };
-
-  security.rtkit.enable = true;
-
-  users.users = {
-    hobr = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ,"networkmanager", "audio" ];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
     };
   };
 

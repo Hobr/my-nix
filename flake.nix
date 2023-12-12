@@ -36,7 +36,7 @@
         hobr-nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            ./nixos/configuration.nix
+            ./system/configuration.nix
           ];
         };
       };
@@ -46,7 +46,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home-manager/home.nix
+            ./home/home.nix
           ];
         };
       };

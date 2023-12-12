@@ -5,6 +5,7 @@
     # 软件包
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/NUR";
 
     # 环境
     home-manager = {
@@ -12,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hyprland
+    # 桌面环境
     hyprland.url = "github:hyprwm/Hyprland";
   };
 

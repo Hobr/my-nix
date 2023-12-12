@@ -11,6 +11,12 @@
 
     # flakes
     # inputs.hardware.nixosModules.common-ssd
+
+    ./hardware/system.nix
+
+    ./dev/desktop.nix
+    ./dev/docker.nix
+    ./dev/font.nix
   ];
 
   nixpkgs = {
@@ -44,6 +50,22 @@
 
   boot.loader.systemd-boot.enable = true;
 
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "Asia/Shanghai";
+  i18n.defaultLocale = "zh_CN.UTF-8";
+
+  security.rtkit.enable = true;
+
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
   users.users = {
     hobr = {
       isNormalUser = true;
@@ -57,6 +79,12 @@
       PermitRootLogin = "no";
       PasswordAuthentication = false;
     };
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 3d";
   };
 
   system.stateVersion = "23.11";

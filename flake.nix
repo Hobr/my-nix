@@ -20,17 +20,12 @@
     { self
     , nixpkgs
     , home-manager
+    , hyprland
     , ...
     } @ inputs:
     let
       inherit (self) outputs;
-      systems = [
-        "aarch64-linux"
-        "i686-linux"
-        "x86_64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
+      systems = "x86_64-linux";
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
@@ -53,7 +48,6 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            hyprland.homeManagerModules.default
             ./home/main.nix
           ];
         };

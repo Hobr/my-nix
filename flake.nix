@@ -1,12 +1,19 @@
 {
-  description = "Your new nix config";
+  description = "Hobr's NixOS";
 
   inputs = {
+    # 软件包
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # 环境
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs =
@@ -46,6 +53,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
+            hyprland.homeManagerModules.default
             ./home/main.nix
           ];
         };

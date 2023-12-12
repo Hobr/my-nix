@@ -11,6 +11,8 @@
 
     # flakes
     # inputs.nix-colors.homeManagerModules.default
+
+    ./wm/Hyprland.nix
   ];
 
   nixpkgs = {

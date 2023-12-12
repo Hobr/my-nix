@@ -1,18 +1,31 @@
 {
-  nix.settings = {
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.unstable-packages
+    ];
+    config.allowUnfree = true;
+    hostPlatform = "x86_64-linux";
+  };
+
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 3d";
+    };
+
+    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+
+    nixPath = [ "/etc/nix/path" ];
+  };
+
+  settings = {
     experimental-features = "nix-command flakes";
     auto-optimise-store = true;
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 3d";
-  };
-
-  nix.registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-
-  nix.nixPath = [ "/etc/nix/path" ];
   environment.etc =
     lib.mapAttrs'
       (name: value: {
@@ -20,6 +33,4 @@
         value.source = value.flake;
       })
       config.nix.registry;
-
-  nixpkgs.hostPlatform = "x86_64-linux";
 }

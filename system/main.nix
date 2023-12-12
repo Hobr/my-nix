@@ -31,16 +31,5 @@
     ./dev/docker.nix
   ];
 
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   system.stateVersion = "23.11";
 }

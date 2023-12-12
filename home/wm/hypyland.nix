@@ -2,10 +2,11 @@
   imports = [
     hyprland.homeManagerModules.default
   ];
+
   wayland.windowManager.Hyprland = {
     enable = true;
-    nvidiaPatches = true;
-    systemdIntegration = true;
+    enableNvidiaPatches = true;
+    systemd.enable = true;
     xwayland.enable = true;
   };
 

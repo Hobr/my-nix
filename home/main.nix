@@ -13,7 +13,7 @@
     # inputs.nix-colors.homeManagerModules.default
 
     ./wm/dunst.nix
-    ./wm/Hyprland.nix
+    ./wm/hyprland.nix
     ./wm/rofi.nix
     ./wm/waybar.nix
 

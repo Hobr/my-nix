@@ -12,10 +12,18 @@
     # flakes
     # inputs.hardware.nixosModules.common-ssd
 
+    ./hardware/nix.nix
     ./hardware/system.nix
+    ./hardware/disk.nix
+    ./hardware/boot.nix
+    ./hardware/network.nix
+    ./hardware/nvidia.nix
+    ./hardware/audio.nix
+    ./hardware/bluetooth.nix
+    ./hardware/locale.nix
 
-    ./desktop/font.nix
     ./desktop/xdg.nix
+    ./desktop/font.nix
 
     ./dev/docker.nix
   ];
@@ -31,41 +39,7 @@
     };
   };
 
-  nix.registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-
-  nix.nixPath = [ "/etc/nix/path" ];
-  environment.etc =
-    lib.mapAttrs'
-      (name: value: {
-        name = "nix/path/${name}";
-        value.source = value.flake;
-      })
-      config.nix.registry;
-
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    auto-optimise-store = true;
-  };
-
-  networking.hostName = "hobr-nixos";
-
-  boot.loader.systemd-boot.enable = true;
-
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Asia/Shanghai";
-  i18n.defaultLocale = "zh_CN.UTF-8";
-
   security.rtkit.enable = true;
-
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   users.users = {
     hobr = {
@@ -82,12 +56,5 @@
     };
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 3d";
-  };
-
   system.stateVersion = "23.11";
-  nixpkgs.hostPlatform = "x86_64-linux";
 }

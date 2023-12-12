@@ -14,9 +14,10 @@
 
     ./hardware/system.nix
 
-    ./dev/desktop.nix
+    ./desktop/font.nix
+    ./desktop/xdg.nix
+
     ./dev/docker.nix
-    ./dev/font.nix
   ];
 
   nixpkgs = {

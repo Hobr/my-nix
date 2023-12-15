@@ -12,7 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hardware.url = "github:nixos/nixos-hardware";
 
     # 桌面环境
     hyprland.url = "github:hyprwm/Hyprland";
@@ -45,7 +44,7 @@
         umipro = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            ./nixos/configuration.nix
+            ./system/default.nix
           ];
         };
       };
@@ -55,7 +54,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home-manager/home.nix
+            ./home/default.nix
           ];
         };
       };

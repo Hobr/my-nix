@@ -9,7 +9,8 @@
     # outputs.nixosModules.example
     # inputs.hardware.nixosModules.common-ssd
 
-    ./hardware-configuration.nix
+    ./disko.nix
+    ./hardware.nix
   ];
 
   nixpkgs = {

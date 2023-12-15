@@ -14,31 +14,34 @@ cryptsetup open /dev/nvme0n1 crypt
 
 # LVM
 pvcreate /dev/mapper/crypt
-vgcreate lvm /dev/mapper/crypt
+vgcreate system /dev/mapper/crypt
 
-lvcreate -L 16G -n swap lvm
-lvcreate -l 100%FREE -n root lvm
+lvcreate -L 24G system -n swap
+lvcreate -l 100%FREE system -n root
 
 # 交换
-mkswap -L Swap /dev/lvm/swap
-swapon /dev/lvm/swap
+mkswap -L Swap /dev/mapper/system-swap
+swapon /dev/mapper/system-swap
 
 # 子卷
-mkfs.btrfs -L NixOS /dev/lvm/root
-mount -t btrfs /dev/lvm/root /mnt
-
-btrfs subvolume create /mnt/nix
-btrfs subvolume create /mnt/persist
-btrfs subvolume list -p /mnt
+mkfs.btrfs -L NixOS /dev/mapper/system-root
+mount -m /dev/mapper/system-root /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@root
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@cache
+btrfs subvolume create /mnt/@log
+btrfs subvolume create /mnt/@local
+btrfs subvolume list /mnt
 umount /mnt
 
 # 挂载
-mount -t tmpfs -o defaults,mode=755,size=6G none /mnt
-mkdir -p /mnt/{home/hobr,nix,persist,boot,mnt/windows,mnt/data}
-
-mount -t tmpfs -o defaults,mode=777,size=6G none /mnt/home/hobr
-mount -o compress=zstd,ssd,subvol=nix /dev/lvm/root /mnt/nix
-mount -o compress=zstd,ssd,subvol=persist /dev/lvm/root /mnt/persist
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@ /dev/mapper/system-root /mnt
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@root /dev/mapper/system-root /mnt/root
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@home /dev/mapper/system-root /mnt/home
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@cache /dev/mapper/system-root /mnt/var/cache
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@log /dev/mapper/system-root /mnt/var/log
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=lzo,subvol=@local /dev/mapper/system-root /mnt/usr/local
 
 mount /dev/nvme1n1p1 /mnt/boot
 mount /dev/nvme1n1p3 /mnt/mnt/windows

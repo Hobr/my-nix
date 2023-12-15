@@ -18,6 +18,7 @@
     ./hardware/boot.nix
     ./hardware/network.nix
     ./hardware/nvidia.nix
+    ./hardware/touchpad.nix
     ./hardware/audio.nix
     ./hardware/bluetooth.nix
     ./hardware/locale.nix

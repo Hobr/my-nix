@@ -8,6 +8,7 @@
   imports = [
     # outputs.nixosModules.example
     # inputs.hardware.nixosModules.common-ssd
+    inputs.disko.nixosModules.disko
 
     ./disko.nix
     ./hardware.nix
@@ -46,6 +47,7 @@
   networking.hostName = "umipro";
 
   boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   users.users = {
     hobr = {

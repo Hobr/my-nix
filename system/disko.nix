@@ -1,1 +1,4 @@
-{ }
+{
+  disko.devices = {
+    disk = { };
+  }

@@ -8,8 +8,18 @@
       content = {
         partitions = {
           luks = {
+
+            swap = {
+              content = {
+                label = "Swap";
+                resumeDevice = true;
+                type = "swap";
+              };
+              size = "100%";
+            };
             content = {
               content = {
+                label = "NixOS";
                 type = "btrfs";
                 extraArgs = [ "-f" ];
 
@@ -37,15 +47,6 @@
               type = "luks";
             };
             end = "-24G";
-          };
-
-          swap = {
-            content = {
-              randomEncryption = true;
-              resumeDevice = true;
-              type = "swap";
-            };
-            size = "100%";
           };
         };
         type = "gpt";

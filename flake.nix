@@ -20,6 +20,11 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixos";
+    };
+
     # 桌面环境
     hyprland.url = "github:hyprwm/Hyprland";
   };

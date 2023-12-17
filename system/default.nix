@@ -11,6 +11,7 @@
 
     ./disko.nix
     ./impermanence.nix
+    ./secure.nix
     ./hardware.nix
     ./nvidia.nix
   ];

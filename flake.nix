@@ -18,6 +18,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    impermanence.url = "github:nix-community/impermanence";
+
     # 桌面环境
     hyprland.url = "github:hyprwm/Hyprland";
   };

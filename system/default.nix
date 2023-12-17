@@ -8,10 +8,11 @@
   imports = [
     # outputs.nixosModules.example
     # inputs.hardware.nixosModules.common-ssd
-    inputs.disko.nixosModules.disko
 
     ./disko.nix
+    ./impermanence.nix
     ./hardware.nix
+    ./nvidia.nix
   ];
 
   nixpkgs = {

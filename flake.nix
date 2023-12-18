@@ -91,14 +91,12 @@
     in
     {
       packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
       overlays = import ./overlay { inherit inputs; };
       nixosModules = import ./module/system;
       homeManagerModules = import ./module/home;
-      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
       nixosConfigurations = {
-        # UmiPro3 系统
         handsonic = nixpkgs.lib.nixosSystem {
           modules = [ ./host/handsonic ];
           specialArgs = { inherit inputs outputs; };
@@ -106,7 +104,6 @@
       };
 
       homeConfigurations = {
-        # UmiPro3 用户
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           modules = [ ./home/handsonic ];
           pkgs = nixpkgs.legacyPackages.x86_64-linux;

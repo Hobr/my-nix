@@ -1,6 +1,12 @@
 # My NixOS
 
-个人的 ***NixOS***配置, 日常生活中在用, 更新频率较高
+个人的**NixOS**配置, 日常生活使用, 更新频率较高
+
+## 介绍
+
+- 主机
+  - handsonic 笔记本: 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
+  - distortion 服务器: 4H4G, 40G, 150Mbps, 美国
 
 ## 安装
 

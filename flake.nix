@@ -8,6 +8,9 @@
     nur.url = "github:nix-community/NUR";
 
     # 环境
+    hardware.url = "github:nixos/nixos-hardware";
+    impermanence.url = "github:nix-community/impermanence";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,21 +21,36 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    impermanence.url = "github:nix-community/impermanence";
-
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixos";
     };
+
 
     nixpak = {
       url = "github:nixpak/nixpak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "nixpkgs";
+    };
+
+    nh = {
+      url = "github:viperml/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # 桌面环境
     hyprland.url = "github:hyprwm/Hyprland";
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
 
     hyprpicker = {
       url = "github:hyprwm/hyprpicker";
@@ -51,8 +69,7 @@
     };
   };
 
-  outputs =
-    { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       inherit (self) outputs;
       systems = [
@@ -65,27 +82,40 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      overlays = import ./overlays { inherit inputs; };
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
+      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      overlays = import ./overlay { inherit inputs; };
+      nixosModules = import ./module/system;
+      homeManagerModules = import ./module/home;
+      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
 
       nixosConfigurations = {
-        umipro = nixpkgs.lib.nixosSystem {
+        # UmiPro3 系统
+        handsonic = nixpkgs.lib.nixosSystem {
+          modules = [ ./host/handsonic ];
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./system
-          ];
+        };
+
+        # 美国VPS 系统
+        distortion = nixpkgs.lib.nixosSystem {
+          modules = [ ./host/distortion ];
+          specialArgs = { inherit inputs outputs; };
         };
       };
 
       homeConfigurations = {
-        "hobr@umipro" = home-manager.lib.homeManagerConfiguration {
+        # UmiPro3 用户
+        "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
+          modules = [ ./home/handsonic ];
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home
-          ];
+        };
+
+        # 美国VPS 用户
+        "kanade@distortion" = home-manager.lib.homeManagerConfiguration {
+          modules = [ ./home/distortion ];
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
         };
       };
     };

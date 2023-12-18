@@ -5,5 +5,4 @@
       extraGroups = [ "wheel" ];
     };
   };
-
 }

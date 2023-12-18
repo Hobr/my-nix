@@ -1,5 +1,8 @@
-{ outputs, lib, config, ... }: {
+{ outputs, lib, config, modulesPath, ... }: {
   imports = [
+    # 硬件
+    (modulesPath + "/installer/scan/not-detected.nix")
+
     # Nix配置
     ./nix.nix
   ];

@@ -1,63 +1,31 @@
-{ inputs
-, outputs
-, lib
-, config
-, ...
-}: {
+{
   imports = [
+    # Nix
+    ./nix.nix
+
+    # 分区
     ./disko.nix
-    ./impermanence.nix
-    ./secure.nix
+    # 文件系统
+    ./filesystem.nix
+
+    # 引导
+    ./boot.nix
+
+    # 基础硬件
     ./hardware.nix
+    # 显卡
     ./nvidia.nix
+
+    # 网络
+    ./network.nix
+    # 音频
+    ./audio.nix
+
+    # 用户
+    ./user.nix
+
+    # TODO 安全启动 & 无状态
+    # ./secure.nix
+    # ./impermanence.nix
   ];
-
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
-    config = {
-      allowUnfree = true;
-    };
-  };
-
-  nix.registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-
-  nix.nixPath = [ "/etc/nix/path" ];
-  environment.etc =
-    lib.mapAttrs'
-      (name: value: {
-        name = "nix/path/${name}";
-        value.source = value.flake;
-      })
-      config.nix.registry;
-
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    auto-optimise-store = true;
-  };
-
-  networking.hostName = "umipro";
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  users.users = {
-    hobr = {
-      isNormalUser = true;
-      extraGroups = [ "wheel", "networkmanager","audio" ];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
-
-  system.stateVersion = "23.11";
 }

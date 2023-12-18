@@ -1,10 +1,5 @@
-{ outputs
-, pkgs
-, ...
-}: {
+{ outputs, pkgs, ... }: {
   imports = [
-    ./impermanence.nix
-
     ./hyprland.nix
   ];
 

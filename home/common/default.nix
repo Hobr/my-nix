@@ -1,4 +1,3 @@
-# 共通 用户入口
 {
   imports = [
     ./nixpkg.nix

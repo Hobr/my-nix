@@ -1,4 +1,3 @@
-# 共通 系统入口
 { outputs, lib, config, ... }: {
   imports = [
     # Nix配置

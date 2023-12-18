@@ -1,4 +1,3 @@
-# UmiPro3 系统入口
 {
   imports = [
     # 共用

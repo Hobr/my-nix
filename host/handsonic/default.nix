@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     # 共用
@@ -36,7 +37,22 @@
     ./gnupg.nix
     # MPD
     ./mpd.nix
+    # 虚拟化
+    ./virtual.nix
   ];
+
+  # 临时
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    gnome-terminal
+    gedit
+    epiphany
+  ]);
 
   nixpkgs.hostPlatform = "x86_64-linux";
 }

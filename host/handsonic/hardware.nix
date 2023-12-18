@@ -9,6 +9,8 @@
 
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
+
+    supportedFilesystems = [ "btrfs" ];
   };
 
   hardware.cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;

@@ -1,32 +1,20 @@
 # UmiPro3 系统入口
 {
   imports = [
+    # 共用
     ../common
+
+    # 引导
+    ./boot.nix
+    # i18n
+    ./i18n.nix
+    # 网络
+    ./network.nix
+    # SSH
+    ./ssh.nix
+    # 用户
+    ./user.nix
   ];
-
-  networking = {
-    hostName = "handsonic";
-    useDHCP = true;
-  };
-
-  i18n.defaultLocale = "zh_CN.UTF-8";
-
-  boot.loader.systemd-boot.enable = true;
-
-  users.users = {
-    kanade = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
 
   nixpkgs.hostPlatform = "x86_64-linux";
 }

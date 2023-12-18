@@ -1,5 +1,10 @@
 # 共通 系统入口
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{ outputs, lib, config, ... }: {
+  imports = [
+    # Nix配置
+    ./nix.nix
+  ];
+
   nixpkgs = {
     overlays = [
       outputs.overlays.additions
@@ -8,17 +13,6 @@
     ];
     config = {
       allowUnfree = true;
-    };
-  };
-
-  nix = {
-    nixPath = [ "/etc/nix/path" ];
-
-    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-
-    settings = {
-      experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
     };
   };
 

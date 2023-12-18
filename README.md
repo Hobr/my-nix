@@ -24,14 +24,14 @@ rm /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/configuration.nix
 # 代理
 export all_proxy=http://192.168.1.102:10809
 echo -n "password" > /tmp/secret.key
-sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko system/disko.nix --arg disks '[ "/dev/nvme0n1" ]'
+sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko host/common/disko.nix --arg disks '[ "/dev/nvme0n1" ]'
 lsblk -f
 nixos-install --show-trace --flake .#umipro
 reboot
 
 sudo passwd -l root
 nix shell nixpkgs#home-manager
-home-manager switch --flake .#hobr@umipro --show-trace
+home-manager switch --flake .#kanade@handsonic --show-trace
 reboot
 make switch
 ```

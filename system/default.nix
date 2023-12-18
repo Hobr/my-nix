@@ -23,6 +23,7 @@
 
     # 用户
     ./user.nix
+    ./i18n.nix
 
     # TODO 安全启动 & 无状态
     # ./secure.nix

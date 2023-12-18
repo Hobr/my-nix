@@ -52,11 +52,7 @@
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , ...
-    } @ inputs:
+    { self, nixpkgs, home-manager, ... } @ inputs:
     let
       inherit (self) outputs;
       systems = [

@@ -4,6 +4,11 @@
     useDHCP = true;
 
     # NetworkManager
-    networkmanager.enable = true;
-  };
-}
+    networkmanager = {
+      enable = true;
+      wifi = {
+        macAddress = "random";
+        powersave = true;
+      };
+    };
+  }

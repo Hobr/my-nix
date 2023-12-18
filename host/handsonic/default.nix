@@ -7,6 +7,8 @@
     ./filesystem.nix
     # 引导
     ./boot.nix
+    # 内核
+    ./kernel.nix
 
     # 硬件
     ./hardware.nix
@@ -18,6 +20,8 @@
     ./network.nix
     # 触控板
     ./touchpad.nix
+    # 蓝牙
+    ./bluetooth.nix
 
     # 用户
     ./user.nix
@@ -30,6 +34,8 @@
     ./ssh.nix
     # GnuPG
     ./gnupg.nix
+    # MPD
+    ./mpd.nix
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";

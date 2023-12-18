@@ -103,25 +103,12 @@
           modules = [ ./host/handsonic ];
           specialArgs = { inherit inputs outputs; };
         };
-
-        # 美国VPS 系统
-        distortion = nixpkgs.lib.nixosSystem {
-          modules = [ ./host/distortion ];
-          specialArgs = { inherit inputs outputs; };
-        };
       };
 
       homeConfigurations = {
         # UmiPro3 用户
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           modules = [ ./home/handsonic ];
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-        };
-
-        # 美国VPS 用户
-        "kanade@distortion" = home-manager.lib.homeManagerConfiguration {
-          modules = [ ./home/distortion ];
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };

@@ -11,9 +11,17 @@
     };
   };
 
-  nix.registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+  nix = {
+    nixPath = [ "/etc/nix/path" ];
 
-  nix.nixPath = [ "/etc/nix/path" ];
+    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+
+    settings = {
+      experimental-features = "nix-command flakes";
+      auto-optimise-store = true;
+    };
+  };
+
   environment.etc =
     lib.mapAttrs'
       (name: value: {
@@ -21,34 +29,6 @@
         value.source = value.flake;
       })
       config.nix.registry;
-
-  nix.settings = {
-    # Enable flakes and new 'nix' command
-    experimental-features = "nix-command flakes";
-    # Deduplicate and optimize nix store
-    auto-optimise-store = true;
-  };
-
-  networking.hostName = "handsonic";
-
-  boot.loader.systemd-boot.enable = true;
-
-  users.users = {
-    kanade = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
-
-  nixpkgs.hostPlatform = "x86_64-linux";
 
   system.stateVersion = "23.11";
 }

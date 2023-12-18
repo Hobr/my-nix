@@ -8,7 +8,6 @@
       content = {
         partitions = {
           luks = {
-
             swap = {
               content = {
                 label = "Swap";

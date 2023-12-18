@@ -6,9 +6,6 @@
 , ...
 }: {
   imports = [
-    # outputs.nixosModules.example
-    # inputs.hardware.nixosModules.common-ssd
-
     ./disko.nix
     ./impermanence.nix
     ./secure.nix
@@ -21,9 +18,6 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
-
-      # neovim-nightly-overlay.overlays.default
-
     ];
     config = {
       allowUnfree = true;

@@ -1,6 +1,9 @@
 {
   imports = [
     ./nixpkg.nix
+
+    # 开发环境
+    ./direnv.nix
   ];
 
   programs.home-manager.enable = true;

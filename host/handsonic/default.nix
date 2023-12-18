@@ -39,6 +39,9 @@
     ./mpd.nix
     # 虚拟化
     ./virtual.nix
+
+    # NeoVim
+    ./nvim.nix
   ];
 
   # 临时

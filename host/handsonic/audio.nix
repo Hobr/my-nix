@@ -5,6 +5,7 @@
   # Pipewire
   services.pipewire = {
     enable = true;
+    package = pkgs.unstable.pipewire;
 
     # 主音频服务器
     audio.enable = true;

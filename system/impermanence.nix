@@ -19,7 +19,6 @@
       "/var/cache"
       "/var/db/sudo"
     ];
-    files = [ "/etc/machine-id" ];
   };
 
   systemd.tmpfiles.rules = [

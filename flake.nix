@@ -74,7 +74,7 @@
         umipro = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            ./system/default.nix
+            ./system
           ];
         };
       };
@@ -84,7 +84,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [
-            ./home/default.nix
+            ./home
           ];
         };
       };

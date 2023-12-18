@@ -1,5 +1,8 @@
+{ inputs, ... }:
 {
   imports = [
+    inputs.nur.nixosModules.nur
+
     # Nix
     ./nix.nix
 

@@ -1,3 +1,5 @@
 .vscode
-result
 local.md
+.direnv
+result*
+.nixie

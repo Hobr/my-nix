@@ -1,12 +1,11 @@
-{ inputs
-, outputs
-, lib
-, config
+{ outputs
 , pkgs
 , ...
 }: {
   imports = [
     ./impermanence.nix
+
+    ./hyprland.nix
   ];
 
   nixpkgs = {

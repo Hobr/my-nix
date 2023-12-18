@@ -1,5 +1,8 @@
 {
   boot = {
+    # Luks
+    initrd.luks.devices.crypted.device = "/dev/nvme0n1";
+
     loader = {
       systemd-boot = {
         enable = true;

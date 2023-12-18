@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   networking = {
     hostName = "handsonic";
@@ -23,4 +24,6 @@
         DNSOverTLS=yes
       '';
     };
+
+    users.users.kanade.extraGroups = lib.mkAfter [ "networkmanager" ];
   }

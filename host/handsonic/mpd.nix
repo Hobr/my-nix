@@ -1,7 +1,7 @@
 {
   services.mpd = {
     enable = true;
-    musicDirectory = "/hobr/hobr/Music";
+    musicDirectory = "/home/kanade/Music";
 
     # 监听
     network.listenAddress = "any";

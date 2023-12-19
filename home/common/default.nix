@@ -1,5 +1,7 @@
 { outputs, ... }: {
   imports = [
+    # 用户
+    ./user.nix
     # 开发环境
     ./direnv.nix
   ];

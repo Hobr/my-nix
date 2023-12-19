@@ -4,8 +4,6 @@
     # 共用
     ../common
 
-    # 分区
-    ./disko.nix
     # 文件系统
     ./filesystem.nix
     # 引导

@@ -31,11 +31,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ## 分区
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     ## Secure Boot
     lanzaboote = {
       url = "github:nix-community/lanzaboote";

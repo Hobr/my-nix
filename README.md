@@ -23,8 +23,6 @@ rm /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/configuration.nix
 
 # 代理
 export all_proxy=http://192.168.1.102:10809
-echo -n "password" > /tmp/secret.key
-sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko host/handsonic/disko.nix
 lsblk -f
 nixos-install --show-trace --flake .#handsonic
 reboot

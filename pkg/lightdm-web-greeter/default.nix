@@ -1,14 +1,14 @@
 { stdenv, fetchFromGitHub, ... } @ args:
 
 stdenv.mkDerivation rec {
-  pname = "lightdm-web-greeter-${version}";
-  version = "0.7.1";
+  pname = "lightdm-web-greeter";
+  version = "3.5.2";
 
   src = fetchFromGitHub ({
-    owner = "open-quantum-safe";
-    repo = "liboqs";
+    owner = "JezerM";
+    repo = "web-greeter";
     rev = version;
-    fetchSubmodules = false;
+    fetchSubmodules = true;
     sha256 = "sha256-m20M4+3zsH40hTpMJG9cyIjXp0xcCUBS+cCiRVLXFqM=";
   });
 

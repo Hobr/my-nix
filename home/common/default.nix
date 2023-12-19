@@ -13,10 +13,7 @@
       outputs.overlays.unstable-packages
     ];
 
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
+    config.allowUnfree = true;
   };
 
   programs.home-manager.enable = true;

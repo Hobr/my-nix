@@ -6,11 +6,13 @@
 
     # 文件系统
     ./filesystem.nix
+    # Opt-in
+    ./persist.nix
     # 引导
     ./boot.nix
     # 内核
     ./kernel.nix
-    # 软件包全局
+    # 构建
     ./nixpkgs.nix
 
     # 硬件

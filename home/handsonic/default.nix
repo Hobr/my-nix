@@ -4,5 +4,7 @@
 
     # 基础软件包
     ./pkg.nix
+    # Opt-in
+    ./persist.nix
   ];
 }

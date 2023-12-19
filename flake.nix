@@ -71,6 +71,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # 配置文件
+    ## LightDM
+    lightdm-gab-gradient = {
+      url = "github:GabrielTenma/lightdm-gab-gradient";
+      flake = false;
+    };
+    ## 我的NVim配置
+    nvim-config = {
+      url = "github:Hobr/myNeoVim";
+      flake = false;
+    };
     # Catppuccin 主题
     ## 界面
     catppuccin-cursors = {

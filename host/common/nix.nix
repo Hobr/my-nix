@@ -16,4 +16,11 @@
       options = "--delete-older-than 3d";
     };
   };
+
+  documentation = {
+    man.enable = true;
+    doc.enable = false;
+    dev.enable = false;
+    info.enable = false;
+  };
 }

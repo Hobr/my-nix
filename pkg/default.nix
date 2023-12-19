@@ -1,3 +1,3 @@
 pkgs: {
-  # xxx = pkgs.callPackage ./xxx { };
+  lightdm-web-greeter = pkgs.callPackage ./lightdm-web-greeter { };
 }

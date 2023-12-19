@@ -8,8 +8,12 @@
     # 用户
     ./user.nix
 
-    # 安全
-    ./secure.nix
+    # 权限
+    ./permissions.nix
+    # TPM2
+    ./tpm.nix
+    # 安全启动
+    ./secureboot.nix
     # ZSH
     ./shell.nix
     # GnuPG

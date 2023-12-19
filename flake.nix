@@ -42,7 +42,7 @@
       url = "github:nixpak/nixpak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ## Nix Cli助手
+    ## CLI
     nh = {
       url = "github:viperml/nh";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,9 +51,9 @@
     # 桌面环境
     ## Hyrpland
     hyprland.url = "github:hyprwm/Hyprland";
-    ## XDG门户
+    ## XDG
     xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
-    ## Hyprland插件
+    ## 插件
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -72,24 +72,79 @@
     };
 
     # Catppuccin 主题
-    catppuccin-alacritty = {
-      url = "github:catppuccin/alacritty";
+    ## 界面
+    catppuccin-cursors = {
+      url = "github:catppuccin/cursors";
       flake = false;
     };
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
+    catppuccin-gtk = {
+      url = "github:catppuccin/gtk";
+      flake = false;
+    };
+    catppuccin-qt5ct = {
+      url = "github:catppuccin/qt5ct";
+      flake = false;
+    };
+    catppuccin-tty = {
+      url = "github:catppuccin/tty";
+      flake = false;
+    };
+    catppuccin-xresources = {
+      url = "github:catppuccin/xresources";
+      flake = false;
+    };
+    ## CLI
+    catppuccin-zsh-syntax-highlighting = {
+      url = "github:catppuccin/zsh-syntax-highlighting";
       flake = false;
     };
     catppuccin-btop = {
       url = "github:catppuccin/btop";
       flake = false;
     };
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
+    catppuccin-fzf = {
+      url = "github:catppuccin/fzf";
+      flake = false;
+    };
+    ## 软件
+    catppuccin-hyprland = {
+      url = "github:catppuccin/hyprland";
+      flake = false;
+    };
+    catppuccin-waybar = {
+      url = "github:catppuccin/waybar";
+      flake = false;
+    };
+    catppuccin-dunst = {
+      url = "github:catppuccin/dunst";
+      flake = false;
+    };
+    catppuccin-rofi = {
+      url = "github:catppuccin/rofi";
+      flake = false;
+    };
+    catppuccin-alacritty = {
+      url = "github:catppuccin/alacritty";
+      flake = false;
+    };
+    catppuccin-plymouth = {
+      url = "github:catppuccin/plymouth";
+      flake = false;
+    };
     catppuccin-fcitx5 = {
       url = "github:catppuccin/fcitx5";
       flake = false;
     };
-    catppuccin-hyprland = {
-      url = "github:catppuccin/hyprland";
+    catppuccin-qtcreator = {
+      url = "github:catppuccin/qtcreator";
+      flake = false;
+    };
+    catppuccin-cutter = {
+      url = "github:catppuccin/cutter";
       flake = false;
     };
   };
@@ -107,10 +162,10 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
       overlays = import ./overlay { inherit inputs; };
       nixosModules = import ./module/system;
       homeManagerModules = import ./module/home;
+      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
       nixosConfigurations = {

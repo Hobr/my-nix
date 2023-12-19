@@ -1,7 +1,11 @@
-{ inputs, lib, ... }: {
-  imports = [
-    ./nix.nix
-  ];
+{ inputs, lib, config, ... }: {
+  nixpkgs = {
+    hostPlatform = {
+      gcc.arch = "tigerlake";
+      gcc.tune = "tigerlake";
+      system = "x86_64-linux";
+    };
+  };
 
   nix = {
     nixPath = [ "/etc/nix/path" ];
@@ -9,6 +13,7 @@
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
+      extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
     };
   };
 }

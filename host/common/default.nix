@@ -5,6 +5,9 @@
 
     # Nix配置
     ./nix.nix
+
+    # ZSH
+    ./shell.nix
   ];
 
   nixpkgs = {
@@ -16,6 +19,7 @@
     config = {
       allowUnfree = true;
     };
+
   };
 
   environment.etc =
@@ -26,5 +30,6 @@
       })
       config.nix.registry;
 
+  programs.ccache.enable = true;
   system.stateVersion = "23.11";
 }

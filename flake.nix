@@ -14,6 +14,11 @@
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ## 个人NUR源
+    hobr-nur = {
+      url = "github:Hobr/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 环境
     ## 硬件

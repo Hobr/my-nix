@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   # OpenGL
   hardware.opengl = {
@@ -14,7 +14,7 @@
     modesetting.enable = true;
 
     # 电源管理
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
 
     # 开源驱动
@@ -26,4 +26,6 @@
     # 驱动包
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
+
+  boot.kernelParams = lib.mkAfter [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
 }

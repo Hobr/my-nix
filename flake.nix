@@ -25,7 +25,8 @@
     hardware.url = "github:nixos/nixos-hardware";
     ## 无状态
     impermanence.url = "github:nix-community/impermanence";
-
+    ## 密钥管理
+    agenix.url = "github:ryantm/agenix";
     ## 用户管理
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -40,12 +41,6 @@
     nixpak = {
       url = "github:nixpak/nixpak";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ## 密钥管理
-    sops-nix = {
-      url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs-stable.follows = "nixpkgs";
     };
     ## Nix Cli助手
     nh = {
@@ -74,6 +69,28 @@
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Catppuccin 主题
+    catppuccin-alacritty = {
+      url = "github:catppuccin/alacritty";
+      flake = false;
+    };
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
+    catppuccin-btop = {
+      url = "github:catppuccin/btop";
+      flake = false;
+    };
+    catppuccin-fcitx5 = {
+      url = "github:catppuccin/fcitx5";
+      flake = false;
+    };
+    catppuccin-hyprland = {
+      url = "github:catppuccin/hyprland";
+      flake = false;
     };
   };
 

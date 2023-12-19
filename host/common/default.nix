@@ -5,9 +5,15 @@
 
     # Nix配置
     ./nix.nix
+    # 用户
+    ./user.nix
 
+    # 安全
+    ./secure.nix
     # ZSH
     ./shell.nix
+    # GnuPG
+    ./gnupg.nix
   ];
 
   nixpkgs = {
@@ -19,7 +25,6 @@
     config = {
       allowUnfree = true;
     };
-
   };
 
   environment.etc =

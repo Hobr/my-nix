@@ -12,6 +12,8 @@
     ./boot.nix
     # 内核
     ./kernel.nix
+    # 软件包全局
+    ./nixpkgs.nix
 
     # 硬件
     ./hardware.nix
@@ -26,17 +28,11 @@
     # 蓝牙
     ./bluetooth.nix
 
-    # 用户
-    ./user.nix
     # i18n
     ./i18n.nix
 
-    # 安全
-    ./secure.nix
     # SSH
     ./ssh.nix
-    # GnuPG
-    ./gnupg.nix
     # MPD
     ./mpd.nix
     # 虚拟化
@@ -44,6 +40,8 @@
 
     # NeoVim
     ./nvim.nix
+
+
   ];
 
   # 临时

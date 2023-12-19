@@ -1,11 +1,11 @@
 { inputs, ... }: {
   additions = final: _prev: import ../pkg { pkgs = final; };
 
-  modifications = final: prev: {
+  modifications = self: super: {
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-    ccacheWrapper = prev.ccacheWrapper.override {
+    ccacheWrapper = super.ccacheWrapper.override {
       extraConfig = ''
         export CCACHE_COMPRESS=1
         export CCACHE_DIR="${config.programs.ccache.cacheDir}"

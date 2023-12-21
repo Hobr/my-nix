@@ -1,11 +1,12 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
+    inputs.impermanence.nixosModules.impermanence
   ];
 
   environment.persistence.main = {
-    persistentStoragePath = "/persistent";
+    hideMounts = true;
+    persistentStoragePath = "/persist";
     directories = [
       "/var/log"
       "/var/lib"

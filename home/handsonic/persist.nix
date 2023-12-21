@@ -4,11 +4,13 @@
     inputs.impermanence.home-manager.impermanence
   ];
 
-  home.persistence."/persistent/home/hobr" = {
+  home.persistence."/persist/home/hobr" = {
     directories = [
+      "Document"
       "Download"
       "Picture"
-      "Document"
+      "Music"
+      "Video"
       ".ssh"
       ".config"
       ".gnupg"

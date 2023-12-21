@@ -17,11 +17,11 @@
       options = [ "subvol=nix" ];
     };
 
-    "/persistent" = {
+    "/persist" = {
       device = "/dev/mapper/system-root";
       neededForBoot = true;
       fsType = "btrfs";
-      options = [ "subvol=persistent" ];
+      options = [ "subvol=persist" ];
     };
 
     "/mnt/windows" = {

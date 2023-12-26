@@ -2,7 +2,7 @@
 {
   networking = {
     hostName = "handsonic";
-    useDHCP = true;
+    useDHCP = lib.mkDefault true;
 
     # 防火墙
     firewall.enable = false;

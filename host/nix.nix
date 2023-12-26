@@ -1,4 +1,4 @@
-{lib,inputs,config,...}:
+{lib,inputs,outputs,config,...}:
 {
   nixpkgs = {
     # 非自由软件

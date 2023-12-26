@@ -24,7 +24,7 @@
     # 硬件
     ./hardware.nix
     # 显卡
-    ./nvidia.nix
+    ./gpu.nix
     # 音频
     ./audio.nix
     # 网络

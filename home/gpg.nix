@@ -10,7 +10,7 @@
 
   services.gpg-agent = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
     pinentryFlavor = "gnome3";
   };
 }

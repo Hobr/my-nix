@@ -18,6 +18,8 @@
     ./user.nix
     # 地区
     ./locale.nix
+    # 安全
+    ./secure.nix
 
     # 硬件
     ./hardware.nix

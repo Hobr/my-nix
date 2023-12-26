@@ -3,7 +3,7 @@
   imports = [ inputs.impermanence.nixosModules.impermanence ];
   boot = {
     # 文件系统支持
-    supportedFilesystems = ["btrfs" "ntfs" "ext3" "ext4"];
+    supportedFilesystems = ["btrfs" "ntfs" "vfat" ];
 
     # LUKS设备
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
@@ -15,6 +15,7 @@
     "/boot" = {
       device = "/dev/nvme1n1p1";
       fsType = "vfat";
+      options = [ "rw" "noatime" "errors=remount-ro" ];
     };
 
     # 根分区

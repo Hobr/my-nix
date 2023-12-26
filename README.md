@@ -17,6 +17,42 @@
 ```bash
 sudo -i
 
+# 分区
+parted /dev/nvme0n1 mklabel gpt
+
+# LUKS
+cryptsetup luksFormat /dev/nvme0n1
+cryptsetup luksOpen /dev/nvme0n1 crypt
+
+# LVM
+pvcreate /dev/mapper/crypt
+vgcreate system /dev/mapper/crypt
+
+lvcreate -L 24G system -n swap
+lvcreate -l 100%FREE system -n root
+
+# Btrfs
+mkfs.btrfs -L NixOS /dev/mapper/system-root
+mount -m /dev/mapper/system-root /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@persist
+btrfs subvolume create /mnt/@nix
+btrfs subvolume list /mnt
+umount /mnt
+
+# 挂载
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@ /dev/mapper/system-root /mnt
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persit /dev/mapper/system-root /mnt/persist
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@nix /dev/mapper/system-root /mnt/nix
+
+mount -m /dev/nvme1n1p1 /mnt/boot
+mount -m /dev/nvme1n1p3 /mnt/mnt/windows
+mount -m /dev/nvme1n1p4 /mnt/mnt/data
+
+# 交换
+mkswap -L Swap /dev/mapper/system-swap
+swapon /dev/mapper/system-swap
+
 # 部署
 nixos-generate-config --root /mnt
 git clone https://github.com/Hobr/my-nix.git

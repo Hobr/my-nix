@@ -58,7 +58,6 @@
     nixosModules = import ./module/system;
     homeManagerModules = import ./module/home;
     packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-
     nixosConfigurations = {
       handsonic = nixpkgs.lib.nixosSystem {
         modules = [ ./host ];

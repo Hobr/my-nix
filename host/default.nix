@@ -10,19 +10,28 @@
   ];
 
   nixpkgs = {
+    hostPlatform = "x86_64-linux";
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.unstable-packages
     ];
+
     config = {
       allowUnfree = true;
     };
   };
 
-  nix.registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+  nix = {
+    nixPath = ["/etc/nix/path"];
+    registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
 
-  nix.nixPath = ["/etc/nix/path"];
+    settings = {
+      experimental-features = "nix-command flakes";
+      auto-optimise-store = true;
+    };
+  };
+
   environment.etc =
     lib.mapAttrs'
     (name: value: {
@@ -31,14 +40,17 @@
     })
     config.nix.registry;
 
-  nix.settings = {
-    experimental-features = "nix-command flakes";
-    auto-optimise-store = true;
+  networking = {
+    hostName = "handsonic";
   };
 
-  networking.hostName = "handsonic";
-
-  boot.loader.systemd-boot.enable = true;
+  boot = {
+    loader = {
+      systemd-boot = {
+        enable = true;
+      }
+    };
+  };
 
   users.users = {
     kanade = {
@@ -57,5 +69,4 @@
   };
 
   system.stateVersion = "23.11";
-  nixpkgs.hostPlatform = "x86_64-linux";
 }

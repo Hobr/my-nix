@@ -1,9 +1,7 @@
-{inputs,...}:
 {
-  imports = [ inputs.impermanence.nixosModules.impermanence ];
   boot = {
     # 文件系统支持
-    supportedFilesystems = ["btrfs" "ntfs" "vfat" ];
+    supportedFilesystems = ["btrfs" "ntfs" "vfat" "tmpfs" ];
 
     # LUKS设备
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
@@ -18,11 +16,11 @@
       options = [ "rw" "noatime" "errors=remount-ro" ];
     };
 
-    # 根分区
-    "/" ={
-      device = "/dev/mapper/system-root";
-      fsType = "btrfs";
-      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@" ];
+    # 根目录
+    "/" = {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=16G" "mode=755" ];
     };
 
     # 持久化分区
@@ -55,30 +53,4 @@
 
   # 交换
   swapDevices = [ { device = "/dev/mapper/system-swap"; }];
-
-  # 重置@卷
-  boot.initrd.postDeviceCommands = lib.mkAfter ''
-    mkdir /btrfs_tmp
-    mount /dev/mapper/system-root /btrfs_tmp
-    if [[ -e /btrfs_tmp/root ]]; then
-        mkdir -p /btrfs_tmp/old_roots
-        timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/root)" "+%Y-%m-%-d_%H:%M:%S")
-        mv /btrfs_tmp/root "/btrfs_tmp/old_roots/$timestamp"
-    fi
-
-    delete_subvolume_recursively() {
-        IFS=$'\n'
-        for i in $(btrfs subvolume list -o "$1" | cut -f 9- -d ' '); do
-            delete_subvolume_recursively "/btrfs_tmp/$i"
-        done
-        btrfs subvolume delete "$1"
-    }
-
-    for i in $(find /btrfs_tmp/old_roots/ -maxdepth 1 -mtime +30); do
-        delete_subvolume_recursively "$i"
-    done
-
-    btrfs subvolume create /btrfs_tmp/root
-    umount /btrfs_tmp
-  '';
 }

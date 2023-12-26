@@ -34,37 +34,36 @@ lvcreate -l 100%FREE system -n root
 # Btrfs
 mkfs.btrfs -L NixOS /dev/mapper/system-root
 mount -m /dev/mapper/system-root /mnt
-btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@persist
 btrfs subvolume create /mnt/@nix
 btrfs subvolume list /mnt
 umount /mnt
 
 # 挂载
-mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@ /dev/mapper/system-root /mnt
+mount -t tmpfs none /mnt
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persist /dev/mapper/system-root /mnt/persist
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@nix /dev/mapper/system-root /mnt/nix
 
 mount -m /dev/nvme1n1p1 /mnt/boot
 mount -m /dev/nvme1n1p3 /mnt/mnt/windows
 mount -m /dev/nvme1n1p4 /mnt/mnt/data
+mkdir /mnt/persist
+mkdir /mnt/nix
 
 # 交换
 mkswap -L Swap /dev/mapper/system-swap
 swapon /dev/mapper/system-swap
+
+lsblk -f
 
 # 部署
 nixos-generate-config --root /mnt
 git clone https://github.com/Hobr/my-nix.git
 cd my-nix
 
-nano /mnt/etc/nixos/hardware-configuration.nix
-rm /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/configuration.nix
-
 # 代理
-export all_proxy=http://192.168.1.102:10809
-lsblk -f
-nixos-install --show-trace --flake .#handsonic
+export all_proxy=socks5://192.168.1.102:7890
+nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
 reboot
 
 home-manager switch --flake .#kanade@handsonic --show-trace

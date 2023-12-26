@@ -11,6 +11,7 @@
       "/var/lib"
 
       "/etc"
+      "/root"
     ];
     files = [ ];
   };

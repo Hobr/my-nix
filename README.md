@@ -65,10 +65,6 @@ cd my-nix
 export all_proxy=socks5://192.168.1.102:7890
 nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
 reboot
-
-home-manager switch --flake .#kanade@handsonic --show-trace
-reboot
-make switch
 ```
 
 ## 参考资料

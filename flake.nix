@@ -65,13 +65,5 @@
         specialArgs = { inherit inputs outputs; };
       };
     };
-
-    homeConfigurations = {
-      "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
-        modules = [ ./home ];
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs outputs; };
-      };
-    };
   };
 }

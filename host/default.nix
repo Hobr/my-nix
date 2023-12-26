@@ -4,6 +4,8 @@
     ./nix.nix
     # 全局配置
     ./config.nix
+    # Home-Manager
+    ./homemanager.nix
 
     # 文件系统
     ./filesystem.nix

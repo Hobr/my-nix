@@ -1,8 +1,6 @@
 { inputs, ... }:
 {
-  imports = [
-    inputs.impermanence.nixosModules.impermanence
-  ];
+  imports = [ inputs.impermanence.nixosModules.impermanence ];
 
   environment.persistence."/persist/system" = {
     hideMounts = true;

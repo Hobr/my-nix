@@ -1,8 +1,6 @@
 { inputs, ... }:
 {
-  imports = [
-    inputs.impermanence.home-manager.impermanence
-  ];
+  imports = [ inputs.impermanence.home-manager.impermanence ];
 
   home.persistence."/persist/home/kanade" = {
     allowOther = true;

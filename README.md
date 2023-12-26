@@ -42,7 +42,7 @@ umount /mnt
 
 # 挂载
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@ /dev/mapper/system-root /mnt
-mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persit /dev/mapper/system-root /mnt/persist
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persist /dev/mapper/system-root /mnt/persist
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@nix /dev/mapper/system-root /mnt/nix
 
 mount -m /dev/nvme1n1p1 /mnt/boot

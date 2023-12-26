@@ -177,7 +177,6 @@
     nixosModules = import ./module/system;
     homeManagerModules = import ./module/home;
     packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
     nixosConfigurations = {
       handsonic = nixpkgs.lib.nixosSystem {

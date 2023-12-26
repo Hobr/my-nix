@@ -34,5 +34,7 @@
     ./desktop.nix
     # SSH
     ./ssh.nix
+    # 代理
+    ./proxy.nix
   ];
 }

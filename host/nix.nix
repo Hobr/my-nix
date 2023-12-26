@@ -24,6 +24,13 @@
       trusted-users = [ "kanade" ];
       substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/" "https://cache.nixos.org" ];
     };
+
+    # GC
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
   };
 
   environment.etc =

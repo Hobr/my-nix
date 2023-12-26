@@ -30,7 +30,6 @@
         fsType = "ntfs-3g";
         options = [ "rw" ];
       };
-
   };
 
   # 交换

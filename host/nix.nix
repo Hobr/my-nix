@@ -1,18 +1,15 @@
 {lib,inputs,config,...}:
 {
   nixpkgs = {
-    # 平台
-    hostPlatform = "x86_64-linux";
-
     # 非自由软件
     config.allowUnfree = true;
 
     # Overlays
     overlays = [
-    outputs.overlays.additions
-    outputs.overlays.modifications
-    outputs.overlays.unstable-packages
-  ];
+      outputs.overlays.additions
+      outputs.overlays.modifications
+      outputs.overlays.unstable-packages
+    ];
   };
 
   nix = {
@@ -22,6 +19,9 @@
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
+
+      # 镜像
+      substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/"];
     };
   };
 
@@ -32,7 +32,4 @@
       value.source = value.flake;
     })
     config.nix.registry;
-
-  # 系统版本
-  system.stateVersion = "23.11";
 }

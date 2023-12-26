@@ -4,4 +4,7 @@
 
   # CPU微码
   hardware.cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;
+
+  # Libinput
+  services.xserver.libinput.enable = true;
 }

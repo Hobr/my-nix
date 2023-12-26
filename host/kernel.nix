@@ -1,5 +1,9 @@
+{pkgs,...}:
 {
   boot = {
+    # 版本
+    kernelPackages = pkgs.linuxPackages_latest;
+
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
 

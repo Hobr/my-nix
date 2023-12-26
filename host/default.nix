@@ -1,72 +1,23 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{outputs, ...}: {
   imports = [
+    # Nix
+    ./nix.nix
+
+    # 文件系统
+    ./filesystem.nix
+    # 引导
+    ./boot.nix
+
+    # 用户
+    ./user.nix
+
+    # 硬件
+    ./hardware.nix
+    # NVIDIA
+    ./nvidia.nix
+
+    # 网络
+    ./network.nix
+
   ];
-
-  nixpkgs = {
-    hostPlatform = "x86_64-linux";
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
-
-    config = {
-      allowUnfree = true;
-    };
-  };
-
-  nix = {
-    nixPath = ["/etc/nix/path"];
-    registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-
-    settings = {
-      experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
-    };
-  };
-
-  environment.etc =
-    lib.mapAttrs'
-    (name: value: {
-      name = "nix/path/${name}";
-      value.source = value.flake;
-    })
-    config.nix.registry;
-
-  networking = {
-    hostName = "handsonic";
-  };
-
-  boot = {
-    loader = {
-      systemd-boot = {
-        enable = true;
-      }
-    };
-  };
-
-  users.users = {
-    kanade = {
-      isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-      extraGroups = ["wheel" "networkmanager"];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-  };
-
-  system.stateVersion = "23.11";
 }

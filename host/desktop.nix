@@ -5,7 +5,7 @@
 
   # 自动启动
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "hobr";
+  services.xserver.displayManager.autoLogin.user = "kanade";
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 }

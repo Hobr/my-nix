@@ -11,6 +11,8 @@
     ./boot.nix
     # 内核
     ./kernel.nix
+    # 持久化
+    ./impermanence.nix
 
     # 用户
     ./user.nix

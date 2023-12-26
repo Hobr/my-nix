@@ -1,6 +1,6 @@
 {outputs, ...}: {
   imports = [
-    # Nix
+    # Nix配置
     ./nix.nix
 
     # 文件系统
@@ -18,6 +18,5 @@
 
     # 网络
     ./network.nix
-
   ];
 }

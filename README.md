@@ -36,6 +36,7 @@ mkfs.btrfs -L NixOS /dev/mapper/system-root
 mount -m /dev/mapper/system-root /mnt
 btrfs subvolume create /mnt/@persist
 btrfs subvolume create /mnt/@nix
+btrfs subvolume create /mnt/@home
 btrfs subvolume list /mnt
 umount /mnt
 
@@ -43,6 +44,7 @@ umount /mnt
 mount -t tmpfs none /mnt
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persist /dev/mapper/system-root /mnt/persist
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@nix /dev/mapper/system-root /mnt/nix
+mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@home /dev/mapper/system-root /mnt/home
 
 mount -m /dev/nvme1n1p1 /mnt/boot
 mount -m /dev/nvme1n1p3 /mnt/mnt/windows

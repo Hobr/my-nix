@@ -4,8 +4,6 @@
     ./nix.nix
     # 全局配置
     ./config.nix
-    # 持久化
-    ./impermanence.nix
 
     # XDG
     ./xdg.nix

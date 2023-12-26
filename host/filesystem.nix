@@ -37,6 +37,12 @@
       options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@nix"];
     };
 
+    "/home" = {
+      device = "/dev/mapper/system-root";
+      fsType = "btrfs";
+      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@home"];
+    };
+
     # Windows 分区
     "/mnt/windows" = {
       device = "/dev/nvme1n1p3";

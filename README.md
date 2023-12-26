@@ -8,6 +8,10 @@
   - handsonic 笔记本: 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
   - distortion 服务器: 4H4G, 40G, 150Mbps, 美国
 
+- 用户
+  - kanade: 个人
+  - root: 管理员
+
 ## 安装
 
 ```bash

@@ -4,7 +4,7 @@
     enable = true;
 
     # Wheel组无需密码
-    wheelNeedsPassword = true;
+    wheelNeedsPassword = false;
   };
 
   # 用户组

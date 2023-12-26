@@ -14,4 +14,6 @@
       allowUnfreePredicate = _: true;
     };
   };
+  
+  systemd.user.startServices = "sd-switch";
 }

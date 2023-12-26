@@ -21,7 +21,8 @@
       auto-optimise-store = true;
 
       # 镜像
-      substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/"];
+      trusted-users = [ "kanade" ];
+      substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/" "https://cache.nixos.org" ];
     };
   };
 

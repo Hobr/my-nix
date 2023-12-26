@@ -13,7 +13,6 @@
     "/boot" = {
       device = "/dev/nvme1n1p1";
       fsType = "vfat";
-      options = [ "rw" "noatime" "errors=remount-ro" ];
     };
 
     # 根目录

@@ -26,9 +26,9 @@
 
     # 桌面环境
     ## Hyrpland
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland/v0.33.1";
     ## XDG
-    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.2.6";
     ## 插件
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -36,7 +36,7 @@
     };
     ## 颜色选择器
     hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
+      url = "github:hyprwm/hyprpicker/v0.2.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

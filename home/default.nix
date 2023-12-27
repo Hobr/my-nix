@@ -21,6 +21,8 @@
     ./terminal/cli.nix
     # Btop
     ./terminal/btop.nix
+    # DirEnv
+    ./terminal/direnv.nix
 
     # 浏览器
     ./software/firefox.nix

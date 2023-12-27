@@ -65,13 +65,14 @@ reboot
 ## 后续
 
 ```bash
-# Pre-commit Hook
+# 开发环境
 cd /mnt/data/Project/my-nix
+direnv allow
 pre-commit install
 
 # SSH
 ssh-keygen -t rsa -C "mail@hobr.site"
-~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub
 
 # GPG
 gpg --import secret-full-key.asc

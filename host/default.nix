@@ -36,8 +36,8 @@
 
     # 桌面
     ./desktop.nix
-    # SSH
-    ./ssh.nix
+    # OpenSSH
+    ./openssh.nix
     # 代理
     ./proxy.nix
   ];

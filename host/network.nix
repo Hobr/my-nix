@@ -3,11 +3,6 @@
   # DNS服务
   services.resolved = {
     enable = true;
-    dnssec = "true";
-    fallbackDns = [ "8.8.8.8" "8.8.4.4" ];
-    extraConfig = ''
-      DNSOverTLS=yes
-    '';
   };
 
   networking = {

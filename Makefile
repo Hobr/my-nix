@@ -1,8 +1,8 @@
 switch:
-	sudo proxychains4 nixos-rebuild switch --flake .#handsonic --show-trace
+	sudo proxychains4 nh os switch
 
 boot:
-	sudo proxychains4 nixos-rebuild boot --flake .#handsonic --show-trace
+	sudo proxychains4 nh os boot
 
 update:
 	sudo proxychains4 nix flake update

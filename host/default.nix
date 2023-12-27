@@ -34,6 +34,8 @@
     # Shell
     ./user/shell.nix
 
+    # CLI
+    ./software/nh.nix
     # 桌面
     ./software/desktop.nix
     # OpenSSH

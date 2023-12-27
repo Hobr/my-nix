@@ -1,5 +1,15 @@
 { lib, ... }:
 {
+  # DNS服务
+  services.resolved = {
+    enable = true;
+    dnssec = "true";
+    fallbackDns = [ "8.8.8.8" "8.8.4.4" ];
+    extraConfig = ''
+      DNSOverTLS=yes
+    '';
+  };
+
   networking = {
     hostName = "handsonic";
     useDHCP = lib.mkDefault true;
@@ -10,10 +20,9 @@
     # NetworkManager
     networkmanager = {
       enable = true;
-
       # DNS服务
-      # dns = "systemd-resolved";
-
+      dns = "systemd-resolved";
+      # 无线网络
       wifi = {
         # 使用设备MAC
         macAddress = "permanent";

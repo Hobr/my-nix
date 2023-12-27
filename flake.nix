@@ -20,7 +20,7 @@
     impermanence.url = "github:nix-community/impermanence";
     ## 用户管理
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

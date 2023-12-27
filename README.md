@@ -60,9 +60,22 @@ cd my-nix
 export all_proxy=socks5://192.168.1.102:7890
 nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
 reboot
+```
 
+## 后续
+
+```bash
+# Pre-commit Hook
 cd /mnt/data/Project/my-nix
 pre-commit install
+
+# SSH
+ssh-keygen -t rsa -C "mail@hobr.site"
+~/.ssh/id_rsa.pub
+
+# GPG
+gpg --import secret-full-key.asc
+gpg --import public-key.asc
 ```
 
 ## 参考资料

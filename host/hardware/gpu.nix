@@ -14,7 +14,7 @@
     modesetting.enable = true;
 
     nvidiaSettings = false;
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
   };
 }

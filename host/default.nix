@@ -1,44 +1,44 @@
 { outputs, ... }: {
   imports = [
     # Nix配置
-    ./nix.nix
+    ./config/nix.nix
     # 全局配置
-    ./config.nix
+    ./config/config.nix
     # Home-Manager
-    ./homemanager.nix
+    ./config/homemanager.nix
 
     # 文件系统
-    ./filesystem.nix
+    ./system/filesystem.nix
     # 引导
-    ./boot.nix
+    ./system/boot.nix
     # 内核
-    ./kernel.nix
+    ./system/kernel.nix
     # 持久化
-    ./impermanence.nix
+    ./system/impermanence.nix
 
     # 硬件
-    ./hardware.nix
+    ./hardware/hardware.nix
     # 显卡
-    ./gpu.nix
+    ./hardware/gpu.nix
     # 音频
-    ./audio.nix
+    ./hardware/audio.nix
     # 网络
-    ./network.nix
+    ./hardware/network.nix
 
     # 用户
-    ./user.nix
+    ./user/user.nix
     # 地区
-    ./locale.nix
+    ./user/locale.nix
     # 安全
-    ./secure.nix
+    ./user/secure.nix
     # Shell
-    ./shell.nix
+    ./user/shell.nix
 
     # 桌面
-    ./desktop.nix
+    ./software/desktop.nix
     # OpenSSH
-    ./openssh.nix
+    ./software/openssh.nix
     # 代理
-    ./proxy.nix
+    ./software/proxy.nix
   ];
 }

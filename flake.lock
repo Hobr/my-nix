@@ -385,21 +385,6 @@
         "type": "github"
       }
     },
-    "nur": {
-      "locked": {
-        "lastModified": 1703678308,
-        "narHash": "sha256-XdPJFzgZjUPHTnBGuq+b14aQavDSxMh41/V1pG6fZwY=",
-        "owner": "nix-community",
-        "repo": "NUR",
-        "rev": "1a15c29d2db118ba4bd50fe309fa35642d944881",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "NUR",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -410,7 +395,6 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-wayland": "nixpkgs-wayland",
-        "nur": "nur",
         "xdg-portal-hyprland": "xdg-portal-hyprland"
       }
     },

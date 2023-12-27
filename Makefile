@@ -1,11 +1,11 @@
 switch:
-	sudo nixos-rebuild switch --flake .#handsonic --show-trace
+	sudo proxychains4 nixos-rebuild switch --flake .#handsonic --show-trace
 
 boot:
-	sudo nixos-rebuild boot --flake .#handsonic --show-trace
+	sudo proxychains4 nixos-rebuild boot --flake .#handsonic --show-trace
 
 update:
-	sudo nix flake update
+	sudo proxychains4 nix flake update
 
 history:
 	sudo nix profile history --profile /nix/var/nix/profiles/system

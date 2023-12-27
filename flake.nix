@@ -7,8 +7,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     ## 官方滚动源
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    ## 用户源
-    nur.url = "github:nix-community/NUR";
     ## Wayland包
     nixpkgs-wayland = {
       url = "github:nix-community/nixpkgs-wayland";

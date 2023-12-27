@@ -7,8 +7,6 @@
         editor = false;
         # 上限
         configurationLimit = 10;
-        # 分辨率
-        consoleMode = "auto";
       };
       efi.canTouchEfiVariables = true;
     };

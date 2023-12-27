@@ -31,6 +31,8 @@
     ./locale.nix
     # 安全
     ./secure.nix
+    # Shell
+    ./shell.nix
 
     # 桌面
     ./desktop.nix

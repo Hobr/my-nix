@@ -13,6 +13,8 @@
     # VSCode
     ./vscode.nix
 
+    # ZSH
+    ./zsh.nix
     # 终端工具
     ./cli.nix
     # Btop

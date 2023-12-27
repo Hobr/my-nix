@@ -1,7 +1,7 @@
 {
   boot = {
     # 文件系统支持
-    supportedFilesystems = ["btrfs" "ntfs" "vfat" "tmpfs" ];
+    supportedFilesystems = [ "btrfs" "ntfs" "vfat" "tmpfs" ];
 
     # LUKS设备
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
@@ -33,13 +33,13 @@
     "/nix" = {
       device = "/dev/mapper/system-root";
       fsType = "btrfs";
-      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@nix"];
+      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@nix" ];
     };
 
     "/home" = {
       device = "/dev/mapper/system-root";
       fsType = "btrfs";
-      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@home"];
+      options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@home" ];
     };
 
     # Windows 分区
@@ -57,5 +57,5 @@
   };
 
   # 交换
-  swapDevices = [ { device = "/dev/mapper/system-swap"; }];
+  swapDevices = [{ device = "/dev/mapper/system-swap"; }];
 }

@@ -42,27 +42,27 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
-  let
-    inherit (self) outputs;
-    systems = [
-      "x86_64-linux"
-      "i686-linux"
-      "aarch64-linux"
-      "x86_64-darwin"
-      "aarch64-darwin"
-    ];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in
-  {
-    overlays = import ./overlay { inherit inputs; };
-    nixosModules = import ./module/system;
-    homeManagerModules = import ./module/home;
-    packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-    nixosConfigurations = {
-      handsonic = nixpkgs.lib.nixosSystem {
-        modules = [ ./host ];
-        specialArgs = { inherit inputs outputs; };
+    let
+      inherit (self) outputs;
+      systems = [
+        "x86_64-linux"
+        "i686-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      overlays = import ./overlay { inherit inputs; };
+      nixosModules = import ./module/system;
+      homeManagerModules = import ./module/home;
+      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
+      nixosConfigurations = {
+        handsonic = nixpkgs.lib.nixosSystem {
+          modules = [ ./host ];
+          specialArgs = { inherit inputs outputs; };
+        };
       };
     };
-  };
 }

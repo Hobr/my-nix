@@ -1,4 +1,4 @@
-{outputs,...}:
+{ outputs, ... }:
 {
   nixpkgs = {
     # Overlays
@@ -13,6 +13,6 @@
       allowUnfree = true;
     };
   };
-  
+
   systemd.user.startServices = "sd-switch";
 }

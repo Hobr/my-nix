@@ -1,5 +1,5 @@
-{inputs, ...}: {
-  additions = final: _prev: import ../pkg {pkgs = final;};
+{ inputs, ... }: {
+  additions = final: _prev: import ../pkg { pkgs = final; };
 
   modifications = final: prev: {
     # example = prev.example.overrideAttrs (oldAttrs: rec {

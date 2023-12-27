@@ -1,4 +1,4 @@
-{lib,inputs,outputs,config,...}:
+{ lib, inputs, outputs, config, ... }:
 {
   nixpkgs = {
     # 非自由软件
@@ -13,8 +13,8 @@
   };
 
   nix = {
-    nixPath = ["/etc/nix/path"];
-    registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+    nixPath = [ "/etc/nix/path" ];
+    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
 
     settings = {
       experimental-features = "nix-command flakes";
@@ -35,9 +35,9 @@
 
   environment.etc =
     lib.mapAttrs'
-    (name: value: {
-      name = "nix/path/${name}";
-      value.source = value.flake;
-    })
-    config.nix.registry;
+      (name: value: {
+        name = "nix/path/${name}";
+        value.source = value.flake;
+      })
+      config.nix.registry;
 }

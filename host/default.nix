@@ -1,4 +1,4 @@
-{outputs, ...}: {
+{ outputs, ... }: {
   imports = [
     # Nix配置
     ./nix.nix

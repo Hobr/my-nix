@@ -1,4 +1,4 @@
-{lib,...}:
+{ lib, ... }:
 {
   networking = {
     hostName = "handsonic";
@@ -26,5 +26,5 @@
   };
 
   # 用户组
-  users.users.kanade.extraGroups = lib.mkAfter ["networkmanager"];
+  users.users.kanade.extraGroups = lib.mkAfter [ "networkmanager" ];
 }

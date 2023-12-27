@@ -1,4 +1,4 @@
-{lib,...}:
+{ lib, ... }:
 {
   security.sudo = {
     enable = true;
@@ -8,7 +8,7 @@
   };
 
   # 用户组
-  users.users.kanade.extraGroups = lib.mkAfter ["wheel"];
+  users.users.kanade.extraGroups = lib.mkAfter [ "wheel" ];
 
   security.rtkit.enable = true;
 }

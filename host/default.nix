@@ -1,11 +1,11 @@
 { outputs, ... }: {
   imports = [
     # Nix配置
-    ./config/nix.nix
+    ./global/nix.nix
     # 全局配置
-    ./config/config.nix
+    ./global/config.nix
     # Home-Manager
-    ./config/homemanager.nix
+    ./global/homemanager.nix
 
     # 文件系统
     ./system/filesystem.nix

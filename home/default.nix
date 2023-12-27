@@ -1,33 +1,32 @@
 {
   imports = [
     # Nix配置
-    ./nix.nix
+    ./global/nix.nix
     # 全局配置
-    ./config.nix
-
+    ./global/config.nix
 
     # GPG
-    ./gpg.nix
+    ./tool/gpg.nix
     # SSH
-    ./ssh.nix
+    ./tool/ssh.nix
     # Git
-    ./git.nix
+    ./tool/git.nix
 
     # XDG
-    ./xdg.nix
+    ./user/xdg.nix
 
     # ZSH
-    ./zsh.nix
+    ./terminal/zsh.nix
     # 终端工具
-    ./cli.nix
+    ./terminal/cli.nix
     # Btop
-    ./btop.nix
+    ./terminal/btop.nix
 
     # 浏览器
-    ./firefox.nix
+    ./software/firefox.nix
     # VSCode
-    ./vscode.nix
+    ./software/vscode.nix
     # NeoVim
-    ./nvim.nix
+    ./software/nvim.nix
   ];
 }

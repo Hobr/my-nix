@@ -11,7 +11,6 @@
     # 配置
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = _: true;
     };
   };
   

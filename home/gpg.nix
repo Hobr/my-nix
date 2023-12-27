@@ -2,7 +2,6 @@
 {
   programs.gpg = {
     enable = true;
-    package = pkgs.gnupg;
   };
 
   home.packages = lib.mkAfter [ pkgs.unstable.pinentry-gnome ];

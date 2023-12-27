@@ -16,13 +16,6 @@
     # 持久化
     ./impermanence.nix
 
-    # 用户
-    ./user.nix
-    # 地区
-    ./locale.nix
-    # 安全
-    ./secure.nix
-
     # 硬件
     ./hardware.nix
     # 显卡
@@ -31,6 +24,13 @@
     ./audio.nix
     # 网络
     ./network.nix
+
+    # 用户
+    ./user.nix
+    # 地区
+    ./locale.nix
+    # 安全
+    ./secure.nix
 
     # 桌面
     ./desktop.nix

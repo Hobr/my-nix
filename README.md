@@ -6,11 +6,27 @@
 
 - 主机
   - handsonic 笔记本: 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
-  - distortion 服务器: 4H4G, 40G, 150Mbps, 美国
 
 - 用户
   - kanade: 个人
-  - root: 管理员
+
+- Clash systemd
+- sub down time
+
+trace: warning: kanade profile: You are using
+
+  Home Manager version 24.05 and
+  Nixpkgs version 23.11.
+
+Using mismatched versions is likely to cause errors and unexpected
+behavior. It is therefore highly recommended to use a release of Home
+Manager that corresponds with your chosen release of Nixpkgs.
+
+If you insist then you can disable this warning by adding
+
+  home.enableNixpkgsReleaseCheck = false;
+
+to your configuration.
 
 ## 安装
 
@@ -56,14 +72,15 @@ mkdir /mnt/nix
 mkswap -L Swap /dev/mapper/system-swap
 swapon /dev/mapper/system-swap
 
-lsblk -f
-
 # 部署
 git clone https://github.com/Hobr/my-nix.git
 cd my-nix
 export all_proxy=socks5://192.168.1.102:7890
 nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
 reboot
+
+cd /mnt/data/Project/my-nix
+pre-commit install
 ```
 
 ## 参考资料

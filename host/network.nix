@@ -12,7 +12,7 @@
       enable = true;
 
       # DNS服务
-      dns = "systemd-resolved";
+      # dns = "systemd-resolved";
 
       wifi = {
         # 使用设备MAC

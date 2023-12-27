@@ -5,6 +5,7 @@
     package = pkgs.proxychains-ng;
     # 安静模式
     quietMode = true;
+    chain.type = "dynamic";
 
     # 代理
     proxies = {
@@ -30,7 +31,7 @@
   systemd.services.Clash = {
     unitConfig = {
       Description = "Clash daemon";
-      After = "NetworkManager.service";
+      After = "NetworkManager-wait-online.service";
     };
     serviceConfig = {
       Type = "simple";
@@ -42,13 +43,14 @@
       ExecStart = "${pkgs.clash-meta}/bin/clash-meta -d /etc/clash";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
     };
+    wantedBy = [ "multi-user.target" ];
   };
 
   # 定时更新订阅
   systemd.timers.SubUpdate = {
     unitConfig = {
       Description = "Clash subscription update.";
-      After = "NetworkManager.service";
+      After = "NetworkManager-wait-online.service";
     };
     timerConfig = {
       OnCalendar = "hourly";

@@ -1,7 +1,7 @@
 {
   boot = {
     # 文件系统支持
-    supportedFilesystems = [ "btrfs" "ntfs" "vfat" "tmpfs" ];
+    supportedFilesystems = [ "btrfs" "ntfs" "vfat" "ext4" "fat" "tmpfs" ];
 
     # LUKS设备
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";

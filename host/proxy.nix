@@ -3,7 +3,6 @@
   programs.proxychains = {
     enable = true;
     package = pkgs.proxychains-ng;
-    # 安静模式
     quietMode = true;
     chain.type = "dynamic";
 

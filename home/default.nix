@@ -5,13 +5,16 @@
     # 全局配置
     ./config.nix
 
+
+    # GPG
+    ./gpg.nix
+    # SSH
+    ./ssh.nix
+    # Git
+    ./git.nix
+
     # XDG
     ./xdg.nix
-
-    # 浏览器
-    ./firefox.nix
-    # VSCode
-    ./vscode.nix
 
     # ZSH
     ./zsh.nix
@@ -20,13 +23,10 @@
     # Btop
     ./btop.nix
 
-    # Git
-    ./git.nix
-    # GPG
-    ./gpg.nix
-    # SSH
-    ./ssh.nix
-
+    # 浏览器
+    ./firefox.nix
+    # VSCode
+    ./vscode.nix
     # NeoVim
     ./nvim.nix
   ];

@@ -14,6 +14,7 @@
       pictures = "${config.home.homeDirectory}/Picture";
       videos = "${config.home.homeDirectory}/Video";
       music = "${config.home.homeDirectory}/Music";
+      templates = "${config.home.homeDirectory}/Template";
     };
   };
 }

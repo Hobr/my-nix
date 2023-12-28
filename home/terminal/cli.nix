@@ -6,5 +6,6 @@
     eza
     nixpkgs-fmt
     xorg.xlsclients
+    pciutils
   ];
 }

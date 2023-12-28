@@ -13,7 +13,10 @@
     ./tool/git.nix
 
     # XDG
-    ./user/xdg.nix
+    ./desktop/xdg.nix
+    # Hyprland
+    # Waybar
+    # Rofi
 
     # ZSH
     ./terminal/zsh.nix

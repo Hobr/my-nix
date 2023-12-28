@@ -22,8 +22,12 @@
     ./hardware/gpu.nix
     # 音频
     ./hardware/audio.nix
+    # Bluetooth
+    ./hardware/bluetooth.nix
     # 网络
     ./hardware/network.nix
+    # TPM2
+    ./hardware/tpm.nix
 
     # 用户
     ./user/user.nix

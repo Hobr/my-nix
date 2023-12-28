@@ -1,5 +1,6 @@
 switch:
 	proxychains4 nh os switch -a ./
+
 boot:
 	proxychains4 nh os boot -a ./
 

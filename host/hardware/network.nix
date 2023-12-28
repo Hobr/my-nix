@@ -3,6 +3,13 @@
   # DNS服务
   services.resolved = {
     enable = true;
+    # DNSSEC
+    dnssec = "allow-downgrade";
+    # 后备DNS
+    fallbackDns = [ "8.8.8.8" "8.8.4.4" ];
+    extraConfig = ''
+      DNSOverTLS=yes
+    '';
   };
 
   networking = {

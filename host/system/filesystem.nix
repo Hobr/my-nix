@@ -6,6 +6,8 @@
     # LUKS设备
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
   };
+  # GVFS
+  services.gvfs.enable = true;
 
   # 挂载
   fileSystems = {

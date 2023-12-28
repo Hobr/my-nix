@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   # 时区
   time.timeZone = "Asia/Shanghai";
@@ -9,5 +10,16 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+  };
+
+  # 字体
+  fonts = {
+    packages = with pkgs.unstable; [
+      (nerdfonts.override { fonts = [ "FiraCode" "Mononoki" ]; })
+      sarasa-gothic
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+    ];
   };
 }

@@ -10,6 +10,13 @@
 - 用户
   - kanade: 个人
 
+## TODO
+
+- CCache
+- 桌面环境
+- NVim环境
+- VSCode环境
+
 ## 安装
 
 ```bash

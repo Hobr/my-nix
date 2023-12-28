@@ -40,4 +40,12 @@
         value.source = value.flake;
       })
       config.nix.registry;
+
+  # 软件文档
+  documentation = {
+    man.enable = true;
+    doc.enable = false;
+    dev.enable = false;
+    info.enable = false;
+  };
 }

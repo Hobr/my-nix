@@ -2,7 +2,6 @@
 {
   security.sudo = {
     enable = true;
-
     # Wheel组无需密码
     wheelNeedsPassword = false;
   };

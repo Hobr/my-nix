@@ -38,7 +38,7 @@
       LimitNOFILE = "1000000";
       CapabilityBoundingSet = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
       AmbientCapabilities = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
-      ExecStartPre = "${pkgs.wget}/bin/wget -O /etc/clash/config.yaml 'https://sub.ops.ci/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
+      ExecStartPre = "${pkgs.wget}/bin/wget -O /etc/clash/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
       ExecStart = "${pkgs.clash-meta}/bin/clash-meta -d /etc/clash";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
     };

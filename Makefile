@@ -1,8 +1,8 @@
 switch:
-	proxychains4 nh os switch -a ./
+	nh os switch -a ./
 
 boot:
-	proxychains4 nh os boot -a ./
+	nh os boot -a ./
 
 update:
 	sudo proxychains4 nix flake update

@@ -5,5 +5,6 @@
     fastfetch
     eza
     nixpkgs-fmt
+    xorg.xlsclients
   ];
 }

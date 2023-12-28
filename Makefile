@@ -1,13 +1,10 @@
 switch:
-	sudo nixos-rebuild switch --flake .#handsonic --show-trace
-	home-manager switch --flake .#kanade@handsonic --show-trace
-
+	proxychains4 nh os switch -a ./
 boot:
-	sudo nixos-rebuild boot --flake .#handsonic --show-trace
-	home-manager build --flake .#kanade@handsonic --show-trace
+	proxychains4 nh os boot -a ./
 
 update:
-	sudo nix flake update
+	sudo proxychains4 nix flake update
 
 history:
 	sudo nix profile history --profile /nix/var/nix/profiles/system

@@ -15,7 +15,9 @@
   # 字体
   fonts = {
     packages = with pkgs.unstable; [
-      (nerdfonts.override { fonts = [ "FiraCode" "Mononoki" ]; })
+      #(nerdfonts.override { fonts = [ "FiraCode" "Mononoki" ]; })
+      fira-code
+      mononoki
       sarasa-gothic
       noto-fonts
       noto-fonts-cjk

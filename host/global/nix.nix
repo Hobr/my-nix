@@ -19,6 +19,7 @@
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
+      system-features = [ "big-parallel" ];
 
       # 镜像
       trusted-users = [ "kanade" ];

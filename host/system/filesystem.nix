@@ -60,4 +60,9 @@
 
   # 交换
   swapDevices = [{ device = "/dev/mapper/system-swap"; }];
+
+  services.fstrim = {
+    enable = true;
+    interval = "weekly";
+  };
 }

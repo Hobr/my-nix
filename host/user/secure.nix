@@ -9,5 +9,8 @@
   # 用户组
   users.users.kanade.extraGroups = lib.mkAfter [ "wheel" ];
 
-  security.rtkit.enable = true;
+  security = {
+    polkit.enable = true;
+    rtkit.enable = true;
+  };
 }

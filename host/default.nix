@@ -34,10 +34,12 @@
     ./user/user.nix
     # 地区
     ./user/locale.nix
-    # 安全
-    ./user/secure.nix
     # Shell
     ./user/shell.nix
+    # 安全
+    ./user/secure.nix
+    # 性能
+    ./user/power.nix
 
     # CLI
     ./software/nh.nix

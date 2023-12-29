@@ -4,8 +4,6 @@
     inputs.chaotic.nixosModules.default
   ];
 
-  # sched_ext
-  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
 
   boot = {
     # 版本
@@ -18,11 +16,13 @@
 
     # 初始化阶段
     initrd = {
-      availableKernelModules = [ "xhci_pci" "thunderbolt" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
+      availableKernelModules = [ "xhci_pci" "thunderbolt" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ "dm-snapshot" ];
     };
   };
 
+  # sched_ext
+  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
   services.ananicy = {
     enable = true;
     package = pkgs.ananicy-cpp;

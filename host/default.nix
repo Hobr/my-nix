@@ -15,7 +15,7 @@
     ./system/kernel.nix
     # 持久化
     ./system/impermanence.nix
-    # 启动 LightDM\Plymouth\XDG
+    # 启动 LightDM\XDG
 
     # 硬件
     ./hardware/hardware.nix

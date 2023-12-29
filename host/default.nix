@@ -15,6 +15,10 @@
     ./system/kernel.nix
     # 持久化
     ./system/impermanence.nix
+    # 安全启动
+    ./hardware/secureboot.nix
+    # TPM2
+    ./hardware/tpm.nix
     # 启动 LightDM\XDG
 
     # 硬件
@@ -27,8 +31,6 @@
     ./hardware/bluetooth.nix
     # 网络
     ./hardware/network.nix
-    # TPM2
-    ./hardware/tpm.nix
 
     # 用户
     ./user/user.nix

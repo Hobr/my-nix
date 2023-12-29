@@ -16,6 +16,7 @@
 - NVim环境
 - VSCode环境
 - CCache
+- ZSH Bindkey
 
 ## 安装
 
@@ -72,10 +73,18 @@ reboot
 ## 后续
 
 ```bash
-# 内核
-zgrep 'SCHED_CLASS' /proc/config.gz
-sudo scx_rusty
-sudo head -2 /sys/kernel/debug/sched/ext
+# 安全启动
+sudo bootctl status
+sudo sbctl create-keys
+sudo sbctl verify
+reboot
+## 打开安全启动并切换到Setup Mode
+sudo sbctl enroll-keys --microsoft
+reboot
+sudo bootctl status
+
+# TPM
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 --tpm2-with-pin=true /dev/nvme0n1
 
 # 开发环境
 cd /mnt/data/Project/my-nix

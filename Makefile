@@ -5,7 +5,7 @@ boot:
 	nh os boot -a ./
 
 update:
-	sudo proxychains4 nix flake update
+	proxychains4 nix flake update
 
 history:
 	sudo nix profile history --profile /nix/var/nix/profiles/system

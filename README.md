@@ -12,10 +12,10 @@
 
 ## TODO
 
-- CCache
 - 桌面环境
 - NVim环境
 - VSCode环境
+- CCache
 
 ## 安装
 
@@ -72,6 +72,10 @@ reboot
 ## 后续
 
 ```bash
+# 内核
+zgrep 'SCHED_CLASS' /proc/config.gz
+sudo scx_rusty
+
 # 开发环境
 cd /mnt/data/Project/my-nix
 direnv allow

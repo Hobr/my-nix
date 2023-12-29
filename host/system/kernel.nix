@@ -1,8 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, inputs, lib, ... }:
 {
+  imports = [
+    inputs.chaotic.nixosModules.default
+  ];
+  # CachyOS Kernel
+  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
+
   boot = {
     # 版本
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_cachyos-sched-ext;
 
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];

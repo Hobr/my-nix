@@ -12,7 +12,7 @@
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
 
-    kernelParams = [ "quiet" "loglevel=0" "nowatchdog" ];
+    kernelParams = [ "quiet" "loglevel=0" "nowatchdog" "systemd.gpt_auto=0" ];
 
     # 初始化阶段
     initrd = {

@@ -84,7 +84,7 @@ reboot
 sudo bootctl status
 
 # TPM
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 --tpm2-with-pin=true /dev/nvme0n1
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme0n1
 
 # 开发环境
 cd /mnt/data/Project/my-nix

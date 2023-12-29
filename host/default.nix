@@ -16,9 +16,9 @@
     # 持久化
     ./system/impermanence.nix
     # 安全启动
-    ./hardware/secureboot.nix
+    ./system/secureboot.nix
     # TPM2
-    ./hardware/tpm.nix
+    ./system/tpm.nix
     # 启动 LightDM\XDG
 
     # 硬件

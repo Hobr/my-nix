@@ -7,6 +7,4 @@
 
   # Libinput
   services.xserver.libinput.enable = true;
-
-  services.fwupd.enable = true;
 }

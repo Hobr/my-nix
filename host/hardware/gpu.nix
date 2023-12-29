@@ -17,6 +17,4 @@
     powerManagement.enable = true;
     powerManagement.finegrained = false;
   };
-
-  boot.initrd.availableKernelModules = lib.mkAfter [ "nvidia" "nvidia_drm" "nvidia_modeset" "nvidia_uvm" ];
 }

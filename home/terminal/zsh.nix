@@ -5,7 +5,19 @@
 
     # 插件
     enableAutosuggestions = true;
-    # initExtra
+    initExtra = ''
+      bindkey "''${key[Backspace]}" backward-delete-char
+      bindkey "''${key[Insert]}" overwrite-mode
+      bindkey "''${key[Home]}" beginning-of-line
+      bindkey "''${key[PageUp]}" up-line-or-history
+      bindkey "''${key[Delete]}" delete-char
+      bindkey "''${key[End]}" end-of-line
+      bindkey "''${key[PageDown]}" down-line-or-history
+      bindkey "''${key[Up]}" up-line-or-search
+      bindkey "''${key[Left]}" backward-char
+      bindkey "''${key[Down]}" down-line-or-search
+      bindkey "''${key[Right]}" forward-char
+    '';
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     plugins = [

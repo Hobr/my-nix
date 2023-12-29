@@ -75,6 +75,7 @@ reboot
 # 内核
 zgrep 'SCHED_CLASS' /proc/config.gz
 sudo scx_rusty
+sudo head -2 /sys/kernel/debug/sched/ext
 
 # 开发环境
 cd /mnt/data/Project/my-nix
@@ -95,3 +96,4 @@ gpg --import public-key.asc
 - [NixOS Wiki](https://nixos.wiki/)
 - [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
 - [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config)
+- [Chaotic's Nyx](https://www.nyx.chaotic.cx/)

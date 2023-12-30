@@ -85,7 +85,8 @@
 
   # Snapper
   services.snapper = {
-    snapshotInterval = "daily";
+    snapshotInterval = "4hours";
+    cleanupInterval = "3d";
     configs = {
       nix = {
         TIMELINE_CREATE = true;

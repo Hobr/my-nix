@@ -73,9 +73,6 @@ reboot
 ## 后续
 
 ```bash
-# 性能
-sudo systemctl enable --now nvidia-suspend.service nvidia-hibernate.service nvidia-resume.service tlp.service
-
 # 安全启动
 sudo bootctl status
 sudo sbctl create-keys

@@ -20,7 +20,9 @@
     # 终端
     ./desktop/alacritty.nix
     # Waybar
+    ./desktop/waybar.nix
     # Rofi
+    ./desktop/rofi.nix
 
     # ZSH
     ./terminal/zsh.nix

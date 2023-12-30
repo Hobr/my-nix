@@ -4,9 +4,8 @@
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.hyprland.nixosModules.default
     inputs.nh.nixosModules.default
-    
+
     # Nix配置
     ./global/nix.nix
     # 全局配置

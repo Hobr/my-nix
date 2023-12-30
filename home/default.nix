@@ -1,8 +1,6 @@
 {inputs,...}:
 {
   imports = [
-    #inputs.hyprland.homeManagerModules.default 
-
     # Nix配置
     ./global/nix.nix
     # 全局配置
@@ -15,8 +13,6 @@
     # Git
     ./tool/git.nix
 
-    # Hyprland
-    ./desktop/hyprland.nix
     # 主题
     ./desktop/theme.nix
     # 终端

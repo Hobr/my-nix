@@ -15,6 +15,8 @@
 
     # 主题
     ./desktop/theme.nix
+    # Hyprland
+    ./desktop/hyprland.nix
     # 终端
     ./desktop/alacritty.nix
     # Waybar

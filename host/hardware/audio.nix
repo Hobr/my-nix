@@ -1,4 +1,4 @@
-{ lib, pkg, ... }:
+{ lib, pkgs, ... }:
 {
   sound = {
     enable = true;

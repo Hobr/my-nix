@@ -1,4 +1,9 @@
 {
+  programs.hyprland = {
+    enable = true;
+    enableNvidiaPatches = true;
+  };
+
   # GDM
   services.xserver.enable = true;
   services.xserver.displayManager = {

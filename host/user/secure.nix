@@ -23,4 +23,5 @@
   security.polkit.enable = true;
   services.gnome.glib-networking.enable = true;
   programs.seahorse.enable = true;
+  services.dbus.packages = [ pkgs.gcr ];
 }

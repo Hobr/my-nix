@@ -104,5 +104,4 @@ gpg --import public-key.asc
 
 - [NixOS Wiki](https://nixos.wiki/)
 - [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
-- [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config)
 - [Chaotic's Nyx](https://www.nyx.chaotic.cx/)

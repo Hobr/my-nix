@@ -10,15 +10,6 @@
 
   # Rtkit
   security.rtkit.enable = true;
-
-  # Gnome Keyring & GnuPG
-  security.pam.services = {
-    greetd = {
-      enableGnomeKeyring = true;
-      gnupg.enable = true;
-    };
-  };
-
   environment.systemPackages = [ pkgs.polkit_gnome ];
   security.polkit.enable = true;
   services.gnome.glib-networking.enable = true;

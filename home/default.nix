@@ -14,8 +14,6 @@
 
     # Hyprland
     ./desktop/hyprland.nix
-    # XDG
-    ./desktop/xdg.nix
     # 主题
     ./desktop/theme.nix
     # 终端

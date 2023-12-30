@@ -34,10 +34,10 @@
       };
     };
 
-    # Intel Undervolt
-    #undervolt.enable = true;
-
     # 温度管理
-    #thermald.enable = true;
+    thermald.enable = true;
+
+    # Intel Undervolt
+    undervolt.enable = true;
   };
 }

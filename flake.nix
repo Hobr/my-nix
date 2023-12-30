@@ -38,7 +38,7 @@
     ## Hyrpland
     hyprland.url = "github:hyprwm/Hyprland/v0.33.1";
     ## XDG
-    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.2.6";
+    xdg-desktop-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.2.6";
     ## 插件
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";

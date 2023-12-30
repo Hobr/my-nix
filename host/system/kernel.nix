@@ -2,7 +2,7 @@
 {
   boot = {
     # 版本
-    kernelPackages = pkgs.linuxPackages_cachyos-sched-ext;
+    kernelPackages = pkgs.linuxPackages_cachyos;
 
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
@@ -17,8 +17,6 @@
     };
   };
 
-  # sched_ext
-  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
   services.ananicy = {
     enable = true;
     package = pkgs.ananicy-cpp;

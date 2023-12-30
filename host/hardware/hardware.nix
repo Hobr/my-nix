@@ -10,4 +10,6 @@
 
   # 雷电
   services.hardware.bolt.enable = true;
+
+  services.printing.enable = false;
 }

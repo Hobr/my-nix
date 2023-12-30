@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # Greet
+  # Greetd
   environment.etc."greetd/environments".text = ''
     Hyprland
   '';

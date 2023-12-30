@@ -8,6 +8,7 @@
   };
   # GVFS
   services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # 挂载
   fileSystems = {

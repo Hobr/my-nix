@@ -36,8 +36,5 @@
 
     # 温度管理
     thermald.enable = true;
-
-    # Intel Undervolt
-    undervolt.enable = true;
   };
 }

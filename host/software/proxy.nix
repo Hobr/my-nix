@@ -35,6 +35,8 @@
       ExecStartPre = "${pkgs.wget}/bin/wget -O /etc/clash/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
       ExecStart = "${pkgs.clash-meta}/bin/clash-meta -d /etc/clash";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
+      Restart = "on-failure";
+      RestartSec = 3;
     };
     wantedBy = [ "multi-user.target" ];
   };

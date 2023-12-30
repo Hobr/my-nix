@@ -13,9 +13,9 @@
         "eDP-1,2560x1440@165,2560x0,auto"
       ];
 
-      exec-once = [ 
+      exec-once = [
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-        "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --components=secrets,ssh,pkcs11"
+        "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --components=gpg,secrets,ssh,pkcs11"
       ];
 
       env = [

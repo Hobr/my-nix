@@ -15,6 +15,7 @@
 - 桌面环境
 - NVim环境
 - VSCode环境
+- Systemd-timesyncd resolved....
 - CCache
 - ZSH Bindkey
 

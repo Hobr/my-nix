@@ -8,6 +8,13 @@
   };
   users.users.kanade.extraGroups = lib.mkAfter [ "wheel" ];
 
+  # Gnome Keyring & GnuPG
+  security.pam.services = {
+    greetd = {
+      enableGnomeKeyring = true;
+      gnupg.enable = true;
+    };
+  };
   # Rtkit
   security.rtkit.enable = true;
   environment.systemPackages = [ pkgs.polkit_gnome ];

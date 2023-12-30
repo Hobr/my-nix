@@ -22,7 +22,8 @@
     ./system/secureboot.nix
     # TPM2
     ./system/tpm.nix
-    # 启动 LightDM\XDG
+    # 启动
+    ./system/launcher.nix
 
     # 硬件
     ./hardware/hardware.nix

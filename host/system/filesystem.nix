@@ -1,3 +1,4 @@
+{pkgs,...}:
 {
   boot = {
     # 文件系统支持
@@ -76,4 +77,10 @@
     enable = true;
     interval = "weekly";
   };
+
+  environment.systemPackages = with pkgs; [
+    btrfs-progs
+    btrfs-assistant
+    btrbk
+  ];
 }

@@ -1,4 +1,4 @@
-{pkgs,...}:
+{ pkgs, ... }:
 {
   boot = {
     # 文件系统支持
@@ -83,4 +83,8 @@
     btrfs-assistant
     btrbk
   ];
+
+  services.btrbk = {
+    extraPackages = pkgs.zstd;
+  };
 }

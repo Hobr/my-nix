@@ -20,7 +20,10 @@
   };
 
   # Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    portalPackage = inputs.xdg-desktop-portal-hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+  };
 
   #systemd.services."getty@tty1".enable = false;
   #systemd.services."autovt@tty1".enable = false;

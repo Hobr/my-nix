@@ -1,8 +1,12 @@
 { inputs, ... }: {
   imports = [
-    # Chaotic 软件包替换
+    inputs.home-manager.nixosModules.home-manager
     inputs.chaotic.nixosModules.default
-
+    inputs.impermanence.nixosModules.impermanence
+    inputs.lanzaboote.nixosModules.lanzaboote
+    inputs.hyprland.nixosModules.default
+    inputs.nh.nixosModules.default
+    
     # Nix配置
     ./global/nix.nix
     # 全局配置

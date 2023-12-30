@@ -1,7 +1,5 @@
 { inputs, pkgs, ... }:
 {
-  imports = [ inputs.hyprland.nixosModules.default ];
-
   services.xserver.enable = true;
 
   services.xserver.displayManager = {

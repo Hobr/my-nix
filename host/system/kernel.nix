@@ -1,10 +1,5 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, lib, ... }:
 {
-  imports = [
-    inputs.chaotic.nixosModules.default
-  ];
-
-
   boot = {
     # 版本
     kernelPackages = pkgs.linuxPackages_cachyos-sched-ext;

@@ -1,5 +1,8 @@
-{ outputs, ... }: {
+{ inputs, ... }: {
   imports = [
+    # Chaotic 软件包替换
+    inputs.chaotic.nixosModules.default
+
     # Nix配置
     ./global/nix.nix
     # 全局配置
@@ -45,8 +48,6 @@
 
     # CLI
     ./software/nh.nix
-    # 桌面
-    ./software/desktop.nix
     # OpenSSH
     ./software/openssh.nix
     # 代理

@@ -15,8 +15,6 @@ let
   '';
 in
 {
-  imports = [ inputs.hyprland.homeManagerModules.default ];
-
   home.packages = with pkgs; [
     qt6.qtwayland
     qt6Packages.qt6ct
@@ -34,7 +32,7 @@ in
     LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_NO_HARDWARE_CURSORS = "1";
+    WLR_NO_HARDWARE_CURSORS = 1;
 
     # 桌面
     XCURSOR_SIZE = 24;
@@ -46,6 +44,7 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
     settings = {
       exec-once = [ "${xdgstart}/bin/xdgstart.sh" ];
@@ -61,7 +60,7 @@ in
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        "col.active_border" = "rgba(33ccffee)";
         "col.inactive_border" = "rgba(595959aa)";
         layout = "dwindle";
         allow_tearing = false;
@@ -78,7 +77,6 @@ in
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        col.shadow = "rgba(1a1a1aee)";
       };
 
       animations = {

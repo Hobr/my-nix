@@ -1,5 +1,8 @@
+{inputs,...}:
 {
   imports = [
+    #inputs.hyprland.homeManagerModules.default 
+
     # Nix配置
     ./global/nix.nix
     # 全局配置

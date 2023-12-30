@@ -20,6 +20,8 @@
 
     # ZSH
     ./terminal/zsh.nix
+    # GNU Toolchain
+    ./terminal/gnu.nix
     # 终端工具
     ./terminal/cli.nix
     # Btop

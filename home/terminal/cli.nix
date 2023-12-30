@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs.unstable; [
+    nano
     wget
     fastfetch
     eza

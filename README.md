@@ -98,6 +98,9 @@ cat ~/.ssh/id_rsa.pub
 # GPG
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
+
+# NVIDIA
+sudo systemctl enable --now nvidia-suspend.service nvidia-hibernate.service nvidia-resume.service
 ```
 
 ## 参考资料

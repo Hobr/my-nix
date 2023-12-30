@@ -1,11 +1,12 @@
 { inputs, pkgs, lib, ... }:
 let
-  xdgstart = pkgs.writeShellScriptBin "xdgstart" ''
+  xdgstart = pkgs.writeShellScriptBin "xdgstart.sh" ''
     #!/bin/bash
     sleep 1
     killall -e xdg-desktop-portal-hyprland
     killall -e xdg-desktop-portal-wlr
     killall xdg-desktop-portal
+    sleep 1
     ${inputs.xdg-desktop-portal-hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland &
     sleep 2
     ${pkgs.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk &
@@ -47,7 +48,7 @@ in
     enable = true;
 
     settings = {
-      exec-once = [ "${xdgstart}/bin/xdgstart" ];
+      exec-once = [ "${xdgstart}/bin/xdgstart.sh" ];
 
       input = {
         kb_layout = "us";

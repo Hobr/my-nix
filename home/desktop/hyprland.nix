@@ -1,4 +1,4 @@
-{inputs, lib, ...}: {
+{ inputs, lib, ... }: {
   imports = [ inputs.hyprland.homeManagerModules.default ];
 
   # NVIDIA
@@ -12,8 +12,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
-    systemd.enable = true;
-    systemd.enable = true;
+    xwayland.enable = true;
   };
 }

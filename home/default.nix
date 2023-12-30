@@ -12,10 +12,12 @@
     # Git
     ./tool/git.nix
 
-    # XDG
-    ./desktop/xdg.nix
     # Hyprland
     ./desktop/hyprland.nix
+    # XDG
+    ./desktop/xdg.nix
+    # 主题
+    ./desktop/theme.nix
     # 终端
     ./desktop/alacritty.nix
     # Waybar

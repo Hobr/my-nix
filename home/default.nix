@@ -15,14 +15,17 @@
     # XDG
     ./desktop/xdg.nix
     # Hyprland
+    ./desktop/hyprland.nix
+    # 终端
+    ./desktop/alacritty.nix
     # Waybar
     # Rofi
 
     # ZSH
     ./terminal/zsh.nix
-    # GNU Toolchain
+    # GNU
     ./terminal/gnu.nix
-    # 终端工具
+    # 工具
     ./terminal/cli.nix
     # Btop
     ./terminal/btop.nix

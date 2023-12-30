@@ -62,6 +62,16 @@
   # 交换
   swapDevices = [{ device = "/dev/mapper/system-swap"; }];
 
+  services.btrfs.autoScrub = {
+    enable = true;
+    fileSystems = [
+      "/nix"
+      "/home"
+      "/persist"
+    ];
+    interval = "weekly";
+  };
+
   services.fstrim = {
     enable = true;
     interval = "weekly";

@@ -1,4 +1,3 @@
-{ inputs, ... }:
 {
   environment.persistence."/persist" = {
     hideMounts = true;

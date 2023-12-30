@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, ... }:
 {
   environment.systemPackages = lib.mkAfter [ pkgs.sbctl ];
 

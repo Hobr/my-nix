@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   sound = {
     enable = true;

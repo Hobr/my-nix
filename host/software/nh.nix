@@ -1,4 +1,3 @@
-{ inputs, ... }:
 {
   nh = {
     enable = true;

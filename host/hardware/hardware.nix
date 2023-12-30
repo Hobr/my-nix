@@ -7,4 +7,7 @@
 
   # Libinput
   services.xserver.libinput.enable = true;
+
+  # 雷电
+  services.hardware.bolt.enable = true;
 }

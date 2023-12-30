@@ -94,8 +94,8 @@
       bind = [
         "$mainMod, Q, exec, alacritty"
         "$mainMod, A, exec, firefox"
-        "$mainMod, W, exec, code"
-        "$mainMod, E, exec, rofi -show drun"
+        "$mainMod, E, exec, code"
+        "$mainMod, W, exec, rofi -show drun"
         "$mainMod, X, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, V, togglefloating,"

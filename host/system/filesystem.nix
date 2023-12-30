@@ -81,10 +81,33 @@
   environment.systemPackages = with pkgs; [
     btrfs-progs
     btrfs-assistant
-    btrbk
   ];
 
-  services.btrbk = {
-    extraPackages = pkgs.zstd;
+  # Snapper
+  services.snapper = {
+    snapshotInterval = "daily";
+    configs = {
+      nix = {
+        TIMELINE_CREATE = true;
+        TIMELINE_CLEANUP = true;
+        SUBVOLUME = "/nix";
+        ALLOW_USERS = [ "kanade" ];
+        ALLOW_GROUPS = [ "wheel" ];
+      };
+      persist = {
+        TIMELINE_CREATE = true;
+        TIMELINE_CLEANUP = true;
+        SUBVOLUME = "/persist";
+        ALLOW_USERS = [ "kanade" ];
+        ALLOW_GROUPS = [ "wheel" ];
+      };
+      home = {
+        TIMELINE_CREATE = true;
+        TIMELINE_CLEANUP = true;
+        SUBVOLUME = "/home";
+        ALLOW_USERS = [ "kanade" ];
+        ALLOW_GROUPS = [ "wheel" ];
+      };
+    };
   };
 }

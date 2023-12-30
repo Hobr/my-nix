@@ -329,11 +329,11 @@
     "hyprland-protocols_2": {
       "inputs": {
         "nixpkgs": [
-          "xdg-portal-hyprland",
+          "xdg-desktop-portal-hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "xdg-portal-hyprland",
+          "xdg-desktop-portal-hyprland",
           "systems"
         ]
       },
@@ -688,7 +688,7 @@
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-wayland": "nixpkgs-wayland",
-        "xdg-portal-hyprland": "xdg-portal-hyprland"
+        "xdg-desktop-portal-hyprland": "xdg-desktop-portal-hyprland"
       }
     },
     "rust-overlay": {
@@ -832,7 +832,7 @@
         "type": "gitlab"
       }
     },
-    "xdg-portal-hyprland": {
+    "xdg-desktop-portal-hyprland": {
       "inputs": {
         "hyprland-protocols": "hyprland-protocols_2",
         "nixpkgs": "nixpkgs_5",

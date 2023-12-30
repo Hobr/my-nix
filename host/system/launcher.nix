@@ -1,8 +1,7 @@
 {
+  # GDM
   services.xserver.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
   services.xserver.displayManager = {
-    # GDM
     gdm = {
       enable = true;
       wayland = true;

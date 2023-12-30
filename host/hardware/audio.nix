@@ -1,3 +1,4 @@
+{ lib, pkg, ... }:
 {
   sound = {
     enable = true;
@@ -19,4 +20,9 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  environment.systemPackages = with pkgs; lib.mkAfter [
+    pamixer
+    pavucontrol
+  ];
 }

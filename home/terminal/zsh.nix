@@ -5,6 +5,7 @@
 
     shellAliases = {
       pr = "proxychains4";
+      rm = "trash-put";
     };
     # 配置
     #    initExtra = ''

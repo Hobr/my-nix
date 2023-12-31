@@ -129,7 +129,7 @@ in
       "$mainMod" = "SUPER";
 
       bind = [
-        "$mainMod, Q, exec, rio"
+        "$mainMod, Q, exec, alacritty"
         "$mainMod, A, exec, firefox"
         "$mainMod, E, exec, code"
         "$mainMod, W, exec, rofi -show drun"

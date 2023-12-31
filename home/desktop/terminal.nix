@@ -1,5 +1,5 @@
 {
-  programs.rio = {
+  programs.alacritty = {
     enable = true;
 
     # 设置

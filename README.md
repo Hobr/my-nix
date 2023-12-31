@@ -107,5 +107,7 @@ gpg --import public-key.asc
 ## 参考资料
 
 - [NixOS Wiki](https://nixos.wiki/)
+- [NixOS Search](https://search.nixos.org/packages)
+- [Home-Manager Option](https://mipmip.github.io/home-manager-option-search/)
 - [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
 - [Chaotic's Nyx](https://www.nyx.chaotic.cx/)

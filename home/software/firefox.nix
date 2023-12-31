@@ -5,7 +5,7 @@
     # https://mozilla.github.io/policy-templates/
     policies = {
       BlockAboutConfig = true;
-      DefaultDownloadDirectory = "\${home}/Downloads";
+      DisablePocket = true;
     };
 
     profiles.hobr = {
@@ -15,17 +15,7 @@
       # 设置
       settings = {
         "browser.startup.homepage" = "https://nixos.org";
-        "browser.search.region" = "GB";
-        "browser.search.isUS" = false;
-        "distribution.searchplugins.defaultLocale" = "en-GB";
-        "general.useragent.locale" = "en-GB";
         "browser.bookmarks.showMobileBookmarks" = true;
-        "browser.newtabpage.pinned" = [
-          {
-            title = "NixOS";
-            url = "https://nixos.org";
-          }
-        ];
       };
       # 搜索
       search = {

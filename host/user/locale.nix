@@ -20,7 +20,7 @@
     packages = with pkgs.unstable; [
       fira-code
       mononoki
-      
+
       sarasa-gothic
 
       noto-fonts

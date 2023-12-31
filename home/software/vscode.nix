@@ -7,6 +7,12 @@
     enableExtensionUpdateCheck = false;
     userSettings = {
       "window.titleBarStyle" = "custom";
+      "files.autoSave" = "afterDelay";
+
+      "git.confirmSync" = false;
+      "git.enableSmartCommit" = true;
+
+      "diffEditor.ignoreTrimWhitespace" = false;
     };
   };
 }

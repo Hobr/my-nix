@@ -1,4 +1,18 @@
-{ pkgs, ... }:
+{ inputs, pkgs, lib, ... }:
+let
+  xdgstart = pkgs.writeShellScriptBin "xdgstart" ''
+    #!/bin/bash
+    sleep 1
+    killall -e xdg-desktop-portal-hyprland
+    killall -e xdg-desktop-portal-wlr
+    killall xdg-desktop-portal
+    ${pkgs.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland &
+    sleep 2
+    ${pkgs.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk &
+    sleep 2
+    ${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal &
+  '';
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -14,22 +28,33 @@
       ];
 
       exec-once = [
+        "${xdgstart}/bin/xdgstart"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
         "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --components=gpg,secrets,ssh,pkcs11"
       ];
 
       env = [
-        "XCURSOR_SIZE,24"
+        # 主题
+        "XCURSOR_SIZE,16"
+
+        # NVIDIA
         "LIBVA_DRIVER_NAME,nvidia"
-        "XDG_SESSION_TYPE,wayland"
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "WLR_NO_HARDWARE_CURSORS,1"
-        "QT_QPA_PLATFORM,wayland"
-        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+
+        # Wayland
+        "NIXOS_OZONE_WL,1"
+        "XDG_SESSION_TYPE,wayland"
+        "GDK_BACKEND=wayland,x11"
+        "SDL_VIDEODRIVER=wayland"
         "MOZ_ENABLE_WAYLAND,1"
-        #"NIXOS_OZONE_WL,1"
+        "CLUTTER_BACKEND=wayland"
+
+        # QT
+        "QT_QPA_PLATFORM=wayland;xcb"
+        #"QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
       ];
 
       input = {
@@ -87,6 +112,10 @@
 
       misc = {
         force_default_wallpaper = -1;
+      };
+
+      xwayland = {
+        force_zero_scaling = true;
       };
 
       "$mainMod" = "SUPER";

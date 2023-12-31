@@ -16,14 +16,6 @@
     };
   };
 
-  # 自动登录
-  #  services.xserver.displayManager.autoLogin = {
-  #    enable = true;
-  #    user = "kanade";
-  #  };
-  #  systemd.services."getty@tty1".enable = false;
-  #  systemd.services."autovt@tty1".enable = false;
-
   # Hyprland
   programs.hyprland = {
     enable = true;

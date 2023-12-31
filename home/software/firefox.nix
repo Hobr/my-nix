@@ -31,7 +31,7 @@
       search = {
         default = "Google";
         force = true;
-        order = [ "Google", "Baidu", "Bing", "GitHub" ];
+        order = [ "Google" "Baidu" "Bing" "GitHub" ];
         engines = {
           google = {
             name = "Google";

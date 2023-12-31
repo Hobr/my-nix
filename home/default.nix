@@ -42,7 +42,7 @@
     # 视频
     ./software/video.nix
     # 音频
-    ./software/audo.nix
+    ./software/audio.nix
     # VSCode
     ./software/vscode.nix
     # NeoVim

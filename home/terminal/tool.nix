@@ -45,14 +45,6 @@
     extraOptions = [ ];
   };
 
-  # lsd(ls)
-  programs.lsd = {
-    enable = true;
-    enableAliases = true;
-    colors = { };
-    settings = { };
-  };
-
   # feh(图片查看器)
   programs.feh = {
     enable = true;

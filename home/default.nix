@@ -61,16 +61,18 @@
     ./software/audio.nix
     # 图片
     ./software/image.nix
+    # 即时通讯
+    ./software/im.nix
+    # 邮箱
+    ./software/thunderbird.nix
+    # 下载
+    ./software/download.nix
     # VSCode
     ./software/vscode.nix
     # NeoVim
     ./software/nvim.nix
-    # 下载
-    ./software/download.nix
     # OBS
     ./software/obsstudio.nix
-    # 邮箱
-    ./software/thunderbird.nix
 
     # TexInfo
     ./office/texinfo.nix

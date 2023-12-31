@@ -14,5 +14,6 @@
 
       "diffEditor.ignoreTrimWhitespace" = false;
     };
+    keybindings = [ ];
   };
 }

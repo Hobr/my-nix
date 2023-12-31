@@ -48,6 +48,10 @@
   qt = {
     enable = true;
     platformTheme = "gtk3";
+    style = {
+      package = pkgs.adwaita-qt;
+      name = "adwaita-dark";
+    };
   };
 
   # 字体
@@ -55,5 +59,15 @@
   gtk.font = {
     name = "Sans";
     size = 11;
+  };
+
+  # 深色模式
+  services.darkman = {
+    enable = true;
+    lightModeScripts = { };
+    darkModeScripts = { };
+    settings = {
+      usegeoclue = false;
+    };
   };
 }

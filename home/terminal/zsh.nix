@@ -3,6 +3,7 @@
   programs.zsh = {
     enable = true;
 
+    shellAliases = { };
     # 配置
     #    initExtra = ''
     #      bindkey "''${key[Backspace]}" backward-delete-char

@@ -29,8 +29,6 @@ in
 
       exec-once = [
         "${xdgstart}/bin/xdgstart"
-        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-        "${pkgs.gnome.gnome-keyring}/bin/gnome-keyring-daemon --start --components=gpg,secrets,ssh,pkcs11"
       ];
 
       env = [

@@ -11,6 +11,9 @@
     config = { };
   };
 
+  # Ripgrep(grep)
+  programs.ripgrep.enable = true;
+
   # Bottom(top)
   programs.bottom = {
     enable = true;
@@ -72,6 +75,13 @@
     enable = true;
     enableZshIntegration = true;
     settings = { };
+  };
+
+  # Zoxide(cd)
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    options = [ ];
   };
 
   # nix-locate

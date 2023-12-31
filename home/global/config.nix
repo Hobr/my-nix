@@ -6,13 +6,4 @@
   };
 
   programs.home-manager.enable = true;
-
-  home = {
-    # $PATH
-    sessionPath = [ ];
-    # 环境变量
-    sessionVariables = { };
-    # 别名
-    shellAliases = { };
-  };
 }

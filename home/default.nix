@@ -14,6 +14,10 @@
     ./tool/ssh.nix
     # Git
     ./tool/git.nix
+    # 同步
+    ./tool/sync.nix
+    # 存储
+    ./tool/disk.nix
 
     # 主题
     ./desktop/theme.nix
@@ -22,9 +26,17 @@
     # 终端
     ./desktop/terminal.nix
     # Waybar
-    ./desktop/bar.nix
+    ./desktop/wabar.nix
     # Rofi
     ./desktop/rofi.nix
+    # 消息
+    ./desktop/notice.nix
+    # 锁屏
+    ./desktop/lock.nix
+    # 剪切板
+    ./desktop/clipboard.nix
+    # 注销菜单
+    ./desktop/logout.nix
 
     # ZSH
     ./terminal/zsh.nix
@@ -55,13 +67,19 @@
     ./software/download.nix
     # OBS
     ./software/obsstudio.nix
+    # 邮箱
+    ./software/thunderbird.nix
 
     # TexInfo
     ./office/texinfo.nix
 
     # Python
     ./sci/python.nix
-    # 科学制图
-    ./sci/plot.nix
+    # 数学
+    ./sci/math.nix
+    # 阅读器
+    ./sci/reader.nix
+    # Tex
+    ./sci/tex.nix
   ];
 }

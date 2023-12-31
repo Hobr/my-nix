@@ -1,5 +1,6 @@
 { pkgs, config, ... }:
 {
+  # XDG
   xdg = {
     enable = true;
 
@@ -18,6 +19,7 @@
     };
   };
 
+  # 鼠标
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;
@@ -25,27 +27,33 @@
     size = 16;
   };
 
+  # GTK
   gtk = {
     enable = true;
 
+    # 主题
     theme = {
       package = pkgs.flat-remix-gtk;
       name = "Flat-Remix-GTK-Grey-Darkest";
     };
 
+    # Icon
     iconTheme = {
       package = pkgs.gnome.adwaita-icon-theme;
       name = "Adwaita";
     };
-
-    font = {
-      name = "Sans";
-      size = 11;
-    };
   };
 
+  # QT
   qt = {
     enable = true;
     platformTheme = "gtk3";
+  };
+
+  # 字体
+  fonts.fontconfig.enable = true;
+  gtk.font = {
+    name = "Sans";
+    size = 11;
   };
 }

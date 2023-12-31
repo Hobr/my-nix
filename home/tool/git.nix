@@ -26,4 +26,10 @@
     # Delta
     delta.enable = true;
   };
+
+  # LazyGit
+  programs.lazygit = {
+    enable = true;
+    settings = {};
+  };
 }

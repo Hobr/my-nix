@@ -74,6 +74,9 @@ reboot
 ## 后续
 
 ```bash
+# 索引
+nix-index
+
 # 安全启动
 sudo bootctl status
 sudo sbctl create-keys

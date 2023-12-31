@@ -49,6 +49,8 @@
     # DirEnv
     ./terminal/direnv.nix
 
+    # 基础软件
+    ./software/base.nix
     # 输入法
     ./software/fcitx.nix
     # 浏览器
@@ -74,12 +76,14 @@
     ./office/texinfo.nix
 
     # Python
-    ./sci/python.nix
+    ./study/python.nix
     # 数学
-    ./sci/math.nix
-    # 阅读器
-    ./sci/reader.nix
+    ./study/math.nix
+    # 阅读
+    ./study/reader.nix
+    # 写作
+    ./study/writer.nix
     # Tex
-    ./sci/tex.nix
+    ./study/tex.nix
   ];
 }

@@ -4,7 +4,6 @@
     nano
     wget
     fastfetch
-    eza
     nixpkgs-fmt
     xorg.xlsclients
   ];

@@ -3,6 +3,7 @@
   home.packages = with pkgs.unstable; lib.mkAfter [
     #obsidian
     zotero
+    anki
 
     libreoffice
     hunspell

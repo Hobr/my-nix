@@ -12,6 +12,7 @@
 
 ## TODO
 
+- Rime
 - ZSH Bindkey
 - 桌面环境
 - VSCode环境

@@ -23,18 +23,25 @@
     settings = { };
   };
 
-  # GStreamer
-  home.packages = with pkgs.unstable.gst_all_1; lib.mkAfter [
-    gstreamer
-    gstreamer.dev
-    gst-libav
-    gst-vaapi
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-ugly
-    gst-plugins-rs
-    gstreamermm
-    gst-editing-services
+  home.packages = with pkgs.unstable; lib.mkAfter [
+    # 音乐播放器
+    amberol
+    yesplaymusic
+
+    # 歌词
+    waylyrics
+
+    # GStreamer
+    gst_all_1.gstreamer
+    gst_all_1.gstreamer.dev
+    gst_all_1.gst-libav
+    gst_all_1.gst-vaapi
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-plugins-rs
+    gst_all_1.gstreamermm
+    gst_all_1.gst-editing-services
   ];
 }

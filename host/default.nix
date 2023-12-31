@@ -52,8 +52,8 @@
 
     # OpenSSH
     ./software/openssh.nix
-    # CLI
-    ./software/nh.nix
+    # NixOS Cli
+    ./software/nixcli.nix
     # 代理
     ./software/proxy.nix
   ];

@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-  };
-
   # 内核
   boot = {
     # 版本
@@ -20,6 +18,7 @@
     initrd = {
       availableKernelModules = [ "xhci_pci" "thunderbolt" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ "dm-snapshot" ];
+    };
   };
 
   # Ananicy

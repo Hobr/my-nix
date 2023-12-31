@@ -6,7 +6,7 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     userSettings = {
-       "window.titleBarStyle": "custom";
+      "window.titleBarStyle" = "custom";
     };
   };
 }

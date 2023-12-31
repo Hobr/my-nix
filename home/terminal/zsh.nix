@@ -3,7 +3,9 @@
   programs.zsh = {
     enable = true;
 
-    shellAliases = { };
+    shellAliases = {
+      pr = "proxychains4";
+    };
     # 配置
     #    initExtra = ''
     #      bindkey "''${key[Backspace]}" backward-delete-char

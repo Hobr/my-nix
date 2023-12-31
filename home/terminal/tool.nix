@@ -80,7 +80,4 @@
     package = pkgs.nix-index;
     enableZshIntegration = true;
   };
-  programs.zsh.initExtra = lib.mkAfter ''
-    source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
-  '';
 }

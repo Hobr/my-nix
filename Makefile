@@ -14,7 +14,7 @@ clean:
 	sudo nix-collect-garbage --delete-older-than 1d
 
 purge:
-	sudo nix-collect-garbage -d
+	nix-collect-garbage -d
 
 gc:
 	sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 3d

@@ -119,7 +119,7 @@ in
       };
 
       windowrulev2 = [
-        #"fakefullscreen, class:^(code-url-handler)$"
+        "fakefullscreen, class:^(code-url-handler)$"
         "float,class:^(pavucontrol)$"
         "float,class:^(blueman-manager)$"
         "float,class:^(nm-applet)$"

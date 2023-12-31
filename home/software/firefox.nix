@@ -14,7 +14,7 @@
       extensions = [ ];
       # 设置
       settings = {
-        "browser.startup.homepage" = "https://nixos.org";
+        "browser.startup.homepage" = "https://search.nixos.org/packages";
         "browser.bookmarks.showMobileBookmarks" = true;
       };
       # 搜索

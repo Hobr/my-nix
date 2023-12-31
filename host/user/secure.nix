@@ -4,7 +4,7 @@
   security.rtkit.enable = true;
 
   # Polkit
-  environment.systemPackages = [ pkgs.polkit_gnome ];
+  environment.systemPackages = with pkgs.unstable; lib.mkAfter [ polkit_gnome ];
   security.polkit.enable = true;
 
   # Sudo

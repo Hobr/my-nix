@@ -175,4 +175,7 @@ in
     # 插件
     plugins = [ ];
   };
+
+  # 壁纸
+  home.packages = with pkgs.unstable; lib.mkAfter [ hyprpaper ];
 }

@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  home.packages = lib.mkAfter [ pkgs.pinentry-gnome ];
+  home.packages = with pkgs.unstable; lib.mkAfter [ pinentry-gnome ];
   services.gnome-keyring = {
     enable = true;
     components = [ "pkcs11" "secrets" "ssh" ];

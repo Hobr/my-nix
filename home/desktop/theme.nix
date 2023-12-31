@@ -70,4 +70,7 @@
       usegeoclue = false;
     };
   };
+
+  # nwg-look
+  home.packages = with pkgs.unstable; lib.mkAfter [ nwg-look ];
 }

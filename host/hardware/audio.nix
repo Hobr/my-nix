@@ -21,7 +21,7 @@
     jack.enable = true;
   };
 
-  environment.systemPackages = with pkgs; lib.mkAfter [
+  environment.systemPackages = with pkgs.unstable; lib.mkAfter [
     pamixer
     pavucontrol
   ];

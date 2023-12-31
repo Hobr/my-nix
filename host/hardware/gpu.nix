@@ -13,7 +13,7 @@
   };
 
   # Vulkan
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs.unstable; lib.mkAfter [
     vulkan-loader
     vulkan-validation-layers
     vulkan-tools

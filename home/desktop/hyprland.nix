@@ -53,7 +53,7 @@ in
 
         # QT
         "QT_QPA_PLATFORM=wayland;xcb"
-        #"QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
       ];
 
@@ -117,6 +117,14 @@ in
       xwayland = {
         force_zero_scaling = true;
       };
+
+      windowrulev2 = [
+        #"fakefullscreen, class:^(code-url-handler)$"
+        "float,class:^(pavucontrol)$"
+        "float,class:^(blueman-manager)$"
+        "float,class:^(nm-applet)$"
+        "float,class:^(nm-connection-editor)$"
+      ];
 
       "$mainMod" = "SUPER";
 

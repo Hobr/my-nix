@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  home.packages = lib.mkAfter [ pkgs.unstable.pinentry-gnome ];
+  home.packages = lib.mkAfter [ pkgs.pinentry-gnome ];
   services.gnome-keyring.enable = true;
 
   services.gpg-agent = {

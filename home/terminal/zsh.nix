@@ -3,8 +3,7 @@
   programs.zsh = {
     enable = true;
 
-    # 插件
-    enableAutosuggestions = true;
+    # 配置
     initExtra = ''
       bindkey "''${key[Backspace]}" backward-delete-char
       bindkey "''${key[Insert]}" overwrite-mode
@@ -18,6 +17,9 @@
       bindkey "''${key[Down]}" down-line-or-search
       bindkey "''${key[Right]}" forward-char
     '';
+
+    # 插件
+    enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     plugins = [

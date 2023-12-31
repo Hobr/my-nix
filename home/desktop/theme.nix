@@ -57,7 +57,7 @@
   # 字体
   fonts.fontconfig.enable = true;
   gtk.font = {
-    name = "Sans";
+    name = "Sarasa UI SC";
     size = 11;
   };
 

@@ -18,17 +18,26 @@
   # 字体
   fonts = {
     packages = with pkgs.unstable; [
-      fira-code
-      mononoki
+      (nerdfonts.override { fonts = [ "Mononoki" ]; })
 
       sarasa-gothic
+      twitter-color-emoji
 
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
       noto-fonts-emoji
-
-      source-han-serif
-      source-serif-pro
     ];
+
+    fontconfig = {
+      enable = true;
+      cache32Bit = true;
+      defaultFonts = {
+        serif = [ "Sarasa UI SC" "Noto Serif CJK SC" "Mononoki Nerd Font" ];
+        sansSerif = [ "Sarasa UI SC" "Noto Sans CJK SC" "Mononoki Nerd Font" ];
+        monospace = [ "Sarasa Mono SC" "Noto Sans Mono CJK SC" "Mononoki Nerd Font Mono" ];
+        emoji = [ "Twemoji" "Noto Color Emoji" ];
+      };
+    };
   };
 }

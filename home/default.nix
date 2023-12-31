@@ -57,12 +57,12 @@
     ./software/video.nix
     # 音频
     ./software/audio.nix
+    # 图片
+    ./software/image.nix
     # VSCode
     ./software/vscode.nix
     # NeoVim
     ./software/nvim.nix
-    # Emacs
-    ./software/emacs.nix
     # 下载
     ./software/download.nix
     # OBS

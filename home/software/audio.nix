@@ -1,3 +1,4 @@
+{ pkgs, lib, ... }:
 {
   # MPD
   services.mpd = {
@@ -21,4 +22,19 @@
     mpdMusicDir = "/home/kanade/Music";
     settings = { };
   };
+
+  # GStreamer
+  home.packages = with pkgs.unstable.gst_all_1; lib.mkAfter [
+    gstreamer
+    gstreamer.dev
+    gst-libav
+    gst-vaapi
+    gst-plugins-base
+    gst-plugins-good
+    gst-plugins-bad
+    gst-plugins-ugly
+    gst-plugins-rs
+    gstreamermm
+    gst-editing-services
+  ];
 }

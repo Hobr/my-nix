@@ -12,12 +12,13 @@
 
 ## TODO
 
+- ZSH Bindkey
 - 桌面环境
-- NVim环境
 - VSCode环境
+- NVim环境
 - Systemd-timesyncd resolved....
 - CCache
-- ZSH Bindkey
+- 邮箱
 
 ## 安装
 

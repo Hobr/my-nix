@@ -1,4 +1,4 @@
-{pkgs,lib,...}:
+{ pkgs, lib, ... }:
 {
   # Bat(cat)
   programs.bat = {
@@ -6,34 +6,34 @@
     extraPackages = with pkgs.bat-extras; [ prettybat batwatch batpipe batman batgrep batdiff ];
 
     # 配置
-    themes = {};
-    syntaxes = {};
-    config = {};
-  }
+    themes = { };
+    syntaxes = { };
+    config = { };
+  };
 
   # Bottom(top)
   programs.bottom = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 
   # Btop(top)
   programs.btop = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 
   # Htop(top)
   programs.htop = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 
   # Broot(tree)
   programs.broot = {
     enable = true;
     enableZshIntegration = true;
-    settings = {};
+    settings = { };
   };
 
   # eza(ls)
@@ -42,28 +42,28 @@
     enableAliases = true;
     git = true;
     icons = true;
-    extraOptions = [];
+    extraOptions = [ ];
   };
 
   # lsd(ls)
   programs.lsd = {
     enable = true;
     enableAliases = true;
-    colors = {};
-    settings = {};
+    colors = { };
+    settings = { };
   };
 
   # feh(图片查看器)
   programs.feh = {
     enable = true;
-    buttons = {};
-    keybindings = {};
+    buttons = { };
+    keybindings = { };
   };
 
   # imv(图片查看器)
   programs.imv = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 
   # fzf(fd)
@@ -76,11 +76,10 @@
   programs.less.enable = true;
 
   # 目录颜色
-  programs.dircolors =
-  {
+  programs.dircolors = {
     enable = true;
     enableZshIntegration = true;
-    settings = {};
+    settings = { };
   };
 
   # nix-locate

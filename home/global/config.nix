@@ -9,10 +9,10 @@
 
   home = {
     # $PATH
-    sessionPath = [];
+    sessionPath = [ ];
     # 环境变量
-    sessionVariables = {};
+    sessionVariables = { };
     # 别名
-    shellAliases = {};
-  }
+    shellAliases = { };
+  };
 }

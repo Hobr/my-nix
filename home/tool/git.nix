@@ -30,6 +30,6 @@
   # LazyGit
   programs.lazygit = {
     enable = true;
-    settings = {};
+    settings = { };
   };
 }

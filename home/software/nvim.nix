@@ -9,6 +9,6 @@
     vimdiffAlias = true;
 
     # 插件
-    plugins = [];
+    plugins = [ ];
   };
 }

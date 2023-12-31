@@ -1,8 +1,8 @@
 {
   programs.ncmpcpp = {
     enable = true;
-    bindings = [];
+    bindings = [ ];
     mpdMusicDir = "/home/kanade/Music";
-    settings = {};
+    settings = { };
   };
 }

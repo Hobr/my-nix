@@ -11,7 +11,7 @@
     profiles.hobr = {
       isDefault = true;
       # 扩展
-      extensions = [];
+      extensions = [ ];
       # 设置
       settings = {
         "browser.startup.homepage" = "https://nixos.org";
@@ -31,7 +31,7 @@
       search = {
         default = "Google";
         force = true;
-        order = ["Google", "Baidu", "Bing", "GitHub"];
+        order = [ "Google", "Baidu", "Bing", "GitHub" ];
         engines = {
           google = {
             name = "Google";

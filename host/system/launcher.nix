@@ -29,7 +29,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  # seatd
+  # Seatd
   systemd.services = {
     seatd = {
       enable = true;

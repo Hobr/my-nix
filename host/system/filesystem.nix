@@ -4,11 +4,12 @@
     # 文件系统支持
     supportedFilesystems = [ "btrfs" "ntfs" "vfat" "ext4" "fat" "tmpfs" ];
 
-    # LUKS设备
+    # LUKS
     initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
   };
   # GVFS
   services.gvfs.enable = true;
+  # 挂载
   services.udisks2.enable = true;
 
   # 挂载
@@ -26,7 +27,7 @@
       options = [ "defaults" "size=16G" "mode=755" ];
     };
 
-    # 持久化分区
+    # 持久化
     "/persist" = {
       device = "/dev/mapper/system-root";
       fsType = "btrfs";
@@ -34,12 +35,14 @@
       options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@persist" ];
     };
 
+    # Nix
     "/nix" = {
       device = "/dev/mapper/system-root";
       fsType = "btrfs";
       options = [ "defaults" "ssd" "discard" "noatime" "space_cache=v2" "compress=zstd" "subvol=@nix" ];
     };
 
+    # 用户
     "/home" = {
       device = "/dev/mapper/system-root";
       fsType = "btrfs";
@@ -63,6 +66,13 @@
   # 交换
   swapDevices = [{ device = "/dev/mapper/system-swap"; }];
 
+  # SSD Trim
+  services.fstrim = {
+    enable = true;
+    interval = "weekly";
+  };
+
+  # Btrfs Scrub
   services.btrfs.autoScrub = {
     enable = true;
     fileSystems = [
@@ -72,16 +82,6 @@
     ];
     interval = "weekly";
   };
-
-  services.fstrim = {
-    enable = true;
-    interval = "weekly";
-  };
-
-  environment.systemPackages = with pkgs; [
-    btrfs-progs
-    btrfs-assistant
-  ];
 
   # Snapper
   services.snapper = {

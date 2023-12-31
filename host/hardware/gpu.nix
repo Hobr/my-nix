@@ -12,6 +12,7 @@
     ];
   };
 
+  # Vulkan
   environment.systemPackages = with pkgs; [
     vulkan-loader
     vulkan-validation-layers
@@ -20,6 +21,7 @@
     nvtop
   ];
 
+  # NVIDIA驱动
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.beta;

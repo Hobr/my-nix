@@ -76,6 +76,11 @@ reboot
 ## 后续
 
 ```bash
+# Snapper
+sudo btrfs subvolume create /nix/.snapshots
+sudo btrfs subvolume create /home/.snapshots
+sudo btrfs subvolume create /persist/.snapshots
+
 # 安全启动
 sudo bootctl status
 sudo sbctl create-keys

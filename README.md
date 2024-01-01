@@ -110,6 +110,7 @@ ssh-keygen -t rsa -C "mail@hobr.site"
 cat ~/.ssh/id_rsa.pub
 
 # GPG
+gpg --list-secret-keys
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
 ```

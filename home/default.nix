@@ -1,8 +1,6 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.nix-index-database.hmModules.nix-index
-
     # Nix配置
     ./global/nix.nix
     # 全局配置

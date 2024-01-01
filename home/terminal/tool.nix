@@ -11,25 +11,11 @@
     config = { };
   };
 
-  # Ripgrep(grep)
-  programs.ripgrep.enable = true;
-
-  # Bottom(top)
-  programs.bottom = {
+  # Zoxide(cd)
+  programs.zoxide = {
     enable = true;
-    settings = { };
-  };
-
-  # Btop(top)
-  programs.btop = {
-    enable = true;
-    settings = { };
-  };
-
-  # Htop(top)
-  programs.htop = {
-    enable = true;
-    settings = { };
+    enableZshIntegration = true;
+    options = [ ];
   };
 
   # Broot(tree)
@@ -48,15 +34,18 @@
     extraOptions = [ ];
   };
 
-  # feh(图片查看器)
-  programs.feh = {
+  # 目录颜色
+  programs.dircolors = {
     enable = true;
-    buttons = { };
-    keybindings = { };
+    enableZshIntegration = true;
+    settings = { };
   };
 
-  # imv(图片查看器)
-  programs.imv = {
+  # Ripgrep(grep)
+  programs.ripgrep.enable = true;
+
+  # Btop(top)
+  programs.btop = {
     enable = true;
     settings = { };
   };
@@ -70,24 +59,11 @@
   # less
   programs.less.enable = true;
 
-  # 目录颜色
-  programs.dircolors = {
+  # feh(图片查看器)
+  programs.feh = {
     enable = true;
-    enableZshIntegration = true;
-    settings = { };
+    buttons = { };
+    keybindings = { };
   };
 
-  # Zoxide(cd)
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-    options = [ ];
-  };
-
-  # nix-locate
-  programs.nix-index = {
-    enable = true;
-    package = pkgs.nix-index;
-    enableZshIntegration = true;
-  };
 }

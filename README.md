@@ -65,9 +65,14 @@ mkdir /mnt/nix
 mkswap -L Swap /dev/mapper/system-swap
 swapon /dev/mapper/system-swap
 
-# 部署
+# 配置
 git clone https://github.com/Hobr/my-nix.git
 cd my-nix
+# 加密
+## GitHub access-tokens
+## Clash
+
+# 部署
 export all_proxy=socks5://192.168.1.102:7890
 nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
 reboot

@@ -21,6 +21,9 @@
       auto-optimise-store = true;
       system-features = [ "big-parallel" ];
 
+      # Github API
+      # access-tokens = "github.com=${secrets.git.github.oauth-token}";
+
       # 镜像
       trusted-users = [ "kanade" ];
       substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/" "https://cache.nixos.org" ];

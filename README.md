@@ -16,6 +16,7 @@
 - ZSH Bindkey
 - 桌面环境
 - VSCode环境
+- ReGreet
 - NVim环境
 - Systemd-timesyncd resolved....
 - CCache

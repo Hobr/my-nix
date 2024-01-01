@@ -9,6 +9,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic源
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # NUR
+    nur.url = github:nix-community/NUR;
     ## Wayland包
     nixpkgs-wayland = {
       url = "github:nix-community/nixpkgs-wayland";

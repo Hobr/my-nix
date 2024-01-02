@@ -4,14 +4,21 @@
     enable = true;
     package = pkgs.proxychains-ng;
     quietMode = true;
+    chain.type = "dynamic";
 
     # 代理
     proxies = {
-      Clash = {
+      sock = {
         enable = true;
         type = "socks5";
         host = "127.0.0.1";
         port = 7891;
+      };
+      http = {
+        enable = true;
+        type = "http";
+        host = "127.0.0.1";
+        port = 7890;
       };
     };
   };

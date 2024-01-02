@@ -35,4 +35,7 @@
 
   # 温度管理
   services.thermald.enable = true;
+
+  # ACPI
+  services.acpid.enable = enable;
 }

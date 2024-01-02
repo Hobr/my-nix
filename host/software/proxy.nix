@@ -4,7 +4,6 @@
     enable = true;
     package = pkgs.proxychains-ng;
     quietMode = true;
-    chain.type = "dynamic";
 
     # 代理
     proxies = {

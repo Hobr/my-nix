@@ -37,5 +37,5 @@
   services.thermald.enable = true;
 
   # ACPI
-  services.acpid.enable = enable;
+  services.acpid.enable = true;
 }

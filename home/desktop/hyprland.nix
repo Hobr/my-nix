@@ -23,8 +23,7 @@ in
     # 设置
     settings = {
       monitor = [
-        "DP-1,2560x1440@165,auto,auto"
-        "eDP-1,2560x1440@165,2560x0,auto"
+        "eDP-1,2560x1440@165,auto,1.25"
       ];
 
       exec-once = [

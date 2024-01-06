@@ -26,7 +26,11 @@
 
       # 镜像
       trusted-users = [ "kanade" ];
-      substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" "http://mirrors.ustc.edu.cn/nix-channels/store/" "https://cache.nixos.org" ];
+      substituters = [
+        "https://mirror.sjtu.edu.cn/nix-channels/store"
+        "http://mirrors.ustc.edu.cn/nix-channels/store/"
+        "https://cache.nixos.org"
+      ];
     };
 
     # GC

@@ -59,8 +59,12 @@ mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,s
 mount -m /dev/nvme1n1p1 /mnt/boot
 mount -m /dev/nvme1n1p3 /mnt/mnt/windows
 mount -m /dev/nvme1n1p4 /mnt/mnt/data
-mkdir /mnt/persist
-mkdir /mnt/nix
+
+# Snapper
+btrfs subvolume create /mnt/nix/.snapshots
+btrfs subvolume create /mnt/home/.snapshots
+btrfs subvolume create /mnt/persist/.snapshots
+
 
 # 交换
 mkswap -L Swap /dev/mapper/system-swap
@@ -75,17 +79,20 @@ cd my-nix
 
 # 部署
 export all_proxy=socks5://192.168.1.102:7890
-nixos-install --option substituters "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --show-trace --flake .#handsonic
+nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option trusted-public-keys "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8=" --show-trace --flake .#handsonic
 reboot
 ```
 
 ## 后续
 
 ```bash
-# Snapper
-sudo btrfs subvolume create /nix/.snapshots
-sudo btrfs subvolume create /home/.snapshots
-sudo btrfs subvolume create /persist/.snapshots
+# 取消注释 host/default.nix第23行
+sudo mkdir /etc/clash
+
+# Fwupd
+sudo proxychains4 fwupdmgr refresh
+sudo proxychains4 fwupdmgr get-updates
+sudo proxychains4 fwupdmgr update
 
 # 安全启动
 sudo bootctl status

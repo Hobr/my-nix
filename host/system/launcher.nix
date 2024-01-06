@@ -19,7 +19,7 @@
   # Hyprland
   programs.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
+    package = pkgs.unstable.hyprland;
     xwayland.enable = true;
   };
 

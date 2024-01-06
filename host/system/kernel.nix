@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # 内核
   boot = {
     # 版本
-    kernelPackages = pkgs.linuxPackages_cachyos;
+    kernelPackages = pkgs.linuxPackages_cachyos-sched-ext;
 
     # 内核参数
     consoleLogLevel = 0;
@@ -27,4 +27,7 @@
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-cpp-rules;
   };
+
+  # Sch
+  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
 }

@@ -2,9 +2,10 @@
   additions = final: _prev: import ../pkg { pkgs = final; };
 
   modifications = final: prev: {
-    # example = prev.example.overrideAttrs (oldAttrs: rec {
-    # ...
-    # });
+    # VS Code Fcitx5
+    vscode = prev.vscode.override (old: {
+      commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" "-g" ];
+    });
   };
 
   # pkgs.unstable

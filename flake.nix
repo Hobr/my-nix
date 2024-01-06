@@ -31,10 +31,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #sops-nix = {
+    #  url = "github:Mic92/sops-nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     ## CLI
     nh = {
       url = "github:viperML/nh";
@@ -43,41 +43,41 @@
 
     # 桌面环境
     ## Hyrpland
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     ## Hyprpaper
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprpaper = {
+    #  url = "github:hyprwm/hyprpaper";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     ## Hypr Grimblast
-    hyprcontrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprcontrib = {
+    #  url = "github:hyprwm/contrib";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     ## Hyprpicker
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprpicker = {
+    #  url = "github:hyprwm/hyprpicker";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     ## XDPH
-    xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
+    #xdg-portal-hyprland.url = "github:hyprwm/xdg-desktop-portal-hyprland";
 
     # 语言
     ## Rust
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #rust-overlay = {
+    #  url = "github:oxalica/rust-overlay";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     # 主题
     ## Alacritty
-    catppuccin-alacritty = {
-      url = "github:catppuccin/alacritty";
-      flake = false;
-    };
+    #catppuccin-alacritty = {
+    #  url = "github:catppuccin/alacritty";
+    #  flake = false;
+    #};
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

@@ -47,7 +47,7 @@
 
   # 软件文档
   documentation = {
-    man.enable = true;
+    man.enable = false;
     doc.enable = false;
     dev.enable = false;
     info.enable = false;

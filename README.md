@@ -114,7 +114,11 @@ pre-commit install
 
 # SSH
 ssh-keygen -t rsa -C "mail@hobr.site"
-cat ~/.ssh/id_rsa.pub
+## 或者
+cp xxx/id_rsa.pub ~/.ssh
+cp xxx/id_rsa ~/.ssh
+chmod 700 id_rsa
+chmod 700 id_rsa.pub
 
 # GPG
 gpg --list-secret-keys

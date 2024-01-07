@@ -46,6 +46,8 @@
     ./terminal/cli.nix
     # DirEnv
     ./terminal/direnv.nix
+    # TexInfo
+    ./terminal/texinfo.nix
 
     # 基础软件
     ./software/base.nix
@@ -71,9 +73,6 @@
     ./software/nvim.nix
     # OBS
     ./software/obsstudio.nix
-
-    # TexInfo
-    ./office/texinfo.nix
 
     # Python
     ./study/python.nix

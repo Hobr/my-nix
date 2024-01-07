@@ -29,8 +29,6 @@
         macAddress = "permanent";
         # 查找WIFI时随机MAC
         scanRandMacAddress = true;
-        # 省电模式
-        powersave = true;
       };
     };
   };

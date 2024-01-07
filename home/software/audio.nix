@@ -28,9 +28,6 @@
     amberol
     yesplaymusic
 
-    # 歌词
-    waylyrics
-
     # GStreamer
     gst_all_1.gstreamer
     gst_all_1.gstreamer.dev

@@ -10,7 +10,7 @@
     # Chaotic源
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # NUR
-    nur.url = github:nix-community/NUR;
+    #nur.url = github:nix-community/NUR;
     ## Wayland包
     nixpkgs-wayland = {
       url = "github:nix-community/nixpkgs-wayland";
@@ -27,7 +27,7 @@
     };
     ## 安全启动
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.3.0";
+      url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全

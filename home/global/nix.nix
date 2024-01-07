@@ -16,7 +16,7 @@
 
   # 文档
   manual = {
-    manpages.enable = true;
+    manpages.enable = false;
     html.enable = false;
     json.enable = false;
   };

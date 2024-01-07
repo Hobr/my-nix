@@ -3,7 +3,7 @@
     kanade = {
       isNormalUser = true;
       uid = 1000;
-      hashedPassword = "$y$j9T$1Ow2pVvsJL40Xvsgbuz220$ibZZwwM4N54HMnpdKxEppqpCpOS3Z88jbofpmgSf7h3";
+      hashedPassword = "$y$j9T$C0UuVeSpwcZT/Ig7k/IIK0$W0jxMqKUPiExoWaQ0TWiO8ZL9I5eg2t5MH8N/EBz2B0";
     };
   };
 }

@@ -2,7 +2,10 @@
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.unstable.vscode;
+    package = pkgs.unstable.vscode.override (old: {
+      # Wayland Fcitx5
+      commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" ];
+    });
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     userSettings = {

@@ -27,6 +27,7 @@
     # 音乐播放器
     amberol
     yesplaymusic
+    playerctl
 
     # GStreamer
     gst_all_1.gstreamer

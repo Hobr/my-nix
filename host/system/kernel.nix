@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   # 内核
   boot = {
@@ -27,7 +27,4 @@
     package = pkgs.ananicy-cpp;
     rulesProvider = pkgs.ananicy-cpp-rules;
   };
-
-  # Sch
-  environment.systemPackages = lib.mkAfter [ pkgs.scx ];
 }

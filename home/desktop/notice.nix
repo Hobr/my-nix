@@ -11,10 +11,4 @@
 
     settings = { };
   };
-
-  # SwayOSD
-  services.swayosd = {
-    enable = true;
-    maxVolume = 100;
-  };
 }

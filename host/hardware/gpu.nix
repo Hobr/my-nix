@@ -16,7 +16,10 @@
   environment.systemPackages = with pkgs.unstable; lib.mkAfter [
     vulkan-loader
     vulkan-validation-layers
+    vulkan-extension-layer
     vulkan-tools
+    libva
+    mesa
 
     nvtop
   ];

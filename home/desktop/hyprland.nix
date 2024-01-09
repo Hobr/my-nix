@@ -39,6 +39,7 @@ in
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "WLR_NO_HARDWARE_CURSORS,1"
+        "NVD_BACKEND,direct"
 
         # Wayland
         "NIXOS_OZONE_WL,1"
@@ -46,6 +47,8 @@ in
         "GDK_BACKEND=wayland,x11"
         "SDL_VIDEODRIVER=wayland"
         "MOZ_ENABLE_WAYLAND,1"
+        "MOZ_X11_EGL,1"
+        "MOZ_DISABLE_RDD_SANDBOX,1"
         "CLUTTER_BACKEND=wayland"
 
         # QT

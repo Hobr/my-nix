@@ -17,7 +17,7 @@
     vulkan-loader
     vulkan-validation-layers
     vulkan-tools
-    libva-utils
+
     nvtop
   ];
 

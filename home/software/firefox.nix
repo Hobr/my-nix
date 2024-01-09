@@ -1,4 +1,6 @@
 {
+  home.sessionVariables.BROWSER = "firefox";
+
   programs.firefox = {
     enable = true;
 
@@ -28,34 +30,6 @@
         "gfx.webrender.enabled" = true;
         "layers.acceleration.force-enabled" = true;
         "media.av1.enabled" = false;
-      };
-      # 搜索
-      search = {
-        default = "Google";
-        force = true;
-        order = [ "Google" "Baidu" "Bing" "GitHub" ];
-        engines = {
-          google = {
-            name = "Google";
-            keyword = "google";
-            searchUrl = "https://www.google.com/search?q={searchTerms}";
-          };
-          baidu = {
-            name = "Baidu";
-            keyword = "baidu";
-            searchUrl = "https://www.baidu.com/s?wd={searchTerms}";
-          };
-          github = {
-            name = "GitHub";
-            keyword = "github";
-            searchUrl = "https://github.com/search?q={searchTerms}&type=repositories";
-          };
-          bing = {
-            name = "Bing";
-            keyword = "bing";
-            searchUrl = "https://www.bing.com/search?q={searchTerms}";
-          };
-        };
       };
     };
   };

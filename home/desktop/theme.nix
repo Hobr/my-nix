@@ -55,15 +55,7 @@
   # QT
   qt = {
     enable = true;
-    platformTheme = "qtct";
-    style = {
-      name = "Catppuccin-Latte-Light";
-      package = pkgs.unstable.catppuccin-kde.override {
-        flavour = [ "latte" ];
-        accents = [ "rosewater" ];
-        winDecStyles = [ "modern" ];
-      };
-    };
+    platformTheme = "gtk3";
   };
 
   # 字体

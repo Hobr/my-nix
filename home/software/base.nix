@@ -6,5 +6,8 @@
 
     # 解压
     gnome.file-roller
+
+    # 密码管理器
+    bitwarden
   ];
 }

@@ -164,8 +164,8 @@ in
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
 
-        "$mainMod, mouse_up, workspace, e+1"
-        "$mainMod, mouse_down, workspace, e-1"
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
 
         # Pipewire
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%+"

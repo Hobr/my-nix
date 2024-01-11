@@ -22,9 +22,9 @@
   # 鼠标
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 16;
+    package = pkgs.unstable.catppuccin-cursors.latteRosewater;
+    name = "Catppuccin-Latte-Rosewater-Cursors";
+    size = 20;
   };
 
   # GTK
@@ -33,24 +33,36 @@
 
     # 主题
     theme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat-Remix-GTK-Grey-Darkest";
+      name = "Catppuccin-Latte-Standard-Rosewater-Light";
+      package = pkgs.unstable.catppuccin-gtk.override {
+        accents = [ "rosewater" ];
+        size = "standard";
+        tweaks = [ "normal" ];
+        variant = "latte";
+      };
     };
 
     # Icon
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
-      name = "Adwaita";
+      name = "Papirus";
+      package = pkgs.unstable.catppuccin-papirus-folders.override {
+        accent = "rosewater";
+        flavor = "latte";
+      };
     };
   };
 
   # QT
   qt = {
     enable = true;
-    platformTheme = "gtk3";
+    platformTheme = "qtct";
     style = {
-      package = pkgs.adwaita-qt;
-      name = "adwaita-dark";
+      name = "Catppuccin-Latte-Light";
+      package = pkgs.unstable.catppuccin-kde.override {
+        flavour = [ "latte" ];
+        accents = [ "rosewater" ];
+        winDecStyles = [ "modern" ];
+      };
     };
   };
 
@@ -70,7 +82,4 @@
       usegeoclue = false;
     };
   };
-
-  # nwg-look
-  home.packages = with pkgs.unstable; lib.mkAfter [ nwg-look ];
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.mpv = {
     enable = true;
@@ -7,4 +7,8 @@
     config = { };
     scripts = with pkgs.mpvScripts; [ mpris ];
   };
+
+  home.packages = with pkgs.unstable; lib.mkAfter [
+    ffmpeg-full
+  ];
 }

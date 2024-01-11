@@ -21,10 +21,10 @@
 
   # 鼠标
   home.pointerCursor = {
-    gtk.enable = true;
     package = pkgs.unstable.catppuccin-cursors.latteRosewater;
     name = "Catppuccin-Latte-Rosewater-Cursors";
     size = 20;
+    gtk.enable = true;
   };
 
   # GTK

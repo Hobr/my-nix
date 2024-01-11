@@ -34,13 +34,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # 语言
-    ## Rust
-    #rust-overlay = {
-    #  url = "github:oxalica/rust-overlay";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-
     # 主题
     ## Alacritty
     #catppuccin-alacritty = {

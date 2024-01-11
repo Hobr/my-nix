@@ -26,6 +26,7 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
+    autocd = true;
     plugins = [
       {
         name = "powerlevel10k";

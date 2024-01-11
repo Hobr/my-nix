@@ -6,6 +6,7 @@
   };
 
   home.packages = with pkgs.unstable; lib.mkAfter [
-    transmission
+    transmission_4
+    transmission_4-gtk
   ];
 }

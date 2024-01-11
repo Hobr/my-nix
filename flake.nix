@@ -9,11 +9,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic源
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    ## Wayland包
-    nixpkgs-wayland = {
-      url = "github:nix-community/nixpkgs-wayland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # 环境
     ## 无状态
@@ -52,6 +47,13 @@
     #  url = "github:catppuccin/alacritty";
     #  flake = false;
     #};
+
+    # 软件
+    #nixvim = {
+    #  url = "github:nix-community/nixvim";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

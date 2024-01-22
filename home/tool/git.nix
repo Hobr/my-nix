@@ -19,6 +19,10 @@
 
       # 信任所有目录
       safe.directory = "*";
+
+      # 代理
+      http.proxy = "http://127.0.0.1:7890";
+      https.proxy = "http://127.0.0.1:7890";
     };
 
     # LFS

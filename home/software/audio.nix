@@ -3,21 +3,27 @@
   # MPD
   services.mpd = {
     enable = true;
+    package = pkgs.unstable.mpd;
     extraConfig = "";
   };
 
   # Playctl
-  services.playerctld.enable = true;
+  services.playerctld = {
+    enable = true;
+    package = pkgs.unstable.playerctl;
+  };
 
   # MPD歌词
   services.mpd-mpris = {
     enable = true;
+    package = pkgs.unstable.mpd-mpris;
     mpd.useLocal = true;
   };
 
   # MPD客户端
   programs.ncmpcpp = {
     enable = true;
+    package = pkgs.unstable.ncmpcpp;
     bindings = [ ];
     mpdMusicDir = "/home/kanade/Music";
     settings = { };

@@ -14,6 +14,7 @@
   # Zoxide(cd)
   programs.zoxide = {
     enable = true;
+    package = pkgs.unstable.zoxide;
     enableZshIntegration = true;
     options = [ ];
   };
@@ -21,6 +22,7 @@
   # Broot(tree)
   programs.broot = {
     enable = true;
+    package = pkgs.unstable.broot;
     enableZshIntegration = true;
     settings = { };
   };
@@ -28,6 +30,7 @@
   # eza(ls)
   programs.eza = {
     enable = true;
+    package = pkg.unstable.eza;
     enableAliases = true;
     git = true;
     icons = true;
@@ -42,17 +45,22 @@
   };
 
   # Ripgrep(grep)
-  programs.ripgrep.enable = true;
+  programs.ripgrep = {
+    enable = true;
+    package = pkgs.unstable.ripgrep;
+  };
 
   # Btop(top)
   programs.btop = {
     enable = true;
+    package = pkgs.unstable.btop;
     settings = { };
   };
 
   # fzf(fd)
   programs.fzf = {
     enable = true;
+    package = pkgs.unstable.fzf;
     enableZshIntegration = true;
   };
 
@@ -62,8 +70,8 @@
   # feh(图片查看器)
   programs.feh = {
     enable = true;
+    package = pkgs.unstable.feh;
     buttons = { };
     keybindings = { };
   };
-
 }

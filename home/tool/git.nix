@@ -1,6 +1,8 @@
+{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
+    package = pkgs.unstable.git;
 
     # 用户
     userName = "Hobr";
@@ -34,6 +36,7 @@
   # LazyGit
   programs.lazygit = {
     enable = true;
+    package = pkgs.unstable.lazygit;
     settings = { };
   };
 }

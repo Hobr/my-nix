@@ -68,6 +68,7 @@
   # 深色模式
   services.darkman = {
     enable = true;
+    package = pkgs.unstable.darkman;
     lightModeScripts = { };
     darkModeScripts = { };
     settings = {

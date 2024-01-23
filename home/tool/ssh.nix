@@ -4,9 +4,10 @@
     enable = true;
     extraConfig = ''
       Host github.com
-        Hostname ssh.github.com
-        Port 443
-        ProxyCommand ${pkgs.unstable.netcat-gnu}/bin/nc -v -X 5 -x 127.0.0.1:7891 %h %p
+        Host github.com
+        HostName github.com
+        User git
+        ProxyCommand ${pkgs.unstable.netcat-gnu}/bin/nc -v -x 127.0.0.1:7891 %h %p
     '';
   };
 

@@ -5,7 +5,7 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs.unstable; [
       vaapiVdpau
       libvdpau-va-gl
       nvidia-vaapi-driver

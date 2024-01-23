@@ -24,7 +24,7 @@
 
   # Gnome Keyring
   services.gnome.glib-networking.enable = true;
-  services.dbus.packages = [ pkgs.gcr ];
+  services.dbus.packages = [ pkgs.unstable.gcr ];
   programs.seahorse.enable = true;
 
 }

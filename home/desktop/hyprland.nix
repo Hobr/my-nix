@@ -6,11 +6,11 @@ let
     killall -e xdg-desktop-portal-hyprland
     killall -e xdg-desktop-portal-wlr
     killall xdg-desktop-portal
-    ${pkgs.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland &
+    ${pkgs.unstable.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland &
     sleep 2
-    ${pkgs.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk &
+    ${pkgs.unstable.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk &
     sleep 2
-    ${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal &
+    ${pkgs.unstable.xdg-desktop-portal}/libexec/xdg-desktop-portal &
   '';
 in
 {

@@ -26,7 +26,7 @@
   # XDG Portal
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.unstable.xdg-desktop-portal-gtk ];
   };
 
   # Seatd
@@ -34,7 +34,7 @@
     seatd = {
       enable = true;
       description = "Seat management daemon";
-      script = "${pkgs.seatd}/bin/seatd -g wheel";
+      script = "${pkgs.unstable.seatd}/bin/seatd -g wheel";
       serviceConfig = {
         Type = "simple";
         Restart = "always";

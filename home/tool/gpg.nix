@@ -15,7 +15,7 @@
     enableZshIntegration = true;
     pinentryFlavor = "gnome3";
     extraConfig = ''
-      pinentry-program ${pkgs.pinentry.gnome3}/bin/pinentry
+      pinentry-program ${pkgs.unstable.pinentry.gnome3}/bin/pinentry
     '';
   };
 }

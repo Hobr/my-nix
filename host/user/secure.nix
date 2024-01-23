@@ -4,7 +4,7 @@
   security.rtkit.enable = true;
 
   # Polkit
-  environment.systemPackages = with pkgs.unstable; lib.mkAfter [ polkit_gnome ];
+  environment.systemPackages = lib.mkAfter [ pkgs.polkit_gnome ];
   security.polkit.enable = true;
 
   # Sudo
@@ -24,7 +24,7 @@
 
   # Gnome Keyring
   services.gnome.glib-networking.enable = true;
-  services.dbus.packages = [ pkgs.unstable.gcr ];
+  services.dbus.packages = [ pkgs.gcr ];
   programs.seahorse.enable = true;
 
 }

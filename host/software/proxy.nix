@@ -23,7 +23,7 @@
   };
 
   # Clash
-  environment.systemPackages = with pkgs.unstable; lib.mkAfter [ clash-meta ];
+  environment.systemPackages = lib.mkAfter [ pkgs.unstable.clash-meta ];
 
   # 守护进程
   systemd.services.Clash = {

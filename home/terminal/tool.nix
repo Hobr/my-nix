@@ -3,7 +3,7 @@
   # Bat(cat)
   programs.bat = {
     enable = true;
-    extraPackages = with pkgs.bat-extras; [ prettybat batwatch batpipe batman batgrep batdiff ];
+    extraPackages = with pkgs.unstable.bat-extras; [ prettybat batwatch batpipe batman batgrep batdiff ];
 
     # 配置
     themes = { };
@@ -30,7 +30,7 @@
   # eza(ls)
   programs.eza = {
     enable = true;
-    package = pkg.unstable.eza;
+    package = pkgs.unstable.eza;
     enableAliases = true;
     git = true;
     icons = true;

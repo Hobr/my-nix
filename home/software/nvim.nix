@@ -2,7 +2,7 @@
 {
   programs.neovim = {
     enable = true;
-    package = pkgs.unstable.neovim;
+    package = pkgs.unstable.neovim-unwrapped;
     defaultEditor = true;
 
     # 快捷键

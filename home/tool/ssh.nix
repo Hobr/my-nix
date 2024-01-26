@@ -11,8 +11,6 @@
       };
     };
   };
-  services.ssh-agent.enable = true;
 
-  # 代理
-  home.packages = with pkgs.unstable; lib.mkAfter [ netcat ];
+  services.ssh-agent.enable = true;
 }

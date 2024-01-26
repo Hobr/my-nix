@@ -2,7 +2,7 @@
 {
   programs.zsh = {
     enable = true;
-    package = pkgs.unstable.zsh;
+    package = pkgs.zsh;
 
     shellAliases = {
       pr = "proxychains4";

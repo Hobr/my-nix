@@ -12,7 +12,7 @@
   services.fwupd.enable = true;
 
   # 雷电
-  services.hardware.bolt.enable = true;
+  services.hardware.bolt.enable = false;
 
   # 打印机
   services.printing.enable = false;

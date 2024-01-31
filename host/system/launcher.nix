@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # Greetd
   environment.etc."greetd/environments".text = ''
@@ -23,11 +23,13 @@
     xwayland.enable = true;
   };
 
-  # XDG Portal
+  # XDG
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.unstable.xdg-desktop-portal-gtk ];
   };
+
+  environment.systemPackages = lib.mkAfter [ pkgs.unstable.xdg-utils ];
 
   # Seatd
   systemd.services = {

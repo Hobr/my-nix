@@ -71,6 +71,8 @@
     ./software/vscode.nix
     # NeoVim
     ./software/nvim.nix
+    # LLVM
+    ./software/llvm.nix
     # OBS
     ./software/obsstudio.nix
 

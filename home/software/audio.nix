@@ -32,7 +32,7 @@
   home.packages = with pkgs.unstable; lib.mkAfter [
     # 音乐播放器
     amberol
-    yesplaymusic
+    netease-cloud-music-gtk
     playerctl
 
     # GStreamer

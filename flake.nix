@@ -68,7 +68,7 @@
       packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
       nixosConfigurations = {
         handsonic = nixpkgs.lib.nixosSystem {
-          modules = [ ./host/handsonic.nix ];
+          modules = [ ./host ];
           specialArgs = { inherit inputs outputs; };
         };
       };

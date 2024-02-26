@@ -5,10 +5,14 @@
 ## 介绍
 
 - 主机
-  - handsonic 笔记本: 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
+  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
+  - distortion: 便携触摸本, 联想 Yoga Duet 2020, Intel i5-10210U, Intel UHD630, 16G
+  - overdrive: 服务器
 
 - 用户
-  - kanade: 个人
+  - kanade: handsonic用户, 大软件多
+  - yuzuru: distortion用户, 大软件少
+  - yuri: overdrive用户, 服务器环境
 
 ## TODO
 

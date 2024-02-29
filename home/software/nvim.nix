@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -13,4 +13,7 @@
     # 插件
     plugins = [ ];
   };
+
+  # NeoVide
+  home.packages = with pkgs.unstable; lib.mkAfter [ neovide ];
 }

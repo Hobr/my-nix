@@ -94,9 +94,9 @@ reboot
 sudo mkdir /etc/clash
 
 # Fwupd
-sudo proxychains4 fwupdmgr refresh
-sudo proxychains4 fwupdmgr get-updates
-sudo proxychains4 fwupdmgr update
+sudo fwupdmgr refresh
+sudo fwupdmgr get-updates
+sudo fwupdmgr update
 
 # 安全启动
 sudo bootctl status

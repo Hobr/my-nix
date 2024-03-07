@@ -9,5 +9,19 @@
     ./desktop/terminal.nix
     ./desktop/theme.nix
     ./desktop/waybar.nix
+
+    ./software/audio.nix
+    ./software/download.nix
+    ./software/fcitx.nix
+    ./software/firefox.nix
+    ./software/im.nix
+    ./software/image.nix
+    ./software/llvm.nix
+    ./software/manage.nix
+    ./software/nvim.nix
+    ./software/obs.nix
+    ./software/thunderbird.nix
+    ./software/video.nix
+    ./software/vscode.nix
   ];
 }

@@ -64,6 +64,11 @@ umount /mnt
 
 # 挂载
 mount -t tmpfs none /mnt
+
+# /mnt/etc/nixos/configuration.nix
+nixos-generate-config --root /mnt
+rm -rf /mnt/etc
+
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@nix /dev/mapper/system-root /mnt/nix
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@home /dev/mapper/system-root /mnt/home
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persist /dev/mapper/system-root /mnt/persist
@@ -85,9 +90,6 @@ swapon /dev/mapper/system-swap
 # 配置
 git clone https://github.com/Hobr/my-nix.git
 cd my-nix
-
-# /mnt/etc/nixos/configuration.nix
-nixos-generate-config --root /mnt
 
 # 部署
 export all_proxy=socks5://192.168.1.102:7890

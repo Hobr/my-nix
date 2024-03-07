@@ -32,5 +32,4 @@
       };
     };
   };
-  users.users.kanade.extraGroups = lib.mkAfter [ "networkmanager" ];
 }

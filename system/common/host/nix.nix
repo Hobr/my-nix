@@ -25,7 +25,6 @@
       # access-tokens = "github.com=${secrets.git.github.oauth-token}";
 
       # 镜像
-      trusted-users = [ "kanade" ];
       substituters = [
         "http://mirrors.ustc.edu.cn/nix-channels/store"
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"

@@ -7,7 +7,6 @@
     abrmd.enable = false;
   };
 
-  users.users.kanade.extraGroups = [ "tss" ];
   boot.initrd.availableKernelModules = lib.mkAfter [ "tpm" "tpm_tis" "tpm_crb" ];
   boot.initrd.systemd.enableTpm2 = true;
 }

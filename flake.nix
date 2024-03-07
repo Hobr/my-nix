@@ -70,11 +70,33 @@
       nixosConfigurations = {
         your-hostname = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/configuration.nix ];
+          modules = [ ./system/.nix ];
+        };
+
+        your-hostname = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./system/.nix ];
+        };
+
+        your-hostname = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./system/.nix ];
         };
       };
 
       homeConfigurations = {
+        "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home/home.nix ];
+        };
+
+        "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home/home.nix ];
+        };
+
         "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };

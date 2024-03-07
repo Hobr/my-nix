@@ -25,7 +25,6 @@
     enable = true;
     package = pkgs.unstable.ncmpcpp;
     bindings = [ ];
-    mpdMusicDir = "/home/kanade/Music";
     settings = { };
   };
 

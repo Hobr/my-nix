@@ -35,5 +35,10 @@
     ./terminal/gnu.nix
     ./terminal/tool.nix
     ./terminal/zsh.nix
+
+    ./study/math.nix
+    ./study/reader.nix
+    ./study/tex.nix
+    ./study/writer.nix
   ];
 }

@@ -2,7 +2,7 @@
   # Bootloader
   boot.loader = {
     systemd-boot = {
-      enable = true;
+      enable = false;
       editor = false;
       configurationLimit = 10;
     };

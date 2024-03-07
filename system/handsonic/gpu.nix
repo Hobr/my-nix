@@ -20,8 +20,7 @@
     vulkan-tools
     libva
     mesa
-
-    # nvtop
+    nvtop
   ];
 
   # NVIDIA驱动

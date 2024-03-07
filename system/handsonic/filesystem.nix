@@ -1,15 +1,6 @@
 {
-  boot = {
-    # 文件系统支持
-    supportedFilesystems = [ "btrfs" "ntfs" "vfat" "ext4" "fat" "tmpfs" ];
-
-    # LUKS
-    initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
-  };
-  # GVFS
-  services.gvfs.enable = true;
-  # 挂载
-  services.udisks2.enable = true;
+  # LUKS
+  boot.initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
 
   # 挂载
   fileSystems = {
@@ -64,50 +55,4 @@
 
   # 交换
   swapDevices = [{ device = "/dev/mapper/system-swap"; }];
-
-  # SSD Trim
-  services.fstrim = {
-    enable = true;
-    interval = "weekly";
-  };
-
-  # Btrfs Scrub
-  services.btrfs.autoScrub = {
-    enable = true;
-    fileSystems = [
-      "/nix"
-      "/home"
-      "/persist"
-    ];
-    interval = "weekly";
-  };
-
-  # Snapper
-  services.snapper = {
-    snapshotInterval = "daily";
-    cleanupInterval = "3d";
-    configs = {
-      nix = {
-        TIMELINE_CREATE = true;
-        TIMELINE_CLEANUP = true;
-        SUBVOLUME = "/nix";
-        ALLOW_USERS = [ "kanade" ];
-        ALLOW_GROUPS = [ "wheel" ];
-      };
-      persist = {
-        TIMELINE_CREATE = true;
-        TIMELINE_CLEANUP = true;
-        SUBVOLUME = "/persist";
-        ALLOW_USERS = [ "kanade" ];
-        ALLOW_GROUPS = [ "wheel" ];
-      };
-      home = {
-        TIMELINE_CREATE = true;
-        TIMELINE_CLEANUP = true;
-        SUBVOLUME = "/home";
-        ALLOW_USERS = [ "kanade" ];
-        ALLOW_GROUPS = [ "wheel" ];
-      };
-    };
-  };
 }

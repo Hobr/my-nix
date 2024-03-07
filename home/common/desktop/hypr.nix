@@ -22,26 +22,13 @@ in
 
     # 设置
     settings = {
-      monitor = [
-        "eDP-1,2560x1440@165,auto,1.25"
-      ];
-
       exec-once = [
         "${xdgstart}/bin/xdgstart"
         "fcitx5 -d --replace"
+        "waybar"
       ];
 
       env = [
-        # 主题
-        "XCURSOR_SIZE,20"
-
-        # NVIDIA
-        "LIBVA_DRIVER_NAME,nvidia"
-        "GBM_BACKEND,nvidia-drm"
-        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "WLR_NO_HARDWARE_CURSORS,1"
-        "NVD_BACKEND,direct"
-
         # Wayland
         "NIXOS_OZONE_WL,1"
         "XDG_SESSION_TYPE,wayland"

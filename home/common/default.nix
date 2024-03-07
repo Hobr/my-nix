@@ -16,7 +16,6 @@
     ./software/firefox.nix
     ./software/im.nix
     ./software/image.nix
-    ./software/llvm.nix
     ./software/manage.nix
     ./software/nvim.nix
     ./software/obs.nix

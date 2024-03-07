@@ -13,9 +13,7 @@
     ];
 
     # 配置
-    config = {
-      allowUnfree = true;
-    };
+    config.allowUnfree = true;
   };
 
   home = {

@@ -10,6 +10,14 @@
     ./system/impermanence.nix
     ./system/launcher.nix
 
+    ./hardware/audio.nix
+    ./hardware/bluetooth.nix
+    ./hardware/network.nix
+    ./hardware/hardware.nix
+
+    ./user/locale.nix
+    ./user/secure.nix
+
     ./tool/nh.nix
     ./tool/openssh.nix
     ./tool/proxy.nix

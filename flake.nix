@@ -3,17 +3,17 @@
 
   inputs = {
     # 软件源
-    ## 官方稳定源
+    ## 官方稳定
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    ## 官方滚动源
+    ## 官方滚动
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Chaotic源
+    # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # 环境
-    ## 无状态
+    ## Rootless
     impermanence.url = "github:nix-community/impermanence";
-    ## 用户管理
+    ## 用户
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,9 +39,9 @@
     let
       inherit (self) outputs;
       systems = [
-        "aarch64-linux"
-        "i686-linux"
         "x86_64-linux"
+        "i686-linux"
+        "aarch64-linux"
         "aarch64-darwin"
         "x86_64-darwin"
       ];
@@ -54,16 +54,19 @@
       homeManagerModules = import ./modules/home;
 
       nixosConfigurations = {
+        # Laptop
         handsonic = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./system/handsonic.nix ];
         };
 
+        # Pad
         distortion = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./system/distortion.nix ];
         };
 
+        # Server
         overdrive = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./system/overdrive.nix ];
@@ -71,18 +74,21 @@
       };
 
       homeConfigurations = {
+        # Laptop1
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/kanade.nix ];
         };
 
+        # Pad
         "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/yuzuru.nix ];
         };
 
+        # Server
         "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };

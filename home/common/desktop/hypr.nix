@@ -28,6 +28,7 @@ in
 
       exec-once = [
         "${xdgstart}/bin/xdgstart"
+        "fcitx5 -d --replace"
       ];
 
       env = [

@@ -103,7 +103,6 @@ reboot
 make host
 make user
 
-# 取消注释 host/default.nix第23行
 sudo mkdir /etc/clash
 
 # system\common\system\boot.nix systemd-boot.enable=true

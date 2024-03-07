@@ -120,7 +120,7 @@ sudo bootctl status
 
 # TPM
 sudo systemd-cryptenroll --tpm2-device=list
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+2+3+4+5+7 /dev/nvme0n1
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme0n1
 
 # Fwupd
 sudo fwupdmgr refresh

@@ -91,7 +91,8 @@ reboot
 ## 后续
 
 ```bash
-make home
+make host
+make user
 
 # 取消注释 host/default.nix第23行
 sudo mkdir /etc/clash

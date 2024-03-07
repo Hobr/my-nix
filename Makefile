@@ -1,7 +1,7 @@
-system:
+host:
 	nh os boot -a ./
-	
-home:
+
+user:
 	nh home switch -a ./
 
 update:

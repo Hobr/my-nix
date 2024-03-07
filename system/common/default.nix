@@ -1,6 +1,8 @@
 {
   imports = [
-    ./platform.nix
-    ./nix.nix
+    ./host/platform.nix
+    ./host/nix.nix
+
+    ./system/
   ];
 }

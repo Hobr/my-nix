@@ -7,12 +7,6 @@
       enable = true;
       target = "hyprland-session.target";
     };
-
-    settings = {
-      mainBar = {
-        layer = "top";
-      };
-    };
   };
 
   # 状态栏

@@ -33,20 +33,6 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # 主题
-    ## Alacritty
-    #catppuccin-alacritty = {
-    #  url = "github:catppuccin/alacritty";
-    #  flake = false;
-    #};
-
-    # 软件
-    #nixvim = {
-    #  url = "github:nix-community/nixvim";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
@@ -68,39 +54,39 @@
       homeManagerModules = import ./modules/home;
 
       nixosConfigurations = {
-        your-hostname = nixpkgs.lib.nixosSystem {
+        handsonic = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/.nix ];
+          modules = [ ./system/handsonic.nix ];
         };
 
-        your-hostname = nixpkgs.lib.nixosSystem {
+        distortion = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/.nix ];
+          modules = [ ./system/distortion.nix ];
         };
 
-        your-hostname = nixpkgs.lib.nixosSystem {
+        overdrive = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/.nix ];
+          modules = [ ./system/overdrive.nix ];
         };
       };
 
       homeConfigurations = {
-        "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+        "handsonic@kanade" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/home.nix ];
+          modules = [ ./home/kanade.nix ];
         };
 
-        "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+        "distortion@yuzuru" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/home.nix ];
+          modules = [ ./home/yuzuru.nix ];
         };
 
-        "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+        "overdrive@yuri" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/home.nix ];
+          modules = [ ./home/yuri.nix ];
         };
       };
     };

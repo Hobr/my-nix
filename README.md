@@ -10,18 +10,19 @@
   - overdrive: 服务器, 4H4G
 
 - 用户
-  - kanade: handsonic用户, 大软件多
-  - yuzuru: distortion用户, 大软件少
+  - kanade: handsonic用户, 重软件多
+  - yuzuru: distortion用户, 重软件少
   - yuri: overdrive用户, 服务器环境
 
 ## TODO
 
-- Rime
-- ZSH Bindkey
 - 桌面环境
+- ZSH Bindkey
 - VSCode环境
+- Rime
 - ReGreet
 - NVim环境
+- Emacs环境
 - Systemd-timesyncd resolved....
 - CCache
 - 邮箱

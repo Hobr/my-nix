@@ -4,7 +4,7 @@
     enable = true;
     tctiEnvironment.enable = true;
     pkcs11.enable = true;
-    abrmd.enable = true;
+    abrmd.enable = false;
   };
 
   boot.initrd.availableKernelModules = lib.mkAfter [ "tpm" "tpm_tis" "tpm_crb" ];

@@ -29,5 +29,11 @@
     ./tool/gpg.nix
     ./tool/ssh.nix
     ./tool/sync.nix
+
+    ./terminal/cli.nix
+    ./terminal/direnv.nix
+    ./terminal/gnu.nix
+    ./terminal/tool.nix
+    ./terminal/zsh.nix
   ];
 }

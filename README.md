@@ -100,10 +100,12 @@ reboot
 ## 后续
 
 ```bash
-make host
-make user
-
+nmcli
 sudo mkdir /etc/clash
+sudo systemctl restart Clash
+
+nix-shell -p git
+nh home switch -a ./
 
 # system\common\system\boot.nix systemd-boot.enable=true
 # 安全启动
@@ -142,7 +144,7 @@ gpg --list-secret-keys
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
 
-# 
+# 重新TPM
 sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1
 sudo cryptsetup token remove /dev/nvme0n1p4 --token-id 0
 ```

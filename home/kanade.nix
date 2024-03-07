@@ -1,5 +1,9 @@
 { outputs, ... }:
 {
+  imports = [
+    ./common
+  ];
+
   nixpkgs = {
     # Overlays
     overlays = [

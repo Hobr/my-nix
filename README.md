@@ -1,4 +1,4 @@
-y# My NixOS
+# My NixOS
 
 个人的**NixOS**配置, 日常生活使用, 更新频率较高
 
@@ -142,6 +142,10 @@ chmod 700 id_rsa.pub
 gpg --list-secret-keys
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
+
+# 
+sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1
+sudo cryptsetup token remove /dev/nvme0n1p4 --token-id 0
 ```
 
 ## 参考资料

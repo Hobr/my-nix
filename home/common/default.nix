@@ -23,5 +23,11 @@
     ./software/thunderbird.nix
     ./software/video.nix
     ./software/vscode.nix
+
+    ./tool/disk.nix
+    ./tool/git.nix
+    ./tool/gpg.nix
+    ./tool/ssh.nix
+    ./tool/sync.nix
   ];
 }

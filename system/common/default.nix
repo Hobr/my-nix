@@ -1,7 +1,7 @@
 {
   imports = [
-    ./host/platform.nix
-    ./host/nix.nix
+    ./config/platform.nix
+    ./config/nix.nix
 
     ./system/boot.nix
     ./system/kernel.nix

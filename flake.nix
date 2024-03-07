@@ -24,10 +24,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全
-    #sops-nix = {
-    #  url = "github:Mic92/sops-nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     ## CLI
     nh = {
       url = "github:viperML/nh";

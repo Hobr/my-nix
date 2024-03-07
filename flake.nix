@@ -78,21 +78,21 @@
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/kanade.nix ];
+          modules = [ ./user/kanade.nix ];
         };
 
         # Pad
         "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/yuzuru.nix ];
+          modules = [ ./user/yuzuru.nix ];
         };
 
         # Server
         "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/yuri.nix ];
+          modules = [ ./user/yuri.nix ];
         };
       };
     };

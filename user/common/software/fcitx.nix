@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,lib, ... }:
 {
   i18n.inputMethod = {
     enabled = "fcitx5";
@@ -12,4 +12,8 @@
       fcitx5-anthy
     ];
   };
+
+  home.packages = with pkgs.unstable; lib.mkAfter [
+    maliit-keyboard
+  ]; 
 }

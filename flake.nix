@@ -71,19 +71,19 @@
       };
 
       homeConfigurations = {
-        "handsonic@kanade" = home-manager.lib.homeManagerConfiguration {
+        "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/kanade.nix ];
         };
 
-        "distortion@yuzuru" = home-manager.lib.homeManagerConfiguration {
+        "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/yuzuru.nix ];
         };
 
-        "overdrive@yuri" = home-manager.lib.homeManagerConfiguration {
+        "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/yuri.nix ];

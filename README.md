@@ -1,4 +1,4 @@
-# My NixOS
+y# My NixOS
 
 个人的**NixOS**配置, 日常生活使用, 更新频率较高
 
@@ -32,7 +32,6 @@
 修改内容:
 
 - *system\common\config\nix.nix* 填写**access-tokens**
-- *system\common\hardware\network.nix* 需要全局代理时**proxy.default**
 - *system\common\system\boot.nix* 暂时**systemd-boot.enable=true**
 - *system\common\system\secureboot.nix* 暂时**lanzaboote.enable=false**, 注释**loader.systemd-boot.enable**
 
@@ -107,12 +106,6 @@ make user
 # 取消注释 host/default.nix第23行
 sudo mkdir /etc/clash
 
-# Fwupd
-sudo fwupdmgr refresh
-sudo fwupdmgr get-updates
-sudo fwupdmgr update
-
-
 # system\common\system\boot.nix systemd-boot.enable=true
 # 安全启动
 sudo bootctl status
@@ -126,6 +119,11 @@ sudo bootctl status
 
 # TPM
 sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme0n1
+
+# Fwupd
+sudo fwupdmgr refresh
+sudo fwupdmgr get-updates
+sudo fwupdmgr update
 
 # 开发环境
 cd ~/my-nix

@@ -3,7 +3,7 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
-    #inputs.lanzaboote.nixosModules.lanzaboote
+    inputs.lanzaboote.nixosModules.lanzaboote
     inputs.nh.nixosModules.default
 
     # 软件
@@ -13,7 +13,7 @@
     # 内核
     ./system/kernel.nix
     # 安全启动
-    #./system/secureboot.nix
+    ./system/secureboot.nix
     # TPM
     ./system/tpm.nix
     # 无状态

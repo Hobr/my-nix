@@ -1,35 +1,57 @@
 {
-  description = "Your new nix config";
+  description = "Hobr NixOS";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    # You can access packages and modules from different nixpkgs revs
-    # at the same time. Here's an working example:
+    # 软件源
+    ## 官方稳定源
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    ## 官方滚动源
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
+    # Chaotic源
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    # Home manager
-    home-manager.url = "github:nix-community/home-manager/release-23.05";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # 环境
+    ## 无状态
+    impermanence.url = "github:nix-community/impermanence";
+    ## 用户管理
+    home-manager = {
+      url = "github:nix-community/home-manager/release-23.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ## 安全启动
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.3.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ## 安全
+    #sops-nix = {
+    #  url = "github:Mic92/sops-nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    ## CLI
+    nh = {
+      url = "github:viperML/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
+    # 主题
+    ## Alacritty
+    #catppuccin-alacritty = {
+    #  url = "github:catppuccin/alacritty";
+    #  flake = false;
+    #};
 
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    # 软件
+    #nixvim = {
+    #  url = "github:nix-community/nixvim";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , home-manager
-    , ...
-    } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
       inherit (self) outputs;
-      # Supported systems for your flake packages, shell, etc.
       systems = [
         "aarch64-linux"
         "i686-linux"
@@ -37,51 +59,26 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
-      # This is a function that generates an attribute by calling a function you
-      # pass to it, with each system as an argument
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      # Your custom packages
-      # Accessible through 'nix build', 'nix shell', etc
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-      # Formatter for your nix files, available through 'nix fmt'
-      # Other options beside 'alejandra' include 'nixpkgs-fmt'
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
+      overlays = import ./overlay { inherit inputs; };
+      nixosModules = import ./module/system;
+      homeManagerModules = import ./modules/home;
 
-      # Your custom packages and modifications, exported as overlays
-      overlays = import ./overlays { inherit inputs; };
-      # Reusable nixos modules you might want to export
-      # These are usually stuff you would upstream into nixpkgs
-      nixosModules = import ./modules/nixos;
-      # Reusable home-manager modules you might want to export
-      # These are usually stuff you would upstream into home-manager
-      homeManagerModules = import ./modules/home-manager;
-
-      # NixOS configuration entrypoint
-      # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
-        # FIXME replace with your hostname
         your-hostname = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main nixos configuration file <
-            ./nixos/configuration.nix
-          ];
+          modules = [ ./system/configuration.nix ];
         };
       };
 
-      # Standalone home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        # FIXME replace with your username@hostname
         "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            # > Our main home-manager configuration file <
-            ./home-manager/home.nix
-          ];
+          modules = [ ./home/home.nix ];
         };
       };
     };

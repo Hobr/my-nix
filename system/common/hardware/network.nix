@@ -11,7 +11,7 @@
 
   networking = {
     useDHCP = lib.mkDefault true;
-    # proxy.default = "socks5://127.0.0.1:7891";
+    proxy.default = "socks5://127.0.0.1:7891";
 
     # 防火墙
     firewall.enable = false;

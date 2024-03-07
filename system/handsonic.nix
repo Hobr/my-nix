@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   imports = [
     ./common
@@ -7,7 +8,6 @@
     ./handsonic/gpu.nix
     ./handsonic/hardware.nix
     ./handsonic/power.nix
-    ./handsonic/shell.nix
   ];
 
   # 主机名

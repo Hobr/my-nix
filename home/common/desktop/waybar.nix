@@ -3,6 +3,16 @@
   programs.waybar = {
     enable = true;
     package = pkgs.unstable.waybar;
+    systemd = {
+      enable = true;
+      target = "hyprland-session.target";
+    };
+
+    settings = {
+      mainBar = {
+        layer = "top";
+      };
+    };
   };
 
   # 状态栏

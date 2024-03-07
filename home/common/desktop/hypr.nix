@@ -24,8 +24,6 @@ in
     settings = {
       exec-once = [
         "${xdgstart}/bin/xdgstart"
-        "fcitx5 -d --replace"
-        "waybar"
       ];
 
       env = [

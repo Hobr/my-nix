@@ -1,16 +1,16 @@
 { inputs, ... }: {
-  additions = final: _prev: import ../pkgs { pkgs = final; };
+  additions = final: _prev: import ../pkg { pkgs = final; };
 
-  modifications = final: prev: {
-    # example = prev.example.overrideAttrs (oldAttrs: rec {
-    # ...
-    # });
-  };
+  modifications = final: prev: { };
 
+  # pkgs.unstable
   unstable-packages = final: _prev: {
     unstable = import inputs.nixpkgs-unstable {
       system = final.system;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [ "electron-25.9.0" ];
+      };
     };
   };
 }

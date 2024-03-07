@@ -85,15 +85,14 @@ cd my-nix
 # 部署
 export all_proxy=socks5://192.168.1.102:7890
 nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option trusted-public-keys "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8=" --show-trace --flake .#handsonic/distortion/overdrive
-
-home-manager --flake .#kanade/yuzuru/yuri@handsonic/distortion/overdrive
-
 reboot
 ```
 
 ## 后续
 
 ```bash
+make home
+
 # 取消注释 host/default.nix第23行
 sudo mkdir /etc/clash
 

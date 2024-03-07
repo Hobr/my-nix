@@ -1,7 +1,7 @@
-switch:
-	nh os switch -a ./
+home:
+	nh home switch -a ./
 
-boot:
+sys:
 	nh os boot -a ./
 
 update:
@@ -11,11 +11,4 @@ history:
 	sudo nix profile history --profile /nix/var/nix/profiles/system
 
 clean:
-	sudo nix-collect-garbage --delete-older-than 1d
-
-purge:
-	sudo nix-collect-garbage -d
-
-gc:
-	sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 3d
-	sudo nix store gc --debug
+	nh clean all

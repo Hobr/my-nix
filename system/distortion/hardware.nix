@@ -8,4 +8,8 @@
 
   # 打印机
   services.printing.enable = false;
+
+  # 汉王手写笔
+  services.xserver.wacom.enable = true;
+  hardware.opentabletdriver.enable = true;
 }

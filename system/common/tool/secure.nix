@@ -27,7 +27,7 @@
   programs.seahorse.enable = true;
 
   # Logind
-  service.logind = {
+  services.logind = {
     lidSwitch = "suspend";
     lidSwitchExternalPower = "lock";
     extraConfig = ''

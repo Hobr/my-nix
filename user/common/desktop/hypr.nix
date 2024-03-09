@@ -1,18 +1,4 @@
 { inputs, pkgs, lib, ... }:
-let
-  xdgstart = pkgs.writeShellScriptBin "xdgstart" ''
-    #!/bin/bash
-    sleep 1
-    killall -e xdg-desktop-portal-hyprland
-    killall -e xdg-desktop-portal-wlr
-    killall xdg-desktop-portal
-    ${pkgs.unstable.xdg-desktop-portal-hyprland}/libexec/xdg-desktop-portal-hyprland &
-    sleep 2
-    ${pkgs.unstable.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk &
-    sleep 2
-    ${pkgs.unstable.xdg-desktop-portal}/libexec/xdg-desktop-portal &
-  '';
-in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -22,10 +8,6 @@ in
 
     # 设置
     settings = {
-      exec-once = [
-        "${xdgstart}/bin/xdgstart"
-      ];
-
       env = [
         # 鼠标大小
         "XCURSOR_SIZE,24"

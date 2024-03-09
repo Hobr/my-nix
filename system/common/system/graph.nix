@@ -16,7 +16,7 @@
   # XDG
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   environment.systemPackages = lib.mkAfter [ pkgs.unstable.xdg-utils ];

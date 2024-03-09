@@ -3,9 +3,7 @@
   boot = {
     kernelModules = [ "kvm-intel" ];
     kernelParams = [
-      "i915.enable_fbc=1"
       "i915.enable_psr=2"
-      "i915.enable_guc=2"
       "i915.modeset=1"
     ];
     extraModulePackages = [ ];

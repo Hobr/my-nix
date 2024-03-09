@@ -45,7 +45,7 @@
     ./software/thunderbird.nix
     # 即时通讯
     ./software/im.nix
-  
+
     # 下载
     ./software/download.nix
     # 管理

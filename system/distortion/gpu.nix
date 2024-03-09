@@ -9,6 +9,8 @@
       intel-media-driver
       vaapiVdpau
       libvdpau-va-gl
+      intel-compute-runtime
+      vaapiIntel
     ];
   };
 
@@ -23,5 +25,5 @@
   ];
 
   # GPU驱动
-  services.xserver.videoDrivers = [ "intel" ];
+  services.xserver.videoDrivers = [ "modesetting" "intel" ];
 }

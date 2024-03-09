@@ -1,9 +1,16 @@
 { pkgs, lib, ... }:
 {
-  # Greetd
-  programs.regreet = {
+  # Greet
+  environment.etc."greetd/environments".text = ''
+    Hyprland
+  '';
+
+  services.greetd = {
     enable = true;
-    settings = { };
+    settings = rec {
+      initial_session.command = "Hyprland";
+      default_session = initial_session;
+    };
   };
 
   # Hyprland

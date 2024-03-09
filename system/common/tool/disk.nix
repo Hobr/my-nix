@@ -46,5 +46,8 @@
   services.gvfs.enable = true;
 
   # 挂载
-  services.udisks2.enable = true;
+  services.udisks2 = {
+    enable = true;
+    mountOnMedia = true;
+  };
 }

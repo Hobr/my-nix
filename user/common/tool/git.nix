@@ -25,6 +25,10 @@
       # 代理
       http.proxy = "http://127.0.0.1:7890";
       https.proxy = "http://127.0.0.1:7890";
+
+      core.editor = "nvim";
+      pull.rebase = true;
+      branch.autosetuprebase = "always";
     };
 
     # LFS

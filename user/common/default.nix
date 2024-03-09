@@ -1,7 +1,7 @@
 {
   imports = [
     # Nix
-    ./tool/sync.nix
+    ./tool/nix.nix
     # 硬盘
     ./tool/disk.nix
     # Git

@@ -5,11 +5,6 @@
       monitor = [
         "eDP-1,2160x1350@60,auto,1"
       ];
-
-      env = [
-        # 鼠标大小
-        "XCURSOR_SIZE,20"
-      ];
     };
   };
 }

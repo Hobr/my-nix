@@ -2,7 +2,7 @@
 {
   imports = [
     ./common
-    ./kanade
+    ./config/kanade
   ];
 
   nixpkgs = {

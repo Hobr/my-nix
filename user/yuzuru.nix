@@ -2,7 +2,7 @@
 {
   imports = [
     ./common
-    ./yuzuru
+    ./config/yuzuru
   ];
 
   nixpkgs = {

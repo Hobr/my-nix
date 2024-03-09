@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   wayland.windowManager.hyprland = {
     # 设置
@@ -6,10 +7,7 @@
         "eDP-1,2560x1440@165,auto,1.25"
       ];
 
-      env = [
-        # 鼠标大小
-        "XCURSOR_SIZE,20"
-
+      env = lib.mkAfter [
         # NVIDIA
         "LIBVA_DRIVER_NAME,nvidia"
         "GBM_BACKEND,nvidia-drm"

@@ -27,6 +27,9 @@ in
       ];
 
       env = [
+        # 鼠标大小
+        "XCURSOR_SIZE,24"
+
         # Wayland
         "NIXOS_OZONE_WL,1"
         "XDG_SESSION_TYPE,wayland"

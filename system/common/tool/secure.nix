@@ -26,4 +26,13 @@
   services.dbus.packages = [ pkgs.gcr ];
   programs.seahorse.enable = true;
 
+  # Logind
+  service.logind = {
+    lidSwitch = "suspend";
+    lidSwitchExternalPower = "lock";
+    extraConfig = ''
+      HandlePowerKey=suspend
+      HibernateDelaySec=3600
+    '';
+  };
 }

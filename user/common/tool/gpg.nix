@@ -5,7 +5,7 @@
     package = pkgs.unstable.gnupg;
   };
 
-  home.packages = with pkgs.unstable; lib.mkAfter [ pinentry-gnome ];
+  home.packages = with pkgs.unstable; lib.mkAfter [ pinentry-gnome3 ];
   services.gnome-keyring = {
     enable = true;
     components = [ "pkcs11" "secrets" "ssh" ];
@@ -16,7 +16,7 @@
     enableZshIntegration = true;
     pinentryFlavor = "gnome3";
     extraConfig = ''
-      pinentry-program ${pkgs.unstable.pinentry.gnome3}/bin/pinentry
+      pinentry-program ${pkgs.unstable.pinentry-gnome3}/bin/pinentry
     '';
   };
 }

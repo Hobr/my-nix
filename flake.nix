@@ -13,11 +13,6 @@
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
-    ## Hyprland
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     ## 用户
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";

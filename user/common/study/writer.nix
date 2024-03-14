@@ -4,7 +4,6 @@
     obsidian
     zotero
     anki
-    p3x-onenote
 
     libreoffice
     hunspell

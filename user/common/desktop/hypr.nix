@@ -1,8 +1,8 @@
 { inputs, pkgs, lib, ... }:
 {
+  imports = [ inputs.hyprland.homeManagerModules.default ];
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.unstable.hyprland;
     systemd.enable = true;
     xwayland.enable = true;
 

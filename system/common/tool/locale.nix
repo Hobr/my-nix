@@ -20,7 +20,7 @@
     packages = with pkgs.unstable; [
       (nerdfonts.override { fonts = [ "Mononoki" ]; })
 
-      #sarasa-gothic
+      sarasa-gothic
       twitter-color-emoji
 
       noto-fonts

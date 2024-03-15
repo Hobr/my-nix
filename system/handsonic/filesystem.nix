@@ -40,17 +40,17 @@
     };
 
     # Windows 分区
-    "/mnt/windows" = {
-      device = "/dev/nvme1n1p3";
-      fsType = "ntfs-3g";
-      options = [ "defaults" ];
-    };
+    #"/mnt/windows" = {
+    #  device = "/dev/nvme1n1p3";
+    #  fsType = "ntfs-3g";
+    #  options = [ "defaults" ];
+    #};
 
-    "/mnt/data" = {
-      device = "/dev/nvme1n1p4";
-      fsType = "ntfs-3g";
-      options = [ "defaults" ];
-    };
+    #"/mnt/data" = {
+    #  device = "/dev/nvme1n1p4";
+    #  fsType = "ntfs-3g";
+    #  options = [ "defaults" ];
+    #};
   };
 
   # 交换

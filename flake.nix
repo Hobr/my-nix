@@ -33,6 +33,24 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # 桌面
+    ## Hyprland
+    hypr-xdg.url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.3.1";
+    hypr-idle.url = "github:hyprwm/hypridle/v0.1.1";
+    hypr-paper.url = "github:hyprwm/hyprpaper/v0.6.0";
+    hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";
+    hypr-contrib.url = "github:hyprwm/contrib/v0.1";
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.36.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # 主題
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

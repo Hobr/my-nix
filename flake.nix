@@ -49,8 +49,8 @@
     };
 
     # 主題
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
+    catppuccin-hyprland = {
+      url = "github:catppuccin/hyprland";
       flake = false;
     };
   };

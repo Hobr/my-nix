@@ -33,19 +33,19 @@
         "url": "https://flakehub.com/f/zhaofengli/attic/0.1.%2A.tar.gz"
       }
     },
-    "catppuccin-bat": {
+    "catppuccin-hyprland": {
       "flake": false,
       "locked": {
-        "lastModified": 1710456315,
-        "narHash": "sha256-POoW2sEM6jiymbb+W/9DKIjDM1Buu1HAmrNP0yC2JPg=",
+        "lastModified": 1702668781,
+        "narHash": "sha256-9BhZq9J1LmHfAPBqOr64chiAEzS+YV6zqe9ma95V3no=",
         "owner": "catppuccin",
-        "repo": "bat",
-        "rev": "b19bea35a85a32294ac4732cad5b0dc6495bed32",
+        "repo": "hyprland",
+        "rev": "fc228737d3d0c12e34a7fa155a0fc3192e5e4017",
         "type": "github"
       },
       "original": {
         "owner": "catppuccin",
-        "repo": "bat",
+        "repo": "hyprland",
         "type": "github"
       }
     },
@@ -1080,7 +1080,7 @@
     },
     "root": {
       "inputs": {
-        "catppuccin-bat": "catppuccin-bat",
+        "catppuccin-hyprland": "catppuccin-hyprland",
         "chaotic": "chaotic",
         "home-manager": "home-manager_2",
         "hypr-contrib": "hypr-contrib",

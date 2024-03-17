@@ -99,10 +99,6 @@ reboot
 ## 后续
 
 ```bash
-# scx
-zgrep 'SCHED_CLASS' /proc/config.gz
-sudo scx_rusty
-
 nmcli
 sudo mkdir /etc/clash
 sudo systemctl restart Clash

@@ -10,9 +10,6 @@
     kernelParams = [ "quiet" "udev.log_level=3" "nowatchdog" "systemd.gpt_auto=0" ];
   };
 
-  # SCX
-  environment.systemPackages =  [ pkgs.scx ];
-
   # Ananicy
   services.ananicy = {
     enable = true;

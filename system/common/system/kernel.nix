@@ -3,7 +3,7 @@
   # 内核
   boot = {
     # 版本
-    kernelPackages = pkgs.linuxPackages_cachyos-sched-ext;
+    kernelPackages = pkgs.linuxPackages_cachyos;
 
     # 内核参数
     consoleLogLevel = 0;

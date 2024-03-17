@@ -49,6 +49,22 @@
         "type": "github"
       }
     },
+    "catppuccin-starship": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689246850,
+        "narHash": "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=",
+        "owner": "catppuccin",
+        "repo": "starship",
+        "rev": "5629d2356f62a9f2f8efad3ff37476c19969bd4f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "starship",
+        "type": "github"
+      }
+    },
     "chaotic": {
       "inputs": {
         "attic": "attic",
@@ -1034,11 +1050,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1710654680,
-        "narHash": "sha256-GlQoHF1f9s/J3EQsbbokvC85/3y6e4JiVOcAXg35KlY=",
+        "lastModified": 1710672334,
+        "narHash": "sha256-KSGqaTpK35Q8CqmSH8E8d2efR4s/V+TCB7be4AW892Q=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bc7ae946dd34942dd19079133d6debd35da5a8f0",
+        "rev": "1944ea837f0ee82807a09cd523c1b9ddc11b2706",
         "type": "github"
       },
       "original": {
@@ -1081,6 +1097,7 @@
     "root": {
       "inputs": {
         "catppuccin-hyprland": "catppuccin-hyprland",
+        "catppuccin-starship": "catppuccin-starship",
         "chaotic": "chaotic",
         "home-manager": "home-manager_2",
         "hypr-contrib": "hypr-contrib",

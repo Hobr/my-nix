@@ -11,7 +11,10 @@
   };
 
   # scx
-  chaotic.scx.enable = true;
+  chaotic.scx = {
+    enable = true;
+    scheduler = "scx_rusty";
+  };
 
   # Ananicy
   services.ananicy = {

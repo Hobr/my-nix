@@ -104,13 +104,11 @@ in
         format-icons = {
           default = [ " " ];
         };
-        scroll-step = 5;
+        scroll-step = 3;
         on-click = "pamixer -t";
       };
       "custom/launcher" = {
         format = "";
-        on-click = "pkill wofi || wofi --show drun";
-        on-click-right = "pkill wofi || wallpaper-picker";
         tooltip = "false";
       };
     };

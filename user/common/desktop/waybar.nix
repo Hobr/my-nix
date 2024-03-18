@@ -20,7 +20,7 @@ in
       target = "hyprland-session.target";
     };
     settings.mainBar = {
-      position = "bottom";
+      position = "top";
       layer = "top";
       height = 5;
       margin-top = 0;

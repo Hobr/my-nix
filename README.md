@@ -24,7 +24,6 @@
 - NVim环境
 - Emacs环境
 - Systemd-timesyncd resolved....
-- CCache
 - 邮箱
 
 ## 安装

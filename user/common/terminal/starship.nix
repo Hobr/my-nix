@@ -21,8 +21,6 @@
         disabled = false;
         style = "bg:none fg:#161821";
       };
-
-      palette = "catppuccin_mocha";
     };
   };
 }

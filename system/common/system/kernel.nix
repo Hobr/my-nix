@@ -10,9 +10,9 @@
     kernelParams = [ "quiet" "udev.log_level=3" "nowatchdog" "systemd.gpt_auto=0" ];
   };
 
-  # scx
+  # scx 等待修复
   chaotic.scx = {
-    enable = true;
+    enable = false;
     scheduler = "scx_rusty";
   };
 

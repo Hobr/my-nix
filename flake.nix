@@ -36,14 +36,11 @@
 
     # 桌面
     ## Hyprland
+    hyprland.url = "github:hyprwm/Hyprland/v0.37.1";
     hypr-idle.url = "github:hyprwm/hypridle/v0.1.1";
     hypr-paper.url = "github:hyprwm/hyprpaper/v0.6.0";
     hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";
     hypr-contrib.url = "github:hyprwm/contrib/v0.1";
-    hyprland = {
-      url = "github:hyprwm/Hyprland/v0.37.1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # 主題
     catppuccin-hyprland = {
@@ -95,7 +92,7 @@
       };
 
       homeConfigurations = {
-        # Laptop1
+        # Laptop
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };

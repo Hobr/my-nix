@@ -36,7 +36,6 @@
 
     # 桌面
     ## Hyprland
-    hypr-xdg.url = "github:hyprwm/xdg-desktop-portal-hyprland/v1.3.1";
     hypr-idle.url = "github:hyprwm/hypridle/v0.1.1";
     hypr-paper.url = "github:hyprwm/hyprpaper/v0.6.0";
     hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";

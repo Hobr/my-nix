@@ -1,8 +1,8 @@
 { inputs, pkgs, lib, ... }:
 {
+  imports = [ inputs.hyprland.homeManagerModules.default ];
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.unstable.hyprland;
     systemd.enable = true;
     xwayland.enable = true;
 
@@ -10,7 +10,7 @@
     settings = {
       env = [
         # 鼠标大小
-        "XCURSOR_SIZE,24"
+        "XCURSOR_SIZE,22"
 
         # Wayland
         "NIXOS_OZONE_WL,1"
@@ -164,5 +164,5 @@
   };
 
   # 壁纸
-  home.packages = with pkgs.unstable; lib.mkAfter [ hyprpaper ];
+  home.packages = lib.mkAfter [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
 }

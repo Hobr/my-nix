@@ -54,7 +54,11 @@
   programs.btop = {
     enable = true;
     package = pkgs.unstable.btop;
-    settings = { };
+    settings = {
+      color_theme = "dracula";
+      theme_background = false;
+      update_ms = 500;
+    };
   };
 
   # fzf(fd)

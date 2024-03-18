@@ -66,6 +66,8 @@
     ./terminal/tool.nix
     # ZSH
     ./terminal/zsh.nix
+    # Starship
+    ./terminal/starship.nix
     # GNU
     ./terminal/gnu.nix
     # 开发环境

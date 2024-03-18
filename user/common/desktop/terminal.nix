@@ -1,9 +1,7 @@
 { pkgs, ... }:
 {
-  programs.alacritty = {
+  programs.kitty = {
     enable = true;
-    package = pkgs.unstable.alacritty;
-    # 设置
-    settings = { };
+    package = pkgs.unstable.kitty;
   };
 }

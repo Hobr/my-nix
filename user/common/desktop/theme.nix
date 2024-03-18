@@ -23,7 +23,7 @@
   home.pointerCursor = {
     package = pkgs.unstable.catppuccin-cursors.latteRosewater;
     name = "Catppuccin-Latte-Rosewater-Cursors";
-    size = 20;
+    size = 22;
     gtk.enable = true;
   };
 
@@ -60,6 +60,7 @@
 
   # 字体
   fonts.fontconfig.enable = true;
+
   gtk.font = {
     name = "Sarasa UI SC";
     size = 11;

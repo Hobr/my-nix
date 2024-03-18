@@ -6,7 +6,7 @@
     # DNSSEC
     dnssec = "allow-downgrade";
     # 后备DNS
-    fallbackDns = [ "8.8.8.8" "8.8.4.4" ];
+    fallbackDns = [ "8.8.8.8" "1.1.1.1" ];
   };
 
   networking = {

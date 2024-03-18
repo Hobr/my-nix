@@ -16,13 +16,13 @@
   # Hyprland
   programs.hyprland = {
     enable = true;
-    package = pkgs.unstable.hyprland;
     xwayland.enable = true;
   };
 
   # XDG
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 

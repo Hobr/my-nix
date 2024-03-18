@@ -100,7 +100,7 @@
       "$mainMod" = "SUPER";
 
       bind = [
-        "$mainMod, Q, exec, alacritty"
+        "$mainMod, Q, exec, kitty"
         "$mainMod, A, exec, firefox"
         "$mainMod, E, exec, code"
         "$mainMod, W, exec, rofi -show drun"

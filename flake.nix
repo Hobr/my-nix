@@ -42,7 +42,7 @@
     hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";
     hypr-contrib.url = "github:hyprwm/contrib/v0.1";
     hyprland = {
-      url = "github:hyprwm/Hyprland/v0.36.0";
+      url = "github:hyprwm/Hyprland/v0.37.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

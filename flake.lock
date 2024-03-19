@@ -49,6 +49,22 @@
         "type": "github"
       }
     },
+    "catppuccin-qtcreator": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1697887351,
+        "narHash": "sha256-dTcEJyJTI58DDlzFeBrNGqjON9kdkifsB9rGrNceBUA=",
+        "owner": "catppuccin",
+        "repo": "qtcreator",
+        "rev": "ac6f95b71448b5dd473fed18fca42b88c9cc51e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "qtcreator",
+        "type": "github"
+      }
+    },
     "catppuccin-starship": {
       "flake": false,
       "locked": {
@@ -1049,6 +1065,7 @@
     "root": {
       "inputs": {
         "catppuccin-hyprland": "catppuccin-hyprland",
+        "catppuccin-qtcreator": "catppuccin-qtcreator",
         "catppuccin-starship": "catppuccin-starship",
         "chaotic": "chaotic",
         "home-manager": "home-manager_2",

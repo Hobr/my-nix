@@ -61,6 +61,8 @@
     ./software/emacs.nix
     # VS Code
     ./software/vscode.nix
+    # QT
+    ./software/qt.nix
 
     # CLI
     ./terminal/cli.nix

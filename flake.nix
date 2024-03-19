@@ -51,6 +51,10 @@
       url = "github:catppuccin/starship";
       flake = false;
     };
+    catppuccin-qtcreator = {
+      url = "github:catppuccin/qtcreator";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

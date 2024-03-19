@@ -67,6 +67,20 @@
     enable = true;
     package = pkgs.unstable.fzf;
     enableZshIntegration = true;
+    colors = {
+      bg = "#eff1f5";
+      "bg+" = "#ccd0da";
+      fg = "#4c4f69";
+      "fg+" = "#4c4f69";
+      hl = "#d20f39";
+      "hl+" = "#d20f39";
+      spinner = "#dc8a78";
+      header = "#d20f39";
+      info = "#8839ef";
+      pointer = "#dc8a78";
+      marker = "#dc8a78";
+      prompt = "#8839ef";
+    };
   };
 
   # less

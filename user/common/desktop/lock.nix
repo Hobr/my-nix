@@ -14,5 +14,5 @@
     #};
   };
 
-  xdg.configFile."swaylock/config".source = "${inputs.catppuccin-swaylock}/themes/latte.conf";
+  xdg.configFile."swaylock/config".source = "${inputs.catppuccin-swaylock}/themes/mocha.conf";
 }

@@ -55,6 +55,14 @@
       url = "github:catppuccin/qtcreator";
       flake = false;
     };
+    catppuccin-bat = {
+      url = "github:catppuccin/bat";
+      flake = false;
+    };
+    catppuccin-btop = {
+      url = "github:catppuccin/btop";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

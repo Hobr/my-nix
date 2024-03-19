@@ -33,6 +33,38 @@
         "url": "https://flakehub.com/f/zhaofengli/attic/0.1.%2A.tar.gz"
       }
     },
+    "catppuccin-bat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710456315,
+        "narHash": "sha256-POoW2sEM6jiymbb+W/9DKIjDM1Buu1HAmrNP0yC2JPg=",
+        "owner": "catppuccin",
+        "repo": "bat",
+        "rev": "b19bea35a85a32294ac4732cad5b0dc6495bed32",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "bat",
+        "type": "github"
+      }
+    },
+    "catppuccin-btop": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696688295,
+        "narHash": "sha256-jodJl4f2T9ViNqsY9fk8IV62CrpC5hy7WK3aRpu70Cs=",
+        "owner": "catppuccin",
+        "repo": "btop",
+        "rev": "c6469190f2ecf25f017d6120bf4e050e6b1d17af",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "btop",
+        "type": "github"
+      }
+    },
     "catppuccin-hyprland": {
       "flake": false,
       "locked": {
@@ -1064,6 +1096,8 @@
     },
     "root": {
       "inputs": {
+        "catppuccin-bat": "catppuccin-bat",
+        "catppuccin-btop": "catppuccin-btop",
         "catppuccin-hyprland": "catppuccin-hyprland",
         "catppuccin-qtcreator": "catppuccin-qtcreator",
         "catppuccin-starship": "catppuccin-starship",

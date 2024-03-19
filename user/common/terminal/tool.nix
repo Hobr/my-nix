@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 {
   # Bat(cat)
   programs.bat = {
@@ -6,11 +6,12 @@
     extraPackages = with pkgs.unstable.bat-extras; [ prettybat batwatch batpipe batman batgrep batdiff ];
 
     # 配置
-    themes = { };
+    config = {
+      theme = "catppuccin";
+    };
+    themes.catppuccin.src = "${inputs.catppuccin-bat}/themes/Catppuccin Latte.tmTheme";
     syntaxes = { };
-    config = { };
   };
-
   # Zoxide(cd)
   programs.zoxide = {
     enable = true;
@@ -55,11 +56,11 @@
     enable = true;
     package = pkgs.unstable.btop;
     settings = {
-      color_theme = "dracula";
-      theme_background = false;
+      color_theme = "catppuccin_latte";
       update_ms = 500;
     };
   };
+  xdg.configFile."btop/themes/catppuccin_latte.theme".source = "${inputs.catppuccin-btop}/themes/catppuccin_latte.theme";
 
   # fzf(fd)
   programs.fzf = {

@@ -63,6 +63,10 @@
       url = "github:catppuccin/starship";
       flake = false;
     };
+    catppuccin-zsh = {
+      url = "github:catppuccin/zsh-syntax-highlighting";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

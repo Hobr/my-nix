@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,inputs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -13,7 +13,10 @@
     # 插件
     enableAutosuggestions = true;
     enableCompletion = true;
-    syntaxHighlighting.enable = true;
     autocd = true;
+    syntaxHighlighting.enable = true;
+
+    # 配置
+    initExtraFirst = "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
   };
 }

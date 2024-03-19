@@ -21,9 +21,9 @@
 
   # 鼠标
   home.pointerCursor = {
-    package = pkgs.unstable.catppuccin-cursors.latteRosewater;
-    name = "Catppuccin-Latte-Rosewater-Cursors";
-    size = 22;
+    package = pkgs.unstable.catppuccin-cursors.latteDark;
+    name = "Catppuccin-Latte-Dark-Cursors";
+    size = 24;
     gtk.enable = true;
   };
 
@@ -33,9 +33,9 @@
 
     # 主题
     theme = {
-      name = "Catppuccin-Latte-Standard-Rosewater-Light";
+      name = "Catppuccin-Latte-Standard-Lavender-Light";
       package = pkgs.unstable.catppuccin-gtk.override {
-        accents = [ "rosewater" ];
+        accents = [ "lavender" ];
         size = "standard";
         tweaks = [ "normal" ];
         variant = "latte";
@@ -46,10 +46,16 @@
     iconTheme = {
       name = "Papirus";
       package = pkgs.unstable.catppuccin-papirus-folders.override {
-        accent = "rosewater";
+        accent = "lavender";
         flavor = "latte";
       };
     };
+  };
+
+  xdg.configFile = {
+    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
   # QT
@@ -63,7 +69,7 @@
 
   gtk.font = {
     name = "Sarasa UI SC";
-    size = 11;
+    size = 12;
   };
 
   # 深色模式

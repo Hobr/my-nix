@@ -10,7 +10,7 @@
     settings = {
       env = [
         # 鼠标大小
-        "XCURSOR_SIZE,22"
+        "XCURSOR_SIZE,24"
 
         # Wayland
         "NIXOS_OZONE_WL,1"

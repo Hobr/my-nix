@@ -78,7 +78,7 @@
       };
 
       gestures = {
-        workspace_swipe = "off";
+        workspace_swipe = "yes";
       };
 
       misc = {

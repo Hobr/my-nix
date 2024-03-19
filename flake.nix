@@ -67,6 +67,10 @@
       url = "github:catppuccin/zsh-syntax-highlighting";
       flake = false;
     };
+    catppuccin-swaylock = {
+      url = "github:catppuccin/swaylock";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

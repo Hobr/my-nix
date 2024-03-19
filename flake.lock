@@ -113,6 +113,22 @@
         "type": "github"
       }
     },
+    "catppuccin-swaylock": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705455043,
+        "narHash": "sha256-e17JVWyj+ES9qII8Ukj6JxZh4bWUK+gOKsTvUIu3Qq4=",
+        "owner": "catppuccin",
+        "repo": "swaylock",
+        "rev": "ac089b8b8ae7852816fa709f6d97659221b75e18",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "swaylock",
+        "type": "github"
+      }
+    },
     "catppuccin-zsh": {
       "flake": false,
       "locked": {
@@ -1117,6 +1133,7 @@
         "catppuccin-hyprland": "catppuccin-hyprland",
         "catppuccin-qtcreator": "catppuccin-qtcreator",
         "catppuccin-starship": "catppuccin-starship",
+        "catppuccin-swaylock": "catppuccin-swaylock",
         "catppuccin-zsh": "catppuccin-zsh",
         "chaotic": "chaotic",
         "home-manager": "home-manager_2",

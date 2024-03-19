@@ -57,6 +57,8 @@
 
     # NeoVim
     ./software/nvim.nix
+    # Emacs
+    ./software/emacs.nix
     # VS Code
     ./software/vscode.nix
 

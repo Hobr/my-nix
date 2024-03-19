@@ -47,10 +47,6 @@
       url = "github:catppuccin/hyprland";
       flake = false;
     };
-    catppuccin-starship = {
-      url = "github:catppuccin/starship";
-      flake = false;
-    };
     catppuccin-qtcreator = {
       url = "github:catppuccin/qtcreator";
       flake = false;
@@ -61,6 +57,10 @@
     };
     catppuccin-btop = {
       url = "github:catppuccin/btop";
+      flake = false;
+    };
+    catppuccin-starship = {
+      url = "github:catppuccin/starship";
       flake = false;
     };
   };

@@ -7,6 +7,7 @@
     shellAliases = {
       pr = "proxychains4";
       rm = "trash-put";
+      cat = "bat";
     };
 
     # 插件

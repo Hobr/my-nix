@@ -9,9 +9,15 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-
+    # 配置
+    extraConfig = ''
+      colorscheme catppuccin-latte
+    '';
+    extraLuaConfig = ''
+      vim.cmd.colorscheme "catppuccin"
+    '';
     # 插件
-    plugins = [ ];
+    plugins = with pkgs.vimPlugins; [ catppuccin-nvim ];
   };
 
   # NeoVide

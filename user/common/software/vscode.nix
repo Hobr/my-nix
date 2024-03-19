@@ -9,31 +9,43 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
-      # nix language
+      # NIX
       bbenoist.nix
-      # Color theme
+      # 主题
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
     ];
     userSettings = {
-      # Style
+      # 主题
       "window.titleBarStyle" = "custom";
       "files.autoSave" = "afterDelay";
       "update.mode" = "none";
       "extensions.autoUpdate" = false;
+
+      # 字体
       "editor.fontFamily" = "'Mononoki Nerd Font', 'Sarasa UI SC'";
       "terminal.integrated.fontFamily" = "'Mononoki Nerd Font', 'Sarasa UI SC'";
       "editor.fontSize" = 16;
+
+      # Catputtin
       "workbench.colorTheme" = "Catppuccin Latte";
       "workbench.iconTheme" = "catppuccin-latte";
+
+      "catppuccin-icons.hidesExplorerArrows" = false;
+      "catppuccin-icons.specificFolders" = true;
+      "catpuccin-icons.monochrome" = false;
+
+      # 终端
+      "terminal.integrated.minimumContrastRatio" = 1;
 
       # Git
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
       "git.autofetch" = true;
 
-      # Editor
+      # 编辑器
       "diffEditor.ignoreTrimWhitespace" = false;
+      "editor.semanticHighlighting.enabled" = true;
     };
     keybindings = [ ];
   };

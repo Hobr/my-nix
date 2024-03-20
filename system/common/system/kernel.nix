@@ -12,7 +12,7 @@
 
   # scx 等待修复
   chaotic.scx = {
-    enable = false;
+    enable = true;
     scheduler = "scx_rusty";
   };
 

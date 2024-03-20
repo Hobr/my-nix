@@ -14,7 +14,8 @@ in
 {
   programs.waybar = {
     enable = true;
-    package = pkgs.unstable.waybar;
+    # temp
+    #package = pkgs.unstable.waybar;
     systemd = {
       enable = true;
       target = "hyprland-session.target";

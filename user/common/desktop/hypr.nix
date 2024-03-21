@@ -8,7 +8,9 @@
 
     # 设置
     settings = {
-      exec-once = [ "clash-verge" ];
+      exec-once = [
+        "clash-verge"
+      ];
 
       env = [
         # 鼠标大小

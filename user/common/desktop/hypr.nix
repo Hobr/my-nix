@@ -8,6 +8,8 @@
 
     # 设置
     settings = {
+      exec-once = [ "clash-verge" ];
+
       env = [
         # 鼠标大小
         "XCURSOR_SIZE,24"

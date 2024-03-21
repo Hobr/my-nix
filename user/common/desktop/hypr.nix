@@ -9,9 +9,6 @@
     # 设置
     settings = {
       exec-once = [
-        # 开机启动
-        "clash-verge"
-
         # 清空粘贴板
         "cliphist wipe"
       ];

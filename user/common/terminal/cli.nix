@@ -20,6 +20,9 @@
     p7zip
     zip
     unzip
+
+    arduino
+    arduino-ide
   ];
 
   programs.info.enable = true;

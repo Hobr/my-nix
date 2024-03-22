@@ -34,7 +34,7 @@
     # 主题
     theme = {
       name = "Catppuccin-Latte-Standard-Lavender-Light";
-      package = pkgs.unstable.catppuccin-gtk.override {
+      package = pkgs.catppuccin-gtk.override {
         accents = [ "lavender" ];
         size = "standard";
         tweaks = [ "normal" ];

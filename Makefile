@@ -12,3 +12,6 @@ history:
 
 clean:
 	nh clean all
+
+format:
+	alejandra ./

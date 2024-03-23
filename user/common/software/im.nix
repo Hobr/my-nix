@@ -1,6 +1,6 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
-  home.packages = with pkgs.unstable; lib.mkAfter [
+  home.packages = with pkgs.unstable; [
     qq
     telegram-desktop
     element-desktop

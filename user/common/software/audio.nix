@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   # MPD
   services.mpd = {
@@ -28,7 +28,7 @@
     settings = { };
   };
 
-  home.packages = with pkgs.unstable; lib.mkAfter [
+  home.packages = with pkgs.unstable; [
     # 音乐播放器
     amberol
     netease-cloud-music-gtk

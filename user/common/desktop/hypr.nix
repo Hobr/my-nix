@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.hyprland.homeManagerModules.default ];
   wayland.windowManager.hyprland = {
@@ -169,5 +169,5 @@
   };
 
   # 壁纸
-  home.packages = lib.mkAfter [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
+  home.packages = [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
 }

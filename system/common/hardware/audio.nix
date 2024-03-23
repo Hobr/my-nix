@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{  pkgs, ... }:
 {
   sound = {
     enable = true;
@@ -25,7 +25,7 @@
     jack.enable = true;
   };
 
-  environment.systemPackages = with pkgs; lib.mkAfter [
+  environment.systemPackages = with pkgs; [
     pamixer
     pavucontrol
   ];

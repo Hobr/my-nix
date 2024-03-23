@@ -1,11 +1,11 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   # Aria
   programs.aria2 = {
     enable = true;
   };
 
-  home.packages = with pkgs.unstable; lib.mkAfter [
+  home.packages = with pkgs.unstable; [
     transmission_4-gtk
   ];
 }

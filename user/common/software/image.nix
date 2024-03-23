@@ -1,6 +1,6 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs,  inputs, ... }:
 {
-  home.packages = with pkgs.unstable; lib.mkAfter [
+  home.packages = with pkgs.unstable; [
     hyprpicker
     slurp
     swappy

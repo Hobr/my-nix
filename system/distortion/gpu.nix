@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config,pkgs, ... }:
 {
   # OpenGL
   hardware.opengl = {
@@ -15,7 +15,7 @@
   };
 
   # Vulkan
-  environment.systemPackages = with pkgs.unstable; lib.mkAfter [
+  environment.systemPackages = with pkgs.unstable;[
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer

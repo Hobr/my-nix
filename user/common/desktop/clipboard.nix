@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   # Cliphist
   services.cliphist = {
@@ -8,5 +8,5 @@
   };
 
   # wl-clipboard
-  home.packages = lib.mkAfter [ pkgs.unstable.wl-clipboard ];
+  home.packages =  [ pkgs.unstable.wl-clipboard ];
 }

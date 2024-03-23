@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs,  ... }:
 {
   programs.proxychains = {
     enable = true;
@@ -23,7 +23,7 @@
   };
 
   # Clash
-  environment.systemPackages = lib.mkAfter [ pkgs.unstable.clash-meta ];
+  environment.systemPackages = [ pkgs.unstable.clash-meta ];
 
   # 守护进程
   systemd.services.Clash = {

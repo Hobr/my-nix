@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   security.tpm2 = {
     enable = true;
@@ -7,6 +6,6 @@
     abrmd.enable = false;
   };
 
-  boot.initrd.availableKernelModules = lib.mkAfter [ "tpm" "tpm_tis" "tpm_crb" ];
+  boot.initrd.availableKernelModules = [ "tpm" "tpm_tis" "tpm_crb" ];
   boot.initrd.systemd.enableTpm2 = true;
 }

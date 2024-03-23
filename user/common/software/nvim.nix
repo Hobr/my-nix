@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   programs.neovim = {
     enable = true;
@@ -21,5 +21,5 @@
   };
 
   # NeoVide
-  home.packages = with pkgs.unstable; lib.mkAfter [ neovide ];
+  home.packages = with pkgs.unstable; [ neovide ];
 }

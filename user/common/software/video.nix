@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   programs.mpv = {
     enable = true;
@@ -8,7 +8,7 @@
     scripts = with pkgs.mpvScripts; [ mpris ];
   };
 
-  home.packages = with pkgs.unstable; lib.mkAfter [
+  home.packages = with pkgs.unstable; [
     ffmpeg-full
     yt-dlp
     openai-whisper

@@ -1,10 +1,10 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   # Rtkit
   security.rtkit.enable = true;
 
   # Polkit
-  environment.systemPackages = lib.mkAfter [ pkgs.polkit_gnome ];
+  environment.systemPackages = [ pkgs.polkit_gnome ];
   security.polkit.enable = true;
 
   # Sudo

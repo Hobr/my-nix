@@ -1,6 +1,6 @@
-{ pkgs, lib, ... }:
+{ pkgs,lib, ... }:
 {
-  environment.systemPackages = with pkgs.unstable; lib.mkAfter [ sbctl ];
+  environment.systemPackages = with pkgs.unstable;[ sbctl ];
 
   boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.lanzaboote = {

@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   # Greet
   environment.etc."greetd/environments".text = ''
@@ -25,7 +25,7 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  environment.systemPackages = lib.mkAfter [ pkgs.unstable.xdg-utils ];
+  environment.systemPackages = [ pkgs.unstable.xdg-utils ];
 
   # Seatd
   systemd.services = {

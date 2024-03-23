@@ -10,5 +10,7 @@
 
   home.packages = with pkgs.unstable; lib.mkAfter [
     ffmpeg-full
+    yt-dlp
+    openai-whisper
   ];
 }

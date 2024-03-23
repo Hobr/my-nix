@@ -1,7 +1,7 @@
 {
   programs.matplotlib = {
     enable = true;
-    config = { };
+    config = {};
   };
 
   programs.sagemath.enable = true;

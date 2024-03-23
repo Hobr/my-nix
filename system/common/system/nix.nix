@@ -1,5 +1,10 @@
-{ lib, inputs, outputs, config, ... }:
 {
+  lib,
+  inputs,
+  outputs,
+  config,
+  ...
+}: {
   nixpkgs = {
     # 非自由软件
     config.allowUnfree = true;
@@ -13,13 +18,13 @@
   };
 
   nix = {
-    nixPath = [ "/etc/nix/path" ];
-    registry = (lib.mapAttrs (_: flake: { inherit flake; })) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+    nixPath = ["/etc/nix/path"];
+    registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
 
     settings = {
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
-      system-features = [ "big-parallel" ];
+      system-features = ["big-parallel"];
 
       # Github API
       # access-tokens = "github.com=${secrets.git.github.oauth-token}";
@@ -43,11 +48,11 @@
 
   environment.etc =
     lib.mapAttrs'
-      (name: value: {
-        name = "nix/path/${name}";
-        value.source = value.flake;
-      })
-      config.nix.registry;
+    (name: value: {
+      name = "nix/path/${name}";
+      value.source = value.flake;
+    })
+    config.nix.registry;
 
   # 软件文档
   documentation = {

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # Dunst
   services.dunst = {
     enable = true;
@@ -9,6 +8,6 @@
       name = "Papirus";
     };
 
-    settings = { };
+    settings = {};
   };
 }

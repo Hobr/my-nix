@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     package = pkgs.zsh;

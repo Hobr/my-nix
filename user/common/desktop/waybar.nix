@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   custom = {
     font = "Mononoki Nerd Font";
     font_size = "15px";
@@ -10,8 +9,7 @@ let
     background = "11111B";
     opacity = "0.98";
   };
-in
-{
+in {
   programs.waybar = {
     enable = true;
     package = pkgs.unstable.waybar;
@@ -65,11 +63,11 @@ in
           sort-by-number = true;
         };
         persistent-workspaces = {
-          "1" = [ ];
-          "2" = [ ];
-          "3" = [ ];
-          "4" = [ ];
-          "5" = [ ];
+          "1" = [];
+          "2" = [];
+          "3" = [];
+          "4" = [];
+          "5" = [];
         };
       };
       memory = {
@@ -102,7 +100,7 @@ in
         format = "{icon} {volume}%";
         format-muted = "󰖁 ";
         format-icons = {
-          default = [ " " ];
+          default = [" "];
         };
         scroll-step = 3;
         on-click = "pamixer -t";
@@ -114,85 +112,85 @@ in
     };
     style = ''
 
-    * {
-        border: none;
-        border-radius: 0px;
-        padding: 0;
-        margin: 0;
-        min-height: 0px;
-        font-family: ${custom.font};
-        font-weight: ${custom.font_weight};
-        opacity: ${custom.opacity};
-    }
+      * {
+          border: none;
+          border-radius: 0px;
+          padding: 0;
+          margin: 0;
+          min-height: 0px;
+          font-family: ${custom.font};
+          font-weight: ${custom.font_weight};
+          opacity: ${custom.opacity};
+      }
 
-    window#waybar {
-        background: none;
-    }
+      window#waybar {
+          background: none;
+      }
 
-    #workspaces {
-        font-size: 18px;
-        padding-left: 15px;
-        
-    }
-    #workspaces button {
-        color: ${custom.text_color};
-        padding-left:  6px;
-        padding-right: 6px;
-    }
-    #workspaces button.empty {
-        color: #6c7086;
-    }
-    #workspaces button.active {
-        color: #b4befe;
-    }
+      #workspaces {
+          font-size: 18px;
+          padding-left: 15px;
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock {
-        font-size: ${custom.font_size};
-        color: ${custom.text_color};
-    }
+      }
+      #workspaces button {
+          color: ${custom.text_color};
+          padding-left:  6px;
+          padding-right: 6px;
+      }
+      #workspaces button.empty {
+          color: #6c7086;
+      }
+      #workspaces button.active {
+          color: #b4befe;
+      }
 
-    #cpu {
-        padding-left: 15px;
-        padding-right: 9px;
-        margin-left: 7px;
-    }
-    #memory {
-        padding-left: 9px;
-        padding-right: 9px;
-    }
-    #disk {
-        padding-left: 9px;
-        padding-right: 15px;
-    }
+      #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock {
+          font-size: ${custom.font_size};
+          color: ${custom.text_color};
+      }
 
-    #tray {
-        padding: 0 20px;
-        margin-left: 7px;
-    }
+      #cpu {
+          padding-left: 15px;
+          padding-right: 9px;
+          margin-left: 7px;
+      }
+      #memory {
+          padding-left: 9px;
+          padding-right: 9px;
+      }
+      #disk {
+          padding-left: 9px;
+          padding-right: 15px;
+      }
 
-    #pulseaudio {
-        padding-left: 15px;
-        padding-right: 9px;
-        margin-left: 7px;
-    }
-    #network {
-        padding-left: 9px;
-        padding-right: 15px;
-    }
-    
-    #clock {
-        padding-left: 9px;
-        padding-right: 15px;
-    }
+      #tray {
+          padding: 0 20px;
+          margin-left: 7px;
+      }
 
-    #custom-launcher {
-        font-size: 20px;
-        color: #b4befe;
-        font-weight: ${custom.font_weight};
-        padding-left: 10px;
-        padding-right: 15px;
-    }
-  '';
+      #pulseaudio {
+          padding-left: 15px;
+          padding-right: 9px;
+          margin-left: 7px;
+      }
+      #network {
+          padding-left: 9px;
+          padding-right: 15px;
+      }
+
+      #clock {
+          padding-left: 9px;
+          padding-right: 15px;
+      }
+
+      #custom-launcher {
+          font-size: 20px;
+          color: #b4befe;
+          font-weight: ${custom.font_weight};
+          padding-left: 10px;
+          padding-right: 15px;
+      }
+    '';
   };
 
   # 状态栏

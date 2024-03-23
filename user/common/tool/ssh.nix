@@ -1,5 +1,4 @@
-{ pkgs, lib, ... }:
-{
+{pkgs, ...}: {
   programs.ssh = {
     enable = true;
     matchBlocks = {

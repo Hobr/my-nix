@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.direnv = {
     enable = true;
     package = pkgs.unstable.direnv;
@@ -8,6 +7,6 @@
       enable = true;
       package = pkgs.unstable.nix-direnv;
     };
-    config = { };
+    config = {};
   };
 }

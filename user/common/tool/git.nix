@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.git = {
     enable = true;
     package = pkgs.unstable.git;
@@ -41,6 +40,6 @@
   programs.lazygit = {
     enable = true;
     package = pkgs.unstable.lazygit;
-    settings = { };
+    settings = {};
   };
 }

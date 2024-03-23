@@ -1,5 +1,4 @@
-{ config,pkgs, ... }:
-{
+{pkgs, ...}: {
   # OpenGL
   hardware.opengl = {
     enable = true;
@@ -15,7 +14,7 @@
   };
 
   # Vulkan
-  environment.systemPackages = with pkgs.unstable;[
+  environment.systemPackages = with pkgs.unstable; [
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
@@ -25,5 +24,5 @@
   ];
 
   # GPU驱动
-  services.xserver.videoDrivers = [ "modesetting" "intel" ];
+  services.xserver.videoDrivers = ["modesetting" "intel"];
 }

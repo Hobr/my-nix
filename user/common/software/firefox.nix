@@ -13,7 +13,7 @@
     profiles.hobr = {
       isDefault = true;
       # 扩展
-      extensions = [ ];
+      extensions = [];
       # 设置
       settings = {
         "browser.startup.homepage" = "https://search.nixos.org/packages";

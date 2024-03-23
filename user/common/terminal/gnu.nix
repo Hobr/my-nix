@@ -1,6 +1,5 @@
-{ pkgs,  ... }:
-{
-  home.packages = with pkgs.unstable;[
+{pkgs, ...}: {
+  home.packages = with pkgs.unstable; [
     coreutils-full
     gnumake
     gnused

@@ -77,65 +77,68 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
-    let
-      inherit (self) outputs;
-      systems = [
-        "x86_64-linux"
-        "i686-linux"
-        "aarch64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in
-    {
-      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-      overlays = import ./overlay { inherit inputs; };
-      nixosModules = import ./module/system;
-      homeManagerModules = import ./modules/home;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    systems = [
+      "x86_64-linux"
+      "i686-linux"
+      "aarch64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in {
+    packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
+    overlays = import ./overlay {inherit inputs;};
+    nixosModules = import ./module/system;
+    homeManagerModules = import ./modules/home;
 
-      nixosConfigurations = {
-        # Laptop
-        handsonic = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/handsonic.nix ];
-        };
-
-        # Pad
-        distortion = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/distortion.nix ];
-        };
-
-        # Server
-        overdrive = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./system/overdrive.nix ];
-        };
+    nixosConfigurations = {
+      # Laptop
+      handsonic = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./system/handsonic.nix];
       };
 
-      homeConfigurations = {
-        # Laptop
-        "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./user/kanade.nix ];
-        };
+      # Pad
+      distortion = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./system/distortion.nix];
+      };
 
-        # Pad
-        "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./user/yuzuru.nix ];
-        };
-
-        # Server
-        "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./user/yuri.nix ];
-        };
+      # Server
+      overdrive = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./system/overdrive.nix];
       };
     };
+
+    homeConfigurations = {
+      # Laptop
+      "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./user/kanade.nix];
+      };
+
+      # Pad
+      "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./user/yuzuru.nix];
+      };
+
+      # Server
+      "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./user/yuri.nix];
+      };
+    };
+  };
 }

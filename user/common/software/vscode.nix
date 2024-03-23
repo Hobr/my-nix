@@ -1,10 +1,9 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     package = pkgs.unstable.vscode.override (old: {
       # Wayland Fcitx5
-      commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" ];
+      commandLineArgs = (old.commandLineArgs or []) ++ ["--enable-wayland-ime"];
     });
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
@@ -43,6 +42,6 @@
       "editor.semanticHighlighting.enabled" = true;
       "explorer.confirmDragAndDrop" = false;
     };
-    keybindings = [ ];
+    keybindings = [];
   };
 }

@@ -1,5 +1,4 @@
-{ outputs, ... }:
-{
+{outputs, ...}: {
   imports = [
     ./common
     ./config/yuzuru

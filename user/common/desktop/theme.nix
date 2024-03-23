@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   # XDG
   xdg = {
     enable = true;
@@ -35,9 +38,9 @@
     theme = {
       name = "Catppuccin-Latte-Standard-Lavender-Light";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "lavender" ];
+        accents = ["lavender"];
         size = "standard";
-        tweaks = [ "normal" ];
+        tweaks = ["normal"];
         variant = "latte";
       };
     };
@@ -76,8 +79,8 @@
   services.darkman = {
     enable = true;
     package = pkgs.unstable.darkman;
-    lightModeScripts = { };
-    darkModeScripts = { };
+    lightModeScripts = {};
+    darkModeScripts = {};
     settings = {
       usegeoclue = false;
     };

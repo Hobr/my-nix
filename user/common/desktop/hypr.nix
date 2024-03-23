@@ -1,6 +1,4 @@
-{ inputs, pkgs, ... }:
-{
-  imports = [ inputs.hyprland.homeManagerModules.default ];
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -165,9 +163,9 @@
     };
 
     # 插件
-    plugins = [ ];
+    plugins = [];
   };
 
   # 壁纸
-  home.packages = [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
+  home.packages = [inputs.hypr-paper.packages.${pkgs.system}.hyprpaper];
 }

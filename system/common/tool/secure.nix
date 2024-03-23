@@ -1,10 +1,9 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # Rtkit
   security.rtkit.enable = true;
 
   # Polkit
-  environment.systemPackages = [ pkgs.polkit_gnome ];
+  environment.systemPackages = [pkgs.polkit_gnome];
   security.polkit.enable = true;
 
   # Sudo
@@ -23,7 +22,7 @@
 
   # Gnome Keyring
   services.gnome.glib-networking.enable = true;
-  services.dbus.packages = [ pkgs.gcr ];
+  services.dbus.packages = [pkgs.gcr];
   programs.seahorse.enable = true;
 
   # Logind

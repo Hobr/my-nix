@@ -18,17 +18,17 @@
       isNormalUser = true;
       uid = 1000;
       hashedPassword = "$y$j9T$C0UuVeSpwcZT/Ig7k/IIK0$W0jxMqKUPiExoWaQ0TWiO8ZL9I5eg2t5MH8N/EBz2B0";
-      extraGroups = [ "wheel" "networkmanager" "tss" "dialout" ];
+      extraGroups = ["wheel" "networkmanager" "tss" "dialout"];
     };
   };
 
-  nix.settings.trusted-users = [ "yuzuru" ];
+  nix.settings.trusted-users = ["yuzuru"];
   services.greetd.settings.initial_session.user = "yuzuru";
 
   services.snapper.configs = {
-    nix.ALLOW_USERS = [ "yuzuru" ];
-    persist.ALLOW_USERS = [ "yuzuru" ];
-    home.ALLOW_USERS = [ "yuzuru" ];
+    nix.ALLOW_USERS = ["yuzuru"];
+    persist.ALLOW_USERS = ["yuzuru"];
+    home.ALLOW_USERS = ["yuzuru"];
   };
 
   # 平台

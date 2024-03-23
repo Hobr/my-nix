@@ -1,7 +1,7 @@
-{ inputs, ... }: {
-  additions = final: _prev: import ../pkg { pkgs = final; };
+{inputs, ...}: {
+  additions = final: _prev: import ../pkg {pkgs = final;};
 
-  modifications = final: prev: { };
+  modifications = final: prev: {};
 
   # pkgs.unstable
   unstable-packages = final: _prev: {
@@ -9,7 +9,7 @@
       system = final.system;
       config = {
         allowUnfree = true;
-        permittedInsecurePackages = [ "electron-25.9.0" ];
+        permittedInsecurePackages = ["electron-25.9.0"];
       };
     };
   };

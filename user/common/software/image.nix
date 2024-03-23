@@ -1,5 +1,8 @@
-{ pkgs,  inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs.unstable; [
     hyprpicker
     slurp

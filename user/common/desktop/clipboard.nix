@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # Cliphist
   services.cliphist = {
     enable = true;
@@ -8,5 +7,5 @@
   };
 
   # wl-clipboard
-  home.packages =  [ pkgs.unstable.wl-clipboard ];
+  home.packages = [pkgs.unstable.wl-clipboard];
 }

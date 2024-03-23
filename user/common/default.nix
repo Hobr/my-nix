@@ -1,5 +1,7 @@
 {
   imports = [
+    inputs.hyprland.homeManagerModules.default
+
     # Nix
     ./tool/nix.nix
     # 硬盘

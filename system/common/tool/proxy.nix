@@ -1,5 +1,4 @@
-{ pkgs,  ... }:
-{
+{pkgs, ...}: {
   programs.proxychains = {
     enable = true;
     package = pkgs.unstable.proxychains-ng;
@@ -23,7 +22,7 @@
   };
 
   # Clash
-  environment.systemPackages = [ pkgs.unstable.clash-meta ];
+  environment.systemPackages = [pkgs.unstable.clash-meta];
 
   # 守护进程
   systemd.services.Clash = {
@@ -43,7 +42,7 @@
       Restart = "on-failure";
       RestartSec = 3;
     };
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
   };
 
   # 定时更新订阅
@@ -57,6 +56,6 @@
       Persistent = "true";
       Unit = "Clash.service";
     };
-    wantedBy = [ "timers.target" "multi-user.target" ];
+    wantedBy = ["timers.target" "multi-user.target"];
   };
 }

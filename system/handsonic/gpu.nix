@@ -9,18 +9,20 @@
       vaapiVdpau
       libvdpau-va-gl
       nvidia-vaapi-driver
-      nvtop
     ];
   };
 
-  # Vulkan
   environment.systemPackages = with pkgs.unstable; lib.mkAfter [
+    # Vulkan
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
     vulkan-tools
     libva
     mesa
+
+    # NVTop
+    nvtop
   ];
 
   # NVIDIA驱动

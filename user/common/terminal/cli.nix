@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib,inputs, ... }:
 {
   home.packages = with pkgs.unstable; lib.mkAfter [
     nano
@@ -23,6 +23,8 @@
 
     arduino
     arduino-ide
+
+    inputs.alejandra.defaultPackage.${system}
   ];
 
   programs.info.enable = true;

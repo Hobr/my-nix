@@ -33,7 +33,11 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    # Formatter
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # 桌面
     ## Hyprland
     hyprland.url = "github:hyprwm/Hyprland/v0.37.1";

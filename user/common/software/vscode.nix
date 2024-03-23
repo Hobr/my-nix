@@ -30,11 +30,6 @@
       # Catputtin
       "workbench.colorTheme" = "Catppuccin Latte";
       "workbench.iconTheme" = "catppuccin-latte";
-
-      "catppuccin-icons.hidesExplorerArrows" = false;
-      "catppuccin-icons.specificFolders" = true;
-      "catpuccin-icons.monochrome" = false;
-
       # 终端
       "terminal.integrated.minimumContrastRatio" = 1;
 
@@ -46,6 +41,7 @@
       # 编辑器
       "diffEditor.ignoreTrimWhitespace" = false;
       "editor.semanticHighlighting.enabled" = true;
+      "explorer.confirmDragAndDrop" = false;
     };
     keybindings = [ ];
   };

@@ -10,6 +10,6 @@
   home.packages = with pkgs.unstable; [
     ffmpeg-full
     yt-dlp
-    openai-whisper
+    openai-whisper-cpp
   ];
 }

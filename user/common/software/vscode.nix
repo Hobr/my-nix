@@ -10,6 +10,9 @@
     extensions = with pkgs.vscode-extensions; [
       # NIX
       bbenoist.nix
+      jnoortheen.nix-ide
+      arrterian.nix-env-selector
+      kamadorueda.alejandra
       # 主题
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons

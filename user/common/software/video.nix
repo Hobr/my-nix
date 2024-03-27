@@ -11,5 +11,6 @@
     ffmpeg-full
     yt-dlp
     openai-whisper-cpp
+    losslesscut-bin
   ];
 }

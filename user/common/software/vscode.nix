@@ -13,6 +13,10 @@
       # 主题
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
+      # Python
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-python.isort
     ];
     userSettings = {
       # 主题

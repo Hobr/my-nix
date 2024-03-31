@@ -11,9 +11,12 @@
     ffmpeg-full
     yt-dlp
     losslesscut-bin
+    aegisub
     (openai-whisper-cpp.override {
       cudaSupport = true;
     })
-    aegisub
+    (blender.override {
+      cudaSupport = true;
+    })
   ];
 }

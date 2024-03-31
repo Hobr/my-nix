@@ -85,7 +85,5 @@
     ./study/writer.nix
     # Tex
     ./study/tex.nix
-    # 数学
-    ./study/math.nix
   ];
 }

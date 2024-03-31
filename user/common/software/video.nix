@@ -10,7 +10,9 @@
   home.packages = with pkgs.unstable; [
     ffmpeg-full
     yt-dlp
-    openai-whisper-cpp
     losslesscut-bin
+    (openai-whisper-cpp.override {
+      cudaSupport = true;
+    })
   ];
 }

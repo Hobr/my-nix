@@ -28,6 +28,7 @@
     cudatoolkit
     cudaPackages.cudnn
     cudaPackages.nccl
+    cudaPackages.cuda_nvcc
 
     # NVTop
     nvtop

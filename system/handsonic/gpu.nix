@@ -24,6 +24,10 @@
     libva
     mesa
 
+    # CUDA
+    cudatoolkit
+    cudaPackages.cudnn
+
     # NVTop
     nvtop
   ];

@@ -9,8 +9,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    # OpenGL/Cuda
-    nix-gl-host.url = "github:numtide/nix-gl-host";
 
     # 环境
     ## Rootless

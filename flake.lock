@@ -966,6 +966,24 @@
         "type": "github"
       }
     },
+    "nix-gl-host": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1707561455,
+        "narHash": "sha256-e3EAKVsrmuC4NwEEpAU6nS4LgNoGH/7fgax1eUtxz18=",
+        "owner": "numtide",
+        "repo": "nix-gl-host",
+        "rev": "f0fbe496473e6e1a91492b09d9ae840ad9c81fbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-gl-host",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1711523803,
@@ -1142,6 +1160,22 @@
     },
     "nixpkgs_8": {
       "locked": {
+        "lastModified": 1669045945,
+        "narHash": "sha256-BQxzijvZpLQ7R+KuQzCPcFgIS6OK0Onb29pYFe2pzJo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "6b5019a48f876f3288efc626fa8b70ad0c64eb46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_9": {
+      "locked": {
         "lastModified": 1711668574,
         "narHash": "sha256-u1dfs0ASQIEr1icTVrsKwg2xToIpn7ZXxW3RHfHxshg=",
         "owner": "nixos",
@@ -1207,7 +1241,8 @@
         "impermanence": "impermanence",
         "lanzaboote": "lanzaboote",
         "nh": "nh",
-        "nixpkgs": "nixpkgs_8",
+        "nix-gl-host": "nix-gl-host",
+        "nixpkgs": "nixpkgs_9",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "sops-nix": "sops-nix"
       }

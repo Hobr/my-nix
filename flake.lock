@@ -91,11 +91,11 @@
     "catppuccin-hyprland": {
       "flake": false,
       "locked": {
-        "lastModified": 1702668781,
-        "narHash": "sha256-9BhZq9J1LmHfAPBqOr64chiAEzS+YV6zqe9ma95V3no=",
+        "lastModified": 1711905801,
+        "narHash": "sha256-jkk021LLjCLpWOaInzO4Klg6UOR4Sh5IcKdUxIn7Dis=",
         "owner": "catppuccin",
         "repo": "hyprland",
-        "rev": "fc228737d3d0c12e34a7fa155a0fc3192e5e4017",
+        "rev": "13d7b4e3db178bb01520eb68e16e4cf4e11da6ab",
         "type": "github"
       },
       "original": {

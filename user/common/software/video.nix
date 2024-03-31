@@ -14,5 +14,7 @@
     (openai-whisper-cpp.override {
       cudaSupport = true;
     })
+    subtitleedit
+    aegisub
   ];
 }

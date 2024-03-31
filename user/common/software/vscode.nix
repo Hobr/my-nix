@@ -8,7 +8,7 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
-      # NIX
+      # Nix
       bbenoist.nix
       jnoortheen.nix-ide
       arrterian.nix-env-selector
@@ -20,6 +20,8 @@
       ms-python.python
       ms-python.vscode-pylance
       ms-python.isort
+      # Git
+      eamodio.gitlens
     ];
     userSettings = {
       # 主题

@@ -8,6 +8,8 @@
   nixpkgs = {
     # 非自由软件
     config.allowUnfree = true;
+    # CUDA
+    config.cudaSupport = true;
 
     # Overlays
     overlays = [

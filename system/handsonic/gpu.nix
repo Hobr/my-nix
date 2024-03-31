@@ -28,7 +28,6 @@
     cudatoolkit
     cudaPackages.cudnn
     cudaPackages.nccl
-    cudaPackages.nvidia_driver
 
     # NVTop
     nvtop

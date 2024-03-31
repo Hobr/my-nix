@@ -87,5 +87,7 @@
     ./study/tex.nix
     # 数学
     ./study/math.nix
+    # Python
+    ./study/python.nix
   ];
 }

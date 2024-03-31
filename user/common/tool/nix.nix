@@ -1,5 +1,8 @@
 {outputs, ...}: {
   nixpkgs = {
+    # CUDA
+    config.cudaSupport = true;
+
     # Overlays
     overlays = [
       outputs.overlays.additions

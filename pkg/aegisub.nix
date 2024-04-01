@@ -29,6 +29,7 @@
   wrapGAppsHook,
   wxGTK,
   zlib,
+  meson,
   spellcheckSupport ? true,
   hunspell ? null,
   openalSupport ? false,
@@ -52,8 +53,8 @@ assert portaudioSupport -> (portaudio != null); let
   inherit (darwin.apple_sdk.frameworks) CoreText CoreFoundation AppKit Carbon IOKit Cocoa;
 in
   stdenv.mkDerivation rec {
-    pname = "aegisub";
-    version = "3.3.3";
+    pname = "Aegisub";
+    version = "3.2.2";
 
     src = fetchFromGitHub {
       owner = "arch1t3cht";
@@ -67,8 +68,8 @@ in
       luajit52
       pkg-config
       which
-      cmake
       wrapGAppsHook
+      meson
     ];
 
     buildInputs =
@@ -138,13 +139,7 @@ in
 
     meta = with lib; {
       homepage = "https://github.com/arch1t3cht/Aegisub";
-      description = "An advanced subtitle editor";
-      longDescription = ''
-        Aegisub is a free, cross-platform open source tool for creating and
-        modifying subtitles. Aegisub makes it quick and easy to time subtitles to
-        audio, and features many powerful tools for styling them, including a
-        built-in real-time video preview.
-      '';
+      description = "A general-purpose subtitle editor with ASS/SSA support (arch1t3cht fork)";
       license = licenses.bsd3;
       maintainers = with maintainers; [tgoyne kblomster arch1t3cht];
       platforms = platforms.unix;

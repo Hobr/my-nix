@@ -12,7 +12,7 @@
     yt-dlp
     losslesscut-bin
     aegisub
-    # cuda user
+    realesrgan-ncnn-vulkan
     (openai-whisper-cpp.override {
       cudaSupport = true;
     })

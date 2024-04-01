@@ -19,6 +19,7 @@
       # Python
       ms-python.python
       ms-python.vscode-pylance
+      ms-python.black-formatter
       ms-python.isort
       # Git
       eamodio.gitlens

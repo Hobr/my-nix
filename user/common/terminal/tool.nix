@@ -57,7 +57,7 @@
   # Btop(top)
   programs.btop = {
     enable = true;
-    package = pkgs.unstable.btop;
+    package = pkgs.unstable.btop {cudaSupport = true;};
     settings = {
       color_theme = "catppuccin_latte";
       update_ms = 500;

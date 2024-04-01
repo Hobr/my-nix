@@ -59,7 +59,7 @@
       };
 
       "[nix]" = {
-        "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "editor.defaultFormatter" = "kamadorueda.alejandra";
         "editor.formatOnSave" = true;
       };
     };

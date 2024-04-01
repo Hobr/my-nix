@@ -1,8 +1,4 @@
-{
-  modulesPath,
-  inputs,
-  ...
-}: {
+{modulesPath, ...}: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   # Libinput

@@ -51,6 +51,11 @@
       "diffEditor.ignoreTrimWhitespace" = false;
       "editor.semanticHighlighting.enabled" = true;
       "explorer.confirmDragAndDrop" = false;
+
+      "[python]" = {
+        "editor.defaultFormatter" = "ms-python.black-formatter";
+        "editor.formatOnSave" = true;
+      };
     };
     keybindings = [];
   };

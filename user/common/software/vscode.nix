@@ -13,6 +13,7 @@
       jnoortheen.nix-ide
       arrterian.nix-env-selector
       kamadorueda.alejandra
+      mkhl.direnv
       # 主题
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
@@ -54,6 +55,11 @@
 
       "[python]" = {
         "editor.defaultFormatter" = "ms-python.black-formatter";
+        "editor.formatOnSave" = true;
+      };
+
+      "[nix]" = {
+        "editor.defaultFormatter" = "jnoortheen.nix-ide";
         "editor.formatOnSave" = true;
       };
     };

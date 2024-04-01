@@ -13,9 +13,11 @@
     losslesscut-bin
     aegisub
     blender
-    (openai-whisper-cpp.override {
-      cudaSupport = true;
-    })
+    openai-whisper-cpp
+    # cuda user
+    #(openai-whisper-cpp.override {
+    #  cudaSupport = true;
+    #})
     #(blender.override {
     #  cudaSupport = true;
     #})

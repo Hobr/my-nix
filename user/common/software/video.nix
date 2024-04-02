@@ -11,6 +11,6 @@
     ffmpeg-full
     yt-dlp
     losslesscut-bin
-    aegisub
+    aegisub-arch1t3cht
   ];
 }

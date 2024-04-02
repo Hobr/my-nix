@@ -1,4 +1,4 @@
 pkgs: {
-  # xxx = pkgs.callPackage ./xxx { };
-  aegisub = pkgs.callPackage ./aegisub {};
+  aegisub = pkgs.callPackage ./aegisub.nix {};
+  rime-ice = pkgs.callPackage ./rime-ice.nix {};
 }

@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  # CUDA
+  nixpkgs.config.cudaSupport = true;
+
   programs.btop.package = pkgs.unstable.btop.override {cudaSupport = true;};
 
   home.packages = with pkgs.unstable; [

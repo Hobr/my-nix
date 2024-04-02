@@ -11,7 +11,7 @@
       pr = "proxychains4";
       rm = "trash-put";
       cat = "bat";
-      v = "nvim";
+      v = "lvim";
     };
 
     # 插件

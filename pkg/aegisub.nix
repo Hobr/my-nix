@@ -3,32 +3,6 @@
   config,
   stdenv,
   fetchFromGitHub,
-  boost179,
-  cmake,
-  expat,
-  harfbuzz,
-  ffmpeg,
-  ffms,
-  fftw,
-  fontconfig,
-  freetype,
-  fribidi,
-  glib,
-  icu,
-  intltool,
-  libGL,
-  libGLU,
-  libX11,
-  libass,
-  libiconv,
-  libuchardet,
-  luajit,
-  pcre,
-  pkg-config,
-  which,
-  wrapGAppsHook,
-  wxGTK,
-  zlib,
   spellcheckSupport ? true,
   hunspell ? null,
   openalSupport ? false,
@@ -40,7 +14,6 @@
   portaudioSupport ? false,
   portaudio ? null,
   useBundledLuaJIT ? false,
-  darwin,
 }:
 assert spellcheckSupport -> (hunspell != null);
 assert openalSupport -> (openal != null);
@@ -49,64 +22,52 @@ assert pulseaudioSupport -> (libpulseaudio != null);
 assert portaudioSupport -> (portaudio != null); let
   luajit52 = luajit.override {enable52Compat = true;};
   inherit (lib) optional;
-  inherit (darwin.apple_sdk.frameworks) CoreText CoreFoundation AppKit Carbon IOKit Cocoa;
 in
   stdenv.mkDerivation rec {
-    pname = "aegisub";
-    version = "3.3.3";
+    pname = "arch1t3cht";
+    version = "future_11";
 
     src = fetchFromGitHub {
       owner = "wangqr";
       repo = pname;
-      rev = "v${version}";
-      sha256 = "sha256-oKhLv81EFudrJaaJ2ga3pVh4W5Hd2YchpjsoYoqRm78=";
+      rev = version;
+      sha256 = "";
     };
 
     nativeBuildInputs = [
-      intltool
       luajit52
-      pkg-config
-      which
-      cmake
+      git
+      meson
+      boost
       wrapGAppsHook
     ];
 
     buildInputs =
       [
-        boost179
-        expat
+        boost
         ffmpeg
         ffms
         fftw
         fontconfig
-        freetype
-        fribidi
-        glib
-        harfbuzz
+        hicolor-icon-theme
         icu
-        libGL
-        libGLU
-        libX11
+        jansson
         libass
-        libiconv
+        libGL
+        python3
         libuchardet
-        pcre
-        wxGTK
+        vapoursynth
+        vapoursynth-plugin-bestsource-git
+        vapoursynth-plugin-lsmashsource
+        vapoursynth-plugin-wwxd-git
+        wxGTK32
         zlib
       ]
-      ++ lib.optionals stdenv.isDarwin [
-        CoreText
-        CoreFoundation
-        AppKit
-        Carbon
-        IOKit
-        Cocoa
-      ]
+      ++ optional spellcheckSupport [hunspell hunspellDicts.en_US]
       ++ optional alsaSupport alsa-lib
       ++ optional openalSupport openal
       ++ optional portaudioSupport portaudio
-      ++ optional pulseaudioSupport libpulseaudio
-      ++ optional spellcheckSupport hunspell;
+      ++ optional pulseaudioSupport libpulseaudio;
 
     enableParallelBuilding = true;
 
@@ -116,7 +77,7 @@ in
     ];
 
     patches = lib.optionals (!useBundledLuaJIT) [
-      ./remove-bundled-luajit.patch
+      ./patch/remove-bundled-luajit.patch
     ];
 
     # error: unknown type name 'NSUInteger'
@@ -138,17 +99,9 @@ in
 
     meta = with lib; {
       homepage = "https://github.com/wangqr/Aegisub";
-      description = "An advanced subtitle editor";
-      longDescription = ''
-        Aegisub is a free, cross-platform open source tool for creating and
-        modifying subtitles. Aegisub makes it quick and easy to time subtitles to
-        audio, and features many powerful tools for styling them, including a
-        built-in real-time video preview.
-      '';
-      # The Aegisub sources are itself BSD/ISC, but they are linked against GPL'd
-      # softwares - so the resulting program will be GPL
+      description = " 	A general-purpose subtitle editor with ASS/SSA support (arch1t3cht fork)";
       license = licenses.bsd3;
-      maintainers = with maintainers; [AndersonTorres wegank];
+      maintainers = with maintainers; [tgoyne kblomster arch1t3cht];
       platforms = platforms.unix;
       mainProgram = "aegisub";
     };

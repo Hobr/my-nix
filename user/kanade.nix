@@ -2,6 +2,7 @@
   imports = [
     ./common
     ./config/kanade
+    ./cuda/withCuda.nix
   ];
 
   home = {

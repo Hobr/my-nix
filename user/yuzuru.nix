@@ -2,6 +2,7 @@
   imports = [
     ./common
     ./config/yuzuru
+    ./cuda/withoutCuda.nix
   ];
 
   home = {

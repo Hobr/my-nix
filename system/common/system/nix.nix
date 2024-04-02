@@ -43,12 +43,6 @@
       dates = "daily";
       options = "--delete-older-than 3d";
     };
-
-    # Direnv持续
-    extraOptions = ''
-      keep-outputs = true
-      keep-derivations = true
-    '';
   };
 
   environment.etc =

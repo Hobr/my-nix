@@ -28,6 +28,7 @@
     arduino-ide
 
     inputs.alejandra.defaultPackage.${system}
+    nix-init
   ];
 
   programs.info.enable = true;

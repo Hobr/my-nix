@@ -127,9 +127,12 @@ in
     enableParallelBuilding = true;
 
     configurePhase = ''
-      cp ${bestsource} subprojects/bestsource
-      cp ${vapoursynth} subprojects/vapoursynth
-      cp ${AviSynthPlus} subprojects/avisynth
+      cp -i ${bestsource} subprojects/bestsource
+      cp -i ${vapoursynth} subprojects/vapoursynth
+      cp -i ${AviSynthPlus} subprojects/avisynth
+      meson subprojects packagefiles --apply bestsource
+      meson subprojects packagefiles --apply avisynth
+      meson subprojects packagefiles --apply vapoursynth
     '';
 
     meta = with lib; {

@@ -9,6 +9,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # 个人NUR
+    hobr.url = "github:Hobr/hobr_nur";
 
     # 环境
     ## Rootless

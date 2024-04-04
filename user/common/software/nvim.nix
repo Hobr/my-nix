@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.neovim = {
-    enable = false;
+    enable = true;
     package = pkgs.unstable.neovim-unwrapped;
     defaultEditor = true;
 
@@ -20,5 +20,5 @@
   };
 
   # NeoVide
-  home.packages = with pkgs.unstable; [neovide lunarvim];
+  home.packages = with pkgs.unstable; [neovide];
 }

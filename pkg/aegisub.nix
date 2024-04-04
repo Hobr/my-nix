@@ -126,13 +126,16 @@ in
 
     enableParallelBuilding = true;
 
+    # https://nix.dev/tutorials/packaging-existing-software.html
     configurePhase = ''
-      cp -i ${bestsource} subprojects/bestsource
-      cp -i ${vapoursynth} subprojects/vapoursynth
-      cp -i ${AviSynthPlus} subprojects/avisynth
-      meson subprojects packagefiles --apply bestsource
-      meson subprojects packagefiles --apply avisynth
-      meson subprojects packagefiles --apply vapoursynth
+      runHook preInstall
+      mkdir -p $out/subprojects/bestsource
+      cp ${bestsource} subprojects/bestsource
+      mkdir -p $out/subprojects/vapoursynth
+      cp ${vapoursynth} subprojects/vapoursynth
+      mkdir -p $out/subprojects/avisynth
+      cp ${AviSynthPlus} subprojects/avisynth
+      runHook postInstall
     '';
 
     meta = with lib; {

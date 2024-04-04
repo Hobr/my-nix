@@ -506,11 +506,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712249996,
-        "narHash": "sha256-Rc8QIJnWsSIn3X+Wr+gCW67zpj3F1Wcal0yESSH376w=",
+        "lastModified": 1712251685,
+        "narHash": "sha256-pHjh7TwqvQ5Bav9FYxYF1lHSsQh+/7Hlx8hBDjQ/DhA=",
         "owner": "Hobr",
         "repo": "hobr_nur",
-        "rev": "4d6989680cb6f5c67492f01afa9dc19e4ce72faf",
+        "rev": "8b10679dc1d7da1aac52619285872477ba9802ea",
         "type": "github"
       },
       "original": {

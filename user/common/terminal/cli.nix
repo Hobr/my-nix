@@ -29,6 +29,7 @@
 
     inputs.alejandra.defaultPackage.${system}
     nix-init
+    cachix
   ];
 
   programs.info.enable = true;

@@ -10,7 +10,10 @@
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # 个人NUR
-    hobr.url = "github:Hobr/hobr_nur";
+    hobr = {
+      url = "github:Hobr/hobr_nur";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 环境
     ## Rootless

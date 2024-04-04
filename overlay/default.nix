@@ -1,6 +1,4 @@
 {inputs, ...}: {
-  additions = final: _prev: import ../pkg {pkgs = final;};
-
   modifications = final: prev: {};
 
   # pkgs.unstable

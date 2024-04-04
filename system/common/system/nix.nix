@@ -34,6 +34,7 @@
         "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store"
         "https://hobr.cachix.org"
       ];
+
       trusted-public-keys = [
         "hobr.cachix.org-1:F9LxDwb6IAYpHitjzaCCxeDI3TA4obcgIlEU+7oWXzU="
       ];

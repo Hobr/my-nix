@@ -12,6 +12,7 @@
 
     fastfetch
     xorg.xlsclients
+    xorg.xset
 
     brightnessctl
     trash-cli

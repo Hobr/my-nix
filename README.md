@@ -16,9 +16,6 @@
 
 ## TODO
 
-- 软件适配
-  - <https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=aegisub-arch1t3cht>
-  - <https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=aegisub-wangqr-git>
 - 桌面环境
 - ZSH Bindkey
 - VSCode环境

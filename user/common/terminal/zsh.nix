@@ -11,7 +11,8 @@
       pr = "proxychains4";
       rm = "trash-put";
       cat = "bat";
-      v = "lvim";
+      v = "vim";
+      reboot = "sudo systemctl reboot";
     };
 
     # 插件

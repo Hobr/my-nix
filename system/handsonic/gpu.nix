@@ -24,6 +24,10 @@
     libva
     mesa
 
+    # CUDA
+    cudatoolkit
+    cudaPackages.cudnn
+
     # NVTop
     nvtop
   ];
@@ -37,5 +41,12 @@
     powerManagement.enable = true;
     powerManagement.finegrained = false;
     nvidiaSettings = false;
+  };
+
+  environment.sessionVariables = {
+    CUDA_PATH = pkgs.unstable.cudatoolkit;
+    LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${pkgs.unstable.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib";
+    EXTRA_LDFLAGS = "-L/lib -L${pkgs.unstable.linuxPackages.nvidia_x11}/lib";
+    EXTRA_CCFLAGS = "-I/usr/include";
   };
 }

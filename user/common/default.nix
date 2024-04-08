@@ -85,7 +85,5 @@
     ./study/writer.nix
     # Tex
     ./study/tex.nix
-    # Python
-    ./study/python.nix
   ];
 }

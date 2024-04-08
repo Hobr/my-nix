@@ -22,6 +22,6 @@
     syntaxHighlighting.enable = true;
 
     # 配置
-    initExtraFirst = "LD_LIBRARY_PATH='$LD_LIBRARY_PATH:${pkgs.unstable.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib'\nsource ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
+    initExtraFirst = "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
   };
 }

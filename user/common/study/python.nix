@@ -4,7 +4,6 @@
       with python-pkgs; [
         pip
         virtualenv
-        wheel
       ]))
   ];
 }

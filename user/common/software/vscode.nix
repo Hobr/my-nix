@@ -26,7 +26,6 @@
       donjayamanne.githistory
       # C++
       ms-vscode.cpptools
-      ms-vscode.makefile-tools
       # Python
       ms-python.python
       ms-python.black-formatter

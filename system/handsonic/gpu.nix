@@ -43,4 +43,6 @@
     powerManagement.finegrained = false;
     nvidiaSettings = false;
   };
+
+  environment.sessionVariables.CUDA_PATH = pkgs.unstable.cudatoolkit;
 }

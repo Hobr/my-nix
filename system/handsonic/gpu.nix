@@ -44,9 +44,5 @@
     nvidiaSettings = false;
   };
 
-  environment.sessionVariables = {
-    CUDA_PATH = pkgs.unstable.cudatoolkit;
-    EXTRA_LDFLAGS = "-L/lib -L${pkgs.unstable.linuxPackages.nvidia_x11}/lib";
-    EXTRA_CCFLAGS = "-I/usr/include";
-  };
+  environment.sessionVariables.CUDA_PATH = pkgs.unstable.cudatoolkit;
 }

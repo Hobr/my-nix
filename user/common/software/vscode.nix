@@ -8,22 +8,42 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
+      # 界面
+      ms-ceintl.vscode-language-pack-zh-hans
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+      # Code
+      visualstudioexptteam.vscodeintellicode
+      editorconfig.editorconfig
+      christian-kohler.path-intellisense
+      # 功能
+      formulahendry.code-runner
+      esbenp.prettier-vscode
+      ms-vscode-remote.remote-ssh
+      usernamehw.errorlens
+      # Git
+      eamodio.gitlens
+      donjayamanne.githistory
+      # C++
+      ms-vscode.cpptools
+      ms-vscode.makefile-tools
+      # Python
+      ms-python.python
+      ms-python.black-formatter
+      ms-python.isort
       # Nix
       bbenoist.nix
       jnoortheen.nix-ide
       arrterian.nix-env-selector
       kamadorueda.alejandra
       mkhl.direnv
-      # 主题
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
-      # Python
-      ms-python.python
-      ms-python.vscode-pylance
-      ms-python.black-formatter
-      ms-python.isort
-      # Git
-      eamodio.gitlens
+      # Ruby
+      rebornix.ruby
+      shopify.ruby-lsp
+      # Markdown
+      davidanson.vscode-markdownlint
+      # Latex
+      james-yu.latex-workshop
     ];
     userSettings = {
       # 主题

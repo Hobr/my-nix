@@ -12,7 +12,6 @@
       rm = "trash-put";
       cat = "bat";
       v = "vim";
-      reboot = "sudo systemctl reboot";
     };
 
     # 插件

@@ -7,7 +7,7 @@
     });
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    extensions = with pkgs.vscode-extensions; [
+    extensions = with pkgs.unstable.vscode-extensions; [
       # 界面
       ms-ceintl.vscode-language-pack-zh-hans
       catppuccin.catppuccin-vsc
@@ -38,7 +38,6 @@
       kamadorueda.alejandra
       mkhl.direnv
       # Ruby
-      rebornix.ruby
       shopify.ruby-lsp
       # Markdown
       davidanson.vscode-markdownlint

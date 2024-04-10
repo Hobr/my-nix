@@ -6,7 +6,7 @@
     ## 官方稳定
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     ## 官方滚动
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # 个人NUR

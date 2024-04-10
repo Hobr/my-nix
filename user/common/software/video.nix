@@ -8,7 +8,6 @@
     ffmpeg-full
     yt-dlp
     losslesscut-bin
-    avisynthplus
     inputs.hobr.packages.${pkgs.system}.aegisub
   ];
 }

@@ -34,7 +34,6 @@
       bbenoist.nix
       jnoortheen.nix-ide
       arrterian.nix-env-selector
-      kamadorueda.alejandra
       mkhl.direnv
       # Ruby
       shopify.ruby-lsp
@@ -77,7 +76,6 @@
       };
 
       "[nix]" = {
-        "editor.defaultFormatter" = "kamadorueda.alejandra";
         "editor.formatOnSave" = true;
       };
     };

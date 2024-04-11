@@ -1,11 +1,7 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs.unstable; [
     nano
-    nixpkgs-fmt
+    nixfmt
 
     wget
     httpie
@@ -27,8 +23,6 @@
 
     arduino
     arduino-ide
-
-    inputs.alejandra.defaultPackage.${system}
   ];
 
   programs.info.enable = true;

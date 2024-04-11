@@ -75,8 +75,6 @@
         "editor.defaultFormatter" = "ms-python.black-formatter";
         "editor.formatOnSave" = true;
       };
-
-      "[nix]" = { "editor.formatOnSave" = true; };
     };
     keybindings = [ ];
   };

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # 内核
   boot = {
     # 版本
@@ -6,7 +6,8 @@
 
     # 内核参数
     consoleLogLevel = 0;
-    kernelParams = ["quiet" "udev.log_level=3" "nowatchdog" "systemd.gpt_auto=0"];
+    kernelParams =
+      [ "quiet" "udev.log_level=3" "nowatchdog" "systemd.gpt_auto=0" ];
   };
 
   # scx

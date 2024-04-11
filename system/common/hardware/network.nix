@@ -1,11 +1,11 @@
-{lib, ...}: {
+{ lib, ... }: {
   # DNS服务
   services.resolved = {
     enable = true;
     # DNSSEC
     dnssec = "allow-downgrade";
     # 后备DNS
-    fallbackDns = ["8.8.8.8" "1.1.1.1"];
+    fallbackDns = [ "8.8.8.8" "1.1.1.1" ];
   };
 
   networking = {

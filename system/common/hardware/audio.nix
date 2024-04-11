@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   sound = {
     enable = true;
     mediaKeys.enable = true;
@@ -24,8 +24,5 @@
     jack.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    pamixer
-    pavucontrol
-  ];
+  environment.systemPackages = with pkgs; [ pamixer pavucontrol ];
 }

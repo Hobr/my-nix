@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   # Greet
   environment.etc."greetd/environments".text = ''
     Hyprland
@@ -25,10 +21,10 @@
   # XDG
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  environment.systemPackages = [pkgs.unstable.xdg-utils];
+  environment.systemPackages = [ pkgs.unstable.xdg-utils ];
 
   # Seatd
   systemd.services = {
@@ -41,7 +37,7 @@
         Restart = "always";
         RestartSec = "1";
       };
-      wantedBy = ["multi-user.target"];
+      wantedBy = [ "multi-user.target" ];
     };
   };
 }

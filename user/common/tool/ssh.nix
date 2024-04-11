@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.ssh = {
     enable = true;
     matchBlocks = {
@@ -6,7 +6,8 @@
         hostname = "ssh.github.com";
         user = "git";
         port = 443;
-        proxyCommand = "${pkgs.unstable.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
+        proxyCommand =
+          "${pkgs.unstable.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
       };
     };
   };

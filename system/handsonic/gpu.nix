@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{ config, pkgs, lib, ... }: {
   # OpenGL
   hardware.opengl = {
     enable = true;
@@ -34,7 +29,7 @@
   ];
 
   # NVIDIA驱动
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.beta;
     open = false;

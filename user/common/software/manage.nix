@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   home.packages = with pkgs.unstable; [
     # 资源管理器
     gnome.nautilus

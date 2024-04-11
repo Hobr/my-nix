@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   programs.zsh = {
     enable = true;
     package = pkgs.zsh;
@@ -21,6 +17,7 @@
     syntaxHighlighting.enable = true;
 
     # 配置
-    initExtraFirst = "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
+    initExtraFirst =
+      "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
   };
 }

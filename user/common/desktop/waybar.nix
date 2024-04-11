@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   custom = {
     font = "Mononoki Nerd Font";
     font_size = "15px";
@@ -12,7 +13,7 @@
 in {
   programs.waybar = {
     enable = true;
-    package = pkgs.unstable.waybar.override {swaySupport = false;};
+    package = pkgs.unstable.waybar.override { swaySupport = false; };
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -25,25 +26,15 @@ in {
       margin-bottom = 0;
       margin-left = 0;
       margin-right = 0;
-      modules-left = [
-        "custom/launcher"
-        "hyprland/workspaces"
-      ];
-      modules-center = [
-        "clock"
-      ];
-      modules-right = [
-        "tray"
-        "cpu"
-        "memory"
-        "disk"
-        "pulseaudio"
-        "network"
-      ];
+      modules-left = [ "custom/launcher" "hyprland/workspaces" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "tray" "cpu" "memory" "disk" "pulseaudio" "network" ];
       clock = {
         format = " {:%H:%M}";
         tooltip = "true";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        tooltip-format = ''
+          <big>{:%Y %B}</big>
+          <tt><small>{calendar}</small></tt>'';
         format-alt = " {:%d/%m}";
       };
       "hyprland/workspaces" = {
@@ -63,11 +54,11 @@ in {
           sort-by-number = true;
         };
         persistent-workspaces = {
-          "1" = [];
-          "2" = [];
-          "3" = [];
-          "4" = [];
-          "5" = [];
+          "1" = [ ];
+          "2" = [ ];
+          "3" = [ ];
+          "4" = [ ];
+          "5" = [ ];
         };
       };
       memory = {
@@ -99,9 +90,7 @@ in {
       pulseaudio = {
         format = "{icon} {volume}%";
         format-muted = "󰖁 ";
-        format-icons = {
-          default = [" "];
-        };
+        format-icons = { default = [ " " ]; };
         scroll-step = 3;
         on-click = "pamixer -t";
       };

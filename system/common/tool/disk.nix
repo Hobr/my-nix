@@ -8,19 +8,19 @@
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         SUBVOLUME = "/nix";
-        ALLOW_GROUPS = ["wheel"];
+        ALLOW_GROUPS = [ "wheel" ];
       };
       persist = {
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         SUBVOLUME = "/persist";
-        ALLOW_GROUPS = ["wheel"];
+        ALLOW_GROUPS = [ "wheel" ];
       };
       home = {
         TIMELINE_CREATE = true;
         TIMELINE_CLEANUP = true;
         SUBVOLUME = "/home";
-        ALLOW_GROUPS = ["wheel"];
+        ALLOW_GROUPS = [ "wheel" ];
       };
     };
   };
@@ -34,11 +34,7 @@
   # Btrfs Scrub
   services.btrfs.autoScrub = {
     enable = true;
-    fileSystems = [
-      "/nix"
-      "/home"
-      "/persist"
-    ];
+    fileSystems = [ "/nix" "/home" "/persist" ];
     interval = "weekly";
   };
 

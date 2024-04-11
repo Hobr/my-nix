@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -80,21 +76,13 @@
         preserve_split = "yes";
       };
 
-      master = {
-        new_is_master = true;
-      };
+      master = { new_is_master = true; };
 
-      gestures = {
-        workspace_swipe = "yes";
-      };
+      gestures = { workspace_swipe = "yes"; };
 
-      misc = {
-        force_default_wallpaper = -1;
-      };
+      misc = { force_default_wallpaper = -1; };
 
-      xwayland = {
-        force_zero_scaling = true;
-      };
+      xwayland = { force_zero_scaling = true; };
 
       windowrulev2 = [
         "fakefullscreen, class:^(code-url-handler)$"
@@ -167,9 +155,9 @@
     };
 
     # 插件
-    plugins = [];
+    plugins = [ ];
   };
 
   # 壁纸
-  home.packages = [inputs.hypr-paper.packages.${pkgs.system}.hyprpaper];
+  home.packages = [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
 }

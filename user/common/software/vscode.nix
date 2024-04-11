@@ -1,9 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.vscode = {
     enable = true;
     package = pkgs.unstable.vscode.override (old: {
       # Wayland Fcitx5
-      commandLineArgs = (old.commandLineArgs or []) ++ ["--enable-wayland-ime"];
+      commandLineArgs = (old.commandLineArgs or [ ])
+        ++ [ "--enable-wayland-ime" ];
     });
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
@@ -75,10 +76,8 @@
         "editor.formatOnSave" = true;
       };
 
-      "[nix]" = {
-        "editor.formatOnSave" = true;
-      };
+      "[nix]" = { "editor.formatOnSave" = true; };
     };
-    keybindings = [];
+    keybindings = [ ];
   };
 }

@@ -1,6 +1,7 @@
-{config, ...}: {
+{ config, ... }: {
   # CPU微码
-  hardware.cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode =
+    config.hardware.enableRedistributableFirmware;
 
   # 雷电
   services.hardware.bolt.enable = true;

@@ -1,10 +1,8 @@
-{outputs, ...}: {
+{ outputs, ... }: {
   nixpkgs = {
     # Overlays
-    overlays = [
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-    ];
+    overlays =
+      [ outputs.overlays.modifications outputs.overlays.unstable-packages ];
 
     # 配置
     config.allowUnfree = true;

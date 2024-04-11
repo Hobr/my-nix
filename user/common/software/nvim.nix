@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.neovim = {
     enable = true;
     package = pkgs.unstable.neovim-unwrapped;
@@ -16,9 +16,9 @@
       vim.cmd.colorscheme "catppuccin"
     '';
     # 插件
-    plugins = with pkgs.vimPlugins; [catppuccin-nvim];
+    plugins = with pkgs.vimPlugins; [ catppuccin-nvim ];
   };
 
   # NeoVide
-  home.packages = with pkgs.unstable; [neovide];
+  home.packages = with pkgs.unstable; [ neovide ];
 }

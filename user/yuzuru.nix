@@ -1,9 +1,5 @@
-{outputs, ...}: {
-  imports = [
-    ./common
-    ./config/yuzuru
-    ./common/cuda/withoutCuda.nix
-  ];
+{ outputs, ... }: {
+  imports = [ ./common ./config/yuzuru ./common/cuda/withoutCuda.nix ];
 
   home = {
     username = "yuzuru";

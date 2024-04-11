@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{ pkgs, inputs, ... }: {
   programs.swaylock = {
     enable = true;
     package = pkgs.unstable.swaylock-effects;
@@ -17,5 +13,6 @@
     #};
   };
 
-  xdg.configFile."swaylock/config".source = "${inputs.catppuccin-swaylock}/themes/mocha.conf";
+  xdg.configFile."swaylock/config".source =
+    "${inputs.catppuccin-swaylock}/themes/mocha.conf";
 }

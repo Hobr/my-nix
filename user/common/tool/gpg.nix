@@ -1,13 +1,13 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.gpg = {
     enable = true;
     package = pkgs.unstable.gnupg;
   };
 
-  home.packages = with pkgs.unstable; [pinentry-gnome3];
+  home.packages = with pkgs.unstable; [ pinentry-gnome3 ];
   services.gnome-keyring = {
     enable = true;
-    components = ["pkcs11" "secrets" "ssh"];
+    components = [ "pkcs11" "secrets" "ssh" ];
   };
 
   services.gpg-agent = {

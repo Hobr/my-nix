@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # MPD
   services.mpd = {
     enable = true;
@@ -23,8 +23,8 @@
   programs.ncmpcpp = {
     enable = true;
     package = pkgs.unstable.ncmpcpp;
-    bindings = [];
-    settings = {};
+    bindings = [ ];
+    settings = { };
   };
 
   home.packages = with pkgs.unstable; [

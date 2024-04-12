@@ -112,6 +112,18 @@
           specialArgs = { inherit inputs outputs; };
           modules = [ ./system/overdrive.nix ];
         };
+
+        # Darwin交叉编译
+        cross_compile = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              nixpkgs.crossSystem = {
+                system = "x86_64-darwin";
+              };
+            }
+          ];
+        };
       };
 
       homeConfigurations = {

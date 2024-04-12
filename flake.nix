@@ -6,7 +6,7 @@
     ## 官方稳定
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     ## 官方滚动
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # 个人NUR
@@ -111,18 +111,6 @@
         overdrive = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./system/overdrive.nix ];
-        };
-
-        # Darwin交叉编译
-        cross_compile = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            {
-              nixpkgs.crossSystem = {
-                system = "x86_64-darwin";
-              };
-            }
-          ];
         };
       };
 

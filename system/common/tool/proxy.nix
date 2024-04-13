@@ -21,13 +21,11 @@
     };
   };
 
-  # Clash
-  environment.systemPackages = [ pkgs.clash-meta ];
-
+  # Mihomo
   # 守护进程
-  systemd.services.Clash = {
+  systemd.services.Mihomo = {
     unitConfig = {
-      Description = "Clash daemon";
+      Description = "Mihomo daemon";
       After = "NetworkManager-wait-online.service";
     };
     serviceConfig = {
@@ -39,8 +37,8 @@
       AmbientCapabilities =
         "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
       ExecStartPre =
-        "${pkgs.wget}/bin/wget -O /etc/clash/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
-      ExecStart = "${pkgs.clash-meta}/bin/clash-meta -d /etc/clash";
+        "${pkgs.wget}/bin/wget -O /etc/mihomo/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
+      ExecStart = "${pkgs.mihomo}/bin/mihomo -d /etc/mihomo";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
       Restart = "on-failure";
       RestartSec = 3;
@@ -51,13 +49,13 @@
   # 定时更新订阅
   systemd.timers.SubUpdate = {
     unitConfig = {
-      Description = "Clash subscription update.";
+      Description = "Mihomo subscription update.";
       After = "NetworkManager-wait-online.service";
     };
     timerConfig = {
       OnCalendar = "hourly";
       Persistent = "true";
-      Unit = "Clash.service";
+      Unit = "Mihomo.service";
     };
     wantedBy = [ "timers.target" "multi-user.target" ];
   };

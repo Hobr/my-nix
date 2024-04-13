@@ -99,8 +99,8 @@ reboot
 
 ```bash
 nmcli
-sudo mkdir /etc/clash
-sudo systemctl restart Clash
+sudo mkdir /etc/mihomo
+sudo systemctl restart Mihomo
 
 nix-shell -p git
 nh home switch -a ./

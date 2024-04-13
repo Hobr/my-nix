@@ -1,4 +1,4 @@
-{ outputs, ... }: {
+{
   imports = [ ./common ./config/kanade ./common/cuda/withCuda.nix ];
 
   home = {

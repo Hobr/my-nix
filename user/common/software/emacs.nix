@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{
   programs.emacs = {
     enable = true;
     extraPackages = epkgs: [ epkgs.catppuccin-theme epkgs.magit ];

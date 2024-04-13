@@ -48,9 +48,7 @@
   };
 
   # Ripgrep(grep)
-  programs.ripgrep = {
-    enable = true;
-  };
+  programs.ripgrep = { enable = true; };
 
   # Btop(top)
   programs.btop = {

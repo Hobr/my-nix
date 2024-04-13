@@ -6,8 +6,7 @@
         hostname = "ssh.github.com";
         user = "git";
         port = 443;
-        proxyCommand =
-          "${pkgs.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
+        proxyCommand = "${pkgs.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
       };
     };
   };

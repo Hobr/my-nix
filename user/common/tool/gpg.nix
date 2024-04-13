@@ -1,7 +1,5 @@
 { pkgs, ... }: {
-  programs.gpg = {
-    enable = true;
-  };
+  programs.gpg = { enable = true; };
 
   home.packages = with pkgs; [ pinentry-gnome3 ];
   services.gnome-keyring = {

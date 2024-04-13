@@ -6,9 +6,7 @@
   };
 
   # Playctl
-  services.playerctld = {
-    enable = true;
-  };
+  services.playerctld = { enable = true; };
 
   # MPD歌词
   services.mpd-mpris = {

@@ -8,15 +8,11 @@
   # Pipewire
   services.pipewire = {
     enable = true;
-    package = pkgs.unstable.pipewire;
 
     # 主音频服务器
     audio.enable = true;
     # 管理器
-    wireplumber = {
-      enable = true;
-      package = pkgs.unstable.wireplumber;
-    };
+    wireplumber.enable = true;
     # 兼容
     alsa.enable = true;
     alsa.support32Bit = true;

@@ -11,7 +11,7 @@
     ];
   };
 
-  environment.systemPackages = with pkgs.unstable; [
+  environment.systemPackages = with pkgs; [
     # Vulkan
     vulkan-loader
     vulkan-validation-layers
@@ -39,5 +39,5 @@
     nvidiaSettings = false;
   };
 
-  environment.sessionVariables.CUDA_PATH = pkgs.unstable.cudatoolkit;
+  environment.sessionVariables.CUDA_PATH = pkgs.cudatoolkit;
 }

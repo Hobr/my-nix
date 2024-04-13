@@ -20,7 +20,7 @@
 
   # 鼠标
   home.pointerCursor = {
-    package = pkgs.unstable.catppuccin-cursors.latteDark;
+    package = pkgs.catppuccin-cursors.latteDark;
     name = "Catppuccin-Latte-Dark-Cursors";
     size = 24;
     gtk.enable = true;
@@ -44,7 +44,7 @@
     # Icon
     iconTheme = {
       name = "Papirus";
-      package = pkgs.unstable.catppuccin-papirus-folders.override {
+      package = pkgs.catppuccin-papirus-folders.override {
         accent = "lavender";
         flavor = "latte";
       };
@@ -77,7 +77,6 @@
   # 深色模式
   services.darkman = {
     enable = true;
-    package = pkgs.unstable.darkman;
     lightModeScripts = { };
     darkModeScripts = { };
     settings = { usegeoclue = false; };

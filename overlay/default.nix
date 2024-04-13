@@ -1,9 +1,9 @@
 { inputs, ... }: {
   modifications = final: prev: { };
 
-  # pkgs.unstable
-  unstable-packages = final: _prev: {
-    unstable = import inputs.nixpkgs-unstable {
+  # pkgs.stable
+  stable-packages = final: _prev: {
+    stable = import inputs.nixpkgs-stable {
       system = final.system;
       config = {
         allowUnfree = true;

@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }: {
   programs.zsh = {
     enable = true;
-    package = pkgs.zsh;
 
     shellAliases = {
       pr = "proxychains4";

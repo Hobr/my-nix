@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }: {
   programs.swaylock = {
     enable = true;
-    package = pkgs.unstable.swaylock-effects;
+    package = pkgs.swaylock-effects;
     #settings = {
     #  clock = true;
     #  datestr = "";

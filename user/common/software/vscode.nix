@@ -1,14 +1,14 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
-    package = pkgs.unstable.vscode.override (old: {
+    package = pkgs.vscode.override (old: {
       # Wayland Fcitx5
       commandLineArgs = (old.commandLineArgs or [ ])
         ++ [ "--enable-wayland-ime" ];
     });
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    extensions = with pkgs.unstable.vscode-extensions; [
+    extensions = with pkgs.vscode-extensions; [
       # 界面
       ms-ceintl.vscode-language-pack-zh-hans
       catppuccin.catppuccin-vsc

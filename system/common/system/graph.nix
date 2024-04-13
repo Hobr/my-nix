@@ -24,14 +24,14 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
-  environment.systemPackages = [ pkgs.unstable.xdg-utils ];
+  environment.systemPackages = [ pkgs.xdg-utils ];
 
   # Seatd
   systemd.services = {
     seatd = {
       enable = true;
       description = "Seat management daemon";
-      script = "${pkgs.unstable.seatd}/bin/seatd -g wheel";
+      script = "${pkgs.seatd}/bin/seatd -g wheel";
       serviceConfig = {
         Type = "simple";
         Restart = "always";

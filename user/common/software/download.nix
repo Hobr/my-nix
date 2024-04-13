@@ -2,5 +2,5 @@
   # Aria
   programs.aria2 = { enable = true; };
 
-  home.packages = with pkgs.unstable; [ transmission_4-gtk ];
+  home.packages = with pkgs; [ transmission_4-gtk ];
 }

@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   programs.rofi = {
     enable = true;
-    package = pkgs.unstable.rofi-wayland;
-    plugins = with pkgs.unstable; [
+    package = pkgs.rofi-wayland;
+    plugins = with pkgs; [
       rofi-top
       rofi-rbw
       rofi-calc

@@ -14,7 +14,7 @@
   };
 
   # Vulkan
-  environment.systemPackages = with pkgs.unstable; [
+  environment.systemPackages = with pkgs; [
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer

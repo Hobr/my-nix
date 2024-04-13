@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  home.packages = with pkgs.unstable; [
+  home.packages = with pkgs; [
     vlc
     ffmpeg-full
     yt-dlp

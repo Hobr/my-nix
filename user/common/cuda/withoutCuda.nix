@@ -1,1 +1,1 @@
-{ pkgs, ... }: { programs.btop.package = pkgs.unstable.btop; }
+{ pkgs, ... }: { programs.btop.package = pkgs.btop; }

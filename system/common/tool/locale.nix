@@ -16,7 +16,7 @@
 
   # 字体
   fonts = {
-    packages = with pkgs.unstable; [
+    packages = with pkgs; [
       (nerdfonts.override { fonts = [ "Mononoki" ]; })
 
       sarasa-gothic

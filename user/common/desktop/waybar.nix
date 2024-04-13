@@ -13,7 +13,7 @@ let
 in {
   programs.waybar = {
     enable = true;
-    package = pkgs.unstable.waybar.override { swaySupport = false; };
+    package = pkgs.waybar.override { swaySupport = false; };
     systemd = {
       enable = true;
       target = "hyprland-session.target";

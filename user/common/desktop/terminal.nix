@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   programs.kitty = {
     enable = true;
-    package = pkgs.unstable.kitty;
     shellIntegration.enableZshIntegration = true;
 
     # 配置

@@ -2,7 +2,7 @@
   nixpkgs = {
     # Overlays
     overlays =
-      [ outputs.overlays.modifications outputs.overlays.unstable-packages ];
+      [ outputs.overlays.modifications outputs.overlays.stable-packages ];
 
     # 配置
     config.allowUnfree = true;

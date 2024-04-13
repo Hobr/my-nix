@@ -4,7 +4,7 @@
     config.allowUnfree = true;
     # Overlays
     overlays =
-      [ outputs.overlays.modifications outputs.overlays.unstable-packages ];
+      [ outputs.overlays.modifications outputs.overlays.stable-packages ];
   };
 
   nix = {

@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   programs.proxychains = {
     enable = true;
-    package = pkgs.unstable.proxychains-ng;
+    package = pkgs.proxychains-ng;
     quietMode = true;
 
     # 代理
@@ -22,7 +22,7 @@
   };
 
   # Clash
-  environment.systemPackages = [ pkgs.unstable.clash-meta ];
+  environment.systemPackages = [ pkgs.clash-meta ];
 
   # 守护进程
   systemd.services.Clash = {
@@ -39,9 +39,9 @@
       AmbientCapabilities =
         "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
       ExecStartPre =
-        "${pkgs.unstable.wget}/bin/wget -O /etc/clash/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
-      ExecStart = "${pkgs.unstable.clash-meta}/bin/clash-meta -d /etc/clash";
-      ExecReload = "${pkgs.unstable.coreutils}/bin/kill -HUP $MAINPID";
+        "${pkgs.wget}/bin/wget -O /etc/clash/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
+      ExecStart = "${pkgs.clash-meta}/bin/clash-meta -d /etc/clash";
+      ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
       Restart = "on-failure";
       RestartSec = 3;
     };

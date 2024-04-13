@@ -3,8 +3,11 @@
     # 非自由软件
     config.allowUnfree = true;
     # Overlays
-    overlays =
-      [ outputs.overlays.modifications outputs.overlays.stable-packages ];
+    overlays = [
+      outputs.overlays.modifications
+      outputs.overlays.stable-packages
+      inputs.nix-xilinx.overlay
+    ];
   };
 
   nix = {

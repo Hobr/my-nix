@@ -38,6 +38,11 @@
       url = "github:viperML/nh";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Xilint
+    nix-xilinx = {
+      url = "gitlab:doronbehar/nix-xilinx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 桌面
     ## Hyprland

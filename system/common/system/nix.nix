@@ -1,7 +1,11 @@
 { lib, inputs, outputs, config, ... }: {
   nixpkgs = {
-    # 非自由软件
-    config.allowUnfree = true;
+    config = {
+      # 非自由软件
+      allowUnfree = true;
+      # 跨平台
+      allowUnsupportedSystem = true;
+    };
     # Overlays
     overlays = [
       outputs.overlays.modifications

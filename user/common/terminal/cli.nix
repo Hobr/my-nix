@@ -6,6 +6,7 @@
     wget
     httpie
 
+    nitch
     fastfetch
     xorg.xlsclients
     xorg.xset

@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     nano
     nixfmt
+    nixpkgs-review
 
     wget
     httpie

@@ -4,7 +4,6 @@
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.nh.nixosModules.default
     inputs.hyprland.nixosModules.default
 
     # 软件

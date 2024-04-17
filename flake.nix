@@ -33,11 +33,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ## CLI
-    nh = {
-      url = "github:viperML/nh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";

@@ -42,10 +42,10 @@
     # 桌面
     ## Hyprland
     hyprland.url = "github:hyprwm/Hyprland/v0.39.1";
-    hypr-idle.url = "github:hyprwm/hypridle/v0.1.1";
-    hypr-paper.url = "github:hyprwm/hyprpaper/v0.6.0";
-    hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";
-    hypr-contrib.url = "github:hyprwm/contrib/v0.1";
+    hypridle.url = "github:hyprwm/hypridle/v0.1.1";
+    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hyprpicker.url = "github:hyprwm/hyprpicker/v0.2.0";
+    hyprcontrib.url = "github:hyprwm/contrib/v0.1";
 
     # 主题
     catppuccin.url = "github:catppuccin/nix";

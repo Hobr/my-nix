@@ -1,6 +1,8 @@
 { inputs, ... }: {
   imports = [
     inputs.hyprland.homeManagerModules.default
+    inputs.hyprpaper.homeManagerModules.hyprpaper
+    inputs.hypridle.homeManagerModules.hypridle
     inputs.sops-nix.homeManagerModules.sops
     inputs.catppuccin.homeManagerModules.catppuccin
 

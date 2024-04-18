@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -160,5 +160,15 @@
   };
 
   # 壁纸
-  home.packages = [ inputs.hypr-paper.packages.${pkgs.system}.hyprpaper ];
+  services.hyprpaper = {
+    enable = true;
+    preloads = [ ];
+    wallpapers = [ ];
+  };
+
+  # IDLE
+  services.hypridle = {
+    enable = true;
+    listeners = [ ];
+  };
 }

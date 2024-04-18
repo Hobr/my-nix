@@ -3,7 +3,7 @@
     hyprpicker
     slurp
     grim
-    inputs.hypr-contrib.packages.${pkgs.system}.grimblast
+    inputs.hyprcontrib.packages.${pkgs.system}.grimblast
 
     gimp
     swappy

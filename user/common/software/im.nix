@@ -1,3 +1,1 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [ qq telegram-desktop element-desktop ];
-}
+{ pkgs, ... }: { home.packages = with pkgs; [ qq telegram-desktop fractal ]; }

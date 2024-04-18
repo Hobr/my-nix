@@ -5,6 +5,7 @@
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.hyprland.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
 
     # 软件
     ./system/nix.nix

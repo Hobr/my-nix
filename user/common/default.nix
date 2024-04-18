@@ -1,6 +1,7 @@
 { inputs, ... }: {
   imports = [
     inputs.hyprland.homeManagerModules.default
+    inputs.sops-nix.homeManagerModules.sops
 
     # Nix
     ./tool/nix.nix

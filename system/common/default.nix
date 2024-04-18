@@ -4,8 +4,8 @@
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.nh.nixosModules.default
     inputs.hyprland.nixosModules.default
+    inputs.sops-nix.nixosModules.sops
 
     # 软件
     ./system/nix.nix

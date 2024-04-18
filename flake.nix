@@ -33,11 +33,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ## CLI
-    nh = {
-      url = "github:viperML/nh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";
@@ -46,7 +41,7 @@
 
     # 桌面
     ## Hyprland
-    hyprland.url = "github:hyprwm/Hyprland/v0.39.0";
+    hyprland.url = "github:hyprwm/Hyprland/v0.39.1";
     hypr-idle.url = "github:hyprwm/hypridle/v0.1.1";
     hypr-paper.url = "github:hyprwm/hyprpaper/v0.6.0";
     hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";

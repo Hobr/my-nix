@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   # Bat(cat)
   programs.bat = {
     enable = true;
@@ -12,9 +12,7 @@
     ];
 
     # 配置
-    config = { theme = "catppuccin"; };
-    themes.catppuccin.src =
-      "${inputs.catppuccin-bat}/themes/Catppuccin Latte.tmTheme";
+    catppuccin.enable = true;
     syntaxes = { };
   };
   # Zoxide(cd)
@@ -53,32 +51,16 @@
   # Btop(top)
   programs.btop = {
     enable = true;
+    catppuccin.enable = true;
     settings = {
-      color_theme = "catppuccin_latte";
       update_ms = 500;
     };
   };
-  xdg.configFile."btop/themes/catppuccin_latte.theme".source =
-    "${inputs.catppuccin-btop}/themes/catppuccin_latte.theme";
-
   # fzf(fd)
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    colors = {
-      bg = "#eff1f5";
-      "bg+" = "#ccd0da";
-      fg = "#4c4f69";
-      "fg+" = "#4c4f69";
-      hl = "#d20f39";
-      "hl+" = "#d20f39";
-      spinner = "#dc8a78";
-      header = "#d20f39";
-      info = "#8839ef";
-      pointer = "#dc8a78";
-      marker = "#dc8a78";
-      prompt = "#8839ef";
-    };
+    catppuccin.enable = true;
   };
 
   # less

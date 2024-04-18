@@ -47,33 +47,16 @@
     hypr-picker.url = "github:hyprwm/hyprpicker/v0.2.0";
     hypr-contrib.url = "github:hyprwm/contrib/v0.1";
 
-    # 主題
-    catppuccin-hyprland = {
-      url = "github:catppuccin/hyprland";
-      flake = false;
-    };
-    catppuccin-qtcreator = {
-      url = "github:catppuccin/qtcreator";
-      flake = false;
-    };
-    catppuccin-bat = {
-      url = "github:catppuccin/bat";
-      flake = false;
-    };
-    catppuccin-btop = {
-      url = "github:catppuccin/btop";
-      flake = false;
-    };
-    catppuccin-starship = {
-      url = "github:catppuccin/starship";
-      flake = false;
-    };
+    # 主题
+    catppuccin.url = "github:catppuccin/nix";
+    ## ZSH
     catppuccin-zsh = {
       url = "github:catppuccin/zsh-syntax-highlighting";
       flake = false;
     };
-    catppuccin-swaylock = {
-      url = "github:catppuccin/swaylock";
+    # QT Creator
+    catppuccin-qtcreator = {
+      url = "github:catppuccin/qtcreator";
       flake = false;
     };
   };

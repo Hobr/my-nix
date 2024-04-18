@@ -33,51 +33,18 @@
         "url": "https://flakehub.com/f/zhaofengli/attic/0.1.%2A.tar.gz"
       }
     },
-    "catppuccin-bat": {
-      "flake": false,
+    "catppuccin": {
       "locked": {
-        "lastModified": 1712664886,
-        "narHash": "sha256-gzf0/Ltw8mGMsEFBTUuN33MSFtUP4xhdxfoZFntaycQ=",
+        "lastModified": 1713323853,
+        "narHash": "sha256-EfUm65RRsoch0tpfHZtEyqo+iWIYhuSX39U/fi0/4WU=",
         "owner": "catppuccin",
-        "repo": "bat",
-        "rev": "b8134f01b0ac176f1cf2a7043a5abf5a1a29457b",
+        "repo": "nix",
+        "rev": "372decb578f3187d7aad837885ed98e73e8abd60",
         "type": "github"
       },
       "original": {
         "owner": "catppuccin",
-        "repo": "bat",
-        "type": "github"
-      }
-    },
-    "catppuccin-btop": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1696688295,
-        "narHash": "sha256-jodJl4f2T9ViNqsY9fk8IV62CrpC5hy7WK3aRpu70Cs=",
-        "owner": "catppuccin",
-        "repo": "btop",
-        "rev": "c6469190f2ecf25f017d6120bf4e050e6b1d17af",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "btop",
-        "type": "github"
-      }
-    },
-    "catppuccin-hyprland": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1712161758,
-        "narHash": "sha256-XTqpmucOeHUgSpXQ0XzbggBFW+ZloRD/3mFhI+Tq4O8=",
-        "owner": "catppuccin",
-        "repo": "hyprland",
-        "rev": "b57375545f5da1f7790341905d1049b1873a8bb3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "hyprland",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -94,38 +61,6 @@
       "original": {
         "owner": "catppuccin",
         "repo": "qtcreator",
-        "type": "github"
-      }
-    },
-    "catppuccin-starship": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1689246850,
-        "narHash": "sha256-nsRuxQFKbQkyEI4TXgvAjcroVdG+heKX5Pauq/4Ota0=",
-        "owner": "catppuccin",
-        "repo": "starship",
-        "rev": "5629d2356f62a9f2f8efad3ff37476c19969bd4f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "starship",
-        "type": "github"
-      }
-    },
-    "catppuccin-swaylock": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1712008121,
-        "narHash": "sha256-AKiOeV9ggvsreC/lq2qXytUsR+x66Q0kpN2F4/Oh2Ao=",
-        "owner": "catppuccin",
-        "repo": "swaylock",
-        "rev": "77246bbbbf8926bdb8962cffab6616bc2b9e8a06",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "swaylock",
         "type": "github"
       }
     },
@@ -165,11 +100,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1713435434,
-        "narHash": "sha256-wVfsbrQjzoUnbqmrFxk8iBG+bZjP6wCvXG+uLH1FyxA=",
+        "lastModified": 1713439171,
+        "narHash": "sha256-CpaucqKj7I4U6AwE5oQejijsO7xM+K6nQSvIqzSLJC4=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "5866c7ea8299182aab7ebb1313b60f392bfe46fb",
+        "rev": "69d132ef94333609c3b43fa6a649145d8400a7b9",
         "type": "github"
       },
       "original": {
@@ -482,16 +417,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1702537497,
-        "narHash": "sha256-br4Z7OFEHWN8oOnKf40BoS6QFt1EyVLqwaVGBG7/DT8=",
-        "rev": "7a88cdedbda35f808ed2f329a7a811e0511870f9",
-        "revCount": 3192,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/nix-community/home-manager/0.1.3192%2Brev-7a88cdedbda35f808ed2f329a7a811e0511870f9/018c6725-7e9b-7e8e-bb57-f493c0e4f7dc/source.tar.gz"
+        "lastModified": 1713391096,
+        "narHash": "sha256-5xkzsy+ILgQlmvDDipL5xqAehnjWBenAQXV4/NLg2dE=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "f46814ec7cbef9c2aef18ca1cbe89f2bb1e8c394",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/nix-community/home-manager/0.1.%2A.tar.gz"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "home-manager_2": {
@@ -986,11 +922,11 @@
     },
     "nixpkgs-stable_4": {
       "locked": {
-        "lastModified": 1713042715,
-        "narHash": "sha256-RifMwYuKu5v6x6O65msKDTqKkQ9crGwOB7yr20qMEuE=",
+        "lastModified": 1713434076,
+        "narHash": "sha256-+/p5edwlkqKZc6GDAQl+92Hoe1f3NNbUF9uj+X9H3pU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c27f3b6d8e29346af16eecc0e9d54b1071eae27e",
+        "rev": "8494ae076b7878d61a7d2d25e89a847fe8f8364c",
         "type": "github"
       },
       "original": {
@@ -1145,12 +1081,8 @@
     },
     "root": {
       "inputs": {
-        "catppuccin-bat": "catppuccin-bat",
-        "catppuccin-btop": "catppuccin-btop",
-        "catppuccin-hyprland": "catppuccin-hyprland",
+        "catppuccin": "catppuccin",
         "catppuccin-qtcreator": "catppuccin-qtcreator",
-        "catppuccin-starship": "catppuccin-starship",
-        "catppuccin-swaylock": "catppuccin-swaylock",
         "catppuccin-zsh": "catppuccin-zsh",
         "chaotic": "chaotic",
         "hobr": "hobr",
@@ -1245,11 +1177,11 @@
         "nixpkgs-stable": "nixpkgs-stable_4"
       },
       "locked": {
-        "lastModified": 1713428550,
-        "narHash": "sha256-bHWNcnnlVzd1ek7uHoQQzFEM5lqscijCOgcz1uU766w=",
+        "lastModified": 1713439347,
+        "narHash": "sha256-bSCdPIzLadg4eHPt1CB9HQnqJ/SWG82y8A6wBGp8CQw=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "a9795d1959fe17a38bc901323d25f4e70acef511",
+        "rev": "ac538092be2723b68fd4ff75eba7684480451c8f",
         "type": "github"
       },
       "original": {

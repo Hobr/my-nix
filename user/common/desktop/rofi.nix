@@ -2,6 +2,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
+    catppuccin.enable = true;
     plugins = with pkgs; [
       rofi-top
       rofi-rbw

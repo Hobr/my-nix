@@ -2,20 +2,11 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-
+    catppuccin.enable = true;
     # 快捷键
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    # 配置
-    extraConfig = ''
-      colorscheme catppuccin-latte
-    '';
-    extraLuaConfig = ''
-      vim.cmd.colorscheme "catppuccin"
-    '';
-    # 插件
-    plugins = with pkgs.vimPlugins; [ catppuccin-nvim ];
   };
 
   # NeoVide

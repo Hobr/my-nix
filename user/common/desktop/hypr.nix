@@ -3,6 +3,7 @@
     enable = true;
     systemd.enable = true;
     xwayland.enable = true;
+    catppuccin.enable = true;
 
     # 设置
     settings = {

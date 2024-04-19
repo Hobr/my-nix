@@ -170,9 +170,7 @@
         # 窗口
         "$mainMod, X, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, V, togglefloating,"
-        "$mainMod, P, pseudo,"
-        "$mainMod, J, togglesplit,"
+        "$mainMod, F, togglefloating,"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"

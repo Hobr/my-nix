@@ -19,10 +19,7 @@
   };
 
   # XDG
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
+  xdg.portal.enable = true;
 
   environment.systemPackages = [ pkgs.xdg-utils ];
 

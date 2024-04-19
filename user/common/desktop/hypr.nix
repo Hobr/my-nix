@@ -39,9 +39,6 @@
         "cliphist wipe"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-
-        # 自动启动
-        "telegram-desktop -autostart"
       ];
 
       general = {
@@ -83,7 +80,7 @@
         # 阴影颜色
         "col.shadow" = "rgba(1a1a1aee)";
         # 阴影偏移
-        shadow_offset = "0 5";
+        shadow_offset = "0 1";
         # 阴影大小
         shadow_scale = 1.0;
 
@@ -233,7 +230,7 @@
   # 壁纸
   services.hyprpaper = {
     enable = true;
-    preloads = [ "/mnt/data/Project/my-nix/wallpaper/1.png" ];
+    preloads = [ "../../../wallpaper/1.png" ];
     wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/wallpaper/1.png" ];
   };
 

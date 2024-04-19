@@ -18,14 +18,6 @@
     };
   };
 
-  # 鼠标
-  home.pointerCursor = {
-    package = pkgs.catppuccin-cursors.latteDark;
-    name = "Catppuccin-Latte-Dark-Cursors";
-    size = 24;
-    gtk.enable = true;
-  };
-
   # GTK
   gtk = {
     enable = true;

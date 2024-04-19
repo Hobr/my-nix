@@ -6,11 +6,13 @@
 
       env = [
         # NVIDIA
-        "LIBVA_DRIVER_NAME,nvidia"
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "WLR_NO_HARDWARE_CURSORS,1"
+        "LIBVA_DRIVER_NAME,nvidia"
         "NVD_BACKEND,direct"
+        "MOZ_X11_EGL,1"
+        "MOZ_DISABLE_RDD_SANDBOX,1"
+        "WLR_NO_HARDWARE_CURSORS,1"
       ];
     };
   };

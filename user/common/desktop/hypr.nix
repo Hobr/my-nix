@@ -22,16 +22,6 @@
         "XDG_SESSION_TYPE,wayland"
         "SDL_VIDEODRIVER,wayland"
         "MOZ_ENABLE_WAYLAND,1"
-
-        # NVIDIA
-        "GBM_BACKEND,nvidia-drm"
-        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "LIBVA_DRIVER_NAME,nvidia"
-
-        "NVD_BACKEND,direct"
-        "MOZ_X11_EGL,1"
-        "MOZ_DISABLE_RDD_SANDBOX,1"
-        "WLR_NO_HARDWARE_CURSORS,1"
       ];
 
       exec-once = [
@@ -51,9 +41,9 @@
         # 窗口与屏幕边框间隔
         gaps_out = 20;
         # 活动窗口边框颜色
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         # 非活动窗口边框颜色
-        "col.inactive_border" = "rgba(595959aa)";
+        #"col.inactive_border" = "rgba(595959aa)";
         # 光标不使用多少秒后消失
         cursor_inactive_timeout = 5;
         # 布局
@@ -78,11 +68,7 @@
         # 不在窗口后渲染
         shadow_ignore_window = true;
         # 阴影颜色
-        "col.shadow" = "rgba(1a1a1aee)";
-        # 阴影偏移
-        shadow_offset = "0 1";
-        # 阴影大小
-        shadow_scale = 1.0;
+        #"col.shadow" = "rgba(1a1a1aee)";
 
         # 模糊
         blur = {
@@ -228,7 +214,7 @@
   # 壁纸
   services.hyprpaper = {
     enable = true;
-    preloads = [ "../../../wallpaper/1.png" ];
+    preloads = [ "/mnt/data/Project/my-nix/wallpaper/1.png" ];
     wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/wallpaper/1.png" ];
   };
 
@@ -248,7 +234,7 @@
         # 1.5分钟
         timeout = 150;
         # 设置为最低亮度
-        onTimeout = "brightnessctl -s set 10";
+        onTimeout = "brightnessctl set 20%";
         # 苏醒 恢复亮度
         onResume = "brightnessctl -r";
       }

@@ -42,6 +42,8 @@ in {
         disable-scroll = true;
         format = "{icon}";
         on-click = "activate";
+        on-scroll-up = "hyprctl dispatch workspace e+1";
+        on-scroll-dow = "hyprctl dispatch workspace e-1";
         format-icons = {
           "1" = "󰈹";
           "2" = "";

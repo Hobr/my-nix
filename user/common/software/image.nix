@@ -5,8 +5,8 @@
     grim
     inputs.hyprcontrib.packages.${pkgs.system}.grimblast
 
-    gimp
+    # gimp
+    # inkscape
     swappy
-    inkscape
   ];
 }

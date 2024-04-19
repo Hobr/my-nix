@@ -1,6 +1,1 @@
-{
-  programs.texlive = {
-    enable = true;
-    # extraPackages = "";
-  };
-}
+{ programs.texlive = { enable = true; }; }

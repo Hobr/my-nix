@@ -23,8 +23,8 @@
     zip
     unzip
 
-    arduino
-    arduino-ide
+    # arduino
+    # arduino-ide
   ];
 
   programs.info.enable = true;

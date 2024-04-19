@@ -3,7 +3,7 @@
     vlc
     ffmpeg-full
     yt-dlp
-    losslesscut-bin
+    # losslesscut-bin
     inputs.hobr.packages.${pkgs.system}.aegisub
   ];
 }

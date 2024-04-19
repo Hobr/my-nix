@@ -18,10 +18,28 @@
     };
   };
 
+  # 鼠标
+  home.pointerCursor = {
+    package = pkgs.catppuccin-cursors.latteDark;
+    name = "Catppuccin-Latte-Dark-Cursors";
+    size = 24;
+    gtk.enable = true;
+  };
+
   # GTK
   gtk = {
     enable = true;
-    catppuccin.enable = true;
+
+    # 主题
+    theme = {
+      name = "Catppuccin-Latte-Standard-Lavender-Light";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+        size = "standard";
+        tweaks = [ "normal" ];
+        variant = "latte";
+      };
+    };
 
     # Icon
     iconTheme = {
@@ -31,6 +49,15 @@
         flavor = "latte";
       };
     };
+  };
+
+  xdg.configFile = {
+    "gtk-4.0/assets".source =
+      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source =
+      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source =
+      "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
   };
 
   # QT

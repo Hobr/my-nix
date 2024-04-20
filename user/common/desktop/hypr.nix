@@ -105,7 +105,7 @@
         # 触控板空间切换
         workspace_swipe = true;
         # 切换用指数
-        workspace_swipe_fingers = 4;
+        workspace_swipe_fingers = 3;
       };
 
       misc = {

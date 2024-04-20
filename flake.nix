@@ -18,6 +18,8 @@
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
+    # VSCode Extension
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     ## 用户
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";

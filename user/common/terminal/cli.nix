@@ -5,6 +5,7 @@
     nixpkgs-review
 
     wget
+    axel
     httpie
 
     nitch

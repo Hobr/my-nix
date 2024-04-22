@@ -212,11 +212,7 @@
   };
 
   # 壁纸
-  services.hyprpaper = {
-    enable = true;
-    preloads = [ "/mnt/data/Project/my-nix/wallpaper/1.png" ];
-    wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/wallpaper/1.png" ];
-  };
+  services.hyprpaper.enable = true;
 
   # IDLE
   services.hypridle = {

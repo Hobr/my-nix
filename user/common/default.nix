@@ -89,6 +89,8 @@
     ./study/writer.nix
     # Tex
     ./study/tex.nix
+    # C/C++
+    ./study/cpp.nix
     # Python
     ./study/python.nix
   ];

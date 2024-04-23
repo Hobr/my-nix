@@ -1,6 +1,1 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
-    gcc
-    cmake
-  ];
-}
+{ pkgs, ... }: { home.packages = with pkgs; [ gcc cmake ]; }

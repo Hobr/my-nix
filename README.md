@@ -125,10 +125,8 @@ sudo fwupdmgr refresh
 sudo fwupdmgr get-updates
 sudo fwupdmgr update
 
-# 开发环境
-cd ~/my-nix
-direnv allow
-pre-commit install
+# 软件配置
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 # SSH
 ssh-keygen -t rsa -C "mail@hobr.site"

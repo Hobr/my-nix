@@ -26,6 +26,9 @@
 
     # arduino
     # arduino-ide
+
+    # 屏幕键盘
+    squeekboard
   ];
 
   programs.info.enable = true;

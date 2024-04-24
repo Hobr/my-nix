@@ -47,7 +47,11 @@
         # 光标不使用多少秒后消失
         cursor_inactive_timeout = 5;
         # 布局
-        layout = "master";
+        layout = "dwindle";
+      };
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
       };
 
       decoration = {
@@ -122,11 +126,6 @@
         force_introspection = 0;
       };
 
-      master = {
-        # 新窗口为主窗口
-        new_is_master = true;
-      };
-
       animations = {
         enabled = "yes";
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
@@ -157,6 +156,10 @@
         "$mainMod, X, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, F, togglefloating,"
+
+        # Dwindle
+        "$mainMod, P, pseudo,"
+        "$mainMod, J, togglesplit,"
 
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"

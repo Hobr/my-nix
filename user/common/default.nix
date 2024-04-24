@@ -69,8 +69,6 @@
     ./software/vscode.nix
     # QT
     ./software/qt.nix
-    # 日用
-    ./software/use.nix
 
     # CLI
     ./terminal/cli.nix

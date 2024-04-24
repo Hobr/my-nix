@@ -4,6 +4,8 @@
     zotero
     anki
 
+    gnome.ghex
+
     libreoffice
     hunspell
     hunspellDicts.en_US

@@ -13,4 +13,9 @@
       fcitx5-configtool
     ];
   };
+
+  # 触屏键盘
+  home.packages = with pkgs; [
+    wvkbd
+  ];
 }

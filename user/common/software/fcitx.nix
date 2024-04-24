@@ -15,7 +15,5 @@
   };
 
   # 触屏键盘
-  home.packages = with pkgs; [
-    wvkbd
-  ];
+  home.packages = [ pkgs.wvkbd ];
 }

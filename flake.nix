@@ -40,6 +40,11 @@
       url = "gitlab:doronbehar/nix-xilinx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # 罗技
+    solaar = {
+      url = "github:Svenum/Solaar-Flake/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 桌面
     ## Hyprland

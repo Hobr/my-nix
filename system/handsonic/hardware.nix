@@ -8,4 +8,7 @@
 
   # 打印机
   services.printing.enable = false;
+
+  # 罗技
+  programs.solaar.enable = true;
 }

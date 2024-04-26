@@ -7,17 +7,17 @@
     inputs.catppuccin.homeManagerModules.catppuccin
 
     # Nix
-    ./tool/nix.nix
+    ./service/nix.nix
     # 硬盘
-    ./tool/disk.nix
+    ./service/disk.nix
     # Git
-    ./tool/git.nix
+    ./service/git.nix
     # GPG
-    ./tool/gpg.nix
+    ./service/gpg.nix
     # SSH
-    ./tool/ssh.nix
+    ./service/ssh.nix
     # 同步
-    ./tool/sync.nix
+    ./service/sync.nix
 
     # 桌面
     ./desktop/hypr.nix
@@ -45,10 +45,10 @@
     # 图像
     ./software/image.nix
 
-    # 浏览器
-    ./software/firefox.nix
+    # 网络
+    ./software/internet.nix
     # 邮箱
-    ./software/thunderbird.nix
+    ./software/mail.nix
     # 即时通讯
     ./software/im.nix
 
@@ -60,15 +60,6 @@
     ./software/fcitx.nix
     # OBS-Studio
     ./software/obs.nix
-
-    # NeoVim
-    ./software/nvim.nix
-    # Emacs
-    ./software/emacs.nix
-    # VS Code
-    ./software/vscode.nix
-    # QT
-    ./software/qt.nix
 
     # CLI
     ./terminal/cli.nix
@@ -84,14 +75,22 @@
     ./terminal/direnv.nix
 
     # 阅读
-    ./study/reader.nix
+    ./product/reader.nix
     # 编辑
-    ./study/writer.nix
-    # Tex
-    ./study/tex.nix
+    ./product/writer.nix
+    # NeoVim
+    ./product/nvim.nix
+    # product
+    ./product/emacs.nix
+    # QT
+    ./product/qt.nix
     # C/C++
-    ./study/cpp.nix
+    ./product/cpp.nix
     # Python
-    ./study/python.nix
+    ./product/python.nix
+    # Tex
+    ./product/tex.nix
+    # 其他工具
+    ./product/tool.nix
   ];
 }

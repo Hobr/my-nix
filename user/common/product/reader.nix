@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   programs.sioyek = {
     enable = true;
     bindings = {
@@ -14,4 +14,6 @@
       "text_highlight_color" = "1.0 0.0 0.0";
     };
   };
+
+  home.packages = with pkgs; [ zotero hunspell hunspellDicts.en_US ];
 }

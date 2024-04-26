@@ -1,12 +1,12 @@
 { pkgs, ... }: {
+  # Playctl
+  services.playerctld = { enable = true; };
+
   # MPD
   services.mpd = {
     enable = true;
     extraConfig = "";
   };
-
-  # Playctl
-  services.playerctld = { enable = true; };
 
   # MPD歌词
   services.mpd-mpris = {

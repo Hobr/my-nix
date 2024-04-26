@@ -5,6 +5,7 @@
     anki
 
     gnome.ghex
+    charles
 
     libreoffice
     hunspell

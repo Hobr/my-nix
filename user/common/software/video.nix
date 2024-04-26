@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
+  programs.mpv.enable = true;
+
   home.packages = with pkgs; [
-    vlc
     ffmpeg_7
     yt-dlp
     # losslesscut-bin

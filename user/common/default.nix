@@ -82,6 +82,8 @@
     ./product/nvim.nix
     # product
     ./product/emacs.nix
+    # Visual Stuido Code
+    ./product/vscode.nix
     # QT
     ./product/qt.nix
     # C/C++

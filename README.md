@@ -100,6 +100,7 @@ reboot
 ```bash
 nmcli
 sudo mkdir /etc/mihomo
+cp dist/geoip.metadb /etc/mihomo
 sudo systemctl restart Mihomo
 
 nix-shell -p git

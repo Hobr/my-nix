@@ -5,7 +5,15 @@
     # https://mozilla.github.io/policy-templates/
     policies = {
       DisablePocket = true;
-      FirefoxHome.Pocket = false;
+      DisableFirefoxStudies = true;
+      FirefoxHome = {
+        Pocket = false;
+        Snippets = false;
+      };
+      UserMessaging = {
+        ExtensionRecommendations = false;
+        SkipOnboarding = true;
+      };
     };
   };
 

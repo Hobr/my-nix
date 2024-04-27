@@ -98,13 +98,18 @@ reboot
 ## 后续
 
 ```bash
+# SUPER+M
+# TTY
 nmcli
 sudo mkdir /etc/mihomo
-cp dist/geoip.metadb /etc/mihomo
+sudo cp dist/geoip.metadb /etc/mihomo
 sudo systemctl restart Mihomo
+rm ~/.config/hypr/hypyland.conf
 
+# Home
 nix-shell -p git
 make home
+reboot
 
 # 安全启动
 sudo bootctl status
@@ -126,21 +131,22 @@ sudo fwupdmgr refresh
 sudo fwupdmgr get-updates
 sudo fwupdmgr update
 
-# 软件配置
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-
 # SSH
 ssh-keygen -t rsa -C "mail@hobr.site"
 ## 或者
 cp xxx/id_rsa.pub ~/.ssh
 cp xxx/id_rsa ~/.ssh
-chmod 700 id_rsa
-chmod 700 id_rsa.pub
+chmod 700 ~/.ssh/id_rsa
+chmod 700 ~/.ssh/id_rsa.pub
+ssh git@github.com
 
 # GPG
 gpg --list-secret-keys
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
+
+# 软件配置
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 
 # 重新TPM
 sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1

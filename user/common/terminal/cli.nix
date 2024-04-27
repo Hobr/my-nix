@@ -3,6 +3,7 @@
     wget
     axel
     httpie
+    iftop
 
     nitch
     fastfetch

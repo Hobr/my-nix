@@ -6,7 +6,6 @@
     nixpkgs-review
 
     gnome.ghex
-    charles
     klayout
 
     arduino

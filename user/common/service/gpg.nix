@@ -10,9 +10,6 @@
   services.gpg-agent = {
     enable = true;
     enableZshIntegration = true;
-    pinentryFlavor = "gnome3";
-    extraConfig = ''
-      pinentry-program ${pkgs.pinentry-gnome3}/bin/pinentry
-    '';
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 }

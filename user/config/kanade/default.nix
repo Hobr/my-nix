@@ -1,1 +1,1 @@
-{ imports = [ ./firefox.nix ./hypr.nix ]; }
+{ imports = [ ./hypr.nix ]; }

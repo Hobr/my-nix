@@ -4,26 +4,16 @@
 
     # https://mozilla.github.io/policy-templates/
     policies = {
-      BlockAboutConfig = true;
       DisablePocket = true;
-    };
-
-    profiles.hobr = {
-      isDefault = true;
-      # 扩展
-      extensions = [ ];
-      # 设置
-      settings = {
-        "browser.startup.homepage" = "https://search.nixos.org/packages";
-        "browser.bookmarks.showMobileBookmarks" = true;
-      };
+      FirefoxHome.Pocket = false;
     };
   };
+
+  home.sessionVariables.BROWSER = "firefox";
 
   home.packages = with pkgs;
     [
       # 密码管理器
       bitwarden
     ];
-  home.sessionVariables.BROWSER = "firefox";
 }

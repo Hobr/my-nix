@@ -18,7 +18,7 @@
   };
 
   services.hyprpaper = {
-    preloads = [ "/mnt/data/Project/my-nix/wallpaper/1.png" ];
-    wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/wallpaper/1.png" ];
+    preloads = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
+    wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
   };
 }

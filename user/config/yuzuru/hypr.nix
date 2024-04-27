@@ -6,10 +6,10 @@
 
   services.hyprpaper = {
     preloads = [
-      "/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/wallpaper/1.png"
+      "/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/dist/wallpaper/1.png"
     ];
     wallpapers = [
-      "eDP-1,/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/wallpaper/1.png"
+      "eDP-1,/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/dist/wallpaper/1.png"
     ];
   };
 }

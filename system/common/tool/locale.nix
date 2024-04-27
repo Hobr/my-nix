@@ -9,9 +9,9 @@
   };
 
   # 键盘布局
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # 字体

@@ -25,7 +25,7 @@
     cudaPackages.cudnn
 
     # NVTop
-    nvtop
+    nvtopPackages.nvidia
   ];
 
   # NVIDIA驱动

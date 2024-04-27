@@ -48,7 +48,7 @@ cryptsetup luksOpen /dev/nvme0n1 crypt
 pvcreate /dev/mapper/crypt
 vgcreate system /dev/mapper/crypt
 
-lvcreate -L 24G system -n swap
+lvcreate -L 16G system -n swap
 lvcreate -l 100%FREE system -n root
 
 # Btrfs
@@ -90,7 +90,7 @@ cd my-nix
 
 # 部署
 export all_proxy=socks5://192.168.1.102:7890
-nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://hyprland.cachix.org https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option trusted-public-keys "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" --show-trace --flake .#handsonic/distortion/overdrive
+nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://hyprland.cachix.org https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option require-sigs false --show-trace --flake .#handsonic/distortion/overdrive
 
 reboot
 ```
@@ -104,12 +104,12 @@ cp dist/geoip.metadb /etc/mihomo
 sudo systemctl restart Mihomo
 
 nix-shell -p git
-nh home switch -a ./
+make home
 
-# system\common\system\boot.nix systemd-boot.enable=true
 # 安全启动
 sudo bootctl status
 sudo sbctl create-keys
+# systemd-boot.enable=false
 sudo sbctl verify
 reboot
 ## 打开安全启动并切换到Setup Mode

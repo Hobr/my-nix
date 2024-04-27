@@ -18,10 +18,8 @@
 
 - 桌面环境
 - ZSH Bindkey
-- VSCode环境
 - Rime
 - ReGreet
-- NVim环境
 - Emacs环境
 - Systemd-timesyncd resolved....
 - 邮箱
@@ -112,9 +110,9 @@ make home
 reboot
 
 # 安全启动
+# 恢复 system\common\system\secureboot.ni lanzaboote.enable=true, loader.systemd-boot.enable
 sudo bootctl status
 sudo sbctl create-keys
-# systemd-boot.enable=false
 sudo sbctl verify
 reboot
 ## 打开安全启动并切换到Setup Mode

@@ -30,9 +30,9 @@
 
 修改内容:
 
-- *system\common\config\nix.nix* 填写**access-tokens**
 - *system\common\system\boot.nix* 暂时**systemd-boot.enable=true**
 - *system\common\system\secureboot.nix* 暂时**lanzaboote.enable=false**, 注释**loader.systemd-boot.enable**
+- *system\common\system\nix.nix* 填写**access-tokens**
 
 ```bash
 sudo -i
@@ -90,7 +90,7 @@ cd my-nix
 
 # 部署
 export all_proxy=socks5://192.168.1.102:7890
-nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option trusted-public-keys "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8=" --show-trace --flake .#handsonic/distortion/overdrive
+nixos-install --option substituters "https://chaotic-nyx.cachix.org/ https://hyprland.cachix.org https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" --option trusted-public-keys "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8= hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" --show-trace --flake .#handsonic/distortion/overdrive
 
 reboot
 ```

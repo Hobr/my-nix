@@ -5,9 +5,7 @@
     kernelPackages = pkgs.linuxPackages_cachyos;
 
     # 内核参数
-    consoleLogLevel = 0;
-    kernelParams =
-      [ "quiet" "udev.log_level=3" "nowatchdog" "systemd.gpt_auto=0" ];
+    kernelParams = [ "systemd.gpt_auto=0" ];
   };
 
   # scx

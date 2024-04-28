@@ -430,11 +430,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714237076,
-        "narHash": "sha256-j5hZPJOhVvWrMsIVihxbpd4jgc1nPQ4WywEV5MdfkT4=",
+        "lastModified": 1714276627,
+        "narHash": "sha256-sGXi2IF/0K9mwoZGT366Z+l4wenVywybKKUzi3UnwC8=",
         "owner": "Hobr",
         "repo": "hobr_nur",
-        "rev": "874ef4944d8591996c8a35c1bc76db1929054c33",
+        "rev": "c6a14c05627c4c555efb457fcd5c851894becc6f",
         "type": "github"
       },
       "original": {
@@ -1092,6 +1092,7 @@
         "type": "github"
       }
     },
+
     "nixpkgs_8": {
       "locked": {
         "lastModified": 1714237262,

@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     wget
     axel
-    httpie
+    httpx
     iftop
 
     nitch

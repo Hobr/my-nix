@@ -92,6 +92,8 @@
     ./product/python.nix
     # Tex
     ./product/tex.nix
+    # 电路
+    ./product/circuit.nix
     # 其他工具
     ./product/tool.nix
   ];

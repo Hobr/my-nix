@@ -1,9 +1,9 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    nano
-    nixfmt
-    nixpkgs-review
+    ripes
+    klayout
 
-    gnome.ghex
+    arduino
+    arduino-ide
   ];
 }

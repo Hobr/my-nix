@@ -3,6 +3,7 @@
     nano
     nixfmt
     nixpkgs-review
+    pre-commit
 
     gnome.ghex
   ];

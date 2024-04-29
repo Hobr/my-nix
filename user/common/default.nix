@@ -90,6 +90,8 @@
     ./product/cpp.nix
     # Python
     ./product/python.nix
+    # NodeJS
+    ./product/js.nix
     # Tex
     ./product/tex.nix
     # 电路

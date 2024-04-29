@@ -145,6 +145,7 @@ gpg --import public-key.asc
 
 # 软件配置
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+npm set prefix ~/.npm-global
 
 # 重新TPM
 sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1

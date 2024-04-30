@@ -247,8 +247,8 @@
       }
       # 关闭屏幕
       {
-        # 5.5分钟
-        timeout = 330;
+        # 8分钟
+        timeout = 480;
         # 熄屏
         onTimeout = "hyprctl dispatch dpms off";
         # 恢复

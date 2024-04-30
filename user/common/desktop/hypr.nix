@@ -221,7 +221,8 @@
   services.hypridle = {
     enable = true;
     # 检查线程, 避免多开
-    lockCmd = "pidof swaylock || swaylock";
+    lockCmd =
+      "pidof ${pkgs.swaylock-effects}/bin/swaylock || ${pkgs.swaylock-effects}/bin/swaylock";
     # 挂起
     beforeSleepCmd = "systemctl suspend";
     # 点击唤醒
@@ -233,16 +234,16 @@
         # 1.5分钟
         timeout = 150;
         # 设置为最低亮度
-        onTimeout = "brightnessctl set 20%";
+        onTimeout = "${pkgs.brightnessctl}/bin/brightnessctl set 20%";
         # 苏醒 恢复亮度
-        onResume = "brightnessctl -r";
+        onResume = "${pkgs.brightnessctl}/bin/brightnessctl -r";
       }
       # 锁定
       {
         # 5分钟
         timeout = 300;
         # 锁屏
-        onTimeout = "swaylock";
+        onTimeout = "${pkgs.swaylock-effects}/bin/swaylock";
       }
       # 关闭屏幕
       {

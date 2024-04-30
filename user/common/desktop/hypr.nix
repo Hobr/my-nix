@@ -231,12 +231,12 @@
     listeners = [
       # 降低亮度
       {
-        # 1.5分钟
+        # 2.5分钟
         timeout = 150;
         # 设置为最低亮度
         onTimeout = "${pkgs.brightnessctl}/bin/brightnessctl set 20%";
         # 苏醒 恢复亮度
-        onResume = "${pkgs.brightnessctl}/bin/brightnessctl -r";
+        onResume = "${pkgs.brightnessctl}/bin/brightnessctl set 100%";
       }
       # 锁定
       {

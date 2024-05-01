@@ -9,7 +9,6 @@
     # Overlays
     overlays = [
       outputs.overlays.modifications
-      outputs.overlays.stable-packages
       inputs.nix-xilinx.overlay
     ];
   };

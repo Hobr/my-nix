@@ -7,10 +7,7 @@
       allowUnsupportedSystem = true;
     };
     # Overlays
-    overlays = [
-      outputs.overlays.modifications
-      inputs.nix-xilinx.overlay
-    ];
+    overlays = [ outputs.overlays.modifications inputs.nix-xilinx.overlay ];
   };
 
   nix = {

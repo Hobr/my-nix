@@ -1,3 +1,1 @@
-{ inputs, ... }: {
-  modifications = final: prev: { };
-}
+{ inputs, ... }: { modifications = final: prev: { }; }

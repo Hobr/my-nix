@@ -16,14 +16,11 @@
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
+    ## 安全启动
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
     ## 用户
     home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ## 安全启动
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.3.0";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全
@@ -51,7 +48,8 @@
     hyprcontrib.url = "github:hyprwm/contrib/v0.1";
 
     # 主题
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url =
+      "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";
     ## ZSH
     catppuccin-zsh = {
       url = "github:catppuccin/zsh-syntax-highlighting";

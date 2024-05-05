@@ -32,7 +32,7 @@
   # eza(ls)
   programs.eza = {
     enable = true;
-    enableZshIntegration = true;
+    enableAliases = true;
     git = true;
     icons = true;
     extraOptions = [ ];

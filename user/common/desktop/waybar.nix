@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   custom = {
     font = "Mononoki Nerd Font";
@@ -13,7 +13,10 @@ let
 in {
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar.override { swaySupport = false; };
+    package = pkgs.waybar.override {
+      swaySupport = false;
+      hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    };
     systemd = {
       enable = true;
       target = "hyprland-session.target";

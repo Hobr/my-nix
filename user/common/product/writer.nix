@@ -1,1 +1,1 @@
-{ pkgs, ... }: { home.packages = with pkgs; [ obsidian libreoffice anki ]; }
+{ pkgs, ... }: { home.packages = with pkgs; [ obsidian libreoffice ]; }

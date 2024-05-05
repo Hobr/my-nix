@@ -18,10 +18,4 @@
   };
 
   home.sessionVariables.BROWSER = "firefox";
-
-  home.packages = with pkgs;
-    [
-      # 密码管理器
-      bitwarden
-    ];
 }

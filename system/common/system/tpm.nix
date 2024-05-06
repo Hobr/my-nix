@@ -6,6 +6,11 @@
     abrmd.enable = false;
   };
 
-  boot.initrd.availableKernelModules = [ "tpm" "tpm_tis" "tpm_crb" ];
-  boot.initrd.systemd.enableTpm2 = true;
+  boot.initrd = {
+    availableKernelModules = [ "tpm" "tpm_tis" "tpm_crb" ];
+    systemd = {
+      enable = true;
+      enableTpm2 = true;
+    };
+  };
 }

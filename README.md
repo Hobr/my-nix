@@ -30,7 +30,6 @@
 
 - *system\common\system\boot.nix* 暂时**systemd-boot.enable=true**
 - *system\common\system\secureboot.nix* 暂时**lanzaboote.enable=false**, 注释**loader.systemd-boot.enable**
-- *system\common\system\nix.nix* 填写**access-tokens**
 
 ```bash
 sudo -i
@@ -110,7 +109,7 @@ make home
 reboot
 
 # 安全启动
-# 恢复 system\common\system\secureboot.ni lanzaboote.enable=true, loader.systemd-boot.enable
+# 恢复 system\common\system\secureboot.nix lanzaboote.enable=true, loader.systemd-boot.enable
 sudo bootctl status
 sudo sbctl create-keys
 sudo sbctl verify

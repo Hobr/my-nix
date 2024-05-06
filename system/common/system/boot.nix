@@ -9,8 +9,4 @@
     efi.canTouchEfiVariables = true;
     timeout = 3;
   };
-
-  # Splash
-  #boot.plymouth = { enable = true; };
-  boot.initrd.systemd.enable = true;
 }

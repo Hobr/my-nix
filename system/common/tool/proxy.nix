@@ -37,7 +37,7 @@
       AmbientCapabilities =
         "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
       ExecStartPre =
-        "${pkgs.wget}/bin/wget -O /etc/mihomo/config.yaml 'https://conv.trafficmanager.net/sub?target=clash&url=https://yy-node.trafficmanager.net/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
+        "${pkgs.wget}/bin/wget -O /etc/mihomo/config.yaml 'http://106.15.207.16:8899/sub?target=clash&url=http://106.15.207.16:40000/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
       ExecStart = "${pkgs.mihomo}/bin/mihomo -d /etc/mihomo";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
       Restart = "on-failure";

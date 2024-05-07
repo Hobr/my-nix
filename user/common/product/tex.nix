@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   programs.texlive = {
     enable = true;
-    extraPackages = tpkgs: { inherit (tpkgs) scheme-medium; };
+    extraPackages = tpkgs: { inherit (tpkgs) scheme-full; };
   };
 }

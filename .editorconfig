@@ -10,7 +10,6 @@ trim_trailing_whitespace = true
 ident_style = space
 ident_size = 2
 
-
 [Makefile]
 indent_size = 4
 indent_style = tab

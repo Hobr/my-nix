@@ -1,3 +1,3 @@
 {
-  # rograms.obs-studio = { enable = true; };
+  programs.obs-studio = { enable = true; };
 }

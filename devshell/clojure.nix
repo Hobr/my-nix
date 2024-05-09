@@ -1,5 +1,5 @@
 {
-  description = "Node.JS Shell";
+  description = "Clojure Shell";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -7,11 +7,15 @@
 
   outputs = { self, nixpkgs }:
     let
+      # Java版本
+      javaVersion = 20;
+
       overlays = [
         (final: prev: rec {
-          nodejs = prev.nodejs_latest;
-          pnpm = prev.nodePackages.pnpm;
-          yarn = (prev.yarn.override { inherit nodejs; });
+          jdk = prev."jdk${toString javaVersion}";
+          boot = prev.boot.override { inherit jdk; };
+          clojure = prev.clojure.override { inherit jdk; };
+          leiningen = prev.leiningen.override { inherit jdk; };
         })
       ];
       supportedSystems =
@@ -22,7 +26,7 @@
     in {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default =
-          pkgs.mkShell { packages = with pkgs; [ node2nix nodejs pnpm yarn ]; };
+          pkgs.mkShell { packages = with pkgs; [ boot clojure leiningen ]; };
       });
     };
 }

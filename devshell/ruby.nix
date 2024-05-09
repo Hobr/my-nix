@@ -11,11 +11,10 @@
       in {
         devShell = with pkgs;
           mkShell {
-            packages = with pkgs; [ ruby_3_2 ];
+            packages = with pkgs; [ ruby_3_2 bundler ];
             shellHook = ''
-              gem sources --remove https://rubygems.org/
-              gem sources -a https://mirrors.aliyun.com/rubygems/
-              bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems
+              gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+              bundle config mirror.https://rubygems.org https://gems.ruby-china.com
             '';
           };
       });

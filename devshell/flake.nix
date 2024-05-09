@@ -1,5 +1,5 @@
 {
-  description = "Clojure Shell";
+  description = "Scala Shell";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -12,18 +12,21 @@
           (final: prev: rec {
             # 版本
             jdk = prev."jdk20";
-            boot = prev.boot.override { inherit jdk; };
-            clojure = prev.clojure.override { inherit jdk; };
-            leiningen = prev.leiningen.override { inherit jdk; };
+            sbt = prev.sbt.override { jre = jdk; };
+            scala = prev.scala_3.override { jre = jdk; };
           })
         ];
 
-        pkgs = import nixpkgs { inherit system overlays; };
+        pkgs = import nixpkgs { inherit system; };
       in {
         devShell = with pkgs;
           mkShell {
-            packages = with pkgs; [ clojure boot leiningen ];
-            BOOT_VERSION = "2.8.3";
+            packages = with pkgs; [ scala scala-cli sbt coursier ];
+
+            NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [
+              circt
+            ];
+            NIX_LD = lib.fileContents "${stdenv.cc}/nix-support/dynamic-linker";
           };
       });
 }

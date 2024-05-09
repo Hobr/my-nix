@@ -42,6 +42,9 @@
             ];
             RUSTUP_UPDATE_ROOT = "https://mirrors.aliyun.com/rustup/rustup";
             RUSTUP_DIST_SERVER = "https://mirrors.aliyun.com/rustup";
+            shellHook = ''
+              export PATH="$PATH:~/.cargo/bin/"
+            '';
           };
       });
 }

@@ -10,15 +10,17 @@
     overlays = [ outputs.overlays.modifications inputs.nix-xilinx.overlay ];
   };
 
-  nix = {
-    nixPath = [ "/etc/nix/path" ];
-    registry = (lib.mapAttrs (_: flake: { inherit flake; }))
-      ((lib.filterAttrs (_: lib.isType "flake")) inputs);
+  nix = let flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  in {
+    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+    channel.enable = false;
 
     settings = {
       experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
       system-features = [ "big-parallel" ];
+      flake-registry = "";
+      nix-path = config.nix.nixPath;
 
       # Github API
       # access-tokens = "github.com=${secrets.git.github.oauth-token}";
@@ -44,11 +46,6 @@
       options = "--delete-older-than 3d";
     };
   };
-
-  environment.etc = lib.mapAttrs' (name: value: {
-    name = "nix/path/${name}";
-    value.source = value.flake;
-  }) config.nix.registry;
 
   # 软件文档
   documentation = {

@@ -87,7 +87,7 @@
     # QT
     ./product/qt.nix
     # 电路
-    ./product/circuit.nix
+    ./product/electron.nix
     # 其他工具
     ./product/tool.nix
   ];

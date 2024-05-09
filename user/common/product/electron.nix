@@ -3,6 +3,10 @@
     ripes
     klayout
 
+    circt
+    verilog
+    gtkwave
+
     arduino
     arduino-ide
   ];

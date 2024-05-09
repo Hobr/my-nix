@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, rust-overlay }:
+  outputs = { self, nixpkgs, flake-utils, rust-overlay }:
     let
       overlays = [
         rust-overlay.overlays.default

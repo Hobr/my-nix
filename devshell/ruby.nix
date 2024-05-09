@@ -6,15 +6,17 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-    let
-      supportedSystems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f:
-        nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import nixpkgs { inherit system; }; });
-    in {
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell { packages = with pkgs; [ ruby_3_2 ]; };
+    flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = import nixpkgs { inherit system; };
+      in {
+        devShell = with pkgs;
+          mkShell {
+            packages = with pkgs; [ ruby_3_2 ];
+            shellHook = ''
+              gem sources --remove https://rubygems.org/
+              gem sources -a https://mirrors.aliyun.com/rubygems/
+              bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems
+            '';
+          };
       });
-    };
 }

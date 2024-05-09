@@ -6,21 +6,14 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-    let
-      supportedSystems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f:
-        nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import nixpkgs { inherit system; }; });
-    in {
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell.override {
-          # 编译器
-          # stdenv = pkgs.clangStdenv;
-        } {
-          packages = with pkgs;
-            [
+    flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = import nixpkgs { inherit system; };
+      in {
+        devShell = with pkgs;
+          mkShell {
+            packages = with pkgs; [
               gcc
+              gdb
               clang-tools
               codespell
               conan
@@ -35,8 +28,7 @@
               autoconf
               cmake
               cmake-language-server
-            ] ++ (if system == "aarch64-darwin" then [ ] else [ gdb ]);
-        };
+            ];
+          };
       });
-    };
 }

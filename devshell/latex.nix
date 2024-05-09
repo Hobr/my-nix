@@ -6,21 +6,16 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-    let
-      supportedSystems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f:
-        nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import nixpkgs { inherit system; }; });
-    in {
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            texlive.combined.scheme-full
-            texlab
-            tectonic
-          ];
-        };
+    flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = import nixpkgs { inherit system; };
+      in {
+        devShell = with pkgs;
+          mkShell {
+            packages = with pkgs; [
+              texlive.combined.scheme-full
+              texlab
+              tectonic
+            ];
+          };
       });
-    };
 }

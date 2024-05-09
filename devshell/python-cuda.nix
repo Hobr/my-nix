@@ -1,36 +1,28 @@
-let
-  pkgs = import <nixpkgs> {
-    config.allowUnfree = true;
-    cudaSupport = true;
+{
+  description = "Python CUDA Shell";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
   };
-  pkg-unstable = import <nixpkgs-unstable> {
-    config.allowUnfree = true;
-    cudaSupport = true;
-  };
-in pkgs.mkShell {
-  name = "Python-CUDA-direnv";
-  buildInputs = (with pkgs; [
-    julia
-    (python3.withPackages (python-pkgs:
-      with python-pkgs; [
-        isort
-        black
-        flake8
-        pip
-        numba
-        cupy
-        scipy
-        matplotlib
-      ]))
-  ]) ++ (with pkg-unstable; [
-    linuxPackages.nvidia_x11
-    cudatoolkit
-    cudaPackages.cudnn
-  ]);
-  shellHook = ''
-    export CUDA_PATH=${pkgs.cudatoolkit}
-    export LD_LIBRARY_PATH=${pkg-unstable.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib
-    export EXTRA_LDFLAGS="-L/lib -L${pkg-unstable.linuxPackages.nvidia_x11}/lib"
-    export EXTRA_CCFLAGS="-I/usr/include"
-  '';
+
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = import nixpkgs { inherit system; };
+      in {
+        devShell = with pkgs;
+          mkShell {
+            venvDir = "venv";
+            packages = with pkgs;
+              [ python311 poetry ]
+              ++ (with pkgs.python311Packages; [ pip venvShellHook ])
+              ++ [ linuxPackages.nvidia_x11 cudatoolkit cudaPackages.cudnn ];
+
+            PIP_INDEX_URL = "http://mirrors.aliyun.com/pypi/simple/";
+            CUDA_PATH = "${pkgs.cudatoolkit}";
+            LD_LIBRARY_PATH =
+              "${pkgs.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib";
+            EXTRA_LDFLAGS = "-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib";
+            EXTRA_CCFLAGS = "-I/usr/include";
+          };
+      });
 }

@@ -8,12 +8,10 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        # Java版本
-        javaVersion = 20;
-
         overlays = [
           (final: prev: rec {
-            jdk = prev."jdk${toString javaVersion}";
+            # 版本
+            jdk = prev."jdk20";
             boot = prev.boot.override { inherit jdk; };
             clojure = prev.clojure.override { inherit jdk; };
             leiningen = prev.leiningen.override { inherit jdk; };
@@ -23,6 +21,9 @@
         pkgs = import nixpkgs { inherit system overlays; };
       in {
         devShell = with pkgs;
-          mkShell rec { packages = with pkgs; [ boot clojure leiningen ]; };
+          mkShell {
+            packages = with pkgs; [ clojure boot leiningen ];
+            BOOT_VERSION = "2.7.2";
+          };
       });
 }

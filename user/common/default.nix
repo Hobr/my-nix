@@ -86,14 +86,6 @@
     ./product/vscode.nix
     # QT
     ./product/qt.nix
-    # C/C++
-    ./product/cpp.nix
-    # Python
-    ./product/python.nix
-    # NodeJS
-    ./product/js.nix
-    # Tex
-    ./product/tex.nix
     # 电路
     ./product/circuit.nix
     # 其他工具

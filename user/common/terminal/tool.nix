@@ -15,6 +15,7 @@
     catppuccin.enable = true;
     syntaxes = { };
   };
+
   # Zoxide(cd)
   programs.zoxide = {
     enable = true;

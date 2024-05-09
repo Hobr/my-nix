@@ -34,6 +34,12 @@
     lfs.enable = true;
     # Delta
     delta.enable = true;
+    # 忽略
+    ignores = [
+      "result*"
+      ".direnv"
+      "venv"
+    ];
   };
 
   # LazyGit

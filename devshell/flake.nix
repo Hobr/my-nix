@@ -23,9 +23,7 @@
           mkShell {
             packages = with pkgs; [ scala scala-cli sbt coursier ];
 
-            NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [
-              circt
-            ];
+            NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [ circt ];
             NIX_LD = lib.fileContents "${stdenv.cc}/nix-support/dynamic-linker";
           };
       });

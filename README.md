@@ -149,6 +149,18 @@ npm set prefix ~/.npm-global
 # 重新TPM
 sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1
 sudo cryptsetup token remove /dev/nvme0n1p4 --token-id 0
+
+# Dev Shell
+cp devshell/xx.nix xxx
+cp devshell/.envrc xxx
+direnv allow
+
+# Vivado
+nix run gitlab:doronbehar/nix-xilinx#xilinx-shell
+chmod +x xxx.bin
+./xxx.bin
+cp dist/xilinx_nix.sh ~/.config/xilinx/nix.sh
+vivado
 ```
 
 ## 参考资料

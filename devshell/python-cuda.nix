@@ -25,7 +25,7 @@
       {
         devShell =
           with pkgs;
-          mkShell {
+          mkShell rec {
             venvDir = "venv";
             packages =
               with pkgs;
@@ -41,13 +41,38 @@
                 linuxPackages.nvidia_x11
                 cudatoolkit
                 cudaPackages.cudnn
+
+                xorg.libXi
+                xorg.libXmu
+                xorg.libXext
+                xorg.libX11
+                xorg.libXv
+                xorg.libXrandr
+                zlib
+                freeglut
+                gcc
+                stdenv.cc.cc.lib
+                stdenv.cc
+                ncurses5
+                binutils
+                gitRepo
+                autoconf
+                curl
+                procps
+                gnumake
+                util-linux
+                m4
+                gperf
+                unzip
+                libGLU
+                libGL
+                glib
               ];
             PIP_INDEX_URL = "http://mirrors.aliyun.com/pypi/simple/";
             PIP_TRUSTED_HOST = "mirrors.aliyun.com";
             CUDA_PATH = "${pkgs.cudatoolkit}";
-            LD_LIBRARY_PATH = "${pkgs.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib:${pkgs.stdenv.cc.cc.lib}/lib";
+            LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath packages;
             EXTRA_LDFLAGS = "-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib";
-            EXTRA_CCFLAGS = "-I/usr/include";
           };
       }
     );

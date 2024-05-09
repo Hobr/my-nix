@@ -50,8 +50,7 @@
     hyprcontrib.url = "github:hyprwm/contrib/v0.1";
 
     # 主题
-    catppuccin.url =
-      "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";
+    catppuccin.url = "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";
     ## ZSH
     catppuccin-zsh = {
       url = "github:catppuccin/zsh-syntax-highlighting";
@@ -64,7 +63,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       inherit (self) outputs;
       systems = [
@@ -75,7 +80,8 @@
         "x86_64-darwin"
       ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
-    in {
+    in
+    {
       overlays = import ./overlay { inherit inputs; };
       nixosModules = import ./module/system;
       homeManagerModules = import ./modules/home;
@@ -83,19 +89,25 @@
       nixosConfigurations = {
         # Laptop
         handsonic = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./system/handsonic.nix ];
         };
 
         # Pad
         distortion = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./system/distortion.nix ];
         };
 
         # Server
         overdrive = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./system/overdrive.nix ];
         };
       };
@@ -104,21 +116,27 @@
         # Laptop
         "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./user/kanade.nix ];
         };
 
         # Pad
         "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./user/yuzuru.nix ];
         };
 
         # Server
         "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
           modules = [ ./user/yuri.nix ];
         };
       };

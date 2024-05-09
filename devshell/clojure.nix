@@ -5,8 +5,14 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         overlays = [
           (final: prev: rec {
@@ -19,11 +25,18 @@
         ];
 
         pkgs = import nixpkgs { inherit system overlays; };
-      in {
-        devShell = with pkgs;
+      in
+      {
+        devShell =
+          with pkgs;
           mkShell {
-            packages = with pkgs; [ clojure boot leiningen ];
+            packages = with pkgs; [
+              clojure
+              boot
+              leiningen
+            ];
             BOOT_VERSION = "2.8.3";
           };
-      });
+      }
+    );
 }

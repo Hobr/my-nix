@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.sioyek = {
     enable = true;
     bindings = {
@@ -6,8 +7,14 @@
       "move_down" = "j";
       "move_left" = "h";
       "move_right" = "l";
-      "screen_down" = [ "d" "" ];
-      "screen_up" = [ "u" "" ];
+      "screen_down" = [
+        "d"
+        ""
+      ];
+      "screen_up" = [
+        "u"
+        ""
+      ];
     };
     config = {
       "background_color" = "1.0 1.0 1.0";
@@ -15,5 +22,9 @@
     };
   };
 
-  home.packages = with pkgs; [ zotero hunspell hunspellDicts.en_US ];
+  home.packages = with pkgs; [
+    zotero
+    hunspell
+    hunspellDicts.en_US
+  ];
 }

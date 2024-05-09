@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # OpenGL
   hardware.opengl = {
     enable = true;
@@ -24,5 +25,8 @@
   ];
 
   # GPU驱动
-  services.xserver.videoDrivers = [ "modesetting" "intel" ];
+  services.xserver.videoDrivers = [
+    "modesetting"
+    "intel"
+  ];
 }

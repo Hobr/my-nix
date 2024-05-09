@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     telegram-desktop
     fractal
     (qq.override (old: {
       # Wayland Fcitx5
-      commandLineArgs = (old.commandLineArgs or [ ])
-        ++ [ "--enable-wayland-ime" ];
+      commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" ];
     }))
   ];
 }

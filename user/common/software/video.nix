@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   programs.mpv.enable = true;
 
   home.packages = with pkgs; [

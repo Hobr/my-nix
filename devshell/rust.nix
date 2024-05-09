@@ -9,27 +9,42 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, rust-overlay }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      rust-overlay,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         overlays = [
           rust-overlay.overlays.default
           (final: prev: {
-            rustToolchain = let rust = prev.rust-bin;
-            in if builtins.pathExists ./rust-toolchain.toml then
-              rust.fromRustupToolchainFile ./rust-toolchain.toml
-            else if builtins.pathExists ./rust-toolchain then
-              rust.fromRustupToolchainFile ./rust-toolchain
-            else
-              rust.stable.latest.default.override {
-                extensions = [ "rust-src" "rustfmt" ];
-              };
+            rustToolchain =
+              let
+                rust = prev.rust-bin;
+              in
+              if builtins.pathExists ./rust-toolchain.toml then
+                rust.fromRustupToolchainFile ./rust-toolchain.toml
+              else if builtins.pathExists ./rust-toolchain then
+                rust.fromRustupToolchainFile ./rust-toolchain
+              else
+                rust.stable.latest.default.override {
+                  extensions = [
+                    "rust-src"
+                    "rustfmt"
+                  ];
+                };
           })
         ];
 
         pkgs = import nixpkgs { inherit overlays system; };
-      in {
-        devShell = with pkgs;
+      in
+      {
+        devShell =
+          with pkgs;
           mkShell {
             packages = with pkgs; [
               rustToolchain
@@ -46,5 +61,6 @@
               export PATH="$PATH:~/.cargo/bin/"
             '';
           };
-      });
+      }
+    );
 }

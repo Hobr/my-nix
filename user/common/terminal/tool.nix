@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Bat(cat)
   programs.bat = {
     enable = true;
@@ -47,13 +48,17 @@
   };
 
   # Ripgrep(grep)
-  programs.ripgrep = { enable = true; };
+  programs.ripgrep = {
+    enable = true;
+  };
 
   # Btop(top)
   programs.btop = {
     enable = true;
     catppuccin.enable = true;
-    settings = { update_ms = 500; };
+    settings = {
+      update_ms = 500;
+    };
   };
   # fzf(fd)
   programs.fzf = {

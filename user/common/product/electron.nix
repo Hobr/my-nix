@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   home.packages = with pkgs; [
     inputs.nix-xilinx.packages.${pkgs.system}.vivado
     ripes

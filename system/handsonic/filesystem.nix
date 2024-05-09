@@ -14,7 +14,11 @@
     "/" = {
       device = "none";
       fsType = "tmpfs";
-      options = [ "defaults" "size=16G" "mode=755" ];
+      options = [
+        "defaults"
+        "size=16G"
+        "mode=755"
+      ];
     };
 
     # 持久化
@@ -67,16 +71,26 @@
     "/mnt/windows" = {
       device = "/dev/nvme1n1p3";
       fsType = "ntfs3";
-      options = [ "nofail" "rw" "discard" "uid=1000" ];
+      options = [
+        "nofail"
+        "rw"
+        "discard"
+        "uid=1000"
+      ];
     };
 
     "/mnt/data" = {
       device = "/dev/nvme1n1p4";
       fsType = "ntfs3";
-      options = [ "nofail" "rw" "discard" "uid=1000" ];
+      options = [
+        "nofail"
+        "rw"
+        "discard"
+        "uid=1000"
+      ];
     };
   };
 
   # 交换
-  swapDevices = [{ device = "/dev/mapper/system-swap"; }];
+  swapDevices = [ { device = "/dev/mapper/system-swap"; } ];
 }

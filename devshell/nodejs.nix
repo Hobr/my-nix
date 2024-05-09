@@ -5,8 +5,14 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         overlays = [
           (final: prev: rec {
@@ -18,12 +24,22 @@
         ];
 
         pkgs = import nixpkgs { inherit overlays system; };
-      in {
-        devShell = with pkgs;
+      in
+      {
+        devShell =
+          with pkgs;
           mkShell {
-            packages = with pkgs; [ node2nix yarn2nix nodejs npm pnpm yarn ];
+            packages = with pkgs; [
+              node2nix
+              yarn2nix
+              nodejs
+              npm
+              pnpm
+              yarn
+            ];
             NPM_CONFIG_REGISTRY = "https://registry.npmmirror.com";
             YARN_CONFIG_REGISTRY = "https://registry.npmmirror.com";
           };
-      });
+      }
+    );
 }

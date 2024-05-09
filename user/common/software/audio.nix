@@ -1,6 +1,9 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Playctl
-  services.playerctld = { enable = true; };
+  services.playerctld = {
+    enable = true;
+  };
 
   # MPD
   services.mpd = {

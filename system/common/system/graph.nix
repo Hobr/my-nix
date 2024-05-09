@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Greet
   environment.etc."greetd/environments".text = ''
     Hyprland

@@ -5,8 +5,14 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         overlays = [
           (final: prev: rec {
@@ -18,13 +24,21 @@
         ];
 
         pkgs = import nixpkgs { inherit system; };
-      in {
-        devShell = with pkgs;
+      in
+      {
+        devShell =
+          with pkgs;
           mkShell {
-            packages = with pkgs; [ scala scala-cli sbt coursier ];
+            packages = with pkgs; [
+              scala
+              scala-cli
+              sbt
+              coursier
+            ];
 
             NIX_LD_LIBRARY_PATH = lib.makeLibraryPath [ circt ];
             NIX_LD = lib.fileContents "${stdenv.cc}/nix-support/dynamic-linker";
           };
-      });
+      }
+    );
 }

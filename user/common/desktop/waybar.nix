@@ -10,7 +10,8 @@ let
     background = "11111B";
     opacity = "0.98";
   };
-in {
+in
+{
   programs.waybar = {
     enable = true;
     package = pkgs.waybar.override {
@@ -29,9 +30,19 @@ in {
       margin-bottom = 0;
       margin-left = 0;
       margin-right = 0;
-      modules-left = [ "custom/launcher" "hyprland/workspaces" ];
+      modules-left = [
+        "custom/launcher"
+        "hyprland/workspaces"
+      ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "cpu" "memory" "disk" "pulseaudio" "network" ];
+      modules-right = [
+        "tray"
+        "cpu"
+        "memory"
+        "disk"
+        "pulseaudio"
+        "network"
+      ];
       clock = {
         format = " {:%H:%M}";
         tooltip = "true";
@@ -95,7 +106,9 @@ in {
       pulseaudio = {
         format = "{icon} {volume}%";
         format-muted = "󰖁 ";
-        format-icons = { default = [ " " ]; };
+        format-icons = {
+          default = [ " " ];
+        };
         scroll-step = 3;
         on-click = "pamixer -t";
       };

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Cliphist
   services.cliphist = {
     enable = true;

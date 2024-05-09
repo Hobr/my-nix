@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   programs.zsh = {
     enable = true;
 
@@ -16,7 +17,6 @@
     syntaxHighlighting.enable = true;
 
     # 配置
-    initExtraFirst =
-      "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
+    initExtraFirst = "source ${inputs.catppuccin-zsh}/themes/catppuccin_latte-zsh-syntax-highlighting.zsh";
   };
 }

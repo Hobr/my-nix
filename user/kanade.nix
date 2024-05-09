@@ -1,5 +1,9 @@
 {
-  imports = [ ./common ./config/kanade ./common/cuda/withCuda.nix ];
+  imports = [
+    ./common
+    ./config/kanade
+    ./common/cuda/withCuda.nix
+  ];
 
   home = {
     username = "kanade";

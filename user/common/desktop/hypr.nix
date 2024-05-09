@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
@@ -142,8 +143,10 @@
         ];
       };
 
-      windowrulev2 =
-        [ "float,class:^(pavucontrol)$" "float,class:^(blueman-manager)$" ];
+      windowrulev2 = [
+        "float,class:^(pavucontrol)$"
+        "float,class:^(blueman-manager)$"
+      ];
 
       "$mainMod" = "SUPER";
 
@@ -224,8 +227,7 @@
   services.hypridle = {
     enable = true;
     # 检查线程, 避免多开
-    lockCmd =
-      "pidof ${pkgs.swaylock-effects}/bin/swaylock || ${pkgs.swaylock-effects}/bin/swaylock";
+    lockCmd = "pidof ${pkgs.swaylock-effects}/bin/swaylock || ${pkgs.swaylock-effects}/bin/swaylock";
     # 挂起
     beforeSleepCmd = "systemctl suspend";
     # 点击唤醒

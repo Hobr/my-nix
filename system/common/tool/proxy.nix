@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.proxychains = {
     enable = true;
     package = pkgs.proxychains-ng;
@@ -32,12 +33,9 @@
       Type = "simple";
       LimitNPROC = "500";
       LimitNOFILE = "1000000";
-      CapabilityBoundingSet =
-        "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
-      AmbientCapabilities =
-        "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
-      ExecStartPre =
-        "${pkgs.wget}/bin/wget -O /etc/mihomo/config.yaml 'http://106.15.207.16:8899/sub?target=clash&url=http://106.15.207.16:40000/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
+      CapabilityBoundingSet = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
+      AmbientCapabilities = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_SYS_TIME";
+      ExecStartPre = "${pkgs.wget}/bin/wget -O /etc/mihomo/config.yaml 'http://106.15.207.16:8899/sub?target=clash&url=http://106.15.207.16:40000/link/ArDF5nbkrwv0dqcD?sub=2&udp=true&extend=1&filename=yy'";
       ExecStart = "${pkgs.mihomo}/bin/mihomo -d /etc/mihomo";
       ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
       Restart = "on-failure";
@@ -57,6 +55,9 @@
       Persistent = "true";
       Unit = "Mihomo.service";
     };
-    wantedBy = [ "timers.target" "multi-user.target" ];
+    wantedBy = [
+      "timers.target"
+      "multi-user.target"
+    ];
   };
 }

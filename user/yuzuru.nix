@@ -1,5 +1,9 @@
 {
-  imports = [ ./common ./config/yuzuru ./common/cuda/withoutCuda.nix ];
+  imports = [
+    ./common
+    ./config/yuzuru
+    ./common/cuda/withoutCuda.nix
+  ];
 
   home = {
     username = "yuzuru";

@@ -7,7 +7,11 @@
   };
 
   boot.initrd = {
-    availableKernelModules = [ "tpm" "tpm_tis" "tpm_crb" ];
+    availableKernelModules = [
+      "tpm"
+      "tpm_tis"
+      "tpm_crb"
+    ];
     systemd = {
       enable = true;
       enableTpm2 = true;

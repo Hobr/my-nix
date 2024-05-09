@@ -34,7 +34,11 @@
   # Btrfs Scrub
   services.btrfs.autoScrub = {
     enable = true;
-    fileSystems = [ "/nix" "/home" "/persist" ];
+    fileSystems = [
+      "/nix"
+      "/home"
+      "/persist"
+    ];
     interval = "weekly";
   };
 

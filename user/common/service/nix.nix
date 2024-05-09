@@ -1,4 +1,5 @@
-{ inputs, outputs, ... }: {
+{ inputs, outputs, ... }:
+{
   nixpkgs = {
     config = {
       # 非自由软件
@@ -7,7 +8,10 @@
       allowUnsupportedSystem = true;
     };
     # Overlays
-    overlays = [ outputs.overlays.modifications inputs.nix-xilinx.overlay ];
+    overlays = [
+      outputs.overlays.modifications
+      inputs.nix-xilinx.overlay
+    ];
   };
 
   # 文档

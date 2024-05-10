@@ -1,2 +1,2 @@
-INSTALL_DIR=/mnt/data/xilinx
-VERSION=2023.2
+INSTALL_DIR=/mnt/data/Xilinx
+VERSION=2022.2

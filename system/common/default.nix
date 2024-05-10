@@ -45,5 +45,9 @@
     ./tool/proxy.nix
     # NH
     ./tool/nh.nix
+    # 虚拟化
+    ./tool/virt.nix
+    # Docker
+    ./tool/docker.nix
   ];
 }

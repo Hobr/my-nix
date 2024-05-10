@@ -7,6 +7,7 @@
 
     verilog
     gtkwave
+    circt
 
     arduino
     arduino-ide

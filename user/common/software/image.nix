@@ -9,5 +9,6 @@
     # gimp
     inkscape
     swappy
+    libwebp
   ];
 }

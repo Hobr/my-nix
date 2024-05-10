@@ -5,7 +5,6 @@
     ripes
     klayout
 
-    circt
     verilog
     gtkwave
 

@@ -5,3 +5,4 @@ result*
 .nixie
 mihomo.yaml
 venv
+devshell/flake.lock

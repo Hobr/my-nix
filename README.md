@@ -159,6 +159,7 @@ direnv allow
 nix run gitlab:doronbehar/nix-xilinx#xilinx-shell
 chmod +x xxx.bin
 ./xxx.bin
+mkdir ~/.config/xilinx
 cp dist/xilinx_nix.sh ~/.config/xilinx/nix.sh
 vivado
 ```

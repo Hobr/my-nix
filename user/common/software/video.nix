@@ -14,6 +14,6 @@
     # 补帧
     # inputs.hobr.packages.${pkgs.system}.rife-ncnn-vulkan
     # 超分
-    realesrgan-ncnn-vulkan
+    # inputs.hobr.packages.${pkgs.system}.real-esrgan
   ];
 }

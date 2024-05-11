@@ -7,6 +7,7 @@
     ./handsonic/gpu.nix
     ./handsonic/hardware.nix
     ./handsonic/power.nix
+    ./handsonic/steam.nix
   ];
 
   # 主机名

@@ -8,6 +8,7 @@
     pinentry-gnome3
     sops
   ];
+
   services.gnome-keyring = {
     enable = true;
     components = [

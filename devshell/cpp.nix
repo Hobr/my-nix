@@ -23,6 +23,7 @@
             packages = with pkgs; [
               gcc
               gdb
+              mold
               clang-tools
               codespell
               conan

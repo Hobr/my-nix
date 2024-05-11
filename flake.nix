@@ -9,11 +9,6 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # Flake Utils
     flake-utils.url = "github:numtide/flake-utils";
-    # linyinfeng's NUR
-    lyf = {
-      url = "github:linyinfeng/nur-packages";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # 个人NUR
     hobr = {
       url = "github:Hobr/hobr_nur";

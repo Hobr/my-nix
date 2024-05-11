@@ -6,6 +6,7 @@
     klayout
 
     verilog
+    verilator
     gtkwave
     circt
 

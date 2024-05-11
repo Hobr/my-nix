@@ -1,149 +1,79 @@
 {
-  description = "Hobr NixOS";
+  description = "Your new nix config";
 
   inputs = {
-    # 软件源
-    ## 官方滚动
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    # Flake Utils
-    flake-utils.url = "github:numtide/flake-utils";
-    # linyinfeng's NUR
-    lyf = {
-      url = "github:linyinfeng/nur-packages";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # 个人NUR
-    hobr = {
-      url = "github:Hobr/hobr_nur";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # Nixpkgs
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    # You can access packages and modules from different nixpkgs revs
+    # at the same time. Here's an working example:
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
-    # 环境
-    ## Rootless
-    impermanence.url = "github:nix-community/impermanence";
-    ## 安全启动
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
-    ## 用户
-    home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ## 安全
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # Xilint
-    nix-xilinx = {
-      url = "gitlab:doronbehar/nix-xilinx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # 罗技
-    solaar = {
-      url = "github:Svenum/Solaar-Flake/latest";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # 桌面
-    ## Hyprland
-    hyprland.url = "github:hyprwm/Hyprland/v0.40.0";
-    hypridle.url = "github:hyprwm/hypridle/v0.1.1";
-    hyprpaper.url = "github:hyprwm/hyprpaper";
-    hyprpicker.url = "github:hyprwm/hyprpicker/v0.2.0";
-    hyprcontrib.url = "github:hyprwm/contrib/v0.1";
-
-    # 主题
-    catppuccin.url = "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";
-    ## ZSH
-    catppuccin-zsh = {
-      url = "github:catppuccin/zsh-syntax-highlighting";
-      flake = false;
-    };
-    # QT Creator
-    catppuccin-qtcreator = {
-      url = "github:catppuccin/qtcreator";
-      flake = false;
-    };
+    # Home manager
+    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-      systems = [
-        "x86_64-linux"
-        "i686-linux"
-        "aarch64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in
-    {
-      overlays = import ./overlay { inherit inputs; };
-      nixosModules = import ./module/system;
-      homeManagerModules = import ./modules/home;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    # Supported systems for your flake packages, shell, etc.
+    systems = [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+    # This is a function that generates an attribute by calling a function you
+    # pass to it, with each system as an argument
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in {
+    # Your custom packages
+    # Accessible through 'nix build', 'nix shell', etc
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    # Formatter for your nix files, available through 'nix fmt'
+    # Other options beside 'alejandra' include 'nixpkgs-fmt'
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-      nixosConfigurations = {
-        # Laptop
-        handsonic = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/handsonic.nix ];
-        };
+    # Your custom packages and modifications, exported as overlays
+    overlays = import ./overlays {inherit inputs;};
+    # Reusable nixos modules you might want to export
+    # These are usually stuff you would upstream into nixpkgs
+    nixosModules = import ./modules/nixos;
+    # Reusable home-manager modules you might want to export
+    # These are usually stuff you would upstream into home-manager
+    homeManagerModules = import ./modules/home-manager;
 
-        # Pad
-        distortion = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/distortion.nix ];
-        };
-
-        # Server
-        overdrive = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/overdrive.nix ];
-        };
-      };
-
-      homeConfigurations = {
-        # Laptop
-        "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/kanade.nix ];
-        };
-
-        # Pad
-        "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/yuzuru.nix ];
-        };
-
-        # Server
-        "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/yuri.nix ];
-        };
+    # NixOS configuration entrypoint
+    # Available through 'nixos-rebuild --flake .#your-hostname'
+    nixosConfigurations = {
+      # FIXME replace with your hostname
+      your-hostname = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./nixos/configuration.nix
+        ];
       };
     };
+
+    # Standalone home-manager configuration entrypoint
+    # Available through 'home-manager --flake .#your-username@your-hostname'
+    homeConfigurations = {
+      # FIXME replace with your username@hostname
+      "your-username@your-hostname" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+        ];
+      };
+    };
+  };
 }

@@ -5,6 +5,7 @@
     axel
     httpx
     iftop
+    bpftop
 
     nitch
     fastfetch

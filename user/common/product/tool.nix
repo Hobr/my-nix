@@ -7,7 +7,7 @@
     cookiecutter
     pre-commit
     # 二进制
-    cutter
+    # cutter
     gnome.ghex
     # API测试
     bruno

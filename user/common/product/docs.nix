@@ -33,7 +33,5 @@
     libreoffice
     # PPT放映
     pympress
-    # 阅读
-    librum
   ];
 }

@@ -24,6 +24,7 @@
               gcc
               gdb
               qemu
+              opensbi
             ];
           };
       }

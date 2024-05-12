@@ -76,4 +76,10 @@
     buttons = { };
     keybindings = { };
   };
+
+  # Nix-index
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }

@@ -36,6 +36,7 @@
               libtool
               automake
               autoconf
+              xmake
               cmake
               cmake-language-server
             ];

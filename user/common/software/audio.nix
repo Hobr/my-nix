@@ -28,8 +28,11 @@
     # 音乐播放器
     amberol
     netease-cloud-music-gtk
+    qcm
     playerctl
-
+    # 音频编辑
+    audacity
+    reaper
     # GStreamer
     gst_all_1.gstreamer
     gst_all_1.gstreamer.dev

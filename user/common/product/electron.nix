@@ -1,15 +1,23 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    inputs.nix-xilinx.packages.${pkgs.system}.vivado
-    ripes
+    # 电路设计
+    kicad
+    librepcb
     klayout
-
+    circt
+    # 仿真
+    inputs.nix-xilinx.packages.${pkgs.system}.vivado
+    qucs-s
+    # 模拟器
+    ripes
+    qtrvsim
+    # Verilog
     verilog
     verilator
+    # 波形
     gtkwave
-    circt
-
+    # Arduino
     arduino
     arduino-ide
   ];

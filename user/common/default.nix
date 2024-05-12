@@ -75,15 +75,13 @@
     # 开发环境
     ./terminal/direnv.nix
 
-    # 阅读
-    ./product/reader.nix
-    # 编辑
-    ./product/writer.nix
+    # 文档
+    ./product/docs.nix
     # NeoVim
     ./product/nvim.nix
-    # product
+    # Emacs
     ./product/emacs.nix
-    # Visual Stuido Code
+    # VS Code
     ./product/vscode.nix
     # QT
     ./product/qt.nix

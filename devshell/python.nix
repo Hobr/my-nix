@@ -20,7 +20,7 @@
         devShell =
           with pkgs;
           mkShell {
-            venvDir = "venv";
+            venvDir = ".venv";
             packages =
               with pkgs;
               [

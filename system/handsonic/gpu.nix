@@ -46,4 +46,10 @@
   };
 
   environment.sessionVariables.CUDA_PATH = pkgs.cudatoolkit;
+
+  hardware.nvidia-container-toolkit = {
+    enable = true;
+    mount-nvidia-executables = true;
+    mount-nvidia-docker-1-directories = true;
+  };
 }

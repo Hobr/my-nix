@@ -924,11 +924,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1715504544,
-        "narHash": "sha256-jgTFpozBQYipYZbu/gkeT8676e653gCEy9s/3axTRmI=",
+        "lastModified": 1715590921,
+        "narHash": "sha256-330cR2YAzxXej3axNs6W//HuitHkHivYvOlawOxkJCo=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "357650ad7373b2aba19485acde630bda1c28ab7c",
+        "rev": "c0b0b2be8e9c2674240cac1443da29d5db744cb3",
         "type": "gitlab"
       },
       "original": {

@@ -44,8 +44,8 @@
     # 桌面
     ## Hyprland
     hyprland.url = "github:hyprwm/Hyprland/v0.40.0";
-    hypridle.url = "github:hyprwm/hypridle/v0.1.1";
-    hyprpaper.url = "github:hyprwm/hyprpaper";
+    hypridle.url = "github:hyprwm/hypridle/v0.1.2";
+    hyprpaper.url = "github:hyprwm/hyprpaper/v0.7.0";
     hyprpicker.url = "github:hyprwm/hyprpicker/v0.2.0";
     hyprcontrib.url = "github:hyprwm/contrib/v0.1";
 

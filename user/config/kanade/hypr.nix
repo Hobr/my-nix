@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland = {
     # 设置
     settings = {
-      monitor = [ "eDP-1,2560x1440@165,auto,1.25" ];
+      monitor = [ "eDP-1,2560x1440@165,auto,1" ];
 
       env = [
         # NVIDIA

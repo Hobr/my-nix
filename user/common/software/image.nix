@@ -8,11 +8,11 @@
     # 选色
     hyprpicker
     # 图片处理
-    gimp
+    # gimp
     inkscape
     swappy
     # 2D动画
-    synfigstudio
+    # synfigstudio
     # 图片库
     libwebp
   ];

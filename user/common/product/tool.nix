@@ -10,7 +10,7 @@
     # cutter
     gnome.ghex
     # API测试
-    bruno
+    # bruno
     # Nix
     nurl
     nix-init

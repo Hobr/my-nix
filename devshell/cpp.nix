@@ -25,6 +25,7 @@
               gdb
               mold
               clang-tools
+              bear
               codespell
               conan
               cppcheck

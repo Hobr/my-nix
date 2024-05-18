@@ -101,11 +101,11 @@
         "yafas": "yafas"
       },
       "locked": {
-        "lastModified": 1715951710,
-        "narHash": "sha256-+798ZJWBpUHdrjc7Ozmoyj5WtQ3UqNA268jX8MZQXmM=",
+        "lastModified": 1715965467,
+        "narHash": "sha256-DMWt9USsLEnW+cOVR2XGbBUHPgjmh3aMLJUfwQyEH64=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "5b1f4d9d757db78bc0fdf3e3bd0b161d46d6bc5d",
+        "rev": "e7730480dd888bc029b0e1f2698d2df783a820b1",
         "type": "github"
       },
       "original": {
@@ -1277,16 +1277,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1715441983,
-        "narHash": "sha256-CWRwtvZtcK8CDQCZhmv4nNp1Qmx3JXEidFQi/JMnX/M=",
+        "lastModified": 1715955760,
+        "narHash": "sha256-XM9hLLKwEoQvwXZHbBSqYnra2xScO3YQ19Cv4KmO+0A=",
         "owner": "Svenum",
         "repo": "Solaar-Flake",
-        "rev": "ee38dd45276fcb03174aec5301144514e66f4775",
+        "rev": "1564bf36b610f25468284c1bdb6e6e6325d21226",
         "type": "github"
       },
       "original": {
         "owner": "Svenum",
-        "ref": "latest",
+        "ref": "1.1.13",
         "repo": "Solaar-Flake",
         "type": "github"
       }

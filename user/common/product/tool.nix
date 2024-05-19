@@ -16,5 +16,6 @@
     nix-init
     nixfmt-rfc-style
     nixpkgs-review
+    prefetch-npm-deps
   ];
 }

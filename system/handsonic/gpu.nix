@@ -43,6 +43,7 @@
     powerManagement.enable = true;
     powerManagement.finegrained = false;
     nvidiaSettings = false;
+    dynamicBoost.enable = true;
   };
 
   environment.sessionVariables.CUDA_PATH = pkgs.cudatoolkit;

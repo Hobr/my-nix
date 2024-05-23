@@ -13,5 +13,5 @@ history:
 clean:
 	nh clean all
 
-format:
+fmt:
 	nixfmt ./

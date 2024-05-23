@@ -21,7 +21,14 @@
           with pkgs;
           mkShell {
             packages = with pkgs; [
-              ruby_3_2.withPackages (ps: with ps; [ rails solargraph rubocop ])
+              ruby_3_2.withPackages
+              (
+                ps: with ps; [
+                  rails
+                  solargraph
+                  rubocop
+                ]
+              )
               bundler
             ];
             shellHook = ''

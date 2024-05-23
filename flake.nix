@@ -40,6 +40,11 @@
       url = "github:Svenum/Solaar-Flake/1.1.13";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # NeoVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 桌面
     ## Hyprland

@@ -225,7 +225,7 @@
 
   # IDLE
   services.hypridle = {
-    enable = true;
+    enable = false;
     # 检查线程, 避免多开
     lockCmd = "pidof ${pkgs.swaylock-effects}/bin/swaylock || ${pkgs.swaylock-effects}/bin/swaylock";
     # 挂起

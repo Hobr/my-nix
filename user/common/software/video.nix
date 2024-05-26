@@ -3,13 +3,20 @@
 
   programs.mpv = {
     enable = true;
-    defaultProfiles = [ "gpu-hq" ];
+
+    config = {
+      profile = "gpu-hq";
+      force-window = true;
+      ytdl-format = "bestvideo+bestaudio";
+    };
+
     scripts = with pkgs.mpvScripts; [
       mpris
       webtorrent-mpv-hook
       thumbfast
       quality-menu
       modernx
+      seekTo
     ];
   };
 

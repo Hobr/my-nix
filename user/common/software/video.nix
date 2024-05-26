@@ -1,6 +1,17 @@
 { pkgs, inputs, ... }:
 {
-  programs.mpv.enable = true;
+
+  programs.mpv = {
+    enable = true;
+    defaultProfiles = [ "gpu-hq" ];
+    scripts = with pkgs.mpvScripts; [
+      mpris
+      webtorrent-mpv-hook
+      thumbfast
+      quality-menu
+      modernx
+    ];
+  };
 
   home.packages = with pkgs; [
     ffmpeg

@@ -11,7 +11,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     # 个人NUR
     hobr = {
-      url = "github:Hobr/hobr_nur";
+      url = "github:Hobr/hobr_nur/3c737fba8fecdecc46c2777d27daacc1341006d1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -9,12 +9,12 @@
     # manim
     # 剪辑后期
     # natron
-    olive-editor
+    # olive-editor
     # 字幕
     inputs.hobr.packages.${pkgs.system}.aegisub
     # 补帧
     # inputs.hobr.packages.${pkgs.system}.rife-ncnn-vulkan
-    svp
+    # svp
     # 超分
     # inputs.hobr.packages.${pkgs.system}.real-esrgan
   ];

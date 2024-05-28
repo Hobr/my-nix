@@ -16,6 +16,7 @@
     # Verilog
     verilog
     verilator
+    verible
     # 波形
     gtkwave
     # Arduino

@@ -6,6 +6,7 @@
     # 开发
     cookiecutter
     pre-commit
+    gitkraken
     # 二进制
     # cutter
     gnome.ghex

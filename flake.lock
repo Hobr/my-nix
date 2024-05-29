@@ -606,17 +606,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1716520722,
-        "narHash": "sha256-1ZDI5wGajTSqlzc96xkzO0VojdlXdNHWH9eIgJ7gLJA=",
+        "lastModified": 1716973516,
+        "narHash": "sha256-jEnnPAtLbkeJ0rLAe66vjl7m/P/KEhra1WCEDernS/Q=",
         "owner": "Hobr",
         "repo": "hobr_nur",
-        "rev": "3c737fba8fecdecc46c2777d27daacc1341006d1",
+        "rev": "e2c469fa2a12210389a3d1f57c904c7371f8f35a",
         "type": "github"
       },
       "original": {
         "owner": "Hobr",
         "repo": "hobr_nur",
-        "rev": "3c737fba8fecdecc46c2777d27daacc1341006d1",
         "type": "github"
       }
     },
@@ -1143,11 +1142,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1716800528,
-        "narHash": "sha256-/SoNESnxdqhdi6KojIJpoVfT4FlKvfwwl5eMvXnYE1o=",
+        "lastModified": 1716973319,
+        "narHash": "sha256-YGgPngyQ6xEZkBjjShlGi5J9Gt/Oz345UIqyfu8Wa3A=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "4578e7a49ce441efe9a3d86b2bf16ab991863fac",
+        "rev": "4ebd844f9f5043d7f54253e1a41a41db962bde36",
         "type": "gitlab"
       },
       "original": {
@@ -1361,11 +1360,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1716925245,
-        "narHash": "sha256-MO32KGgZUiWWsDYu93H47iOGWNlXO9BVOMrZzauZKCc=",
+        "lastModified": 1716971155,
+        "narHash": "sha256-BKZ5IZCjGETziCvtjQUX4ra8cB7L6uvos/vJyMz40Ic=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "56d39f54fe11776ba83903ec077bffc7a7d0e638",
+        "rev": "cedc1e4799909952a701efabed40a0f0e6107852",
         "type": "github"
       },
       "original": {

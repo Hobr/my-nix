@@ -3,7 +3,7 @@
 
   inputs = {
     # 软件源
-    ## 官方滚动
+    ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
@@ -48,11 +48,26 @@
 
     # 桌面
     ## Hyprland
-    hyprland.url = "github:hyprwm/Hyprland/v0.40.0";
-    hypridle.url = "github:hyprwm/hypridle/v0.1.2";
-    hyprpaper.url = "github:hyprwm/hyprpaper/v0.7.0";
-    hyprpicker.url = "github:hyprwm/hyprpicker/v0.2.0";
-    hyprcontrib.url = "github:hyprwm/contrib/v0.1";
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.40.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hypridle = {
+      url = "github:hyprwm/hypridle/v0.1.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper/v0.7.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprpicker = {
+      url = "github:hyprwm/hyprpicker/v0.2.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprcontrib = {
+      url = "github:hyprwm/contrib/v0.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 主题
     catppuccin.url = "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";

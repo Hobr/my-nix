@@ -49,7 +49,7 @@
     # 桌面
     ## Hyprland
     hyprland = {
-      url = "github:hyprwm/Hyprland/v0.40.0";
+      url = "github:hyprwm/Hyprland/v0.41.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hypridle = {

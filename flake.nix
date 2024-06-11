@@ -58,7 +58,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpicker = {
-      url = "github:hyprwm/hyprpicker/v0.2.0";
+      url = "github:hyprwm/hyprpicker/v0.3.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprcontrib = {

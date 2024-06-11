@@ -48,8 +48,6 @@
         #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         # 非活动窗口边框颜色
         #"col.inactive_border" = "rgba(595959aa)";
-        # 光标不使用多少秒后消失
-        cursor_inactive_timeout = 5;
         # 布局
         layout = "dwindle";
       };

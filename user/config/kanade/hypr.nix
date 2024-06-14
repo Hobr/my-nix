@@ -2,7 +2,10 @@
   wayland.windowManager.hyprland = {
     # 设置
     settings = {
-      monitor = [ "eDP-1,2560x1440@165,auto,1.25" ];
+      monitor = [
+        "HDMI-A-1,1920x1080@60,auto,1"
+        "eDP-1,2560x1440@165,auto,1"
+      ];
 
       env = [
         # NVIDIA
@@ -19,6 +22,9 @@
 
   services.hyprpaper = {
     preloads = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
-    wallpapers = [ "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
+    wallpapers = [
+      "HDMI-A-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
+      "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
+    ];
   };
 }

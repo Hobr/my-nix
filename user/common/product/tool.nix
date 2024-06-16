@@ -6,8 +6,6 @@
     # 虚拟机
     virt-manager
     # 开发
-    cookiecutter
-    pre-commit
     gitkraken
     # 二进制
     # cutter

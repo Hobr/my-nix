@@ -49,5 +49,7 @@
     ./tool/virt.nix
     # Docker
     ./tool/docker.nix
+    # Nix LD
+    ./tool/ld.nix
   ];
 }

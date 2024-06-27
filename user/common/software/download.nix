@@ -5,5 +5,5 @@
     enable = true;
   };
 
-  home.packages = with pkgs; [ transmission_4-gtk ];
+  home.packages = with pkgs; [ qbittorrent ];
 }

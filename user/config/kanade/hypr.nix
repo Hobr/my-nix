@@ -22,8 +22,8 @@
 
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
-    preloads = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
-    wallpapers = [
+    preload = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
+    wallpaper = [
       "HDMI-A-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
       "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
     ];

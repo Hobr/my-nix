@@ -20,6 +20,8 @@
     impermanence.url = "github:nix-community/impermanence";
     ## 安全启动
     lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
+    # NeoVim
+    nixvim.url = "github:nix-community/nixvim";
     ## 用户
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
@@ -38,11 +40,6 @@
     # 罗技
     solaar = {
       url = "github:Svenum/Solaar-Flake/1.1.13";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # NeoVim
-    nixvim = {
-      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

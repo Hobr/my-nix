@@ -20,6 +20,7 @@
     };
   };
 
+  services.hyprpaper.enable = true;
   services.hyprpaper.settings = {
     preloads = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
     wallpapers = [

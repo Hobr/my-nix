@@ -33,10 +33,7 @@
 
     # 软件
     ## NeoVim
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
     ## Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";

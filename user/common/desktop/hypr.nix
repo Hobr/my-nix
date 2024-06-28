@@ -217,7 +217,4 @@
     # 插件
     plugins = [ ];
   };
-
-  # 壁纸
-  services.hyprpaper.enable = true;
 }

@@ -47,7 +47,10 @@
 
     # 桌面
     ## Hyprland
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland??ref=v0.41.2&submodules=1";
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland??ref=v0.41.2&submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprpicker = {
       url = "github:hyprwm/hyprpicker/v0.3.0";
       inputs.nixpkgs.follows = "nixpkgs";

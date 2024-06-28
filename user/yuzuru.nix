@@ -11,5 +11,5 @@
     stateVersion = "23.11";
   };
 
-  catppuccin.flavour = "latte";
+  catppuccin.flavor = "latte";
 }

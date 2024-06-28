@@ -6,7 +6,7 @@
     };
   };
 
-  services.hyprpaper = {
+  services.hyprpaper.settings = {
     preloads = [ "/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/dist/wallpaper/1.png" ];
     wallpapers = [
       "eDP-1,/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/dist/wallpaper/1.png"

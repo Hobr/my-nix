@@ -6,7 +6,7 @@
     ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/1b67ffd345f496daf5e7b78d9c1fa0a5c3595b61";
     # Flake Utils
     flake-utils.url = "github:numtide/flake-utils";
     # 个人NUR
@@ -20,11 +20,9 @@
     impermanence.url = "github:nix-community/impermanence";
     ## 安全启动
     lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
-    # NeoVim
-    nixvim.url = "github:nix-community/nixvim";
     ## 用户
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全
@@ -32,12 +30,19 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Xilint
+
+    # 软件
+    ## NeoVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ## Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # 罗技
+    ## 罗技
     solaar = {
       url = "github:Svenum/Solaar-Flake/1.1.13";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,15 +50,7 @@
 
     # 桌面
     ## Hyprland
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland??ref=v0.41.1&submodules=1";
-    hypridle = {
-      url = "github:hyprwm/hypridle/v0.1.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper/v0.7.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland??ref=v0.41.2&submodules=1";
     hyprpicker = {
       url = "github:hyprwm/hyprpicker/v0.3.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -64,7 +61,7 @@
     };
 
     # 主题
-    catppuccin.url = "github:catppuccin/nix/a48e70a31616cb63e4794fd3465bff1835cc4246";
+    catppuccin.url = "github:catppuccin/nix";
     ## ZSH
     catppuccin-zsh = {
       url = "github:catppuccin/zsh-syntax-highlighting";

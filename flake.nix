@@ -32,8 +32,6 @@
     };
 
     # 软件
-    ## NeoVim
-    nixvim.url = "github:nix-community/nixvim";
     ## Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";

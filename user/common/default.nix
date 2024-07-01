@@ -4,7 +4,6 @@
     inputs.hyprland.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
     inputs.catppuccin.homeManagerModules.catppuccin
-    inputs.nixvim.homeManagerModules.nixvim
 
     # Nix
     ./service/nix.nix

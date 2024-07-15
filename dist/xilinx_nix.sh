@@ -1,2 +1,0 @@
-INSTALL_DIR=/mnt/data/Xilinx
-VERSION=2022.2

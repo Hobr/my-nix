@@ -1,4 +1,0 @@
-{ inputs, ... }:
-{
-  modifications = final: prev: { };
-}

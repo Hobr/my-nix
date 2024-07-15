@@ -1,3 +1,0 @@
-{
-  # xxx = import ./xxx.nix;
-}

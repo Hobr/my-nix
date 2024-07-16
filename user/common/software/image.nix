@@ -8,9 +8,10 @@
     # 选色
     hyprpicker
     # 图片处理
-    # gimp
+    gimp
     inkscape
     swappy
+    darktable
     # 2D动画
     # synfigstudio
     # 图片库

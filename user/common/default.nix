@@ -1,7 +1,6 @@
 { inputs, ... }:
 {
   imports = [
-    inputs.hyprland.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
     inputs.catppuccin.homeManagerModules.catppuccin
 
@@ -18,22 +17,6 @@
     # 同步
     ./service/sync.nix
 
-    # 桌面
-    ./desktop/hypr.nix
-    # 任务栏
-    ./desktop/waybar.nix
-    # 锁屏
-    ./desktop/lock.nix
-    # 注销
-    ./desktop/logout.nix
-    # 启动器
-    ./desktop/rofi.nix
-    # 消息
-    ./desktop/notice.nix
-    # 终端
-    ./desktop/terminal.nix
-    # 剪切板
-    ./desktop/clipboard.nix
     # 主题
     ./desktop/theme.nix
 

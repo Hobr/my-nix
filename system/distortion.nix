@@ -31,7 +31,6 @@
   };
 
   nix.settings.trusted-users = [ "yuzuru" ];
-  services.greetd.settings.initial_session.user = "yuzuru";
 
   services.snapper.configs = {
     nix.ALLOW_USERS = [ "yuzuru" ];

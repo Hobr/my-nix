@@ -1,7 +1,6 @@
 {
   imports = [
     ./common
-    ./config/yuzuru
     ./common/cuda/withoutCuda.nix
   ];
 

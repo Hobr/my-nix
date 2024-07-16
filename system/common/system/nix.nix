@@ -43,7 +43,7 @@
         # 镜像
         substituters = [
           "https://hobr.cachix.org"
-          "https://hyprland.cachix.org"
+          "https://cosmic.cachix.org/"
           "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store"
           "https://mirrors.ustc.edu.cn/nix-channels/store"
           "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
@@ -51,7 +51,7 @@
 
         trusted-public-keys = [
           "hobr.cachix.org-1:F9LxDwb6IAYpHitjzaCCxeDI3TA4obcgIlEU+7oWXzU="
-          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+          "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
         ];
       };
 

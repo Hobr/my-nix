@@ -44,18 +44,8 @@
     };
 
     # 桌面
-    ## Hyprland
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland?ref=v0.41.2";
-      submodules = true;
-    };
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker/v0.3.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprcontrib = {
-      url = "github:hyprwm/contrib/v0.1";
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -15,25 +15,14 @@
 
   # PAM
   security.pam.services = {
-    greetd = {
+    cosmic-greeter = {
       enableGnomeKeyring = true;
       gnupg.enable = true;
     };
-    swaylock = { };
   };
 
   # Gnome Keyring
   services.gnome.glib-networking.enable = true;
   services.dbus.packages = [ pkgs.gcr ];
   programs.seahorse.enable = true;
-
-  # Logind
-  services.logind = {
-    lidSwitch = "suspend";
-    lidSwitchExternalPower = "lock";
-    extraConfig = ''
-      HandlePowerKey=suspend
-      HibernateDelaySec=3600
-    '';
-  };
 }

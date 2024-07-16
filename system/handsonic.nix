@@ -31,7 +31,6 @@
   };
 
   nix.settings.trusted-users = [ "kanade" ];
-  services.greetd.settings.initial_session.user = "kanade";
 
   services.snapper.configs = {
     nix.ALLOW_USERS = [ "kanade" ];

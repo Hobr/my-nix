@@ -5,7 +5,7 @@
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.hyprland.nixosModules.default
+    inputs.nixos-cosmic.nixosModules.default
     inputs.sops-nix.nixosModules.sops
     inputs.solaar.nixosModules.default
 

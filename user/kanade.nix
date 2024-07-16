@@ -8,7 +8,7 @@
   home = {
     username = "kanade";
     homeDirectory = "/home/kanade";
-    stateVersion = "23.11";
+    stateVersion = "24.05";
   };
 
   catppuccin.flavor = "latte";

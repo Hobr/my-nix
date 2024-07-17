@@ -1,8 +1,8 @@
 os:
-	nh os boot -a ./ -- --show-trace
+	nh os boot -a ./
 
 home:
-	nh home switch -a ./ -- --show-trace
+	nh home switch -a ./
 
 update:
 	nix flake update

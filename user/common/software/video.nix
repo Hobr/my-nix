@@ -23,10 +23,8 @@
   home.packages = with pkgs; [
     ffmpeg
     yt-dlp
-    # 动画
-    manim
     # 剪辑后期
-    natron
+    #natron
     olive-editor
     # 字幕
     inputs.hobr.packages.${pkgs.system}.aegisub

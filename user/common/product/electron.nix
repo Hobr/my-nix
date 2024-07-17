@@ -19,8 +19,5 @@
     verible
     # 波形
     gtkwave
-    # Arduino
-    arduino
-    arduino-ide
   ];
 }

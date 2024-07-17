@@ -6,6 +6,8 @@
       allowUnfree = true;
       # 跨平台
       allowUnsupportedSystem = true;
+      # 破损软件
+      allowBroken = true;
     };
     # Overlays
     overlays = [

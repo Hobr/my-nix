@@ -4,10 +4,7 @@
     enable = true;
   };
 
-  home.packages = with pkgs; [
-    pinentry-gnome3
-    sops
-  ];
+  home.packages = with pkgs; [ sops ];
 
   services.gnome-keyring = {
     enable = true;
@@ -22,8 +19,5 @@
     enable = true;
     enableZshIntegration = true;
     pinentryPackage = pkgs.pinentry-gnome3;
-    extraConfig = ''
-      pinentry-program ${pkgs.pinentry-gnome3}/bin/pinentry
-    '';
   };
 }

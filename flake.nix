@@ -39,7 +39,7 @@
     };
     ## 罗技
     solaar = {
-      url = "github:Svenum/Solaar-Flake/1.1.13";
+      url = "github:Svenum/Solaar-Flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

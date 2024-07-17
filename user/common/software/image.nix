@@ -9,8 +9,6 @@
     inkscape
     swappy
     darktable
-    # 2D动画
-    # synfigstudio
     # 图片库
     libwebp
   ];

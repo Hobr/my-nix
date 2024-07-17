@@ -38,6 +38,7 @@
     ignores = [
       "result*"
       ".direnv"
+      ".venv"
       "venv"
     ];
   };

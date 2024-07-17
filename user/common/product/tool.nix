@@ -8,8 +8,8 @@
     # 开发
     gitkraken
     # 二进制
-    # cutter
     gnome.ghex
+    imhex
     # API测试
     # bruno
     # Nix

@@ -48,19 +48,6 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # 主题
-    catppuccin.url = "github:catppuccin/nix";
-    ## ZSH
-    catppuccin-zsh = {
-      url = "github:catppuccin/zsh-syntax-highlighting";
-      flake = false;
-    };
-    # QT Creator
-    catppuccin-qtcreator = {
-      url = "github:catppuccin/qtcreator";
-      flake = false;
-    };
   };
 
   outputs =

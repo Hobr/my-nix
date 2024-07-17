@@ -1,52 +1,5 @@
 {
   "nodes": {
-    "catppuccin": {
-      "locked": {
-        "lastModified": 1720472194,
-        "narHash": "sha256-CYscFEts6tyvosc1T29nxhzIYJAj/1CCEkV3ZMzSN/c=",
-        "owner": "catppuccin",
-        "repo": "nix",
-        "rev": "d75d5803852fb0833767dc969a4581ac13204e22",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "nix",
-        "type": "github"
-      }
-    },
-    "catppuccin-qtcreator": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1697887351,
-        "narHash": "sha256-dTcEJyJTI58DDlzFeBrNGqjON9kdkifsB9rGrNceBUA=",
-        "owner": "catppuccin",
-        "repo": "qtcreator",
-        "rev": "ac6f95b71448b5dd473fed18fca42b88c9cc51e2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "qtcreator",
-        "type": "github"
-      }
-    },
-    "catppuccin-zsh": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1665638423,
-        "narHash": "sha256-Q7KmwUd9fblprL55W0Sf4g7lRcemnhjh4/v+TacJSfo=",
-        "owner": "catppuccin",
-        "repo": "zsh-syntax-highlighting",
-        "rev": "06d519c20798f0ebe275fc3a8101841faaeee8ea",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "zsh-syntax-highlighting",
-        "type": "github"
-      }
-    },
     "chaotic": {
       "inputs": {
         "compare-to": "compare-to",
@@ -429,11 +382,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1721120520,
-        "narHash": "sha256-6+X+4Nxl3B9cFI3c3XYXcBWBYmb41uP1ef/Z77peYwo=",
+        "lastModified": 1721206919,
+        "narHash": "sha256-F/ZsUXep08rxyGceXosljicrkBo9padzK9v9q3hoHQc=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "c53093b5a3c7bea045e6167799b323472be6e793",
+        "rev": "be2503139eca72e1cfcb0a9bf51826b9f17a09cf",
         "type": "gitlab"
       },
       "original": {
@@ -593,9 +546,6 @@
     },
     "root": {
       "inputs": {
-        "catppuccin": "catppuccin",
-        "catppuccin-qtcreator": "catppuccin-qtcreator",
-        "catppuccin-zsh": "catppuccin-zsh",
         "chaotic": "chaotic",
         "flake-utils": "flake-utils",
         "hobr": "hobr",

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
@@ -46,7 +45,6 @@
   # LazyGit
   programs.lazygit = {
     enable = true;
-    catppuccin.enable = true;
     settings = { };
   };
 }

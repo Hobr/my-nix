@@ -10,6 +10,4 @@
     homeDirectory = "/home/kanade";
     stateVersion = "24.05";
   };
-
-  catppuccin.flavor = "latte";
 }

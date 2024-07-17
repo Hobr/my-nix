@@ -3,7 +3,6 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     inputs.sops-nix.homeManagerModules.sops
-    inputs.catppuccin.homeManagerModules.catppuccin
 
     # Nix
     ./service/nix.nix

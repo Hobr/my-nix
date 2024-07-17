@@ -10,6 +10,4 @@
     homeDirectory = "/home/yuzuru";
     stateVersion = "24.05";
   };
-
-  catppuccin.flavor = "latte";
 }

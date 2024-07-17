@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.git = {
     enable = true;
@@ -38,6 +37,7 @@
     ignores = [
       "result*"
       ".direnv"
+      ".venv"
       "venv"
     ];
   };
@@ -45,7 +45,6 @@
   # LazyGit
   programs.lazygit = {
     enable = true;
-    catppuccin.enable = true;
     settings = { };
   };
 }

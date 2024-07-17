@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     # 电路设计
-    kicad
+    # kicad
     librepcb
     klayout
     circt
@@ -19,8 +19,5 @@
     verible
     # 波形
     gtkwave
-    # Arduino
-    arduino
-    arduino-ide
   ];
 }

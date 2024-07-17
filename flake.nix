@@ -4,9 +4,9 @@
   inputs = {
     # 软件源
     ## 官方
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx/1b67ffd345f496daf5e7b78d9c1fa0a5c3595b61";
+    chaotic.url = "github:chaotic-cx/nyx";
     # Flake Utils
     flake-utils.url = "github:numtide/flake-utils";
     # 个人NUR
@@ -22,7 +22,7 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
     ## 用户
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全
@@ -39,7 +39,7 @@
     };
     ## 罗技
     solaar = {
-      url = "github:Svenum/Solaar-Flake/1.1.13";
+      url = "github:Svenum/Solaar-Flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -57,19 +57,6 @@
     hyprcontrib = {
       url = "github:hyprwm/contrib/v0.1";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # 主题
-    catppuccin.url = "github:catppuccin/nix";
-    ## ZSH
-    catppuccin-zsh = {
-      url = "github:catppuccin/zsh-syntax-highlighting";
-      flake = false;
-    };
-    # QT Creator
-    catppuccin-qtcreator = {
-      url = "github:catppuccin/qtcreator";
-      flake = false;
     };
   };
 

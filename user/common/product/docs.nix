@@ -27,11 +27,7 @@
     hunspellDicts.en_US
     # 文献
     zotero
-    # 笔记
-    obsidian
     # 办公
     libreoffice
-    # PPT放映
-    pympress
   ];
 }

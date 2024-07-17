@@ -13,7 +13,6 @@
     ];
 
     # 配置
-    catppuccin.enable = true;
     syntaxes = { };
   };
 
@@ -55,7 +54,6 @@
   # Btop(top)
   programs.btop = {
     enable = true;
-    catppuccin.enable = true;
     settings = {
       update_ms = 500;
     };
@@ -64,7 +62,6 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    catppuccin.enable = true;
   };
 
   # less

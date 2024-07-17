@@ -30,16 +30,18 @@
 
 - musnix/musnix
 - Mic92/sops-nix
+  - Password
+  - Clash订阅
+
 - lilyinstarlight/nixos-cosmic
-- catppuccin/nix
 - NotAShelf/nvf
 - Svenum/Solaar-Flake
 - gitlab:doronbehar/nix-xilinx
 
 - Cosmic
 
-- Fcitx
-  - Rime
+- Rime
+  - Oh My Rime
 
 - Systemd
   - Timesyncd
@@ -55,6 +57,7 @@
 - 聊天
   - Telegram
   - QQ
+    - LiteLoader
   - WeChat
   - Fractal
 

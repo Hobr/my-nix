@@ -3,9 +3,7 @@
   home.packages = with pkgs; [
     wget
     axel
-    httpx
     iftop
-    bpftop
 
     nitch
     fastfetch

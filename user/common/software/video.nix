@@ -3,21 +3,22 @@
 
   programs.mpv = {
     enable = true;
+    package = pkgs.mpv.override {
+      scripts = with pkgs.mpvScripts; [
+        mpris
+        webtorrent-mpv-hook
+        thumbfast
+        quality-menu
+        modernx
+        seekTo
+      ];
+    };
 
     config = {
       profile = "gpu-hq";
       force-window = true;
       ytdl-format = "bestvideo+bestaudio";
     };
-
-    scripts = with pkgs.mpvScripts; [
-      mpris
-      webtorrent-mpv-hook
-      thumbfast
-      quality-menu
-      modernx
-      seekTo
-    ];
   };
 
   home.packages = with pkgs; [

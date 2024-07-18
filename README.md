@@ -33,12 +33,24 @@
   - Password
   - Clash订阅
 
-- lilyinstarlight/nixos-cosmic
 - NotAShelf/nvf
 - Svenum/Solaar-Flake
 - gitlab:doronbehar/nix-xilinx
 
-- Cosmic
+- Hyprland
+- Waybar
+- Dunst
+- Rofi
+- Swaylock Effect
+- Wlogout
+- Cliphist
+
+- Pamixer
+- Pavucontrol
+
+- ReGreet
+
+- Blueman
 
 - Rime
   - Oh My Rime

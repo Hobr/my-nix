@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     # 电路设计
-    # kicad
+    kicad
     librepcb
     klayout
     circt

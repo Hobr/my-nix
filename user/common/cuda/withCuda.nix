@@ -8,5 +8,6 @@
   home.packages = with pkgs; [
     (openai-whisper-cpp.override { cudaSupport = true; })
     (blender.override { cudaSupport = true; })
+    ollama-cuda
   ];
 }

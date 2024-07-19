@@ -10,8 +10,8 @@
     # 图片处理
     gimp
     inkscape
-    swappy
     darktable
+    rawtherapee
     # 图片库
     libwebp
   ];

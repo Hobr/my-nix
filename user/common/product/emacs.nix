@@ -1,8 +1,6 @@
 {
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: [
-      epkgs.magit
-    ];
+    extraPackages = epkgs: [ epkgs.magit ];
   };
 }

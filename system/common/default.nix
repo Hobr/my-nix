@@ -51,5 +51,7 @@
     ./tool/docker.nix
     # Nix LD
     ./tool/ld.nix
+    # Steam
+    ./tool/steam.nix
   ];
 }

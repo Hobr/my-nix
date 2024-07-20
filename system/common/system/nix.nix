@@ -13,6 +13,7 @@
       allowUnfree = true;
       # 跨平台
       allowUnsupportedSystem = true;
+      permittedInsecurePackages = [ "openssl-1.1.1w" ];
     };
     # Overlays
     overlays = [

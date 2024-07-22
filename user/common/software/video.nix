@@ -24,6 +24,8 @@
   home.packages = with pkgs; [
     ffmpeg
     yt-dlp
+    mkvtoolnix
+    # 编辑
     olive-editor
     # 字幕
     inputs.hobr.packages.${pkgs.system}.aegisub

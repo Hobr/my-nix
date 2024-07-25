@@ -10,7 +10,7 @@
     };
 
     # 插件
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     autocd = true;
     syntaxHighlighting.enable = true;

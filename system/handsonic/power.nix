@@ -32,10 +32,4 @@
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
     };
   };
-
-  # 温度管理
-  services.thermald.enable = true;
-
-  # ACPI
-  services.acpid.enable = true;
 }

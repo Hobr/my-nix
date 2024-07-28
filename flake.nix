@@ -49,6 +49,7 @@
       type = "git";
       url = "https://github.com/hyprwm/Hyprland?ref=v0.41.2";
       submodules = true;
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpicker = {
       url = "github:hyprwm/hyprpicker/v0.3.0";

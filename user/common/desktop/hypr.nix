@@ -8,8 +8,8 @@
     # 设置
     settings = {
       env = [
-        # 鼠标大小
-        "XCURSOR_SIZE,24"
+        "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+        "HYPRCURSOR_SIZE,24"
 
         # QT
         "QT_QPA_PLATFORM,wayland;xcb"

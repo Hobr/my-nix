@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 {
   # XDG
   xdg = {
@@ -21,8 +26,8 @@
 
   # 鼠标
   home.pointerCursor = {
-    package = pkgs.catppuccin-cursors.latteDark;
-    name = "Catppuccin-Latte-Dark-Cursors";
+    package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+    name = "rose-pine-hyprcursor";
     size = 24;
     gtk.enable = true;
   };

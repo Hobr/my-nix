@@ -29,8 +29,8 @@
         "cliphist wipe"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+
         # 开机启动
-        "solaar -w hide"
         "telegram-desktop -startintray"
       ];
 

@@ -1,8 +1,8 @@
 os:
-	nh os boot -a ./
+	nh os boot -a .
 
 home:
-	nh home switch -a ./
+	nh home switch -a .
 
 update:
 	nix flake update

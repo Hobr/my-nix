@@ -30,19 +30,19 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-rfc-style);
 
-      overlays = import ./overlays { inherit inputs; };
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
+      overlays = import ./overlay { inherit inputs; };
+      nixosModules = import ./module/host;
+      homeManagerModules = import ./module/home;
 
       nixosConfigurations = {
         your-hostname = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs outputs;
           };
-          modules = [ ./nixos/configuration.nix ];
+          modules = [ ./host/configuration.nix ];
         };
       };
 
@@ -52,7 +52,7 @@
           extraSpecialArgs = {
             inherit inputs outputs;
           };
-          modules = [ ./home-manager/home.nix ];
+          modules = [ ./home/home.nix ];
         };
       };
     };

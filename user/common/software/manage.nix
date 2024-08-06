@@ -2,9 +2,9 @@
 {
   home.packages = with pkgs; [
     # 资源管理器
-    cinnamon.nemo-with-extensions
+    nemo-with-extensions
     # 解压
-    gnome.file-roller
-    cinnamon.nemo-fileroller
+    file-roller
+    nemo-fileroller
   ];
 }

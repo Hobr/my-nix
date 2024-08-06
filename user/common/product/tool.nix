@@ -8,7 +8,7 @@
     # 开发
     gitkraken
     # 二进制
-    gnome.ghex
+    ghex
     imhex
     # API测试
     # bruno

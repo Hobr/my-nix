@@ -25,10 +25,6 @@
     libva
     mesa
 
-    # CUDA
-    cudatoolkit
-    cudaPackages.cudnn
-
     # NVTop
     nvtopPackages.nvidia
   ];
@@ -44,8 +40,6 @@
     nvidiaSettings = false;
     dynamicBoost.enable = true;
   };
-
-  environment.sessionVariables.CUDA_PATH = pkgs.cudatoolkit;
 
   hardware.nvidia-container-toolkit = {
     enable = true;

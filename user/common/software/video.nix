@@ -25,6 +25,7 @@
     ffmpeg
     yt-dlp
     mkvtoolnix
+    kdenlive
     # 字幕
     inputs.hobr.packages.${pkgs.system}.aegisub
   ];

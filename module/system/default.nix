@@ -1,3 +1,1 @@
-{
-  # xxx = import ./xxxe.nix;
-}
+{ imports = [ ./audio.nix ]; }

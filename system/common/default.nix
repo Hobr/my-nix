@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, outputs, ... }:
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -8,6 +8,8 @@
     inputs.hyprland.nixosModules.default
     inputs.sops-nix.nixosModules.sops
     inputs.solaar.nixosModules.default
+
+    outputs.nixosModules
 
     # 软件
     ./system/nix.nix
@@ -24,8 +26,6 @@
     # 图形环境
     ./system/graph.nix
 
-    # 音频
-    ./hardware/audio.nix
     # 蓝牙
     ./hardware/bluetooth.nix
     # 网络
@@ -54,4 +54,6 @@
     # Steam
     ./tool/steam.nix
   ];
+
+  system.audio.enable = true;
 }

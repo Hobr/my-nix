@@ -15,7 +15,6 @@ in
   options.system.driver.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-
     # Libinput
     services.libinput.enable = true;
 

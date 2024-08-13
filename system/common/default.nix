@@ -13,8 +13,6 @@
 
     # 软件
     ./system/nix.nix
-    # 引导
-    ./system/boot.nix
     # 内核
     ./system/kernel.nix
     # 安全启动
@@ -48,8 +46,15 @@
     ./tool/steam.nix
   ];
 
-  system.driver.enable = true;
-  system.network.enable = true;
-  system.audio.enable = true;
-  system.bluetooth.enable = true;
+  system = {
+    driver.enable = true;
+    network.enable = true;
+    audio.enable = true;
+    bluetooth.enable = true;
+  };
+
+  boot = {
+    systemd-boot.enable = true;
+    #secure-boot.enable = true;
+  };
 }

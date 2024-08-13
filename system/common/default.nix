@@ -26,13 +26,6 @@
     # 图形环境
     ./system/graph.nix
 
-    # 蓝牙
-    ./hardware/bluetooth.nix
-    # 网络
-    ./hardware/network.nix
-    # 硬件
-    ./hardware/hardware.nix
-
     # 语言
     ./tool/locale.nix
     # 硬盘
@@ -55,5 +48,8 @@
     ./tool/steam.nix
   ];
 
+  system.driver.enable = true;
+  system.network.enable = true;
   system.audio.enable = true;
+  system.bluetooth.enable = true;
 }

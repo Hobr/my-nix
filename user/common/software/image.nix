@@ -8,8 +8,8 @@
     # 选色
     hyprpicker
     # 图片处理
-    gimp
-    inkscape
+    # gimp
+    # inkscape
     # darktable
     # rawtherapee
     # 图片库

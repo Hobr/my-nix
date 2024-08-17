@@ -13,8 +13,6 @@
 
     # 语言
     ./tool/locale.nix
-    # 硬盘
-    ./tool/disk.nix
     # Shell
     ./tool/shell.nix
     # 安全
@@ -38,21 +36,22 @@
     kernel.enable = true;
   };
 
-  system = {
-    driver.enable = true;
-    network.enable = true;
-    audio.enable = true;
-    bluetooth.enable = true;
-  };
-
   disk = {
     persist.enable = true;
+    snapper.enable = true;
   };
 
   boot = {
     systemd-boot.enable = true;
     secure-boot.enable = true;
     tpm.enable = true;
+  };
+
+  system = {
+    driver.enable = true;
+    network.enable = true;
+    audio.enable = true;
+    bluetooth.enable = true;
   };
 
   desk = {

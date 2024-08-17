@@ -1,1 +1,6 @@
-{ imports = [ ./persist.nix ]; }
+{
+  imports = [
+    ./persist.nix
+    ./snapper.nix
+  ];
+}

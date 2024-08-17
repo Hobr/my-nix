@@ -15,12 +15,8 @@
     ./system/nix.nix
     # 内核
     ./system/kernel.nix
-    # 安全启动
-    ./system/secureboot.nix
     # TPM
     ./system/tpm.nix
-    # 无状态
-    ./system/impermanence.nix
     # 图形环境
     ./system/graph.nix
 
@@ -55,6 +51,7 @@
 
   boot = {
     systemd-boot.enable = true;
-    #secure-boot.enable = true;
+    secure-boot.enable = true;
+    persist.enable = true;
   };
 }

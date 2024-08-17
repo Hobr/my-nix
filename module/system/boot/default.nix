@@ -1,1 +1,6 @@
-{ imports = [ ./systemd-boot.nix ]; }
+{
+  imports = [
+    ./persist.nix
+    ./systemd-boot.nix
+  ];
+}

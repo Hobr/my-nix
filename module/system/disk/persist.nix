@@ -6,13 +6,12 @@
 }:
 with lib;
 let
-  cfg = config.boot.persist;
+  cfg = config.disk.persist;
 in
 {
-  options.boot.persist.enable = mkEnableOption "enable";
+  options.disk.persist.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-
     environment.persistence."/persist" = {
       hideMounts = true;
       directories = [

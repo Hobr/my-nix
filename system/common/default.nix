@@ -49,10 +49,13 @@
     bluetooth.enable = true;
   };
 
+  disk = {
+    persist.enable = true;
+  };
+
   boot = {
     systemd-boot.enable = true;
     secure-boot.enable = true;
     tpm.enable = true;
-    persist.enable = true;
   };
 }

@@ -11,11 +11,6 @@
 
     outputs.nixosModules
 
-    # 内核
-    ./system/kernel.nix
-    # 图形环境
-    ./system/graph.nix
-
     # 语言
     ./tool/locale.nix
     # 硬盘
@@ -40,6 +35,7 @@
 
   config = {
     nix.enable = true;
+    kernel.enable = true;
   };
 
   system = {
@@ -57,5 +53,9 @@
     systemd-boot.enable = true;
     secure-boot.enable = true;
     tpm.enable = true;
+  };
+
+  desk = {
+    hyprland.enable = true;
   };
 }

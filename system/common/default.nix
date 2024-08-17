@@ -11,8 +11,6 @@
 
     outputs.nixosModules
 
-    # 软件
-    ./system/nix.nix
     # 内核
     ./system/kernel.nix
     # 图形环境
@@ -39,6 +37,10 @@
     # Steam
     ./tool/steam.nix
   ];
+
+  config = {
+    nix.enable = true;
+  };
 
   system = {
     driver.enable = true;

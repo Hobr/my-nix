@@ -1,6 +1,7 @@
 {
   imports = [
-    ./io
     ./boot
+    ./config
+    ./io
   ];
 }

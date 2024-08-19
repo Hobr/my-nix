@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.disk.persist;
+  cfg = config.sys.disk.persist;
 in
 {
-  options.disk.persist.enable = mkEnableOption "enable";
+  options.sys.disk.persist.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     environment.persistence."/persist" = {

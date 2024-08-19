@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.disk.snapper;
+  cfg = config.sys.disk.snapper;
 in
 {
-  options.disk.snapper.enable = mkEnableOption "enable";
+  options.sys.disk.snapper.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # Snapper

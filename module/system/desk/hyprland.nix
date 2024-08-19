@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.desk.hyprland;
+  cfg = config.sys.desk.hyprland;
 in
 {
-  options.desk.hyprland.enable = mkEnableOption "enable";
+  options.sys.desk.hyprland.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # Greet

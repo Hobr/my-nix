@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.system.audio;
+  cfg = config.sys.system.audio;
 in
 {
-  options.system.audio.enable = mkEnableOption "enable";
+  options.sys.system.audio.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     hardware.pulseaudio.enable = false;

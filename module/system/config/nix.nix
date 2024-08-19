@@ -9,10 +9,10 @@
 }:
 with lib;
 let
-  cfg = config.config.nix;
+  cfg = config.sys.config.nix;
 in
 {
-  options.config.nix.enable = mkEnableOption "enable";
+  options.sys.config.nix.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     nixpkgs = {

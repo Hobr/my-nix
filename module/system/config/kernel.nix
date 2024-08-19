@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.config.kernel;
+  cfg = config.sys.config.kernel;
 in
 {
-  options.config.kernel.enable = mkEnableOption "enable";
+  options.sys.config.kernel.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # 内核

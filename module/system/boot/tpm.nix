@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.boot.tpm;
+  cfg = config.sys.boot.tpm;
 in
 {
-  options.boot.tpm.enable = mkEnableOption "enable";
+  options.sys.boot.tpm.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     security.tpm2 = {

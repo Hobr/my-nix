@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.system.bluetooth;
+  cfg = config.sys.system.bluetooth;
 in
 {
-  options.system.bluetooth.enable = mkEnableOption "enable";
+  options.sys.system.bluetooth.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     hardware.bluetooth = {

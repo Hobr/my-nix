@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.system.network;
+  cfg = config.sys.system.network;
 in
 {
-  options.system.network.enable = mkEnableOption "enable";
+  options.sys.system.network.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
 

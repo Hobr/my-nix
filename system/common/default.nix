@@ -31,30 +31,32 @@
     ./tool/steam.nix
   ];
 
-  config = {
-    nix.enable = true;
-    kernel.enable = true;
-  };
+  sys = {
+    config = {
+      nix.enable = true;
+      kernel.enable = true;
+    };
 
-  disk = {
-    persist.enable = true;
-    snapper.enable = true;
-  };
+    disk = {
+      persist.enable = true;
+      snapper.enable = true;
+    };
 
-  boot = {
-    systemd-boot.enable = true;
-    secure-boot.enable = true;
-    tpm.enable = true;
-  };
+    boot = {
+      systemd-boot.enable = true;
+      secure-boot.enable = true;
+      tpm.enable = true;
+    };
 
-  system = {
-    driver.enable = true;
-    network.enable = true;
-    audio.enable = true;
-    bluetooth.enable = true;
-  };
+    system = {
+      driver.enable = true;
+      network.enable = true;
+      audio.enable = true;
+      bluetooth.enable = true;
+    };
 
-  desk = {
-    hyprland.enable = true;
+    desk = {
+      hyprland.enable = true;
+    };
   };
 }

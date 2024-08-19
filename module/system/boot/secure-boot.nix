@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.boot.secure-boot;
+  cfg = config.sys.boot.secure-boot;
 in
 {
-  options.boot.secure-boot.enable = mkEnableOption "enable";
+  options.sys.boot.secure-boot.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
 

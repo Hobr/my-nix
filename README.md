@@ -98,9 +98,6 @@ reboot
 # SUPER+M
 # TTY
 nmcli
-sudo mkdir /etc/mihomo
-sudo cp dist/geoip.metadb /etc/mihomo
-sudo systemctl restart Mihomo
 rm ~/.config/hypr/hypyland.conf
 
 # Home

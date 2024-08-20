@@ -4,7 +4,7 @@
   inputs = {
     # 软件源
     ## 官方
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx";
     # Flake Utils

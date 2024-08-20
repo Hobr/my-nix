@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    inputs.sops-nix.homeManagerModules.sops
 
     # Nix
     ./service/nix.nix

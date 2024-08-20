@@ -8,7 +8,7 @@
     # 选色
     hyprpicker
     # 图片处理
-    # gimp
+    gimp
     # inkscape
     # darktable
     # rawtherapee

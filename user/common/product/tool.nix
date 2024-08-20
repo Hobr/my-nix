@@ -10,8 +10,6 @@
     # 二进制
     ghex
     imhex
-    # API测试
-    # bruno
     # Nix
     nurl
     nix-init

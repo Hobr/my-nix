@@ -9,7 +9,7 @@
       batpipe
       batman
       batgrep
-      batdiff
+      # batdiff
     ];
 
     # 配置

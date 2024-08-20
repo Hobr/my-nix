@@ -1,10 +1,10 @@
 { pkgs, ... }:
 {
-  services.mihomo = {
+  programs.clash-verge = {
     enable = true;
+    package = clash-verge-rev;
     tunMode = true;
-    webui = pkgs.metacubexd;
-    configFile = ../../../dist/mihomo.yaml;
+    autoStart = true;
   };
 
   programs.proxychains = {

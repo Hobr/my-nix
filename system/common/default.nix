@@ -32,6 +32,7 @@
     config = {
       nix.enable = true;
       kernel.enable = true;
+      locale.enable = true;
     };
 
     disk = {

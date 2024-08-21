@@ -18,8 +18,6 @@
     ./tool/secure.nix
     # 代理
     ./tool/proxy.nix
-    # NH
-    ./tool/nh.nix
     # 虚拟化
     ./tool/virt.nix
     # Steam
@@ -58,6 +56,7 @@
     program = {
       docker.enable = true;
       ld.enable = true;
+      nh.enable = true;
     };
   };
 }

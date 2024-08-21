@@ -22,8 +22,6 @@
     ./tool/nh.nix
     # 虚拟化
     ./tool/virt.nix
-    # Docker
-    ./tool/docker.nix
     # Nix LD
     ./tool/ld.nix
     # Steam
@@ -56,6 +54,10 @@
 
     desk = {
       hyprland.enable = true;
+    };
+
+    program = {
+      docker = true;
     };
   };
 }

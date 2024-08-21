@@ -48,6 +48,6 @@
   system.stateVersion = "24.05";
 
   sys = {
-    gpu.nvidia = enable;
+    gpu.nvidia.enable = true;
   };
 }

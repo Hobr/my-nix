@@ -10,8 +10,6 @@
 
     outputs.nixosModules
 
-    # 语言
-    ./tool/locale.nix
     # Shell
     ./tool/shell.nix
     # 安全

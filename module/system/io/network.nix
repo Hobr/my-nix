@@ -27,7 +27,7 @@ in
 
     networking = {
       useDHCP = lib.mkDefault true;
-      proxy.default = "http://127.0.0.1:7890";
+      proxy.default = "http://127.0.0.1:7891";
 
       # 防火墙
       firewall.enable = false;

@@ -4,7 +4,6 @@
 
     ./handsonic/kernel.nix
     ./handsonic/filesystem.nix
-    ./handsonic/gpu.nix
     ./handsonic/hardware.nix
     ./handsonic/power.nix
   ];
@@ -47,4 +46,8 @@
 
   # 系统版本
   system.stateVersion = "24.05";
+
+  sys = {
+    gpu.nvidia = enable;
+  };
 }

@@ -4,7 +4,6 @@
 
     ./distortion/kernel.nix
     ./distortion/filesystem.nix
-    ./distortion/gpu.nix
     ./distortion/hardware.nix
     ./distortion/power.nix
   ];
@@ -44,4 +43,8 @@
 
   # 系统版本
   system.stateVersion = "24.05";
+
+  sys = {
+    gpu.nvidia = enable;
+  };
 }

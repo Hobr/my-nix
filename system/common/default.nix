@@ -22,8 +22,6 @@
     ./tool/nh.nix
     # 虚拟化
     ./tool/virt.nix
-    # Nix LD
-    ./tool/ld.nix
     # Steam
     ./tool/steam.nix
   ];
@@ -58,7 +56,8 @@
     };
 
     program = {
-      docker = true;
+      docker.enable = true;
+      ld.enable = true;
     };
   };
 }

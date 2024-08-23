@@ -14,8 +14,6 @@
     ./tool/shell.nix
     # 安全
     ./tool/secure.nix
-    # 代理
-    ./tool/proxy.nix
     # 虚拟化
     ./tool/virt.nix
     # Steam
@@ -36,8 +34,8 @@
 
     boot = {
       systemd-boot.enable = true;
-      secure-boot.enable = true;
       tpm.enable = true;
+      secure-boot.enable = true;
     };
 
     system = {
@@ -52,9 +50,10 @@
     };
 
     program = {
-      docker.enable = true;
       ld.enable = true;
       nh.enable = true;
+      proxy.enable = true;
+      docker.enable = true;
     };
   };
 }

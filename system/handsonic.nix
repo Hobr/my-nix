@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common
+    ./common.nix
 
     ./handsonic/kernel.nix
     ./handsonic/filesystem.nix

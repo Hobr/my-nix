@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common
+    ./common.nix
 
     ./distortion/kernel.nix
     ./distortion/filesystem.nix

@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.sys.program.secure;
+  cfg = config.sys.program.shell;
 in
 {
-  options.sys.program.secure.enable = mkEnableOption "enable";
+  options.sys.program.shell.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     programs.zsh.enable = true;

@@ -9,11 +9,6 @@
     inputs.solaar.nixosModules.default
 
     outputs.nixosModules
-
-    # 虚拟化
-    ./tool/virt.nix
-    # Steam
-    ./tool/steam.nix
   ];
 
   sys = {
@@ -51,7 +46,9 @@
       nh.enable = true;
       proxy.enable = true;
       ld.enable = true;
+      virtual.enable = true;
       docker.enable = true;
+      steam.enable = true;
     };
   };
 }

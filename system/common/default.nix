@@ -12,8 +12,6 @@
 
     # Shell
     ./tool/shell.nix
-    # 安全
-    ./tool/secure.nix
     # 虚拟化
     ./tool/virt.nix
     # Steam
@@ -50,9 +48,10 @@
     };
 
     program = {
-      ld.enable = true;
+      secure.enable = true;
       nh.enable = true;
       proxy.enable = true;
+      ld.enable = true;
       docker.enable = true;
     };
   };

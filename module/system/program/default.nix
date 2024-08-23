@@ -4,5 +4,6 @@
     ./ld.nix
     ./nh.nix
     ./proxy.nix
+    ./secure.nix
   ];
 }

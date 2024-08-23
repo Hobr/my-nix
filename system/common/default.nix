@@ -10,8 +10,6 @@
 
     outputs.nixosModules
 
-    # Shell
-    ./tool/shell.nix
     # 虚拟化
     ./tool/virt.nix
     # Steam
@@ -48,6 +46,7 @@
     };
 
     program = {
+      shell.enable = true;
       secure.enable = true;
       nh.enable = true;
       proxy.enable = true;

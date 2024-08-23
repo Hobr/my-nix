@@ -5,5 +5,6 @@
     ./nh.nix
     ./proxy.nix
     ./secure.nix
+    ./shell.nix
   ];
 }

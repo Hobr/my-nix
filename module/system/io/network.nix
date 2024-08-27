@@ -12,7 +12,6 @@ in
   options.sys.system.network.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-
     # DNS服务
     services.resolved = {
       enable = true;

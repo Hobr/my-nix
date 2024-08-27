@@ -1,7 +1,9 @@
-{ inputs, ... }:
+{ inputs, outputs, ... }:
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
+
+    outputs.homeManagerModules
 
     # Nix
     ./service/nix.nix
@@ -16,8 +18,6 @@
     # 同步
     ./service/sync.nix
 
-    # 桌面
-    ./desktop/hypr.nix
     # 任务栏
     ./desktop/waybar.nix
     # 锁屏
@@ -86,4 +86,10 @@
     # 其他工具
     ./product/tool.nix
   ];
+
+  home = {
+    desktop = {
+      hypr.enable = true;
+    };
+  };
 }

@@ -1,5 +1,5 @@
 {
   imports = [
-    ./desktop
+    ./hypr.nix
   ];
 }

@@ -81,7 +81,7 @@
     {
       overlays = import ./overlay { inherit inputs; };
       nixosModules = import ./module/system;
-      homeManagerModules = import ./modules/home;
+      homeManagerModules = import ./module/home;
 
       nixosConfigurations = {
         # Laptop

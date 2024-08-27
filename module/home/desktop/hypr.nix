@@ -13,7 +13,6 @@ in
   options.home.desktop.hypr.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enable = true;

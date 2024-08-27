@@ -18,8 +18,6 @@
     # 同步
     ./service/sync.nix
 
-    # 任务栏
-    ./desktop/waybar.nix
     # 锁屏
     ./desktop/lock.nix
     # 注销
@@ -90,6 +88,7 @@
   home = {
     desktop = {
       hypr.enable = true;
+      waybar.enable = true;
     };
   };
 }

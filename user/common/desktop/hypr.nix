@@ -32,6 +32,7 @@
 
         # 开机启动
         "telegram-desktop -startintray"
+        "clash-verge"
       ];
 
       general = {

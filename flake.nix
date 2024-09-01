@@ -47,11 +47,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpicker = {
-      url = "github:hyprwm/hyprpicker/v0.3.0";
+      url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprcontrib = {
-      url = "github:hyprwm/contrib/v0.1";
+      url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rose-pine-hyprcursor = {

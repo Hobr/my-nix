@@ -2,7 +2,6 @@
   imports = [
     ./common
     ./config/kanade
-    ./common/cuda/withCuda.nix
   ];
 
   home = {
@@ -10,4 +9,6 @@
     homeDirectory = "/home/kanade";
     stateVersion = "24.05";
   };
+
+  nixpkgs.config.cudaSupport = true;
 }

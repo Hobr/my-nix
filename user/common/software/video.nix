@@ -26,7 +26,9 @@
     yt-dlp
     mkvtoolnix
     kdenlive
+    blender
     # 字幕
     inputs.hobr.packages.${pkgs.system}.aegisub
+    whisper-ctranslate2
   ];
 }

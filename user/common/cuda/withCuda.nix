@@ -7,7 +7,6 @@
 
   home.packages = with pkgs; [
     whisper-ctranslate2
-    (blender.override { cudaSupport = true; })
-    ollama-cuda
+    blender
   ];
 }

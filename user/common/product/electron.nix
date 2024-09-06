@@ -17,7 +17,6 @@
     verilog
     verilator
     verible
-    inputs.hobr.packages.${pkgs.system}.atopile
     # 波形
     gtkwave
   ];

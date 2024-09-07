@@ -3,7 +3,6 @@
     # 设置
     settings = {
       monitor = [
-        "HDMI-A-1,1920x1080@60,auto,1"
         "eDP-1,2560x1440@165,auto,1.25"
       ];
 
@@ -24,7 +23,6 @@
   services.hyprpaper.settings = {
     preload = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
     wallpaper = [
-      "HDMI-A-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
       "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
     ];
   };

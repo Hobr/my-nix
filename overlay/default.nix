@@ -1,4 +1,6 @@
 { inputs, ... }:
 {
-  modifications = final: prev: { };
+  modifications = final: prev: {
+    cudaPackages = final.cudaPackages_12_3;
+  };
 }

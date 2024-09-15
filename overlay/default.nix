@@ -1,6 +1,8 @@
 { inputs, ... }:
 {
   modifications = final: prev: {
-    cudaPackages = final.cudaPackages_12_3;
+    opencv_cuda = prev.opencv.overrideAttrs (oldAttrs: rec {
+      cudaPackages = final.cudaPackages_12_3;
+    });
   };
 }

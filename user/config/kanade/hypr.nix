@@ -4,6 +4,7 @@
     settings = {
       monitor = [
         "eDP-1,2560x1440@165,auto,1.25"
+        "DP-1,2560x1440@180,auto,1"
       ];
 
       env = [
@@ -24,6 +25,7 @@
     preload = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
     wallpaper = [
       "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
+      "DP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
     ];
   };
 }

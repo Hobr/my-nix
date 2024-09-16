@@ -19,7 +19,7 @@
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
     ## 安全启动
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
     ## 用户
     home-manager = {
       url = "github:nix-community/home-manager";

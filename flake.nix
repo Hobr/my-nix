@@ -17,7 +17,7 @@
 
     # 环境
     ## Rootless
-    impermanence.url = "github:nix-community/impermanence";
+    impermanence.url = "github:nix-community/impermanence/63f4d0443e32b0dd7189001ee1894066765d18a5";
     ## 安全启动
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
     ## 用户

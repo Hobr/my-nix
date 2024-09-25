@@ -299,11 +299,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1726568554,
-        "narHash": "sha256-oz6y5rCu1yzojs41q2FLGrXtm2ApbOtc4z7H2DkDMkE=",
+        "lastModified": 1727240019,
+        "narHash": "sha256-WBmwnWrTAXWRm9kzL/ZhJUv0Gq5OiYn7bh92e8XHSrQ=",
         "owner": "Hobr",
         "repo": "hobr_nur",
-        "rev": "639e36d8c73c6fdaab4f04004048e174fabab6b8",
+        "rev": "09b2b2b53b0e6f021c8a518cc365706721313584",
         "type": "github"
       },
       "original": {
@@ -608,17 +608,16 @@
     },
     "impermanence": {
       "locked": {
-        "lastModified": 1725690722,
-        "narHash": "sha256-4qWg9sNh5g1qPGO6d/GV2ktY+eDikkBTbWSg5/iD2nY=",
+        "lastModified": 1727198257,
+        "narHash": "sha256-/qMVI+SG9zvhLbQFOnqb4y4BH6DdK3DQHZU5qGptehc=",
         "owner": "nix-community",
         "repo": "impermanence",
-        "rev": "63f4d0443e32b0dd7189001ee1894066765d18a5",
+        "rev": "8514fff0f048557723021ffeb31ca55f69b67de3",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "impermanence",
-        "rev": "63f4d0443e32b0dd7189001ee1894066765d18a5",
         "type": "github"
       }
     },

@@ -25,7 +25,6 @@ in
   options.home.desktop.waybar.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-
     programs.waybar = {
       enable = true;
       package = pkgs.waybar.override {

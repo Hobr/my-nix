@@ -12,12 +12,23 @@ in
 {
   options.home.desktop.hypr = {
     enable = mkEnableOption "enable";
-    monitor.type = types listOf str;
-    wallpaper = {
-      preload.type = types listOf str;
-      monitor.type = types listOf str;
+
+    monitor = mkOption {
+      type = with types; listOf str;
     };
-    nvidia = {
+
+    wallpaper = {
+      preload = mkOption {
+        type = with types; listOf str;
+        default = [ ];
+      };
+      monitor = mkOption {
+        type = with types; listOf str;
+        default = [ ];
+      };
+    };
+
+    nvidia = mkOption {
       type = types.bool;
       default = false;
     };
@@ -31,7 +42,7 @@ in
 
       # 设置
       settings = {
-        monitor = cfg.monitor;
+        monitor = (mkIf (cfg.monitor != null) cfg.monitor);
 
         env =
           [
@@ -81,10 +92,6 @@ in
           gaps_in = 5;
           # 窗口与屏幕边框间隔
           gaps_out = 20;
-          # 活动窗口边框颜色
-          #"col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-          # 非活动窗口边框颜色
-          #"col.inactive_border" = "rgba(595959aa)";
           # 布局
           layout = "dwindle";
         };
@@ -255,8 +262,10 @@ in
     # 壁纸
     services.hyprpaper = {
       enable = true;
-      preload = cfg.wallpaper.preload;
-      wallpaper = cfg.wallpaper.monitor;
+      settings = {
+        preload = cfg.wallpaper.preload;
+        wallpaper = cfg.wallpaper.monitor;
+      };
     };
   };
 }

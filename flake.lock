@@ -292,26 +292,6 @@
         "type": "github"
       }
     },
-    "hobr": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1727760843,
-        "narHash": "sha256-b21BTd8Z5FU265KbXeeYIl+Hu65WihZt3wU0798CeP4=",
-        "owner": "Hobr",
-        "repo": "hobr_nur",
-        "rev": "d1e180672e4db83c3a0b4b3577f0d9ea1bbfca90",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Hobr",
-        "repo": "hobr_nur",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -859,7 +839,6 @@
       "inputs": {
         "chaotic": "chaotic",
         "flake-utils": "flake-utils",
-        "hobr": "hobr",
         "home-manager": "home-manager_2",
         "hyprcontrib": "hyprcontrib",
         "hyprland": "hyprland",

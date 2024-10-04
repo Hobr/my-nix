@@ -29,7 +29,7 @@ in
     };
 
     nvidia = mkOption {
-      type = types.bool;
+      type = with types; bool;
       default = false;
     };
   };
@@ -42,7 +42,7 @@ in
 
       # 设置
       settings = {
-        monitor = (mkIf (cfg.monitor != null) cfg.monitor);
+        monitor = cfg.monitor;
 
         env =
           [
@@ -62,15 +62,17 @@ in
             "MOZ_ENABLE_WAYLAND,1"
           ]
           # NVIDIA
-          ++ mkIf cfg.nvidia [
-            "GBM_BACKEND,nvidia-drm"
-            "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-            "LIBVA_DRIVER_NAME,nvidia"
-            "NVD_BACKEND,direct"
-            "MOZ_X11_EGL,1"
-            "MOZ_DISABLE_RDD_SANDBOX,1"
-            "WLR_NO_HARDWARE_CURSORS,1"
-          ];
+          ++ optional cfg.nvidia (
+            [
+              "GBM_BACKEND,nvidia-drm"
+              "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+              "LIBVA_DRIVER_NAME,nvidia"
+              "NVD_BACKEND,direct"
+              "MOZ_X11_EGL,1"
+              "MOZ_DISABLE_RDD_SANDBOX,1"
+              "WLR_NO_HARDWARE_CURSORS,1"
+            ]
+          );
 
         exec-once = [
           # 粘贴板

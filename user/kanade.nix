@@ -13,7 +13,6 @@
           "DP-1,2560x1440@180,0x0,1"
           "eDP-1,2560x1440@165,auto,1.25"
         ];
-
         wallpaper = {
           preload = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
           monitor = [

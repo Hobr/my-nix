@@ -24,6 +24,7 @@ in
       };
       # Overlays
       overlays = [
+        outputs.overlays.additions
         outputs.overlays.modifications
         inputs.nix-xilinx.overlay
       ];

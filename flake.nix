@@ -7,9 +7,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx";
-    # Flake Utils
-    flake-utils.url = "github:numtide/flake-utils";
-
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";

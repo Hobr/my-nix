@@ -9,10 +9,11 @@
     hyprpicker
     # 图片处理
     gimp
-    # inkscape
-    # darktable
-    # rawtherapee
+    inkscape
+    darktable
+    rawtherapee
     # 图片库
     libwebp
+    imagemagick
   ];
 }

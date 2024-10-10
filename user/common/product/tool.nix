@@ -8,6 +8,7 @@
     # 开发
     gitkraken
     postman
+    frida-tools
     # 二进制
     ghex
     imhex

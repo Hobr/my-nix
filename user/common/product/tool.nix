@@ -7,6 +7,7 @@
     virt-manager
     # 开发
     gitkraken
+    postman
     # 二进制
     ghex
     imhex

@@ -49,5 +49,6 @@
 
   sys = {
     gpu.nvidia.enable = true;
+    program.ollama.enable = true;
   };
 }

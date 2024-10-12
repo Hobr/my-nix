@@ -46,5 +46,6 @@
 
   sys = {
     gpu.intel.enable = true;
+    program.ollama.enable = false;
   };
 }

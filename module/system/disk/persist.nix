@@ -17,7 +17,6 @@ in
       directories = [
         "/var/log"
         "/var/lib"
-
         "/etc"
         "/root"
       ];

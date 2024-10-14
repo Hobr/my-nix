@@ -48,7 +48,6 @@
       ld.enable = true;
       virtual.enable = true;
       docker.enable = true;
-      steam.enable = true;
     };
   };
 }

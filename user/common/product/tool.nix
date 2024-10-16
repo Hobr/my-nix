@@ -7,7 +7,7 @@
     virt-manager
     # 开发
     gitkraken
-    postman
+    hoppscotch
     frida-tools
     # 二进制
     ghex

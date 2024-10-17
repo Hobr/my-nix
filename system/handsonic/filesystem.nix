@@ -1,12 +1,13 @@
 {
   # LUKS
-  boot.initrd.luks.devices.luksroot.device = "/dev/nvme0n1";
+  boot.initrd.luks.devices.luksroot1.device = "/dev/nvme0n1p2";
+  boot.initrd.luks.devices.luksroot2.device = "/dev/nvme1n1";
 
   # 挂载
   fileSystems = {
     # 引导
     "/boot" = {
-      device = "/dev/nvme1n1p1";
+      device = "/dev/nvme0n1p1";
       fsType = "vfat";
     };
 
@@ -64,29 +65,6 @@
         "space_cache=v2"
         "compress=zstd"
         "subvol=@home"
-      ];
-    };
-
-    # Windows 分区
-    "/mnt/windows" = {
-      device = "/dev/nvme1n1p3";
-      fsType = "ntfs3";
-      options = [
-        "nofail"
-        "rw"
-        "discard"
-        "uid=1000"
-      ];
-    };
-
-    "/mnt/data" = {
-      device = "/dev/nvme1n1p4";
-      fsType = "ntfs3";
-      options = [
-        "nofail"
-        "rw"
-        "discard"
-        "uid=1000"
       ];
     };
   };

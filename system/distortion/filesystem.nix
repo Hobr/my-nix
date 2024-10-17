@@ -1,6 +1,6 @@
 {
   # LUKS
-  boot.initrd.luks.devices.luksroot.device = "/dev/nvme0n1p4";
+  boot.initrd.luks.devices.luksroot.device = "/dev/nvme0n1p2";
 
   # 挂载
   fileSystems = {
@@ -64,18 +64,6 @@
         "space_cache=v2"
         "compress=zstd"
         "subvol=@home"
-      ];
-    };
-
-    # Windows 分区
-    "/mnt/windows" = {
-      device = "/dev/nvme0n1p3";
-      fsType = "ntfs3";
-      options = [
-        "nofail"
-        "rw"
-        "discard"
-        "uid=1000"
       ];
     };
   };

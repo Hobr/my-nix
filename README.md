@@ -5,9 +5,9 @@
 ## 介绍
 
 - 主机
-  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G
-  - distortion: 便携触摸本, 联想 Yoga Duet 2020, Intel i5-10210U, Intel UHD630, 16G
-  - overdrive: 服务器, 4H4G
+  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G,  双硬盘
+  - distortion: 便携触摸本, 联想 Yoga Duet 2020, Intel i5-10210U, Intel UHD630, 16G, 单硬盘
+  - overdrive: 服务器, 4H4G, 单硬盘
 
 - 用户
   - kanade: handsonic用户, 重软件多
@@ -37,8 +37,11 @@ sudo -i
 # 分区
 parted /dev/nvme0n1 mklabel gpt
 
+# Boot
+mkfs.fat -L Boot /dev/nvme0n1p1
+
 # LUKS
-cryptsetup luksFormat /dev/nvme0n1
+cryptsetup luksFormat /dev/nvme0n1p2
 cryptsetup luksOpen /dev/nvme0n1 crypt
 
 # LVM
@@ -69,8 +72,6 @@ mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,s
 mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,subvol=@persist /dev/mapper/system-root /mnt/persist
 
 mount -m /dev/nvme1n1p1 /mnt/boot
-mount -m -t ntfs3 /dev/nvme1n1p3 /mnt/mnt/windows
-mount -m -t ntfs3 /dev/nvme1n1p4 /mnt/mnt/data
 
 # Snapper
 btrfs subvolume create /mnt/nix/.snapshots

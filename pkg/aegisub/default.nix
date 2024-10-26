@@ -19,7 +19,7 @@
   adwaita-icon-theme,
   dav1d,
   expat,
-  ffmpeg,
+  ffmpeg_6,
   fftw,
   freetype,
   fontconfig,
@@ -164,7 +164,7 @@ stdenv.mkDerivation (finalAttrs: {
     [
       dav1d
       expat
-      ffmpeg
+      ffmpeg_6
       fftw
       freetype
       fontconfig

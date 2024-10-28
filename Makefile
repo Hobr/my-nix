@@ -6,6 +6,8 @@ home:
 
 update:
 	nix flake update
+	git add flake.lock
+	git commit -m "Update"
 
 history:
 	sudo nix profile history --profile /nix/var/nix/profiles/system

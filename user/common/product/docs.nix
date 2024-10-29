@@ -29,5 +29,7 @@
     zotero
     # 办公
     libreoffice
+    # 阅读
+    bookworm
   ];
 }

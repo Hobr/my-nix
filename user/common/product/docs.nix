@@ -30,6 +30,6 @@
     # 办公
     libreoffice
     # 阅读
-    bookworm
+    foliate
   ];
 }

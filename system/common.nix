@@ -3,6 +3,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.chaotic.nixosModules.default
+    inputs.disko.nixosModules.disko
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.hyprland.nixosModules.default

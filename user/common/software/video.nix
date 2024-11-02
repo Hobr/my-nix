@@ -26,6 +26,7 @@
     yt-dlp
     mkvtoolnix
     kdenlive
+    natron
     blender
     # 字幕
     aegisub

@@ -422,12 +422,12 @@
         "revCount": 5433,
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/hyprwm/Hyprland?ref=v0.44.1"
+        "url": "https://github.com/hyprwm/Hyprland?ref=v0.45.0"
       },
       "original": {
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/hyprwm/Hyprland?ref=v0.44.1"
+        "url": "https://github.com/hyprwm/Hyprland?ref=v0.45.0"
       }
     },
     "hyprland-protocols": {

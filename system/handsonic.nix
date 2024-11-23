@@ -22,9 +22,7 @@
         "networkmanager"
         "tss"
         "dialout"
-        "kvm"
-        "libvirtd"
-        "docker"
+        "video"
       ];
     };
   };

@@ -178,6 +178,10 @@ in
           "float,class:^(blueman-manager)$"
         ];
 
+        debug = {
+          disable_logs = false;
+        };
+
         "$mainMod" = "SUPER";
 
         bind = [

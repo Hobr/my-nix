@@ -6,7 +6,7 @@
     ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
@@ -39,10 +39,6 @@
     ## Hyprland
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprpicker = {
-      url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprcontrib = {

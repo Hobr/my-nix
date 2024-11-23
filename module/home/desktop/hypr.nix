@@ -3,6 +3,7 @@
   options,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with lib;
@@ -33,6 +34,7 @@ in
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       systemd.enable = true;
       xwayland.enable = true;
 

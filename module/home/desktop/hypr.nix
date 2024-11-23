@@ -105,16 +105,6 @@ in
           inactive_opacity = 1.0;
           # 全屏窗口不透明度
           fullscreen_opacity = 1.0;
-          # 窗口投影
-          drop_shadow = true;
-          # 投影大小
-          shadow_range = 4;
-          # 阴影渐变程度
-          shadow_render_power = 3;
-          # 不在窗口后渲染
-          shadow_ignore_window = true;
-          # 阴影颜色
-          #"col.shadow" = "rgba(1a1a1aee)";
 
           # 模糊
           blur = {

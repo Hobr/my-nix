@@ -21,7 +21,7 @@
 
     disk = {
       persist.enable = true;
-      snapper.enable = true;
+      snapper.enable = false;
     };
 
     boot = {
@@ -47,8 +47,8 @@
       nh.enable = true;
       proxy.enable = true;
       ld.enable = true;
-      virtual.enable = true;
-      docker.enable = true;
+      virtual.enable = false;
+      docker.enable = false;
     };
   };
 }

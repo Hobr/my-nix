@@ -35,8 +35,6 @@
 
     # 音频
     ./software/audio.nix
-    # 视频
-    ./software/video.nix
     # 图像
     ./software/image.nix
 

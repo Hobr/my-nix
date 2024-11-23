@@ -8,6 +8,7 @@
 
     desktop = {
       hypr = {
+        enable = true;
         nvidia = true;
         monitor = [
           "DP-1,2560x1440@180,0x0,1"
@@ -20,6 +21,14 @@
             "DP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
           ];
         };
+      };
+    };
+
+    software = {
+      video = {
+        base = true;
+        sub = true;
+        edit = false;
       };
     };
   };

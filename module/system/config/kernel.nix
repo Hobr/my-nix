@@ -25,7 +25,7 @@ in
     # scx
     chaotic.scx = {
       enable = true;
-      package = pkgs.scx.rustland;
+      package = pkgs.scx.rustscheds;
       scheduler = "scx_rustland";
     };
 

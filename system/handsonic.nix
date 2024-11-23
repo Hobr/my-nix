@@ -45,7 +45,7 @@
   nixpkgs.config.cudaSupport = true;
 
   # 系统版本
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   sys = {
     gpu.nvidia.enable = true;

@@ -42,7 +42,7 @@
   nixpkgs.hostPlatform.system = "x86_64-linux";
 
   # 系统版本
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
 
   sys = {
     gpu.intel.enable = true;

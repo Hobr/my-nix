@@ -4,7 +4,7 @@
   home = {
     username = "kanade";
     homeDirectory = "/home/kanade";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
 
     desktop = {
       hypr = {

@@ -57,7 +57,7 @@ in
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           ];
 
-          require-sigs= false;
+          require-sigs = false;
         };
 
         # GC

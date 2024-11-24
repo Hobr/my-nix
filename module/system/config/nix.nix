@@ -49,7 +49,7 @@ in
           # access-tokens = "github.com=${secrets.git.github.oauth-token}";
 
           # 镜像
-          substituters = [
+          trusted-substituters = [
             "https://cuda-maintainers.cachix.org"
             "https://hyprland.cachix.org"
             "https://cosmic.cachix.org/"
@@ -57,11 +57,7 @@ in
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           ];
 
-          trusted-public-keys = [
-            "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
-            "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-            "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
-          ];
+          require-sigs= false;
         };
 
         # GC

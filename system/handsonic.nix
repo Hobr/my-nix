@@ -30,12 +30,6 @@
   nix.settings.trusted-users = [ "kanade" ];
   services.greetd.settings.initial_session.user = "kanade";
 
-  #services.snapper.configs = {
-  #  nix.ALLOW_USERS = [ "kanade" ];
-  #  persist.ALLOW_USERS = [ "kanade" ];
-  #  home.ALLOW_USERS = [ "kanade" ];
-  #};
-
   # 平台
   nixpkgs.hostPlatform.system = "x86_64-linux";
 

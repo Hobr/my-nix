@@ -30,12 +30,6 @@
   nix.settings.trusted-users = [ "yuzuru" ];
   services.greetd.settings.initial_session.user = "yuzuru";
 
-  #services.snapper.configs = {
-  #  nix.ALLOW_USERS = [ "yuzuru" ];
-  #  persist.ALLOW_USERS = [ "yuzuru" ];
-  #  home.ALLOW_USERS = [ "yuzuru" ];
-  #};
-
   # 平台
   nixpkgs.hostPlatform.system = "x86_64-linux";
 

@@ -1,6 +1,6 @@
 {
   imports = [
     ./persist.nix
-    ./snapper.nix
+    ./device.nix
   ];
 }

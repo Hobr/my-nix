@@ -73,11 +73,6 @@ mount -m -t btrfs -o defaults,ssd,discard,noatime,space_cache=v2,compress=zstd,s
 
 mount -m /dev/nvme1n1p1 /mnt/boot
 
-# Snapper
-btrfs subvolume create /mnt/nix/.snapshots
-btrfs subvolume create /mnt/home/.snapshots
-btrfs subvolume create /mnt/persist/.snapshots
-
 # 交换
 mkswap -L Swap /dev/mapper/system-swap
 swapon /dev/mapper/system-swap

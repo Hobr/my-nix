@@ -21,7 +21,7 @@
 
     disk = {
       persist.enable = true;
-      snapper.enable = false;
+      device.enable = false;
     };
 
     boot = {

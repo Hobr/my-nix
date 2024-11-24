@@ -14,25 +14,19 @@ in
   options.sys.desk.hyprland.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    # Greet
-    environment.etc."greetd/environments".text = ''
-      Hyprland
-    '';
-
-    services.greetd = {
-      enable = true;
-      settings = rec {
-        initial_session.command = "Hyprland";
-        default_session = initial_session;
-      };
-    };
-
     # Hyprland
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
+      withUWSM = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
+
+    environment.loginShellInit = ''
+      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ] && uwsm check may-start; then
+          exec uwsm start hyprland-uwsm.desktop
+      fi
+    '';
 
     # XDG
     xdg.portal.enable = true;
@@ -40,18 +34,10 @@ in
     environment.systemPackages = [ pkgs.xdg-utils ];
 
     # Seatd
-    systemd.services = {
-      seatd = {
-        enable = true;
-        description = "Seat management daemon";
-        script = "${pkgs.seatd}/bin/seatd -g wheel";
-        serviceConfig = {
-          Type = "simple";
-          Restart = "always";
-          RestartSec = "1";
-        };
-        wantedBy = [ "multi-user.target" ];
-      };
+    services.seatd = {
+      enable = true;
+      group = "wheel";
+      user = "root";
     };
   };
 }

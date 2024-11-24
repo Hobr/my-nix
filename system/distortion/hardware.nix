@@ -11,4 +11,7 @@
 
   # 汉王手写笔
   services.xserver.wacom.enable = true;
+
+  # 电源管理
+  powerManagement.enable = true;
 }

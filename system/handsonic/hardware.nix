@@ -14,4 +14,7 @@
     enable = true;
     window = "hide";
   };
+
+  # 电源管理
+  powerManagement.enable = true;
 }

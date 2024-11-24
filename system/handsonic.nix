@@ -5,7 +5,6 @@
     ./handsonic/kernel.nix
     ./handsonic/filesystem.nix
     ./handsonic/hardware.nix
-    ./handsonic/power.nix
   ];
 
   # 主机名

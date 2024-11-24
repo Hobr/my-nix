@@ -5,7 +5,6 @@
     ./distortion/kernel.nix
     ./distortion/filesystem.nix
     ./distortion/hardware.nix
-    ./distortion/power.nix
   ];
 
   # 主机名

@@ -8,7 +8,7 @@
 
     desktop = {
       hypr = {
-        enable = true;
+        enable = false;
         nvidia = true;
         monitor = [
           "DP-1,2560x1440@180,0x0,1"
@@ -22,6 +22,7 @@
           ];
         };
       };
+      waybar.enable = false;
     };
 
     software = {

@@ -30,7 +30,6 @@ in
 
     # XDG
     xdg.portal.enable = true;
-
     environment.systemPackages = [ pkgs.xdg-utils ];
 
     # Seatd

@@ -82,11 +82,4 @@
     # 其他工具
     ./product/tool.nix
   ];
-
-  home = {
-    desktop = {
-      hypr.enable = true;
-      waybar.enable = true;
-    };
-  };
 }

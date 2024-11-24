@@ -1,1 +1,6 @@
-{ imports = [ ./hyprland.nix ]; }
+{
+  imports = [
+    ./cosmic.nix
+    ./hyprland.nix
+  ];
+}

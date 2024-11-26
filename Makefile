@@ -1,8 +1,8 @@
 os:
-	nh os boot -a . -- --max-jobs 4 --cores 15
+	nh os boot -a . -- --max-jobs 4
 
 home:
-	nh home switch -a . -- --max-jobs 4 --cores 15
+	nh home switch -a . -- --max-jobs 4
 
 update:
 	nix flake update

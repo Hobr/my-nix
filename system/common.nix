@@ -39,8 +39,8 @@
     };
 
     desk = {
-      hyprland.enable = false;
-      cosmic.enable = true;
+      hyprland.enable = true;
+      cosmic.enable = false;
     };
 
     program = {

@@ -13,9 +13,6 @@ in
   options.sys.program.ld.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    programs.nix-ld = {
-      enable = true;
-      package = pkgs.nix-ld-rs;
-    };
+    programs.nix-ld.enable = true;
   };
 }

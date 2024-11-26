@@ -14,19 +14,25 @@ in
   options.sys.desk.hyprland.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
+    # Greet
+    environment.etc."greetd/environments".text = ''
+      Hyprland
+    '';
+
+    services.greetd = {
+      enable = true;
+      settings = rec {
+        initial_session.command = "Hyprland";
+        default_session = initial_session;
+      };
+    };
+
     # Hyprland
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
-      withUWSM = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
-
-    environment.loginShellInit = ''
-      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ] && uwsm check may-start; then
-          exec uwsm start hyprland-uwsm.desktop
-      fi
-    '';
 
     # XDG
     xdg.portal.enable = true;

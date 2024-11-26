@@ -36,8 +36,6 @@ in
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
-      # uwsm
-      systemd.enable = false;
 
       # 设置
       settings = {
@@ -45,6 +43,7 @@ in
 
         env =
           [
+            # Cursor
             "HYPRCURSOR_THEME,rose-pine-hyprcursor"
             "HYPRCURSOR_SIZE,24"
 

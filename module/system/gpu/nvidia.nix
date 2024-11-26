@@ -24,18 +24,21 @@ in
       ];
     };
 
-    environment.systemPackages = with pkgs; [
-      # Vulkan
-      vulkan-loader
-      vulkan-validation-layers
-      vulkan-extension-layer
-      vulkan-tools
-      libva
-      mesa
+    environment.systemPackages =
+      with pkgs;
+      [
+        libva
+        mesa
 
-      # NVTop
-      nvtopPackages.nvidia
-    ];
+        # NVTop
+        nvtopPackages.nvidia
+      ]
+      ++ (with vulkanPackages_latest; [
+        vulkan-loader
+        vulkan-validation-layers
+        vulkan-extension-layer
+        vulkan-tools
+      ]);
 
     # NVIDIA驱动
     services.xserver.videoDrivers = [ "nvidia" ];

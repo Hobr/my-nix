@@ -9,6 +9,7 @@
     inputs.cosmic.nixosModules.default
     inputs.hyprland.nixosModules.default
     inputs.solaar.nixosModules.default
+    inputs.agenix.nixosModules.default
 
     outputs.nixosModules
   ];

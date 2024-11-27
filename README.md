@@ -83,7 +83,7 @@ cd my-nix
 
 # 部署
 export all_proxy=socks5://192.168.1.102:7891
-nixos-install --option trusted-substituters "https://chaotic-nyx.cachix.org/ https://hyprland.cachix.org https://cosmic.cachix.org/ https://mirrors.ustc.edu.cn/nix-channels/store" --option require-sigs false --show-trace --root /mnt --flake .#handsonic/distortion/overdrive
+nixos-install --option trusted-substituters "https://chaotic-nyx.cachix.org/ https://cosmic.cachix.org/ https://mirrors.ustc.edu.cn/nix-channels/store" --option require-sigs false --show-trace --root /mnt --flake .#handsonic/distortion/overdrive
 
 reboot
 ```

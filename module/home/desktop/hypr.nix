@@ -3,7 +3,6 @@
   options,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 with lib;
@@ -34,7 +33,6 @@ in
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
 
       # 设置
@@ -177,10 +175,6 @@ in
           "float,class:^(pavucontrol)$"
           "float,class:^(blueman-manager)$"
         ];
-
-        debug = {
-          disable_logs = false;
-        };
 
         "$mainMod" = "SUPER";
 

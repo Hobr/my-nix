@@ -43,11 +43,6 @@
     # 桌面
     ## Cosmic
     cosmic.url = "github:lilyinstarlight/nixos-cosmic";
-    ## Hyprland
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprcontrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";

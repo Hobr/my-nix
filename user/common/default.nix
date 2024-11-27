@@ -1,8 +1,6 @@
 { inputs, outputs, ... }:
 {
   imports = [
-    inputs.hyprland.homeManagerModules.default
-
     outputs.homeManagerModules
 
     # Nix

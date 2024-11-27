@@ -3,7 +3,6 @@
   options,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 with lib;
@@ -29,7 +28,6 @@ in
       enable = true;
       package = pkgs.waybar.override {
         swaySupport = false;
-        hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
       };
       systemd = {
         enable = true;

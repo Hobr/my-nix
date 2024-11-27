@@ -23,9 +23,9 @@ in
     };
 
     # scx
-    chaotic.scx = {
-      enable = false;
-      package = pkgs.scx_git.rustland;
+    services.scx = {
+      enable = true;
+      package = pkgs.scx.rustscheds;
       scheduler = "scx_rustland";
     };
 
@@ -33,7 +33,7 @@ in
     services.ananicy = {
       enable = true;
       package = pkgs.ananicy-cpp;
-      rulesProvider = pkgs.ananicy-rules-cachyos_git;
+      rulesProvider = pkgs.ananicy-rules-cachyos;
     };
   };
 }

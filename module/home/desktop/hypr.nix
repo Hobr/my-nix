@@ -35,13 +35,13 @@ in
       enable = true;
       xwayland.enable = true;
 
-      # plugins = with pkgs.hyprlandPlugins; [
-      #   hypr-dynamic-cursors
-      #   hyprfocus
-      #   hyprgrass
-      #   hyprspace
-      #   hyprscroller
-      # ];
+      plugins = with pkgs.hyprlandPlugins; [
+        # hypr-dynamic-cursors
+        hyprfocus
+        hyprgrass
+        hyprspace
+        hyprscroller
+      ];
 
       # 设置
       settings = {

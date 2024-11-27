@@ -25,7 +25,7 @@ in
     # scx
     services.scx = {
       enable = true;
-      package = pkgs.scx.rustscheds;
+      package = pkgs.scx_git.rustscheds;
       scheduler = "scx_rustland";
     };
 

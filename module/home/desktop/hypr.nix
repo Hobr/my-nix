@@ -86,6 +86,7 @@ in
           "telegram-desktop -startintray"
           "clash-verge"
           "${pkgs.hyprdim}/bin/hyprdim"
+          "${pkgs.hyprsunset}/bin/hyprsunset"
         ];
 
         general = {
@@ -265,7 +266,6 @@ in
 
     # 工具
     home.packages = with pkgs; [
-      hyprsunset
       hyprgui
     ];
   };

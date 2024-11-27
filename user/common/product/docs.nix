@@ -27,6 +27,7 @@
     hunspellDicts.en_US
     # 文献
     zotero
+    paperlib
     # 办公
     libreoffice
     # 阅读

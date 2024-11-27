@@ -35,6 +35,14 @@ in
       enable = true;
       xwayland.enable = true;
 
+      plugins = with pkgs.hyprlandPlugins; [
+        hypr-dynamic-cursors
+        hyprfocus
+        hyprgrass
+        hyprspace
+        hyprscroller
+      ];
+
       # 设置
       settings = {
         monitor = cfg.monitor;
@@ -77,6 +85,7 @@ in
           # 开机启动
           "telegram-desktop -startintray"
           "clash-verge"
+          "hyprdim --no-dim-when-only --persist --ignore-leaving-special --dialog-dim"
         ];
 
         general = {
@@ -253,5 +262,12 @@ in
         wallpaper = cfg.wallpaper.monitor;
       };
     };
+
+    # 工具
+    home.packages = with pkgs; [
+      hyprsunset
+      hyprdim
+      hyprgui
+    ];
   };
 }

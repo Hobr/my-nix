@@ -36,10 +36,11 @@ in
       xwayland.enable = true;
 
       plugins = with pkgs.hyprlandPlugins; [
-        # hypr-dynamic-cursors
+        # 焦点
         hyprfocus
+        # 触屏
         hyprgrass
-        hyprspace
+        # PaperWM
         hyprscroller
       ];
 

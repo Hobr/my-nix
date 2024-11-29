@@ -46,7 +46,7 @@ in
       ]
       ++ optionals cfg.sub [
         aegisub
-        whisper-ctranslate2
+        stable.whisper-ctranslate2
       ]
       ++ optionals cfg.edit [
         kdenlive

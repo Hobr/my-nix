@@ -13,6 +13,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      outputs.overlays.stable-package
       inputs.nix-xilinx.overlay
     ];
   };

@@ -6,18 +6,14 @@
     # 虚拟机
     virt-manager
     # 开发
-    gitkraken
     hoppscotch
-    frida-tools
     # 二进制
     ghex
-    imhex
     # Nix
     nurl
     nix-init
     nix-update
     nixfmt-rfc-style
     nixpkgs-review
-    prefetch-npm-deps
   ];
 }

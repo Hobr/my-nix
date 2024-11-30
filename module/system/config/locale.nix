@@ -34,7 +34,8 @@ in
     # 字体
     fonts = {
       packages = with pkgs; [
-        (nerdfonts.override { fonts = [ "Mononoki" ]; })
+        nerd-fonts.fira-mono
+        nerd-fonts.mononoki
 
         sarasa-gothic
         twitter-color-emoji

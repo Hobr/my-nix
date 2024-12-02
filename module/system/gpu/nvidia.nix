@@ -32,6 +32,10 @@ in
 
         # NVTop
         nvtopPackages.nvidia
+
+        # CUDA
+        cudatoolkit
+        cudaPackages.cudnn
       ]
       ++ (with vulkanPackages_latest; [
         vulkan-loader

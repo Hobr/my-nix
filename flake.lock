@@ -518,11 +518,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733130123,
-        "narHash": "sha256-GRzDCUqPxlVCskzgrsMc9bzRN9FVsFz9XSAw+Ly+ne8=",
+        "lastModified": 1733216539,
+        "narHash": "sha256-uGlbafhVl8nS+DdHPXispxd/1ZvA/o0HUOu0fxVhuQU=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "325f2167cd2293047e43c5e36a979f587400d70c",
+        "rev": "dad90929809d88f43da2f9ac7ff5cde2fe929a70",
         "type": "gitlab"
       },
       "original": {

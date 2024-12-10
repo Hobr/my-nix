@@ -22,7 +22,7 @@
 
     disk = {
       persist.enable = true;
-      device.enable = false;
+      device.enable = true;
     };
 
     boot = {
@@ -49,8 +49,8 @@
       nh.enable = true;
       proxy.enable = true;
       ld.enable = true;
-      virtual.enable = false;
-      docker.enable = false;
+      virtual.enable = true;
+      docker.enable = true;
     };
   };
 }

@@ -3,7 +3,7 @@
   python3,
   fetchFromGitHub,
   azure-ai-translation-text,
-  backend ? true,
+  backend ? false,
 }:
 
 python3.pkgs.buildPythonApplication rec {

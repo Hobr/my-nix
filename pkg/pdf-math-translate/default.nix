@@ -3,6 +3,7 @@
   python3,
   fetchFromGitHub,
   azure-ai-translation-text,
+  backend ? true,
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -21,24 +22,31 @@ python3.pkgs.buildPythonApplication rec {
     hatchling
   ];
 
-  dependencies = with python3.pkgs; [
-    azure-ai-translation-text
-    deepl
-    gradio
-    huggingface-hub
-    numpy
-    ollama
-    onnx
-    onnxruntime
-    openai
-    opencv-python-headless
-    pdfminer-six
-    pymupdf
-    requests
-    tenacity
-    tencentcloud-sdk-python
-    tqdm
-  ];
+  dependencies =
+    with python3.pkgs;
+    [
+      azure-ai-translation-text
+      deepl
+      gradio
+      huggingface-hub
+      numpy
+      ollama
+      onnx
+      onnxruntime
+      openai
+      opencv-python-headless
+      pdfminer-six
+      pymupdf
+      requests
+      tenacity
+      tencentcloud-sdk-python
+      tqdm
+    ]
+    ++ lib.optional backend [
+      flask
+      celery
+      redis
+    ];
 
   optional-dependencies = with python3.pkgs; {
     dev = [

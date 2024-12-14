@@ -1,7 +1,8 @@
 pkgs: {
   aegisub = pkgs.callPackage ./aegisub { };
   rime-ice = pkgs.callPackage ./rime-ice { };
-
-  intel-fortran = pkgs.callPackage ./intel-fortran.nix { };
-  nv-fortran = pkgs.callPackage ./nv-fortran.nix { };
+  azure-ai-translation-text = pkgs.callPackage ./azure-ai-translation-text { };
+  pdf-math-translate = pkgs.callPackage ./pdf-math-translate {
+    azure-ai-translation-text = pkgs.callPackage ./azure-ai-translation-text { };
+  };
 }

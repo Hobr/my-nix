@@ -28,6 +28,8 @@
     # 文献
     zotero
     paperlib
+    # PDF翻译
+    pdf-math-translate
     # 办公
     libreoffice
     # 阅读

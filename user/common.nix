@@ -7,6 +7,13 @@
     desktop = {
       hypr.enable = true;
       waybar.enable = true;
+      menu.enable = true;
+
+      secure = {
+        lock = true;
+        logout = false;
+      };
+
       tool = {
         notice = true;
         clipboard = true;

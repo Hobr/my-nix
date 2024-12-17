@@ -42,6 +42,7 @@ in
     };
 
     home.packages = with pkgs; [
+      nano
       (if cfg.nvim then neovide else null)
       (if cfg.qt then qtcreator else null)
     ];

@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    # 编辑器
-    nano
     # 虚拟机
     virt-manager
     # 开发

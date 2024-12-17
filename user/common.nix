@@ -8,8 +8,16 @@
       hypr.enable = true;
       waybar.enable = true;
       tool = {
+        notice = true;
         clipboard = true;
+        xdg = true;
+        pointer = true;
+        theme = true;
       };
-    }
+    };
+
+    software = {
+      terminal.enable = true;
+    };
   };
 }

@@ -1,14 +1,12 @@
 {
-  imports = [ ./common ];
+  imports = [ ./common.nix ];
 
   home = {
     username = "kanade";
     homeDirectory = "/home/kanade";
-    stateVersion = "24.11";
 
     desktop = {
       hypr = {
-        enable = true;
         nvidia = true;
         monitor = [
           "DP-1,2560x1440@180,0x0,1"
@@ -21,10 +19,6 @@
             "DP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
           ];
         };
-      };
-      waybar.enable = true;
-      tool = {
-        clipboard = true;
       };
     };
 

@@ -14,6 +14,18 @@
         logout = false;
       };
 
+      dev = {
+        git.enable = true;
+        gpg.enable = true;
+
+        editor = {
+          vscode = true;
+          nvim = true;
+          emacs = true;
+          qt = true;
+        };
+      };
+
       tool = {
         notice = true;
         clipboard = true;

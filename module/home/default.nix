@@ -4,6 +4,7 @@
     ./desktop
     ./dev
     ./software
+    ./web
   ];
 
   nixpkgs = {

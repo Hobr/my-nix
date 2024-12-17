@@ -95,14 +95,6 @@
           };
           modules = [ ./system/distortion.nix ];
         };
-
-        # Server
-        overdrive = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/overdrive.nix ];
-        };
       };
 
       homeConfigurations = {
@@ -122,15 +114,6 @@
             inherit inputs outputs;
           };
           modules = [ ./user/yuzuru.nix ];
-        };
-
-        # Server
-        "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/yuri.nix ];
         };
       };
     };

@@ -26,8 +26,6 @@
     ./desktop/notice.nix
     # 终端
     ./desktop/terminal.nix
-    # 剪切板
-    ./desktop/clipboard.nix
     # 主题
     ./desktop/theme.nix
 

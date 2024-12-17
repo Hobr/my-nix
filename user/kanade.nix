@@ -23,6 +23,9 @@
         };
       };
       waybar.enable = true;
+      tool = {
+        clipboard = true;
+      };
     };
 
     software = {

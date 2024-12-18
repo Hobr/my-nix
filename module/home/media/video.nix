@@ -44,7 +44,7 @@ in
         mkvtoolnix
       ]
       ++ optionals cfg.subtitle [
-        aegisubtitle
+        aegisub
         whisper-ctranslate2
       ];
   };

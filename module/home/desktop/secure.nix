@@ -16,7 +16,6 @@ in
   };
 
   config = {
-    # 粘贴板
     # 锁屏
     programs.swaylock = {
       enable = cfg.lock;

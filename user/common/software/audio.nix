@@ -27,7 +27,6 @@
   home.packages = with pkgs; [
     # 音乐播放器
     amberol
-    qcm
     playerctl
     # 音频编辑
     audacity

@@ -1,4 +1,8 @@
 {
+  imports = [
+    outputs.homeManagerModules
+  ];
+
   home = {
     # 系统版本号
     stateVersion = "24.11";

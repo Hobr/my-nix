@@ -16,6 +16,7 @@ in
       enable = true;
       openFirewall = true;
     };
+
     services.nextjs-ollama-llm-ui.enable = true;
   };
 }

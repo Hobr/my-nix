@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.mail;
+  cfg = config.home.web.mail;
 in
 {
-  options.home.software.mail.enable = mkEnableOption "mail";
+  options.home.web.mail.enable = mkEnableOption "mail";
 
   config = mkIf cfg.enable {
     programs.thunderbird = {

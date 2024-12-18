@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.sync;
+  cfg = config.home.web.sync;
 in
 {
-  options.home.software.sync.enable = mkEnableOption "sync";
+  options.home.web.sync.enable = mkEnableOption "sync";
 
   config = mkIf cfg.enable {
     # Syncthing

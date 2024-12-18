@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.music;
+  cfg = config.home.web.music;
 in
 {
-  options.home.software.music.enable = mkEnableOption "music";
+  options.home.web.music.enable = mkEnableOption "music";
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [ qcm ];

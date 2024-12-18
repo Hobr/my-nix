@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.im;
+  cfg = config.home.web.im;
 in
 {
-  options.home.software.im.enable = mkEnableOption "im";
+  options.home.web.im.enable = mkEnableOption "im";
 
   config = mkIf cfg.enable {
 

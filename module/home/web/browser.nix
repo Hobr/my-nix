@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.browser;
+  cfg = config.home.web.browser;
 in
 {
-  options.home.software.browser.enable = mkEnableOption "browser";
+  options.home.web.browser.enable = mkEnableOption "browser";
 
   config = mkIf cfg.enable {
     programs.firefox = {

@@ -7,10 +7,10 @@
 }:
 with lib;
 let
-  cfg = config.home.software.download;
+  cfg = config.home.web.download;
 in
 {
-  options.home.software.download.enable = mkEnableOption "download";
+  options.home.web.download.enable = mkEnableOption "download";
 
   config = mkIf cfg.enable {
     # Aria

@@ -3,7 +3,6 @@
   options,
   lib,
   inputs,
-  outputs,
   pkgs,
   ...
 }:
@@ -15,23 +14,6 @@ in
   options.sys.config.nix.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    nixpkgs = {
-      config = {
-        # 非自由软件
-        allowUnfree = true;
-        # 跨平台
-        allowUnsupportedSystem = true;
-      };
-
-      # Overlays
-      overlays = [
-        outputs.overlays.additions
-        outputs.overlays.modifications
-        outputs.overlays.stable-package
-        inputs.nix-xilinx.overlay
-      ];
-    };
-
     nix =
       let
         flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;

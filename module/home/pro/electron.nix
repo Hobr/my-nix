@@ -16,8 +16,6 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       # 电路设计
-      stable.kicad-small
-      stable.kikit
       librepcb
       klayout
       circt

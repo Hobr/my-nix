@@ -7,7 +7,10 @@
   imports = [
     ./desktop
     ./dev
+    ./media
+    ./pro
     ./software
+    ./util
     ./web
   ];
 

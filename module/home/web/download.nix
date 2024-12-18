@@ -17,6 +17,10 @@ in
       enable = true;
     };
 
-    home.packages = with pkgs; [ qbittorrent-enhanced ];
+    home.packages = with pkgs; [
+      qbittorrent-enhanced
+      wget
+      axel
+    ];
   };
 }

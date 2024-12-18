@@ -6,10 +6,10 @@
 }:
 with lib;
 let
-  cfg = config.sys.system.network;
+  cfg = config.sys.io.network;
 in
 {
-  options.sys.system.network.enable = mkEnableOption "enable";
+  options.sys.io.network.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # DNS服务

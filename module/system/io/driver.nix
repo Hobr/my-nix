@@ -7,12 +7,12 @@
 }:
 with lib;
 let
-  cfg = config.sys.system.driver;
+  cfg = config.sys.io.driver;
 in
 {
   imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  options.sys.system.driver.enable = mkEnableOption "enable";
+  options.sys.io.driver.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # Libinput

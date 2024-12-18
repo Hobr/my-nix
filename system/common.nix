@@ -31,7 +31,7 @@
       secure-boot.enable = true;
     };
 
-    system = {
+    io = {
       driver.enable = true;
       network.enable = true;
       audio.enable = true;

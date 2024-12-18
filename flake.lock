@@ -579,22 +579,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-stable_3": {
-      "locked": {
-        "lastModified": 1734298236,
-        "narHash": "sha256-aWhhqY44xBjMoO9r5fyPp5u8tqUNWRZ/m/P+abMSs5c=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "eb919d9300b6a18f8583f58aef16db458fbd7bec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-24.11-small",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1734119587,
@@ -682,7 +666,6 @@
         "lanzaboote": "lanzaboote",
         "nix-xilinx": "nix-xilinx",
         "nixpkgs": "nixpkgs_4",
-        "nixpkgs-stable": "nixpkgs-stable_3",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "solaar": "solaar"
       }

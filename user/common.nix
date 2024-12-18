@@ -7,40 +7,52 @@
     # 系统版本号
     stateVersion = "24.11";
 
-    # 桌面
     desktop = {
-      hypr.enable = true;
-      waybar.enable = true;
+      waybary.enable = true;
       menu.enable = true;
-
-      secure = {
-        lock = true;
-        logout = false;
-      };
+      ime.enable = true;
 
       tool = {
-        notice = true;
         clipboard = true;
+        notice = true;
         xdg = true;
         pointer = true;
         theme = true;
       };
-    };
 
-    software = {
-      terminal.enable = true;
+      secure = {
+        lock = true;
+        logout = true;
+      };
     };
 
     web = {
       browser.enable = true;
       im.enable = true;
       mail.enable = true;
+      music.enable = true;
       download.enable = true;
+      sync.enable = true;
+    };
+
+    software = {
+      docs.enable = true;
+      terminal.enable = true;
+      zsh.enable = true;
+    };
+
+    media = {
+      audio.enable = true;
+      video.enable = true;
+      image.enable = true;
     };
 
     dev = {
       git.enable = true;
       gpg.enable = true;
+      nix.enable = true;
+      direnv.enable = true;
+      util.enable = true;
 
       editor = {
         vscode = true;
@@ -48,6 +60,15 @@
         emacs = true;
         qt = true;
       };
+    };
+
+    util = {
+      audio.enable = true;
+      gnu.enable = true;
+      ssh.enable = true;
+      disk.enable = true;
+      file.enable = true;
+      cli.enable = true;
     };
   };
 }

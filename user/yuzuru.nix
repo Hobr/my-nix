@@ -14,12 +14,15 @@
           monitor = [ "eDP-1,/mnt/windows/Users/SyncthingServiceAcct/Project/my-nix/dist/wallpaper/1.png" ];
         };
       };
-    };
 
-    software = {
-      video = {
-        base = true;
-        sub = false;
+      media.video.subtitle = false;
+
+      pro = {
+        audio.enable = false;
+        video.enable = false;
+        image.enable = false;
+        obs.enable = false;
+        electron.enable = false;
       };
     };
   };

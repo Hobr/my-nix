@@ -20,12 +20,15 @@
           ];
         };
       };
-    };
 
-    software = {
-      video = {
-        base = true;
-        sub = true;
+      media.video.subtitle = true;
+
+      pro = {
+        audio.enable = true;
+        video.enable = true;
+        image.enable = true;
+        obs.enable = true;
+        electron.enable = true;
       };
     };
   };

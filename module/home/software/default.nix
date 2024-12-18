@@ -3,5 +3,6 @@
     ./docs.nix
     ./terminal.nix
     ./video.nix
+    ./zsh.nix
   ];
 }

@@ -1,4 +1,8 @@
 {
+  outputs,
+  ...
+}:
+{
   imports = [
     outputs.homeManagerModules
   ];
@@ -8,7 +12,7 @@
     stateVersion = "24.11";
 
     desktop = {
-      waybary.enable = true;
+      waybar.enable = true;
       menu.enable = true;
       ime.enable = true;
 

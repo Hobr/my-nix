@@ -12,6 +12,7 @@
     stateVersion = "24.11";
 
     desktop = {
+      hypr.enable = true;
       waybar.enable = true;
       menu.enable = true;
       ime.enable = true;

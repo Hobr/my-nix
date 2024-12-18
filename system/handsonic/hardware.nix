@@ -1,4 +1,7 @@
-{ config, ... }:
+{
+  config,
+  ...
+}:
 {
   # CPU微码
   hardware.cpu.intel.updateMicrocode = config.hardware.enableRedistributableFirmware;

@@ -7,17 +7,17 @@
 }:
 with lib;
 let
-  cfg = config.home.software.video;
+  cfg = config.home.media.video;
 in
 {
-  options.home.software.video = {
-    base = mkEnableOption "base";
-    sub = mkEnableOption "sub";
+  options.home.media.video = {
+    enable = mkEnableOption "enable";
+    subtitle = mkEnableOption "subtitle";
   };
 
   config = {
     programs.mpv = {
-      enable = cfg.base;
+      enable = cfg.enable;
       package = pkgs.mpv.override {
         scripts = with pkgs.mpvScripts; [
           mpris
@@ -38,13 +38,13 @@ in
 
     home.packages =
       with pkgs;
-      optionals cfg.base [
+      optionals cfg.enable [
         ffmpeg
         yt-dlp
         mkvtoolnix
       ]
-      ++ optionals cfg.sub [
-        aegisub
+      ++ optionals cfg.subtitle [
+        aegisubtitle
         whisper-ctranslate2
       ];
   };

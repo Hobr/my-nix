@@ -26,7 +26,6 @@
       video = {
         base = true;
         sub = true;
-        edit = false;
       };
     };
   };

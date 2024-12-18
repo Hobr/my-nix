@@ -20,7 +20,6 @@
       video = {
         base = true;
         sub = false;
-        edit = false;
       };
     };
   };

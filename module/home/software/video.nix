@@ -13,7 +13,6 @@ in
   options.home.software.video = {
     base = mkEnableOption "base";
     sub = mkEnableOption "sub";
-    edit = mkEnableOption "edit";
   };
 
   config = {
@@ -47,11 +46,6 @@ in
       ++ optionals cfg.sub [
         aegisub
         whisper-ctranslate2
-      ]
-      ++ optionals cfg.edit [
-        kdenlive
-        natron
-        blender
       ];
   };
 }

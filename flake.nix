@@ -5,6 +5,8 @@
     # 软件源
     ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    ## 官方Small
+    nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # 环境

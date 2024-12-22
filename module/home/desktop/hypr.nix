@@ -35,15 +35,6 @@ in
       enable = true;
       xwayland.enable = true;
 
-      plugins = with pkgs.hyprlandPlugins; [
-        # 焦点
-        hyprfocus
-        # 触屏
-        hyprgrass
-        # PaperWM
-        hyprscroller
-      ];
-
       # 设置
       settings = {
         monitor = cfg.monitor;

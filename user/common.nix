@@ -9,7 +9,7 @@
 
   home = {
     # 系统版本号
-    stateVersion = "24.11";
+    stateVersion = "25.05";
 
     desktop = {
       hypr.enable = true;

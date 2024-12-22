@@ -29,12 +29,6 @@
   nix.settings.trusted-users = [ "yuzuru" ];
   services.greetd.settings.initial_session.user = "yuzuru";
 
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
-
-  # 系统版本
-  system.stateVersion = "24.11";
-
   sys = {
     gpu.intel.enable = true;
     program.ollama.enable = false;

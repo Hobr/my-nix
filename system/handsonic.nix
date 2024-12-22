@@ -29,14 +29,8 @@
   nix.settings.trusted-users = [ "kanade" ];
   services.greetd.settings.initial_session.user = "kanade";
 
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
-
   # CUDA
   nixpkgs.config.cudaSupport = true;
-
-  # 系统版本
-  system.stateVersion = "24.11";
 
   sys = {
     gpu.nvidia.enable = true;

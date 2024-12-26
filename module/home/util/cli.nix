@@ -92,7 +92,7 @@ in
 
     programs.info.enable = true;
 
-    home.packages = with pkgs; [
+    home.packages = with pkgs.small; [
       iftop
 
       nitch

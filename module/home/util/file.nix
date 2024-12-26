@@ -13,7 +13,7 @@ in
   options.home.util.file.enable = mkEnableOption "file";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
+    home.packages = with pkgs.small; [
       # 资源管理器
       nemo-with-extensions
 

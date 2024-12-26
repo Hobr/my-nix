@@ -34,7 +34,7 @@ in
 
     # XDG
     xdg.portal.enable = true;
-    environment.systemPackages = [ pkgs.xdg-utils ];
+    environment.systemPackages = [ pkgs.small.xdg-utils ];
 
     # Seatd
     services.seatd = {

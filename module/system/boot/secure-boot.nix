@@ -13,7 +13,7 @@ in
   options.sys.boot.secure-boot.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ sbctl ];
+    environment.systemPackages = with pkgs.small; [ sbctl ];
 
     boot.loader.systemd-boot.enable = lib.mkForce false;
     boot.lanzaboote = {

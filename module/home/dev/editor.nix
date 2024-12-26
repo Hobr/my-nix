@@ -36,7 +36,7 @@ in
     # Visual Studio Code
     programs.vscode = {
       enable = cfg.vscode;
-      package = pkgs.vscode.override (old: {
+      package = pkgs.small.vscode.override (old: {
         # Wayland Fcitx5
         commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" ];
       });

@@ -15,14 +15,14 @@ in
   config = mkIf cfg.enable {
     programs.clash-verge = {
       enable = true;
-      package = pkgs.clash-verge-rev;
+      package = pkgs.small.clash-verge-rev;
       tunMode = true;
       autoStart = true;
     };
 
     programs.proxychains = {
       enable = true;
-      package = pkgs.proxychains-ng;
+      package = pkgs.small.proxychains-ng;
       quietMode = true;
 
       # 代理

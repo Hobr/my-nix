@@ -18,7 +18,7 @@ in
       enable = true;
     };
 
-    home.packages = with pkgs; [
+    home.packages = with pkgs.small; [
       qbittorrent-enhanced
       wget
       axel

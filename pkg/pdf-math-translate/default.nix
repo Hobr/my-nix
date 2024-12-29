@@ -8,14 +8,14 @@
 
 python3.pkgs.buildPythonApplication rec {
   pname = "pdf-math-translate";
-  version = "1.8.7";
+  version = "1.8.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Byaidu";
     repo = "PDFMathTranslate";
     rev = "v${version}";
-    hash = "sha256-HbzHmnbc1yZcxAfW4SYdsaK9eouDmIZnt1fjPREdHaU=";
+    hash = "sha256-WvPdvsKorEnHqf+q26+0VbAEriv6CI1UsNhYPRcMu+A=";
   };
 
   build-system = with python3.pkgs; [
@@ -28,6 +28,7 @@ python3.pkgs.buildPythonApplication rec {
       azure-ai-translation-text
       deepl
       gradio
+      gradio-pdf
       huggingface-hub
       numpy
       ollama
@@ -43,18 +44,10 @@ python3.pkgs.buildPythonApplication rec {
       tqdm
     ]
     ++ lib.optional backend [
-      flask
       celery
+      flask
       redis
     ];
-
-  optional-dependencies = with python3.pkgs; {
-    dev = [
-      black
-      flake8
-      pre-commit
-    ];
-  };
 
   pythonImportsCheck = [
     "pdf2zh"

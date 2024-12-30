@@ -255,10 +255,5 @@ in
         wallpaper = cfg.wallpaper.monitor;
       };
     };
-
-    # 工具
-    home.packages = with pkgs; [
-      hyprgui
-    ];
   };
 }

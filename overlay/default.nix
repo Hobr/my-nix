@@ -11,8 +11,14 @@
   small-package = final: _prev: {
     small = import inputs.nixpkgs-small {
       system = final.system;
-      config.allowUnfree = true;
-      config.cudaSupport = true;
+      config = {
+        # 非自由软件
+        allowUnfree = true;
+        # 跨平台
+        allowUnsupportedSystem = true;
+        # 破损软件
+        allowBroken = true;
+      };
     };
   };
 }

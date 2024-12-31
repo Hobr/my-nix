@@ -1,18 +1,18 @@
 {
   lib,
-  stdenvNoCC,
+  stdenv,
   fetchFromGitHub,
-  ...
 }:
-stdenvNoCC.mkDerivation {
+
+stdenv.mkDerivation rec {
   pname = "rime-ice";
-  version = "2024.12.28";
+  version = "2024.12.12";
 
   src = fetchFromGitHub {
     owner = "iDvel";
     repo = "rime-ice";
-    rev = "main";
-    hash = "sha256-tFeGkY0sg3ZmrDidIC9MRndQQnCLPtimkKZ6FwUq2Is=";
+    rev = version;
+    hash = "sha256-2QZdlLGZwWIesbjYTE/2yhM1hHGVVp7jR02bR0oqxV0=";
   };
 
   installPhase = ''
@@ -20,12 +20,12 @@ stdenvNoCC.mkDerivation {
     cp -r * $out/share/rime-data/
   '';
 
-  meta = with lib; {
+  meta = {
     description = "Rime 配置：雾凇拼音 | 长期维护的简体词库";
     homepage = "https://github.com/iDvel/rime-ice";
-    license = licenses.gpl3Only;
-    maintainers = [ ];
+    license = lib.licenses.gpl3Only;
+    maintainers = with lib.maintainers; [ ];
     mainProgram = "rime-ice";
-    platforms = platforms.all;
+    platforms = lib.platforms.all;
   };
 }

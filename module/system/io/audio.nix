@@ -13,7 +13,7 @@ in
   options.sys.io.audio.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
 
     # Pipewire
     services.pipewire = {

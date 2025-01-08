@@ -518,11 +518,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1736240534,
-        "narHash": "sha256-ZxrHN52PzK3yGYa1T2vHqWVXeHUQvRCamNipZ4cn6lk=",
+        "lastModified": 1736326920,
+        "narHash": "sha256-6vQyPBT0Ld8fRuDAqiBUD9O85itQJJpxlChaQPc/Jhk=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "1dcd54ce15f04ce809747c67efa7676ec3cc7da8",
+        "rev": "94962e2ec27d1d2cda94d5be3d62ebec7a93ec64",
         "type": "gitlab"
       },
       "original": {
@@ -549,11 +549,11 @@
     },
     "nixpkgs-small": {
       "locked": {
-        "lastModified": 1736252914,
-        "narHash": "sha256-ETrrpbJt84Akq2dMs5EaHqoye2qB2hCGzy3dDm+bKYI=",
+        "lastModified": 1736296779,
+        "narHash": "sha256-sCETZgHp3dS6TYMByR3bGjO5rwX6BpFx1bdCpULC8Og=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "664f4619297ccaae790a9a79523fec54a2601b38",
+        "rev": "da76b6311eb169eb526de6feeae7492283fe1f8b",
         "type": "github"
       },
       "original": {
@@ -788,11 +788,11 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1735075906,
-        "narHash": "sha256-P+o2NFlFDOllZgSmcLKSAZTihGbZowFybmeNx4Vn9tA=",
+        "lastModified": 1736321133,
+        "narHash": "sha256-WcMlGvUYUEUCxtrG3DHExdnvAHKuJazi9FLhAiqOorw=",
         "owner": "Svenum",
         "repo": "Solaar-Flake",
-        "rev": "f4415782b0522d2b975b73189be68ce8e094c629",
+        "rev": "808a089a32a2c0f436f106fc554215c4930b3c69",
         "type": "github"
       },
       "original": {

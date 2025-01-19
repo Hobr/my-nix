@@ -13,9 +13,8 @@ in
   options.home.pro.video.enable = mkEnableOption "video";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
+    home.packages = with pkgs.small; [
       kdenlive
-      natron
       losslesscut-bin
       blender
     ];

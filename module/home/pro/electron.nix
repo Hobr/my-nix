@@ -24,7 +24,6 @@ in
       inputs.nix-xilinx.packages.${pkgs.system}.vivado
       qucs-s
       # 模拟器
-      ripes
       qtrvsim
       # Verilog
       verilog

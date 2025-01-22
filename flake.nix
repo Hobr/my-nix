@@ -13,7 +13,7 @@
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";
     ## 安全启动
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
+    lanzaboote.url = "github:nix-community/lanzaboote";
     ## Disko
     disko = {
       url = "github:nix-community/disko";

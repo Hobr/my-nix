@@ -29,6 +29,7 @@ in
     # Hyprland
     programs.hyprland = {
       enable = true;
+      package = pkgs.small.hyprland;
       xwayland.enable = true;
     };
 

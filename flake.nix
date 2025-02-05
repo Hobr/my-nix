@@ -12,6 +12,7 @@
       url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";

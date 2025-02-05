@@ -10,7 +10,6 @@
     inputs.disko.nixosModules.disko
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.cosmic.nixosModules.default
     inputs.solaar.nixosModules.default
     inputs.agenix.nixosModules.default
 
@@ -44,7 +43,6 @@
 
     desk = {
       hyprland.enable = true;
-      cosmic.enable = false;
     };
 
     program = {

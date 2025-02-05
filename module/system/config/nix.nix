@@ -35,7 +35,6 @@ in
           # 镜像
           trusted-substituters = [
             "https://cuda-maintainers.cachix.org"
-            "https://cosmic.cachix.org/"
             "https://mirrors.ustc.edu.cn/nix-channels/store"
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           ];

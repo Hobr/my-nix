@@ -8,7 +8,10 @@
     ## 官方Small
     nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    chaotic = {
+      url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # 环境
     ## Rootless
     impermanence.url = "github:nix-community/impermanence";

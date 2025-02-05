@@ -47,8 +47,12 @@
     };
 
     # 桌面
-    ## Cosmic
-    cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    ## 主题
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ## Hypr
     hyprcontrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";

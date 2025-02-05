@@ -1,9 +1,12 @@
 {
+  inputs,
   outputs,
   ...
 }:
 {
   imports = [
+    inputs.stylix.homeManagerModules.stylix
+
     outputs.homeManagerModules
   ];
 

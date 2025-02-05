@@ -5,6 +5,8 @@
 }:
 {
   imports = [
+    ./theme.nix
+
     ./desktop
     ./dev
     ./media

@@ -21,6 +21,7 @@ in
 
       # 签名
       signing = {
+        format = "openpgp";
         key = "0FD726E34F50F5B0";
         signByDefault = true;
       };

@@ -13,7 +13,7 @@ in
   options.home.dev.util.enable = mkEnableOption "util";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       # 虚拟机
       virt-manager
       # HTTP

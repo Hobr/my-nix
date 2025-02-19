@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
 
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       telegram-desktop
       wechat-uos
       qq

@@ -32,7 +32,7 @@ in
       settings = { };
     };
 
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       # 音乐播放器
       amberol
     ];

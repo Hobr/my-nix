@@ -13,7 +13,7 @@ in
   options.home.util.gnu.enable = mkEnableOption "gnu";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       coreutils-full
       gnumake
       gnused

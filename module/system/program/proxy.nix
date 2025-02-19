@@ -21,7 +21,7 @@ in
 
     programs.proxychains = {
       enable = true;
-      package = pkgs.small.proxychains-ng;
+      package = pkgs.proxychains-ng;
       quietMode = true;
 
       # 代理

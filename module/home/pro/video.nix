@@ -13,7 +13,7 @@ in
   options.home.pro.video.enable = mkEnableOption "video";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       kdenlive
       losslesscut-bin
       blender

@@ -31,7 +31,7 @@ in
     services.dunst = {
       enable = cfg.notice;
       iconTheme = {
-        package = pkgs.small.catppuccin-papirus-folders;
+        package = pkgs.catppuccin-papirus-folders;
         name = "Papirus";
       };
       settings = { };
@@ -71,7 +71,7 @@ in
       # 主题
       theme = {
         name = "Catppuccin-Latte-Standard-Lavender-Light";
-        package = pkgs.small.catppuccin-gtk.override {
+        package = pkgs.catppuccin-gtk.override {
           accents = [ "lavender" ];
           size = "standard";
           tweaks = [ "normal" ];
@@ -82,7 +82,7 @@ in
       # Icon
       iconTheme = {
         name = "Papirus";
-        package = pkgs.small.catppuccin-papirus-folders.override {
+        package = pkgs.catppuccin-papirus-folders.override {
           accent = "lavender";
           flavor = "latte";
         };

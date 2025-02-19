@@ -33,7 +33,6 @@ in
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      package = pkgs.small.hyprland;
       xwayland.enable = true;
 
       # 设置

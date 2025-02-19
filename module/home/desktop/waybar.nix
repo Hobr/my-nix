@@ -28,7 +28,7 @@ in
       enable = true;
       package = pkgs.waybar.override {
         swaySupport = false;
-        hyprland = pkgs.small.hyprland;
+        hyprland = pkgs.hyprland;
       };
       systemd = {
         enable = true;

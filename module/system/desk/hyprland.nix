@@ -29,13 +29,12 @@ in
     # Hyprland
     programs.hyprland = {
       enable = true;
-      package = pkgs.small.hyprland;
       xwayland.enable = true;
     };
 
     # XDG
     xdg.portal.enable = true;
-    environment.systemPackages = [ pkgs.small.xdg-utils ];
+    environment.systemPackages = [ pkgs.xdg-utils ];
 
     # Seatd
     services.seatd = {

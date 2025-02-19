@@ -13,7 +13,7 @@ in
   options.home.dev.nix.enable = mkEnableOption "nix";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs.small; [
+    home.packages = with pkgs; [
       nurl
       nix-init
       nix-update

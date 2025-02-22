@@ -31,7 +31,7 @@ in
     };
 
     environment.systemPackages = with pkgs; [
-      stable.pamixer
+      pamixer
       pavucontrol
     ];
   };

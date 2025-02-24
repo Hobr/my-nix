@@ -57,9 +57,6 @@ in
     };
 
     # LazyGit
-    programs.lazygit = {
-      enable = true;
-      settings = { };
-    };
+    programs.lazygit.enable = true;
   };
 }

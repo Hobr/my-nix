@@ -1,6 +1,7 @@
 {
   inputs,
   outputs,
+  pkgs,
   ...
 }:
 {
@@ -77,6 +78,67 @@
       disk.enable = true;
       file.enable = true;
       cli.enable = true;
+    };
+  };
+
+  # 主题
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
+
+    # 壁纸
+    image = ./wallpaper.png;
+
+    # 指针
+    cursor = {
+      package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+      name = "rose-pine-hyprcursor";
+      size = 24;
+    };
+
+    # 图标
+    iconTheme = {
+      enable = true;
+      dark = "Papirus";
+      light = "Papirus";
+      package = pkgs.catppuccin-papirus-folders.override {
+        accent = "lavender";
+        flavor = "latte";
+      };
+    };
+
+    # 字体
+    fonts = {
+      sizes = {
+        # 程序
+        applications = 12;
+        # 桌面
+        desktop = 10;
+        # 弹出
+        popups = 10;
+        # 终端
+        terminal = 12;
+      };
+
+      serif = {
+        package = pkgs.sarasa-gothic;
+        name = "Sarasa UI SC";
+      };
+
+      sansSerif = {
+        package = pkgs.sarasa-gothic;
+        name = "Sarasa UI SC";
+      };
+
+      monospace = {
+        package = pkgs.sarasa-gothic;
+        name = "Sarasa Mono SC";
+      };
+
+      emoji = {
+        package = pkgs.twitter-color-emoji;
+        name = "Twemoji";
+      };
     };
   };
 }

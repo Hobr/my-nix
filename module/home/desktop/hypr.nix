@@ -264,12 +264,6 @@ in
     };
 
     # 壁纸
-    services.hyprpaper = {
-      enable = true;
-      settings = {
-        preload = cfg.wallpaper.preload;
-        wallpaper = cfg.wallpaper.monitor;
-      };
-    };
+    services.hyprpaper.enable = true;
   };
 }

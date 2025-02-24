@@ -134,7 +134,7 @@ in
             # 启用
             enabled = true;
             # 范围
-            range = 5;
+            range = 2;
             # 清晰
             sharp = true;
           };

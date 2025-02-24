@@ -107,9 +107,9 @@ in
 
         decoration = {
           # 圆角半径
-          rounding = 25;
+          rounding = 15;
           # 活动窗口不透明度
-          active_opacity = 0.9;
+          active_opacity = 0.95;
           # 不活动窗口不透明度
           inactive_opacity = 0.5;
           # 全屏窗口不透明度
@@ -163,7 +163,7 @@ in
         };
 
         # OpenGL
-        opengL = {
+        opengl = {
           # 减少NVIDIA闪烁
           nvidia_anti_flicker = true;
         };

@@ -78,14 +78,12 @@ in
           # 开机启动
           "telegram-desktop -startintray"
           "clash-verge"
-          "${pkgs.hyprdim}/bin/hyprdim"
-          "${pkgs.hyprsunset}/bin/hyprsunset"
         ];
 
         general = {
           # 窗口边框大小
           border_size = 2;
-          # 取消浮动窗口边框
+          # 不显示浮动窗口边框
           no_border_on_floating = true;
           # 窗口间间隙
           gaps_in = 5;
@@ -93,19 +91,27 @@ in
           gaps_out = 20;
           # 布局
           layout = "dwindle";
+          # 单击调整窗口大小
+          resize_on_border = true;
         };
+
+        # 二叉树布局
         dwindle = {
+          # 伪平铺
           pseudotile = true;
+          # 保持分割
           preserve_split = true;
+          # 精确分割
+          smart_split = true;
         };
 
         decoration = {
           # 圆角半径
-          rounding = 10;
+          rounding = 25;
           # 活动窗口不透明度
-          active_opacity = 1.0;
+          active_opacity = 0.9;
           # 不活动窗口不透明度
-          inactive_opacity = 1.0;
+          inactive_opacity = 0.5;
           # 全屏窗口不透明度
           fullscreen_opacity = 1.0;
 
@@ -114,7 +120,7 @@ in
             # 启用
             enabled = true;
             # 大小
-            size = 3;
+            size = 25;
             # 模糊程度
             passes = 1;
             # 优化
@@ -122,43 +128,52 @@ in
             # 模糊菜单
             popups = true;
           };
+
+          # 阴影
+          shadow = {
+            # 启用
+            enabled = true;
+            # 范围
+            range = 5;
+            # 清晰
+            sharp = true;
+          };
         };
 
-        input = {
-          # 键盘布局
-          kb_layout = "us";
-          # 光标跟随鼠标状态
-          follow_mouse = 1;
-          # 灵敏度
-          sensitivity = 0;
-          # 反向滚动
-          touchpad.natural_scroll = false;
-          # 与屏幕旋转值一样
-          touchdevice.transform = 0;
-          tablet.transform = 0;
-        };
-
+        # 手势
         gestures = {
-          # 触控屏空间切换
-          workspace_swipe_touch = true;
-          # 触控板空间切换
+          # 启动
           workspace_swipe = true;
           # 切换用指数
           workspace_swipe_fingers = 3;
+          # 边缘滑动
+          workspace_swipe_touch = true;
+          # 最后一个工作区滑动创建新工作区
+          workspace_swipe_create_new = true;
         };
 
+        # 杂项
         misc = {
           # 禁用随机背景
           disable_hyprland_logo = true;
-          # 鼠标拖动窗口动画
-          animate_mouse_windowdragging = true;
+          # 禁用启动画面渲染
+          disable_splash_rendering = true;
           # 聚焦于请求聚焦的端口
           focus_on_activate = true;
         };
 
-        opengl = {
-          # 停用强制introspection
-          force_introspection = 0;
+        # OpenGL
+        opengL = {
+          # 减少NVIDIA闪烁
+          nvidia_anti_flicker = true;
+        };
+
+        # 生态
+        ecosystem = {
+          # 禁用更新新闻
+          no_update_news = true;
+          # 禁用捐赠提示
+          no_donation_nag = true;
         };
 
         animations = {

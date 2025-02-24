@@ -51,8 +51,6 @@
       nh.enable = true;
       proxy.enable = true;
       ld.enable = true;
-      virtual.enable = true;
-      docker.enable = true;
     };
   };
 

@@ -31,6 +31,11 @@
 
   sys = {
     gpu.intel.enable = true;
-    program.ollama.enable = false;
+
+    program = {
+      ollama.enable = false;
+      virtual.enable = false;
+      docker.enable = false;
+    };
   };
 }

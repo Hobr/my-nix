@@ -73,7 +73,7 @@ in
           # 窗口间间隙
           gaps_in = 5;
           # 窗口与屏幕边框间隔
-          gaps_out = 20;
+          gaps_out = 15;
           # 布局
           layout = "dwindle";
           # 单击调整窗口大小
@@ -87,7 +87,7 @@ in
           # 保持分割
           preserve_split = true;
           # 精确分割
-          smart_split = true;
+          smart_split = false;
         };
 
         decoration = {

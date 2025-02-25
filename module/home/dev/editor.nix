@@ -53,7 +53,7 @@ in
         "[yaml]"."editor.defaultFormatter" = "redhat.vscode-yaml";
 
         "[markdown]"."editor.defaultFormatter" = "DavidAnson.vscode-markdownlint";
-        "[markdown]"."diffEditor.ignoreTrimWhitespace" = "false";
+        "[markdown]"."diffEditor.ignoreTrimWhitespace" = false;
 
         "[ruby]"."editor.defaultFormatter" = "Shopify.ruby-lsp";
         "[ruby]"."editor.formatOnSave" = true;
@@ -65,7 +65,6 @@ in
         "[ruby]"."files.trimFinalNewlines" = true;
         "[ruby]"."editor.rulers" = [ 120 ];
         "[ruby]"."editor.semanticHighlighting.enabled" = true;
-        "[ruby]"."" = true;
 
         "[python]"."diffEditor.ignoreTrimWhitespace" = false;
         "[typst]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";

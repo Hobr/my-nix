@@ -26,14 +26,17 @@ in
   config = mkIf cfg.enable {
     programs.waybar = {
       enable = true;
+
       package = pkgs.waybar.override {
         swaySupport = false;
         hyprland = pkgs.hyprland;
       };
+
       systemd = {
         enable = true;
         target = "hyprland-session.target";
       };
+
       settings.mainBar = {
         position = "top";
         layer = "top";
@@ -129,8 +132,8 @@ in
           tooltip = "false";
         };
       };
-      style = ''
 
+      style = ''
         * {
             border: none;
             border-radius: 0px;
@@ -157,10 +160,10 @@ in
             padding-right: 6px;
         }
         #workspaces button.empty {
-            color: #6c7086;
+            color:rgb(78, 81, 96);
         }
         #workspaces button.active {
-            color: #b4befe;
+            color:rgb(71, 91, 148);
         }
 
         #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock {
@@ -204,7 +207,7 @@ in
 
         #custom-launcher {
             font-size: 20px;
-            color: #b4befe;
+            color:rgb(71, 91, 148);
             font-weight: ${custom.font_weight};
             padding-left: 10px;
             padding-right: 15px;

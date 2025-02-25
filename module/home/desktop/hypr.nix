@@ -41,10 +41,6 @@ in
 
         env =
           [
-            # Cursor
-            "HYPRCURSOR_THEME,rose-pine-hyprcursor"
-            "HYPRCURSOR_SIZE,24"
-
             # QT
             "QT_QPA_PLATFORM,wayland;xcb"
             "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"

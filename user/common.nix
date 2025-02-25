@@ -91,8 +91,8 @@
 
     # 指针
     cursor = {
-      package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-      name = "rose-pine-hyprcursor";
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
       size = 24;
     };
 

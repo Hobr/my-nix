@@ -86,9 +86,6 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
 
-    # 壁纸
-    image = ./wallpaper.png;
-
     # 指针
     cursor = {
       name = "Adwaita";

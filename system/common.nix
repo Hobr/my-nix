@@ -105,10 +105,7 @@
 
   fonts = {
     packages = with pkgs; [
-      nerd-fonts.hack
-
       sarasa-gothic
-      ibm-plex
       twitter-color-emoji
 
       noto-fonts

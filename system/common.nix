@@ -81,28 +81,42 @@
         terminal = 12;
       };
 
-      serif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+      sansSerif = {
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Sans";
       };
 
-      sansSerif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+      serif = {
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Serif";
       };
 
       monospace = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa Mono SC";
+        package = pkgs.nerd-fonts.hack;
+        name = "Hack Nerd Font";
       };
 
       emoji = {
-        package = pkgs.twitter-color-emoji;
-        name = "Twemoji";
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
       };
     };
   };
 
+  fonts = {
+    packages = with pkgs; [
+      nerd-fonts.hack
+
+      sarasa-gothic
+      ibm-plex
+      twitter-color-emoji
+
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
+      noto-fonts-emoji
+    ];
+  };
   # 平台
   nixpkgs.hostPlatform.system = "x86_64-linux";
   # 系统版本

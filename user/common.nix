@@ -120,24 +120,24 @@
         terminal = 12;
       };
 
-      serif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+      sansSerif = {
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Sans";
       };
 
-      sansSerif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+      serif = {
+        package = pkgs.ibm-plex;
+        name = "IBM Plex Serif";
       };
 
       monospace = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa Mono SC";
+        package = pkgs.nerd-fonts.hack;
+        name = "Hack Nerd Font";
       };
 
       emoji = {
-        package = pkgs.twitter-color-emoji;
-        name = "Twemoji";
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
       };
     };
   };

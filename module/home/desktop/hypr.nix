@@ -17,17 +17,6 @@ in
     monitor = mkOption {
       type = with types; listOf str;
     };
-
-    wallpaper = {
-      preload = mkOption {
-        type = with types; listOf str;
-        default = [ ];
-      };
-      monitor = mkOption {
-        type = with types; listOf str;
-        default = [ ];
-      };
-    };
   };
 
   config = mkIf cfg.enable {

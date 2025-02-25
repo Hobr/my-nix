@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [ ./common.nix ];
 
@@ -12,13 +13,6 @@
           "DP-1,2560x1440@180,0x0,1"
           "eDP-1,2560x1440@165,auto,1.25"
         ];
-        wallpaper = {
-          preload = [ "/mnt/data/Project/my-nix/dist/wallpaper/1.png" ];
-          monitor = [
-            "eDP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
-            "DP-1,/mnt/data/Project/my-nix/dist/wallpaper/1.png"
-          ];
-        };
       };
 
     };
@@ -32,6 +26,12 @@
       obs.enable = true;
       electron.enable = true;
     };
+  };
+
+  # 壁纸
+  stylix.image = pkgs.fetchurl {
+    url = "https://images5.alphacoders.com/941/941673.png";
+    hash = "sha256-nknMKEWpm2pyHbdW83x0/ixPmfbpWRfGt8Z12YYPAlE=";
   };
 
   nixpkgs.config.cudaSupport = true;

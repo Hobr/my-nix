@@ -31,7 +31,6 @@ in
     programs.emacs = {
       enable = cfg.emacs;
       package = pkgs.emacs30;
-      extraPackages = epkgs: [ epkgs.magit ];
     };
 
     # Visual Studio Code

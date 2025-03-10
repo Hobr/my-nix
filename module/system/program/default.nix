@@ -2,6 +2,7 @@
   imports = [
     ./docker.nix
     ./ld.nix
+    ./moonlight.nix
     ./nh.nix
     ./ollama.nix
     ./proxy.nix

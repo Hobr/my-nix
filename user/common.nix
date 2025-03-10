@@ -138,6 +138,6 @@
       };
     };
 
-    targets.vscode.profileNames = [ "default "];
+    targets.vscode.profileNames = [ "default " ];
   };
 }

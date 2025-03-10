@@ -53,6 +53,7 @@
       nh.enable = true;
       proxy.enable = true;
       ld.enable = true;
+      moonlight.enable = true;
     };
   };
 

@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation rec {
   pname = "rime-ice";
-  version = "2024.12.12";
+  version = "unstable-2025-03-11";
 
   src = fetchFromGitHub {
     owner = "iDvel";
     repo = "rime-ice";
-    rev = version;
-    hash = "sha256-2QZdlLGZwWIesbjYTE/2yhM1hHGVVp7jR02bR0oqxV0=";
+    rev = "75b225e84f5e95ddf0b5a50fa6e2cff9800ee7b7";
+    hash = "sha256-/sKoufIf4m5h1Zds6AqIyeCjDaZsFU9ot5ln3ykuNyU=";
   };
 
   installPhase = ''

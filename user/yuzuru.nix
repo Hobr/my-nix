@@ -13,7 +13,7 @@
       };
     };
 
-    media.video.subtitle = false;
+    media.video.subtitle = true;
 
     pro = {
       audio.enable = false;

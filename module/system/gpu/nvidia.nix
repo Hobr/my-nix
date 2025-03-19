@@ -61,5 +61,7 @@ in
       mount-nvidia-executables = true;
       mount-nvidia-docker-1-directories = true;
     };
+
+    nixpkgs.config.cudaSupport = true;
   };
 }

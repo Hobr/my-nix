@@ -29,9 +29,6 @@
   nix.settings.trusted-users = [ "kanade" ];
   services.greetd.settings.initial_session.user = "kanade";
 
-  # CUDA
-  nixpkgs.config.cudaSupport = true;
-
   sys = {
     gpu.nvidia.enable = true;
 

@@ -15,10 +15,6 @@ in
     programs.kitty = {
       enable = true;
       shellIntegration.enableZshIntegration = true;
-      font = {
-        name = lib.mkForce "Mononoki Nerd Font";
-        size = 12;
-      };
     };
   };
 }

@@ -25,7 +25,7 @@ in
       mpd.useLocal = true;
     };
 
-    # MPD客户端
+    # ncmpcpp
     programs.ncmpcpp = {
       enable = true;
       bindings = [ ];

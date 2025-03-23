@@ -30,14 +30,12 @@ in
     programs.zoxide = {
       enable = true;
       enableZshIntegration = true;
-      options = [ ];
     };
 
     # Broot(tree)
     programs.broot = {
       enable = true;
       enableZshIntegration = true;
-      settings = { };
     };
 
     # eza(ls)
@@ -46,14 +44,12 @@ in
       enableZshIntegration = true;
       git = true;
       icons = "auto";
-      extraOptions = [ ];
     };
 
     # 目录颜色
     programs.dircolors = {
       enable = true;
       enableZshIntegration = true;
-      settings = { };
     };
 
     # Ripgrep(grep)
@@ -80,8 +76,24 @@ in
     # feh(图片查看器)
     programs.feh = {
       enable = true;
-      buttons = { };
-      keybindings = { };
+
+      buttons = {
+        prev_img = [
+          3
+          "C-3"
+        ];
+        zoom_in = 4;
+        zoom_out = "C-4";
+      };
+
+      keybindings = {
+        prev_img = [
+          "h"
+          "Left"
+        ];
+        zoom_in = "plus";
+        zoom_out = "minus";
+      };
     };
 
     # Nix-index
@@ -90,13 +102,18 @@ in
       enableZshIntegration = true;
     };
 
+    # Ranger
+    programs.ranger.enable = true;
+
+    # Fastfetch
+    programs.fastfetch.enable = true;
+
     programs.info.enable = true;
 
     home.packages = with pkgs; [
       iftop
 
       nitch
-      fastfetch
       xorg.xlsclients
       xorg.xset
 
@@ -104,7 +121,6 @@ in
       trash-cli
 
       sd
-      ranger
       dialog
 
       p7zip

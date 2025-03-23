@@ -45,13 +45,14 @@ in
 
       # LFS
       lfs.enable = true;
-      # Delta
-      delta.enable = true;
+      # Diff
+      diff-so-fancy.enable = true;
       # 忽略
       ignores = [
-        "result*"
         ".direnv"
         ".venv"
+        ".cargo"
+        "result*"
         "venv"
       ];
     };

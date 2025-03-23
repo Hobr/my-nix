@@ -23,6 +23,7 @@ in
     wayland.windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
+      systemd.enableXdgAutostart = true;
 
       # 设置
       settings = {

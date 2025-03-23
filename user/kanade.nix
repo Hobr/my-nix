@@ -20,11 +20,11 @@
     media.video.subtitle = true;
 
     pro = {
-      audio.enable = true;
-      video.enable = true;
+      audio.enable = false;
+      video.enable = false;
       image.enable = true;
       obs.enable = true;
-      electron.enable = true;
+      electron.enable = false;
     };
   };
 

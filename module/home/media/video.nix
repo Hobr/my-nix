@@ -45,7 +45,7 @@ in
       ]
       ++ optionals cfg.subtitle [
         aegisub
-        whisper-ctranslate2
+        stable.whisper-ctranslate2
       ];
   };
 }

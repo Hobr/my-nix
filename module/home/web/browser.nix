@@ -16,6 +16,11 @@ in
     programs.firefox = {
       enable = true;
 
+      languagePacks = [
+        "zh-CN"
+        "en-US"
+      ];
+
       # https://mozilla.github.io/policy-templates/
       policies = {
         DisablePocket = true;

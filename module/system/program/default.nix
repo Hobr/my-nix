@@ -8,6 +8,7 @@
     ./proxy.nix
     ./secure.nix
     ./shell.nix
+    ./teamviewer.nix
     ./virt.nix
   ];
 }

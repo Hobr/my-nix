@@ -36,12 +36,12 @@ in
     # Visual Studio Code
     programs.vscode = {
       enable = cfg.vscode;
-      package = pkgs.vscode.override (old: {
-        # Wayland Fcitx5
-        commandLineArgs = (old.commandLineArgs or [ ]) ++ [ "--enable-wayland-ime" ];
-      });
+      mutableExtensionsDir = false;
 
       profiles.default = {
+        enableExtensionUpdateCheck = false;
+        enableUpdateCheck = false;
+
         extensions =
           with pkgs;
           (with vscode-marketplace; [
@@ -219,7 +219,6 @@ in
           "workbench.productIconTheme" = "fluent-icons";
           "workbench.startupEditor" = "newUntitledFile";
           "terminal.integrated.enableVisualBell" = true;
-          "workbench.iconTheme" = "catppuccin-latte";
           "tinymist.formatterMode" = "typstyle";
           "diffEditor.ignoreTrimWhitespace" = false;
           "github.copilot.editor.enableAutoCompletions" = true;

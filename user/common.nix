@@ -137,5 +137,7 @@
         name = "Twemoji";
       };
     };
+
+    targets.vscode.profileNames = [ "default" ];
   };
 }

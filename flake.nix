@@ -32,6 +32,11 @@
     };
 
     # 软件
+    # VS Code
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     ## Xilint
     nix-xilinx = {
       url = "gitlab:doronbehar/nix-xilinx";

@@ -1,6 +1,9 @@
 {
   inputs,
   outputs,
+  lib,
+  config,
+  pkgs,
   ...
 }:
 {
@@ -15,6 +18,35 @@
     ./util
     ./web
   ];
+
+  nix =
+    let
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+    in
+    {
+      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      package = pkgs.nix;
+      settings = {
+        experimental-features = "nix-command flakes";
+        system-features = [ "big-parallel" ];
+        flake-registry = "";
+        nix-path = config.nix.nixPath;
+
+        # Github API
+        # access-tokens = "github.com=${secrets.git.github.oauth-token}";
+
+        # 镜像
+        trusted-substituters = [
+          "https://chaotic-nyx.cachix.org/"
+          "https://nix-community.cachix.org"
+          "https://mirrors.ustc.edu.cn/nix-channels/store"
+          "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        ];
+
+        require-sigs = false;
+      };
+    };
 
   nixpkgs = {
     config = {

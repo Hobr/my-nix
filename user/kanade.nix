@@ -34,5 +34,9 @@
     hash = "sha256-nknMKEWpm2pyHbdW83x0/ixPmfbpWRfGt8Z12YYPAlE=";
   };
 
-  nixpkgs.config.cudaSupport = true;
+  nixpkgs.config = {
+    cudaSupport = true;
+    cudaCapabilities = [ "8.6" ];
+    cudaForwardCompat = false;
+  };
 }

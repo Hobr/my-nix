@@ -62,6 +62,10 @@ in
       mount-nvidia-docker-1-directories = true;
     };
 
-    nixpkgs.config.cudaSupport = true;
+    nixpkgs.config = {
+      cudaSupport = true;
+      cudaCapabilities = [ "8.6" ];
+      cudaForwardCompat = false;
+    };
   };
 }

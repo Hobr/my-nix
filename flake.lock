@@ -738,11 +738,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743325356,
-        "narHash": "sha256-hh7/w6P15PR7I+0p/ChF8zIXtY70SUQ0xCffHuXVCLo=",
+        "lastModified": 1743498129,
+        "narHash": "sha256-NaWOrYz5cViR0/Y889wrWBuaVviS7owgIXYfmDbjRJI=",
         "owner": "doronbehar",
         "repo": "nix-xilinx",
-        "rev": "ab038f106ad6ebd3d331cad7b0b2ffc16b01ccca",
+        "rev": "07212f40cfedb62eb8f7dcc32a3761a23ac420fd",
         "type": "gitlab"
       },
       "original": {
@@ -989,11 +989,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1743464673,
-        "narHash": "sha256-XQXrK7o2c/5VgiyaSbaIeKhtfhSiF5ykppITYzPnXtk=",
+        "lastModified": 1743496321,
+        "narHash": "sha256-xhHg8ixBhZngvGOMb2SJuJEHhHA10n8pA02fEKuKzek=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "711bd28ac96dec8c9187f8db4a297677eef2e654",
+        "rev": "54721996d6590267d095f63297d9051e9342a33d",
         "type": "github"
       },
       "original": {

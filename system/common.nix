@@ -52,7 +52,6 @@
       proxy.enable = true;
       ld.enable = true;
       moonlight.enable = true;
-      teamviewer.enable = true;
     };
   };
 

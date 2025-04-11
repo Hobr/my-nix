@@ -8,11 +8,9 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.chaotic.nixosModules.default
-    inputs.disko.nixosModules.disko
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.solaar.nixosModules.default
-    inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
 
     outputs.nixosModules

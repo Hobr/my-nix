@@ -2,6 +2,7 @@
   config,
   options,
   lib,
+  pkgs,
   ...
 }:
 with lib;
@@ -18,5 +19,9 @@ in
       notify = true;
       tray = "never";
     };
+
+    home.packages = with pkgs; [
+      ddrescue
+    ];
   };
 }

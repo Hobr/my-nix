@@ -1,0 +1,79 @@
+{
+  inputs,
+  outputs,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.chaotic.nixosModules.default
+    inputs.impermanence.nixosModules.impermanence
+
+    outputs.nixosModules
+
+    ./overdrive/kernel.nix
+    ./overdrive/filesystem.nix
+    ./overdrive/hardware.nix
+  ];
+
+  sys = {
+    config = {
+      nix.enable = true;
+      kernel.enable = true;
+      locale.enable = true;
+    };
+
+    program = {
+      virtual.enable = true;
+      docker.enable = true;
+    };
+
+    disk = {
+      persist.enable = true;
+      device.enable = true;
+    };
+
+    boot.systemd-boot.enable = true;
+
+    io = {
+      driver.enable = true;
+      network.enable = true;
+    };
+
+    program = {
+      shell.enable = true;
+      secure.enable = true;
+      nh.enable = true;
+      ld.enable = true;
+    };
+  };
+
+  # 平台
+  nixpkgs.hostPlatform.system = "x86_64-linux";
+
+  # 系统版本
+  system.stateVersion = "25.05";
+
+  # 主机名
+  networking.hostName = "overdrive";
+
+  # 用户
+  users.users = {
+    yuri = {
+      isNormalUser = true;
+      uid = 1000;
+      hashedPassword = "$y$j9T$C0UuVeSpwcZT/Ig7k/IIK0$W0jxMqKUPiExoWaQ0TWiO8ZL9I5eg2t5MH8N/EBz2B0";
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+        "tss"
+        "dialout"
+        "video"
+      ];
+    };
+  };
+
+  nix.settings.trusted-users = [ "yuri" ];
+  services.greetd.settings.initial_session.user = "yuri";
+}

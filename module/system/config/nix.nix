@@ -16,11 +16,11 @@ in
   config = mkIf cfg.enable {
     nix =
       let
-        flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+        flakeInputs = filterAttrs (_: isType "flake") inputs;
       in
       {
-        nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-        registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+        nixPath = mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+        registry = mapAttrs (_: flake: { inherit flake; }) flakeInputs;
         channel.enable = false;
 
         settings = {

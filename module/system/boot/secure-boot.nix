@@ -15,7 +15,7 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs; [ sbctl ];
 
-    boot.loader.systemd-boot.enable = lib.mkForce false;
+    boot.loader.systemd-boot.enable = mkForce false;
     boot.lanzaboote = {
       enable = true;
       pkiBundle = "/etc/secureboot";

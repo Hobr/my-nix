@@ -6,6 +6,7 @@
   pkgs,
   ...
 }:
+with lib;
 {
   imports = [
     ./theme.nix
@@ -21,11 +22,11 @@
 
   nix =
     let
-      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+      flakeInputs = filterAttrs (_: isType "flake") inputs;
     in
     {
-      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      nixPath = mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      registry = mapAttrs (_: flake: { inherit flake; }) flakeInputs;
       package = pkgs.nix;
       settings = {
         experimental-features = "nix-command flakes";

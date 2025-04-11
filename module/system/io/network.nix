@@ -25,8 +25,8 @@ in
     };
 
     networking = {
-      useDHCP = lib.mkDefault true;
-      proxy.default = "http://127.0.0.1:7891";
+      useDHCP = mkDefault true;
+      proxy.default = mkIf config.sys.program.proxy.enable "http://127.0.0.1:7891";
 
       # 防火墙
       firewall.enable = false;

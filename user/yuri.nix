@@ -6,8 +6,6 @@
 }:
 {
   imports = [
-    inputs.stylix.homeManagerModules.stylix
-
     outputs.homeManagerModules
   ];
 
@@ -25,11 +23,7 @@
       nix.enable = true;
       direnv.enable = true;
       util.enable = true;
-
-      editor = {
-        nvim = true;
-        emacs = true;
-      };
+      editor.nvim = true;
     };
 
     util = {
@@ -38,6 +32,4 @@
       cli.enable = true;
     };
   };
-
-  services.ssh-agent.enable = true;
 }

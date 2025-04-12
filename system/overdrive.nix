@@ -9,6 +9,9 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
+    inputs.lanzaboote.nixosModules.lanzaboote
+    inputs.solaar.nixosModules.default
+    inputs.stylix.nixosModules.stylix
 
     outputs.nixosModules
 
@@ -75,5 +78,4 @@
   };
 
   nix.settings.trusted-users = [ "yuri" ];
-  services.greetd.settings.initial_session.user = "yuri";
 }

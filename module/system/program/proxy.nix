@@ -25,7 +25,7 @@ in
       quietMode = true;
 
       # 代理
-      proxies = {
+      proxies = mkIf config.sys.program.proxy.enable {
         sock = {
           enable = true;
           type = "socks5";

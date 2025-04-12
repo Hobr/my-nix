@@ -135,18 +135,9 @@ gpg --list-secret-keys
 gpg --import secret-full-key.asc
 gpg --import public-key.asc
 
-# 软件配置
-pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-npm set prefix ~/.npm-global
-
 # 重新TPM
 sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1
 sudo cryptsetup token remove /dev/nvme0n1p4 --token-id 0
-
-# Dev Shell
-cp devshell/xx.nix xxx
-cp devshell/.envrc xxx
-direnv allow
 
 # Vivado
 nix run gitlab:doronbehar/nix-xilinx#xilinx-shell

@@ -67,7 +67,6 @@
         vscode = true;
         nvim = true;
         emacs = true;
-        qt = true;
       };
     };
 

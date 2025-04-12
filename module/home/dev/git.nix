@@ -35,8 +35,8 @@ in
         safe.directory = "*";
 
         # 代理
-        http.proxy = "http://127.0.0.1:7891";
-        https.proxy = "http://127.0.0.1:7891";
+        http.proxy = mkIf config.home.proxy.enable "http://127.0.0.1:7891";
+        https.proxy = mkIf config.home.proxy.enable "http://127.0.0.1:7891";
 
         core.editor = "nvim";
         pull.rebase = true;

@@ -15,6 +15,8 @@
     # 系统版本号
     stateVersion = "25.05";
 
+    proxy.enable = true;
+
     desktop = {
       hypr.enable = true;
       waybar.enable = true;

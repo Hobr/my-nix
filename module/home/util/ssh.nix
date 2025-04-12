@@ -10,12 +10,15 @@ let
   cfg = config.home.util.ssh;
 in
 {
-  options.home.util.ssh.enable = mkEnableOption "ssh";
+  options.home = {
+    util.ssh.enable = mkEnableOption "ssh";
+    proxy.enable = mkEnableOption "proxy";
+  };
 
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
-      matchBlocks = {
+      matchBlocks = mkIf config.home.proxy.enable {
         "github.com" = {
           hostname = "ssh.github.com";
           user = "git";

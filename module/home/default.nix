@@ -9,8 +9,6 @@
 with lib;
 {
   imports = [
-    ./theme.nix
-
     ./desktop
     ./dev
     ./media

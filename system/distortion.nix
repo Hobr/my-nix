@@ -22,6 +22,7 @@
         "tss"
         "dialout"
         "video"
+        "docker"
       ];
     };
   };

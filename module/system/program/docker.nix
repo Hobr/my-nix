@@ -2,6 +2,7 @@
   config,
   options,
   lib,
+  pkgs,
   ...
 }:
 with lib;
@@ -19,5 +20,9 @@ in
       autoPrune.enable = true;
       storageDriver = "btrfs";
     };
+
+    environment.systemPackages = with pkgs; [
+      compose2nix
+    ];
   };
 }

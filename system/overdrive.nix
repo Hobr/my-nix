@@ -61,6 +61,9 @@
   # 主机名
   networking.hostName = "overdrive";
 
+  # 内核
+  boot.kernelPackages = mkForce pkgs.linuxPackages_cachyos-server;
+
   # 用户
   users.users = {
     yuri = {

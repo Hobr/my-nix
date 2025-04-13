@@ -24,6 +24,31 @@
 - Systemd-timesyncd resolved....
 - 邮箱
 
+### Docker
+
+无线网卡
+
+disko
+agenix
+
+frp
+
+apisix
+rustdesk
+vaultwarden
+anki
+syncthing
+uptime-kuma
+element-hq/dendrite
+
+openwrt
+gitea
+AList
+calibre
+
+Tieba-Cloud-Sign
+blog terminal.css
+
 ## 安装
 
 修改内容:

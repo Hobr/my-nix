@@ -4,7 +4,7 @@
   inputs = {
     # 软件源
     ## 官方
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     ## 官方稳定
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic

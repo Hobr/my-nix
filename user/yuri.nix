@@ -14,7 +14,7 @@
     homeDirectory = "/home/yuri";
     stateVersion = "25.05";
 
-    proxy.enable = false;
+    proxy.enable = true;
     web.download.enable = true;
     software.zsh.enable = true;
 

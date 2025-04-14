@@ -19,6 +19,10 @@ in
       autoStart = true;
     };
 
+    environment.systemPackages = with pkgs; [
+      mihomo
+    ];
+
     programs.proxychains = {
       enable = true;
       package = pkgs.proxychains-ng;

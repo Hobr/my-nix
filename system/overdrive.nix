@@ -1,9 +1,11 @@
 {
   inputs,
   outputs,
+  lib,
   pkgs,
   ...
 }:
+with lib;
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -49,6 +51,7 @@
       secure.enable = true;
       nh.enable = true;
       ld.enable = true;
+      proxy.enable = true;
     };
   };
 

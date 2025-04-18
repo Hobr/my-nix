@@ -34,7 +34,6 @@
     gpu.intel.enable = true;
 
     program = {
-      ollama.enable = false;
       virtual.enable = false;
       docker.enable = false;
     };

@@ -34,7 +34,6 @@
     gpu.nvidia.enable = true;
 
     program = {
-      ollama.enable = true;
       virtual.enable = true;
       docker.enable = true;
     };

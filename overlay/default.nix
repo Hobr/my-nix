@@ -5,7 +5,8 @@
 {
   additions = final: prev: import ../pkg final.pkgs;
 
-  modifications = final: prev: { };
+  modifications = final: prev: {
+  };
 
   stable-package = final: _prev: {
     stable = import inputs.nixpkgs-stable {

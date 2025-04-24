@@ -139,6 +139,9 @@ in
             ms-vscode.cpptools
             ms-vscode.cpptools-extension-pack
 
+            # Just
+            nefrob.vscode-just-syntax
+
             # Fortran
             fortran-lang.linter-gfortran
           ]);

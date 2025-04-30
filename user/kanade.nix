@@ -20,8 +20,8 @@
     media.video.subtitle = true;
 
     pro = {
-      audio.enable = false;
-      video.enable = false;
+      audio.enable = true;
+      video.enable = true;
       image.enable = true;
       obs.enable = true;
       electron.enable = false;

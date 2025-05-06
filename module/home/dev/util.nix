@@ -14,8 +14,6 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      # HTTP
-      hoppscotch
       # 二进制
       ghex
     ];

@@ -39,7 +39,7 @@ in
     home.packages =
       with pkgs;
       optionals cfg.enable [
-        stable.animeko
+        animeko
 
         ffmpeg
         yt-dlp

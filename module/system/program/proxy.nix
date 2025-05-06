@@ -15,7 +15,7 @@ in
   config = mkIf cfg.enable {
     programs.clash-verge = {
       enable = true;
-      package = pkgs.stable.clash-verge-rev;
+      package = pkgs.clash-verge-rev;
       autoStart = true;
     };
 

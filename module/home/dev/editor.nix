@@ -208,7 +208,7 @@ in
           "security.workspace.trust.untrustedFiles" = "open";
           "update.mode" = "none";
 
-          "github.copilot.editor.enableAutoCompletions" = true;
+          "github.copilot.nextEditSuggestions.enabled" = true;
           "gitlens.views.commitDetails.files.layout" = "tree";
 
           "python.languageServer" = "Pylance";

@@ -139,6 +139,9 @@ in
             ms-vscode.cpptools
             ms-vscode.cpptools-extension-pack
 
+            # PDF
+            tomoki1207.pdf
+
             # Just
             nefrob.vscode-just-syntax
 

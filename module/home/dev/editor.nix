@@ -121,6 +121,9 @@ in
             # Toml
             tamasfe.even-better-toml
 
+            # WIT
+            bytecodealliance.wit-idl
+
             # XML
             dotjoshjohnson.xml
           ])

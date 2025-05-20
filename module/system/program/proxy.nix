@@ -16,7 +16,6 @@ in
     programs.clash-verge = {
       enable = true;
       package = pkgs.clash-verge-rev;
-      autoStart = true;
     };
 
     environment.systemPackages = with pkgs; [

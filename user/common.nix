@@ -40,10 +40,10 @@
     web = {
       browser.enable = true;
       im.enable = true;
-      mail.enable = true;
+      mail.enable = false;
       music.enable = true;
       download.enable = true;
-      sync.enable = true;
+      sync.enable = false;
     };
 
     software = {
@@ -68,7 +68,7 @@
       editor = {
         vscode = true;
         nvim = true;
-        emacs = true;
+        emacs = false;
       };
     };
 

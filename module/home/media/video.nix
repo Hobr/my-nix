@@ -10,10 +10,7 @@ let
   cfg = config.home.media.video;
 in
 {
-  options.home.media.video = {
-    enable = mkEnableOption "enable";
-    subtitle = mkEnableOption "subtitle";
-  };
+  options.home.media.video.enable = mkEnableOption "enable";
 
   config = {
     programs.mpv = {
@@ -42,10 +39,6 @@ in
         ffmpeg
         yt-dlp
         mkvtoolnix
-      ]
-      ++ optionals cfg.subtitle [
-        aegisub
-        whisper-ctranslate2
       ];
   };
 }

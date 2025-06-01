@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    outputs.homeManagerModules
+    outputs.homeModules
   ];
 
   home = {

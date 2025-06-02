@@ -23,6 +23,7 @@ in
           quality-menu
           modernx
           seekTo
+          mpv-playlistmanager
         ];
       };
 

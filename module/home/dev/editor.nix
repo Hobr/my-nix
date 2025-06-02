@@ -150,7 +150,15 @@ in
 
             # Fortran
             fortran-lang.linter-gfortran
-          ]);
+          ])
+          ++ vscode-utils.extensionsFromVscodeMarketplace [
+            {
+              name = "vscode-bevy-inspector";
+              publisher = "splo";
+              version = "0.3.0";
+              sha256 = "sha256-f0FAgQ0wm3FYPz5qpMHWHnTf3un0xw+5gcyBG7PYM2E=";
+            }
+          ];
 
         userSettings = {
           "[c]"."editor.defaultFormatter" = "ms-vscode.cpptools";

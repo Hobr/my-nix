@@ -152,11 +152,19 @@ in
             fortran-lang.linter-gfortran
           ])
           ++ vscode-utils.extensionsFromVscodeMarketplace [
+            # Bevy
             {
               name = "vscode-bevy-inspector";
               publisher = "splo";
               version = "0.3.0";
               sha256 = "sha256-f0FAgQ0wm3FYPz5qpMHWHnTf3un0xw+5gcyBG7PYM2E=";
+            }
+            # Rust
+            {
+              name = "dioxus";
+              publisher = "DioxusLabs";
+              version = "0.6.0";
+              sha256 = "sha256-UYMJf0F8YjH1s7szIdTDG7t31/xjryD3wxogQM4ywOU=";
             }
           ];
 

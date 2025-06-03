@@ -26,6 +26,8 @@ in
       libreoffice
       # 阅读
       foliate
+      # 学习
+      anki-bin
     ];
   };
 }

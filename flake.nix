@@ -6,7 +6,7 @@
     ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     ## 官方稳定
-    nixpkgs-stable.url = "github:emaryn/nixpkgs/animeko";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable-small";
     # Chaotic
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 

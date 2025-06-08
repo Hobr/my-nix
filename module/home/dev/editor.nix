@@ -42,131 +42,103 @@ in
         enableExtensionUpdateCheck = false;
         enableUpdateCheck = false;
 
-        extensions =
-          with pkgs;
-          (with vscode-marketplace; [
-            # 全局
-            ms-ceintl.vscode-language-pack-zh-hans
+        extensions = with pkgs.vscode-marketplace; [
+          # 显示
+          miguelsolorio.fluent-icons
+          ms-ceintl.vscode-language-pack-zh-hans
+          wayou.vscode-todo-highlight
+          albert.tabout
+          usernamehw.errorlens
 
-            # 主题
-            miguelsolorio.fluent-icons
+          # 工具
+          ms-vscode-remote.vscode-remote-extensionpack
+          ms-vsliveshare.vsliveshare
+          visualstudioexptteam.vscodeintellicode
+          christian-kohler.path-intellisense
+          github.codespaces
 
-            # 工具
-            wayou.vscode-todo-highlight
-            albert.tabout
-            usernamehw.errorlens
-            christian-kohler.path-intellisense
-            cschlosser.doxdocgen
+          # Copilot
+          github.copilot
+          github.copilot-chat
 
-            # 环境
-            mkhl.direnv
-            formulahendry.code-runner
-            editorconfig.editorconfig
-            esbenp.prettier-vscode
+          # 环境
+          mkhl.direnv
+          formulahendry.code-runner
+          editorconfig.editorconfig
+          esbenp.prettier-vscode
 
-            # Git
-            eamodio.gitlens
-            codezombiech.gitignore
-            donjayamanne.githistory
+          # Git
+          eamodio.gitlens
+          donjayamanne.githistory
 
-            # Rust
-            rust-lang.rust-analyzer
+          # Rust
+          rust-lang.rust-analyzer
+          cordx56.rustowl-vscode
+          splo.vscode-bevy-inspector
+          dioxuslabs.dioxus
 
-            # Python
-            ms-python.python
-            ms-python.vscode-pylance
-            ms-python.isort
-            ms-python.debugpy
-            charliermarsh.ruff
+          # Python
+          ms-python.python
+          ms-python.vscode-pylance
+          ms-python.isort
+          ms-python.debugpy
+          charliermarsh.ruff
 
-            # CPP
-            jeff-hykin.better-cpp-syntax
-            ms-vscode.cpptools-themes
+          # CPP
+          ms-vscode.cpptools
+          ms-vscode.cpptools-extension-pack
+          jeff-hykin.better-cpp-syntax
+          ms-vscode.cpptools-themes
 
-            # JS
-            firefox-devtools.vscode-firefox-debug
-            vue.volar
-            dbaeumer.vscode-eslint
+          # JS
+          firefox-devtools.vscode-firefox-debug
+          vue.volar
+          dbaeumer.vscode-eslint
 
-            # Nix
-            bbenoist.nix
-            jnoortheen.nix-ide
-            arrterian.nix-env-selector
+          # Nix
+          bbenoist.nix
+          jnoortheen.nix-ide
+          arrterian.nix-env-selector
 
-            # Typst
-            myriad-dreamin.tinymist
+          # Typst
+          myriad-dreamin.tinymist
 
-            # Markdown
-            davidanson.vscode-markdownlint
+          # Markdown
+          davidanson.vscode-markdownlint
 
-            # GraphQL
-            graphql.vscode-graphql
-            graphql.vscode-graphql-syntax
+          # Docker
+          ms-azuretools.vscode-docker
 
-            # Docker
-            ms-azuretools.vscode-docker
+          # Makefile
+          ms-vscode.makefile-tools
 
-            # Makefile
-            ms-vscode.makefile-tools
+          # Stylua
+          johnnymorganz.stylua
 
-            # Stylua
-            johnnymorganz.stylua
+          # Fountain
+          piersdeseilligny.betterfountain
 
-            # Fountain
-            piersdeseilligny.betterfountain
+          # Yaml
+          redhat.vscode-yaml
 
-            # Yaml
-            redhat.vscode-yaml
+          # Toml
+          tamasfe.even-better-toml
 
-            # Toml
-            tamasfe.even-better-toml
+          # WIT
+          bytecodealliance.wit-idl
 
-            # WIT
-            bytecodealliance.wit-idl
+          # XML
+          dotjoshjohnson.xml
 
-            # XML
-            dotjoshjohnson.xml
-          ])
-          ++ (with vscode-extensions; [
-            # 工具
-            ms-vscode-remote.vscode-remote-extensionpack
-            ms-vsliveshare.vsliveshare
-            visualstudioexptteam.vscodeintellicode
-            github.codespaces
+          # PDF
+          tomoki1207.pdf
 
-            # Copilot
-            github.copilot
-            github.copilot-chat
+          # Just
+          nefrob.vscode-just-syntax
 
-            # CPP
-            ms-vscode.cpptools
-            ms-vscode.cpptools-extension-pack
-
-            # PDF
-            tomoki1207.pdf
-
-            # Just
-            nefrob.vscode-just-syntax
-
-            # Fortran
-            fortran-lang.linter-gfortran
-          ])
-          ++ vscode-utils.extensionsFromVscodeMarketplace [
-            # Bevy
-            {
-              name = "vscode-bevy-inspector";
-              publisher = "splo";
-              version = "0.3.0";
-              sha256 = "sha256-f0FAgQ0wm3FYPz5qpMHWHnTf3un0xw+5gcyBG7PYM2E=";
-            }
-            # Rust
-            {
-              name = "dioxus";
-              publisher = "DioxusLabs";
-              version = "0.6.0";
-              sha256 = "sha256-UYMJf0F8YjH1s7szIdTDG7t31/xjryD3wxogQM4ywOU=";
-            }
-          ];
+          # Fortran
+          fortran-lang.linter-gfortran
+        ];
 
         userSettings = {
           "[c]"."editor.defaultFormatter" = "ms-vscode.cpptools";

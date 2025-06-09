@@ -36,6 +36,7 @@ in
     # Visual Studio Code
     programs.vscode = {
       enable = cfg.vscode;
+      package = pkgs.stable.vscode;
       mutableExtensionsDir = false;
 
       profiles.default = {

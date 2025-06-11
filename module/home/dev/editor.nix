@@ -122,6 +122,7 @@ in
 
             # Toml
             tamasfe.even-better-toml
+            tombi-toml.tombi
 
             # WIT
             bytecodealliance.wit-idl

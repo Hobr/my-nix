@@ -27,11 +27,6 @@ in
     programs.waybar = {
       enable = true;
 
-      package = pkgs.waybar.override {
-        swaySupport = false;
-        hyprland = pkgs.hyprland;
-      };
-
       systemd = {
         enable = true;
         target = "hyprland-session.target";

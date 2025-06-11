@@ -121,7 +121,6 @@ in
             redhat.vscode-yaml
 
             # Toml
-            tamasfe.even-better-toml
             tombi-toml.tombi
 
             # WIT

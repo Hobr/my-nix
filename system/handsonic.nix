@@ -29,6 +29,7 @@
 
   nix.settings.trusted-users = [ "kanade" ];
   services.greetd.settings.initial_session.user = "kanade";
+  sys.program.ssh.user = "kanade";
 
   sys = {
     gpu.nvidia.enable = true;

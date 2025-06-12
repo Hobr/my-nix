@@ -85,4 +85,5 @@ with lib;
   };
 
   nix.settings.trusted-users = [ "yuri" ];
+  sys.program.ssh.user = "yuri";
 }

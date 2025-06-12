@@ -29,6 +29,7 @@
 
   nix.settings.trusted-users = [ "yuzuru" ];
   services.greetd.settings.initial_session.user = "yuzuru";
+  sys.program.ssh.user = "yuzuru";
 
   sys = {
     gpu.intel.enable = true;

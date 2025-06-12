@@ -6,6 +6,7 @@
     ./proxy.nix
     ./secure.nix
     ./shell.nix
+    ./ssh.nix
     ./virt.nix
   ];
 }

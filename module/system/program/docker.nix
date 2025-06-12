@@ -15,10 +15,14 @@ in
   config = mkIf cfg.enable {
     virtualisation.docker = {
       enable = true;
-      liveRestore = true;
       enableOnBoot = true;
       autoPrune.enable = true;
       storageDriver = "btrfs";
+      daemon.settings = {
+        experimental = true;
+        live-restore = true;
+        registry-mirrors = [ "https://docker.m.daocloud.io" ];
+      };
     };
 
     environment.systemPackages = with pkgs; [

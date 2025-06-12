@@ -62,7 +62,7 @@ in
           "wl-paste --type image --watch cliphist store"
 
           # 开机启动
-          "telegram-desktop -startintray"
+          "Telegram -startintray"
           "clash-verge"
         ];
 

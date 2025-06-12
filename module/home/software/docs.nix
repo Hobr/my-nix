@@ -28,6 +28,8 @@ in
       foliate
       # 学习
       anki-bin
+      # 笔记
+      obsidian
     ];
   };
 }

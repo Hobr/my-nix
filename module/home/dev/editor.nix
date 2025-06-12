@@ -54,7 +54,9 @@ in
             usernamehw.errorlens
 
             # 工具
-            ms-vscode-remote.vscode-remote-extensionpack
+            ms-vscode.remote-server
+            ms-vscode-remote.remote-ssh
+            ms-vscode-remote.remote-containers
             ms-vsliveshare.vsliveshare
             visualstudioexptteam.vscodeintellicode
             christian-kohler.path-intellisense

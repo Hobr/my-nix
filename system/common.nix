@@ -54,6 +54,7 @@
       proxy.enable = true;
       ld.enable = true;
       ssh.enable = true;
+      zerotier.enable = true;
     };
   };
 

@@ -8,5 +8,6 @@
     ./shell.nix
     ./ssh.nix
     ./virt.nix
+    ./zerotier.nix
   ];
 }

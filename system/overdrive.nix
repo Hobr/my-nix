@@ -30,8 +30,6 @@ with lib;
     };
 
     program = {
-      virtual.enable = true;
-      docker.enable = true;
     };
 
     disk = {
@@ -52,6 +50,14 @@ with lib;
       nh.enable = true;
       ld.enable = true;
       proxy.enable = true;
+      zerotier.enable = true;
+      virtual.enable = true;
+      docker.enable = true;
+
+      ssh = {
+        enable = true;
+        user = "yuri";
+      };
     };
   };
 
@@ -82,11 +88,6 @@ with lib;
         "docker"
       ];
     };
-  };
-
-  sys.program.ssh = {
-    enable = true;
-    user = "yuri";
   };
 
   nix.settings.trusted-users = [ "yuri" ];

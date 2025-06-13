@@ -26,28 +26,33 @@
 
 ### Docker
 
-无线网卡
-
-disko
-agenix
-
-frp
-
-apisix
-rustdesk
-vaultwarden
-anki
-syncthing
-uptime-kuma
-element-hq/dendrite
-
-openwrt
+traefik
 gitea
-AList
-calibre
+uptime-kuma
+Transmission
+Jackett
+Vaultwarden
+jellyfin
+Filebrowser
+ChineseSubFinder
+jackett
+syncthing
+PhotoPrism
+telegraf
+Navidrome
+music-tag-web
+n8n
+Musicn
+Gotify
+Calibre
+iptv-sources
+Portainer
+Nastools
+QD
+Komga/Bungumi
 
-Tieba-Cloud-Sign
-blog terminal.css
+tieba cloud sign
+blog
 
 ## 安装
 

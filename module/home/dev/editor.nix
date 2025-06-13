@@ -74,7 +74,7 @@ in
 
             # Rust
             rust-lang.rust-analyzer
-            cordx56.rustowl-vscode
+            # cordx56.rustowl-vscode
             splo.vscode-bevy-inspector
             dioxuslabs.dioxus
 

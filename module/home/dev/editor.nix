@@ -97,7 +97,6 @@ in
             dbaeumer.vscode-eslint
 
             # Nix
-            bbenoist.nix
             jnoortheen.nix-ide
             arrterian.nix-env-selector
 

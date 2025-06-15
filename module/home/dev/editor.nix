@@ -96,6 +96,9 @@ in
             vue.volar
             dbaeumer.vscode-eslint
 
+            # Golang
+            golang.go
+
             # Nix
             jnoortheen.nix-ide
             arrterian.nix-env-selector

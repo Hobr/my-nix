@@ -112,7 +112,7 @@ in
 
     home.packages = with pkgs; [
       iftop
-
+      screen
       nitch
       xorg.xlsclients
       xorg.xset

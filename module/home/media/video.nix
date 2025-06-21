@@ -37,7 +37,6 @@ in
     home.packages =
       with pkgs;
       optionals cfg.enable [
-        animeko
         ffmpeg
         yt-dlp
         mkvtoolnix

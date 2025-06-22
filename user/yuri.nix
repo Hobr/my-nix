@@ -21,7 +21,6 @@
     dev = {
       git.enable = true;
       gpg.enable = true;
-      nix.enable = true;
       direnv.enable = true;
       util.enable = true;
       editor.nvim = true;

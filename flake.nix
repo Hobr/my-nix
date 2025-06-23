@@ -4,7 +4,7 @@
   inputs = {
     # 软件源
     ## 官方
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     ## 官方稳定
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
     # Chaotic
@@ -22,7 +22,7 @@
     };
     ## 用户
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/39b7903";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全

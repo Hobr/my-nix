@@ -16,6 +16,9 @@ in
     home.packages = with pkgs; [
       # 二进制
       ghex
+
+      # 抓包
+      reqable
     ];
   };
 }

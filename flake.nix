@@ -22,7 +22,7 @@
     };
     ## 用户
     home-manager = {
-      url = "github:nix-community/home-manager/39b7903";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## 安全

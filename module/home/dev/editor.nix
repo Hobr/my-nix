@@ -237,6 +237,7 @@ in
 
     home.packages = with pkgs; [
       nano
+      code-cursor
       (if cfg.nvim then neovide else null)
     ];
   };

@@ -58,6 +58,11 @@ in
     };
 
     # LazyGit
-    programs.lazygit.enable = true;
+    programs.lazygit = {
+      enable = true;
+      settings = {
+        git.overrideGpg = true;
+      };
+    };
   };
 }

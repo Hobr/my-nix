@@ -13,6 +13,9 @@ in
   options.home.web.music.enable = mkEnableOption "music";
 
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [ qcm ];
+    home.packages = with pkgs; [
+      qcm
+      netease-cloud-music-gtk
+    ];
   };
 }

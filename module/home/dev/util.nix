@@ -14,6 +14,9 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
+      # 工具
+      cloc
+
       # 二进制
       ghex
 

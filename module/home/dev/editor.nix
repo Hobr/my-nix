@@ -238,6 +238,7 @@ in
     home.packages = with pkgs; [
       nano
       code-cursor
+      gemini-cli
       (if cfg.nvim then neovide else null)
     ];
   };

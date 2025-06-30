@@ -22,7 +22,6 @@ in
 
       # 抓包
       reqable
-      proxypin
     ];
   };
 }

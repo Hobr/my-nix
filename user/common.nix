@@ -81,6 +81,14 @@
       file.enable = true;
       cli.enable = true;
     };
+
+    pro = {
+      audio.enable = false;
+      video.enable = false;
+      image.enable = true;
+      obs.enable = false;
+      electron.enable = false;
+    };
   };
 
   # 主题

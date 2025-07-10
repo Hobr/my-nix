@@ -17,8 +17,6 @@ in
       # 图片处理
       gimp
       inkscape
-      darktable
-      rawtherapee
     ];
   };
 }

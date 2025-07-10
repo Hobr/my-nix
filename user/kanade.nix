@@ -17,13 +17,6 @@
 
     };
 
-    pro = {
-      audio.enable = false;
-      video.enable = false;
-      image.enable = false;
-      obs.enable = false;
-      electron.enable = false;
-    };
   };
 
   # 壁纸

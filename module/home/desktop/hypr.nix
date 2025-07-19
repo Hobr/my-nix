@@ -29,31 +29,30 @@ in
       settings = {
         monitor = cfg.monitor;
 
-        env =
-          [
-            # QT
-            "QT_QPA_PLATFORM,wayland;xcb"
-            "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-            "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+        env = [
+          # QT
+          "QT_QPA_PLATFORM,wayland;xcb"
+          "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+          "QT_AUTO_SCREEN_SCALE_FACTOR,1"
 
-            # Wayland
-            "NIXOS_OZONE_WL,1"
-            "GDK_BACKEND,wayland,x11"
-            "XDG_SESSION_TYPE,wayland"
-            "SDL_VIDEODRIVER,wayland"
-            "MOZ_ENABLE_WAYLAND,1"
-          ]
-          # NVIDIA
-          ++ optionals cfg.nvidia [
-            "GBM_BACKEND,nvidia-drm"
-            "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-            "LIBVA_DRIVER_NAME,nvidia"
-            "NVD_BACKEND,direct"
-            "MOZ_X11_EGL,1"
-            "MOZ_DISABLE_RDD_SANDBOX,1"
-            "WLR_NO_HARDWARE_CURSORS,1"
-            "ELECTRON_OZONE_PLATFORM_HINT,auto"
-          ];
+          # Wayland
+          "NIXOS_OZONE_WL,1"
+          "GDK_BACKEND,wayland,x11"
+          "XDG_SESSION_TYPE,wayland"
+          "SDL_VIDEODRIVER,wayland"
+          "MOZ_ENABLE_WAYLAND,1"
+        ]
+        # NVIDIA
+        ++ optionals cfg.nvidia [
+          "GBM_BACKEND,nvidia-drm"
+          "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+          "LIBVA_DRIVER_NAME,nvidia"
+          "NVD_BACKEND,direct"
+          "MOZ_X11_EGL,1"
+          "MOZ_DISABLE_RDD_SANDBOX,1"
+          "WLR_NO_HARDWARE_CURSORS,1"
+          "ELECTRON_OZONE_PLATFORM_HINT,auto"
+        ];
 
         exec-once = [
           # 粘贴板

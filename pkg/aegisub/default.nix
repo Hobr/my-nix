@@ -95,25 +95,24 @@ stdenv.mkDerivation rec {
     wrapGAppsHook3
   ];
 
-  buildInputs =
-    [
-      boost183
-      ffmpeg
-      ffms
-      fftw
-      icu
-      libass
-      libGL
-      libuchardet
-      libX11
-      vapoursynth-bestsource
-      wxGTK31
-    ]
-    ++ lib.optionals alsaSupport [ alsa-lib ]
-    ++ lib.optionals openalSupport [ openal ]
-    ++ lib.optionals portaudioSupport [ portaudio ]
-    ++ lib.optionals pulseaudioSupport [ libpulseaudio ]
-    ++ lib.optionals spellcheckSupport [ hunspell ];
+  buildInputs = [
+    boost183
+    ffmpeg
+    ffms
+    fftw
+    icu
+    libass
+    libGL
+    libuchardet
+    libX11
+    vapoursynth-bestsource
+    wxGTK31
+  ]
+  ++ lib.optionals alsaSupport [ alsa-lib ]
+  ++ lib.optionals openalSupport [ openal ]
+  ++ lib.optionals portaudioSupport [ portaudio ]
+  ++ lib.optionals pulseaudioSupport [ libpulseaudio ]
+  ++ lib.optionals spellcheckSupport [ hunspell ];
 
   patches = [
     # Fix unable to generate git_version.h

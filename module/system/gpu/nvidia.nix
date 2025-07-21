@@ -40,7 +40,6 @@ in
       ++ (with vulkanPackages_latest; [
         vulkan-loader
         vulkan-validation-layers
-        vulkan-extension-layer
         vulkan-tools
       ]);
 

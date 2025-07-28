@@ -14,9 +14,6 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      nurl
-      nix-init
-      nix-update
       nixfmt-rfc-style
       nixpkgs-review
     ];

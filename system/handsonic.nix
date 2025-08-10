@@ -23,6 +23,8 @@
         "dialout"
         "video"
         "docker"
+        "qemu-libvirtd"
+        "libvirtd"
       ];
     };
   };

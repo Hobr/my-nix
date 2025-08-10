@@ -86,6 +86,8 @@ with lib;
         "dialout"
         "video"
         "docker"
+        "qemu-libvirtd"
+        "libvirtd"
       ];
     };
   };

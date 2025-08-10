@@ -31,10 +31,8 @@ in
       };
     };
 
-    programs.dconf.enable = true;
+    programs.virt-manager.enable = true;
 
-    environment.systemPackages = [
-      pkgs.virt-manager
-    ];
+    programs.dconf.enable = true;
   };
 }

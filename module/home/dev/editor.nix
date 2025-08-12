@@ -170,7 +170,7 @@ in
           "editor.formatOnType" = false;
           "editor.inlineSuggest.enabled" = true;
           "editor.inlineSuggest.showToolbar" = "always";
-          "editor.minimap.autohide" = true;
+          "editor.minimap.autohide" = "mouseover";
           "editor.minimap.showSlider" = "always";
           "editor.renderControlCharacters" = true;
           "editor.renderWhitespace" = "all";

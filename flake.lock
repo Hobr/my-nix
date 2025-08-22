@@ -864,11 +864,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1755880071,
-        "narHash": "sha256-6FrR/0b9xprxmMrEmbXqMmoKTB/bK2ulucC8uSDUXMQ=",
+        "lastModified": 1755880496,
+        "narHash": "sha256-uA/kJHN6j0weDb03zTeK/hPXOlvTbqczTMAlAPScDQw=",
         "owner": "Hobr",
         "repo": "stylix",
-        "rev": "901f8265f9efa48dd15df762fdb676878a3401f4",
+        "rev": "edd123083e8cd6138fb32fb297ac9d71156eed2b",
         "type": "github"
       },
       "original": {

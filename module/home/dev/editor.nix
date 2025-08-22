@@ -185,7 +185,7 @@ in
 
           "diffEditor.maxComputationTime" = 0;
           "diffEditor.ignoreTrimWhitespace" = false;
-          "diffEditor.renderSideBySide" = true;
+          "diffEditor.renderSideBySide" = false;
 
           "window.menuBarVisibility" = "compact";
           "window.titleBarStyle" = "custom";

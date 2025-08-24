@@ -40,6 +40,7 @@ in
         ffmpeg
         yt-dlp
         mkvtoolnix
+        losslesscut-bin
       ];
   };
 }

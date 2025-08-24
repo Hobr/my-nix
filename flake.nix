@@ -51,7 +51,7 @@
     # 桌面
     ## 主题
     stylix = {
-      url = "github:Hobr/stylix";
+      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ## Hypr

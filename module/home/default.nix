@@ -64,6 +64,10 @@ with lib;
       allowUnsupportedSystem = true;
       # 破损软件
       allowBroken = true;
+      # 漏洞软件
+      permittedInsecurePackages = [
+        "qtwebengine-5.15.19"
+      ];
     };
     # Overlays
     overlays = [

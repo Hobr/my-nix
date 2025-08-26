@@ -41,12 +41,10 @@ in
     programs.seahorse.enable = true;
 
     # Logind
-    services.logind = {
+    services.logind.settings.Login = {
       lidSwitch = "suspend";
       lidSwitchExternalPower = "lock";
-      extraConfig = ''
-        HandlePowerKey=suspend
-      '';
+      HandlePowerKey = "suspend";
     };
   };
 }

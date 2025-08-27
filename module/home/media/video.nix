@@ -27,8 +27,13 @@ in
         ];
       };
 
+      defaultProfiles = [ "gpu-hq" ];
+
       config = {
-        profile = "gpu-hq";
+        hwdec = "auto-safe";
+        vo = "gpu";
+        gpu-context = "wayland";
+
         force-window = true;
         ytdl-format = "bestvideo+bestaudio";
       };

@@ -17,11 +17,11 @@ in
       enable = cfg.enable;
       package = pkgs.mpv.override {
         scripts = with pkgs.mpvScripts; [
+          uosc
           mpris
           webtorrent-mpv-hook
           thumbfast
           quality-menu
-          modernx
           seekTo
           mpv-playlistmanager
         ];

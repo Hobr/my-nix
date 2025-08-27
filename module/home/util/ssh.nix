@@ -18,6 +18,8 @@ in
   config = mkIf cfg.enable {
     programs.ssh = {
       enable = true;
+      enableDefaultConfig = false;
+
       matchBlocks = mkIf config.home.proxy.enable {
         "github.com" = {
           hostname = "ssh.github.com";

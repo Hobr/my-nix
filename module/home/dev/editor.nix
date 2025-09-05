@@ -61,6 +61,7 @@ in
             visualstudioexptteam.vscodeintellicode
             christian-kohler.path-intellisense
             github.codespaces
+            google.gemini-cli-vscode-ide-companion
 
             # 环境
             mkhl.direnv

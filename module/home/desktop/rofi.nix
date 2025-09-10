@@ -16,7 +16,7 @@ in
     # 粘贴板
     programs.rofi = {
       enable = true;
-      package = pkgs.rofi-wayland;
+
       plugins = with pkgs; [
         rofi-top
         rofi-rbw

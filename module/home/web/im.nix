@@ -16,7 +16,7 @@ in
 
     home.packages = with pkgs; [
       telegram-desktop
-      wechat-uos
+      wechat
       qq
     ];
   };

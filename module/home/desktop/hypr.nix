@@ -125,18 +125,6 @@ in
           };
         };
 
-        # 手势
-        gestures = {
-          # 启动
-          workspace_swipe = true;
-          # 切换用指数
-          workspace_swipe_fingers = 3;
-          # 边缘滑动
-          workspace_swipe_touch = true;
-          # 最后一个工作区滑动创建新工作区
-          workspace_swipe_create_new = true;
-        };
-
         # 杂项
         misc = {
           # 禁用随机背景

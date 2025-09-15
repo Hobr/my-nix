@@ -125,6 +125,12 @@ in
           };
         };
 
+        # 触控
+        gestures = {
+          workspace_swipe_touch = true;1
+          gesture = [ "3, horizontal, workspace" ];
+        };
+
         # 杂项
         misc = {
           # 禁用随机背景

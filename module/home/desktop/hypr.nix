@@ -127,7 +127,7 @@ in
 
         # 触控
         gestures = {
-          workspace_swipe_touch = true;1
+          workspace_swipe_touch = true;
           gesture = [ "3, horizontal, workspace" ];
         };
 

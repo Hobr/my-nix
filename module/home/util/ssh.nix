@@ -21,6 +21,13 @@ in
       enableDefaultConfig = false;
 
       matchBlocks = {
+        "github.com" = mkIf config.home.proxy.enable {
+          hostname = "ssh.github.com";
+          user = "git";
+          port = 443;
+          proxyCommand = "${pkgs.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
+        };
+
         "kanade" = {
           hostname = "10.1.127.2";
           user = "kanade";
@@ -37,14 +44,6 @@ in
           hostname = "10.1.127.4";
           user = "yuzuru";
           port = 443;
-        };
-      }
-      // mkIf config.home.proxy.enable {
-        "github.com" = {
-          hostname = "ssh.github.com";
-          user = "git";
-          port = 443;
-          proxyCommand = "${pkgs.netcat}/bin/nc -v -x 127.0.0.1:7891 %h %p";
         };
       };
     };

@@ -478,26 +478,6 @@
         "type": "github"
       }
     },
-    "hyprcontrib": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757889285,
-        "narHash": "sha256-IUDbY2sjfa+ySyI+BEw61QANuzCYXGIdCrbkULLAr1s=",
-        "owner": "hyprwm",
-        "repo": "contrib",
-        "rev": "bc9dbdebbebeb8eb75115a865f74c8acc3ec2424",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hyprwm",
-        "repo": "contrib",
-        "type": "github"
-      }
-    },
     "impermanence": {
       "locked": {
         "lastModified": 1737831083,
@@ -744,7 +724,6 @@
         "chaotic": "chaotic",
         "disko": "disko",
         "home-manager": "home-manager_3",
-        "hyprcontrib": "hyprcontrib",
         "impermanence": "impermanence",
         "lanzaboote": "lanzaboote",
         "nix-vscode-extensions": "nix-vscode-extensions",

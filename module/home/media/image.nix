@@ -18,7 +18,7 @@ in
       # 截图
       slurp
       grim
-      inputs.hyprcontrib.packages.${pkgs.system}.grimblast
+      grimblast
       # 选色
       hyprpicker
       # 图片库

@@ -20,7 +20,26 @@ in
       enable = true;
       enableDefaultConfig = false;
 
-      matchBlocks = mkIf config.home.proxy.enable {
+      matchBlocks = {
+        "kanade" = {
+          hostname = "10.1.127.2";
+          user = "kanade";
+          port = 443;
+        };
+
+        "yuri" = {
+          hostname = "10.1.127.3";
+          user = "yuri";
+          port = 443;
+        };
+
+        "yuzuru" = {
+          hostname = "10.1.127.4";
+          user = "yuzuru";
+          port = 443;
+        };
+      }
+      // mkIf config.home.proxy.enable {
         "github.com" = {
           hostname = "ssh.github.com";
           user = "git";

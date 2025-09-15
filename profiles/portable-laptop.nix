@@ -1,11 +1,5 @@
-# DEPRECATED: This file is deprecated and will be removed in future versions
-# Use the new profile-based system instead:
-# - profiles/gaming-laptop.nix for gaming laptops  
-# - profiles/portable-laptop.nix for portable laptops
-# - profiles/server.nix for servers
-# - profiles/nas.nix for NAS devices
-# See DEVICE_SETUP.md for migration guide
-
+# Portable laptop profile  
+# For lightweight laptops with basic desktop environment, minimal resource usage
 {
   inputs,
   outputs,
@@ -14,39 +8,12 @@
 }:
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
-    inputs.chaotic.nixosModules.default
-    inputs.disko.nixosModules.disko
-    inputs.impermanence.nixosModules.impermanence
-    inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.solaar.nixosModules.default
-    inputs.agenix.nixosModules.default
+    ./base.nix
     inputs.stylix.nixosModules.stylix
-
-    outputs.nixosModules
   ];
 
   sys = {
-    config = {
-      nix.enable = true;
-      kernel.enable = true;
-      locale.enable = true;
-    };
-
-    disk = {
-      persist.enable = true;
-      device.enable = true;
-    };
-
-    boot = {
-      systemd-boot.enable = true;
-      tpm.enable = true;
-      secure-boot.enable = true;
-    };
-
     io = {
-      driver.enable = true;
-      network.enable = true;
       audio.enable = true;
       bluetooth.enable = true;
     };
@@ -56,17 +23,15 @@
     };
 
     program = {
-      shell.enable = true;
-      secure.enable = true;
-      nh.enable = true;
       proxy.enable = true;
-      ld.enable = true;
-      ssh.enable = true;
       zerotier.enable = true;
+      # 不启用虚拟化和 Docker 以节省资源
+      virtual.enable = false;
+      docker.enable = false;
     };
   };
 
-  # 主题
+  # 主题 - 与游戏本相同但可单独调整
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
@@ -124,9 +89,4 @@
       noto-fonts-emoji
     ];
   };
-
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
-  # 系统版本
-  system.stateVersion = "25.11";
 }

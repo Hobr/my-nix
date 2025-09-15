@@ -2,6 +2,28 @@
 
 个人的**NixOS**配置, 日常生活使用, 更新频率较高
 
+## 配置结构
+
+本配置采用基于设备类型的模块化设计，支持多种设备类型的快速部署:
+
+### 设备类型
+- **游戏本** (`gaming-laptop`): 高性能笔记本，完整桌面环境 + 专业软件
+- **便携本** (`portable-laptop`): 轻薄本，基础桌面环境，节省资源
+- **服务器** (`server`): 无桌面环境，纯命令行，适用于服务器部署
+- **NAS** (`nas`): 网络存储，基于服务器配置 + 存储优化
+
+### 目录结构
+```
+profiles/           # 设备类型配置文件
+user/profiles/      # 用户角色配置文件  
+templates/          # 新设备模板文件
+system/            # 具体设备配置
+user/              # 具体用户配置
+module/            # 自定义模块
+```
+
+详细配置指南请参见 [DEVICE_SETUP.md](./DEVICE_SETUP.md)
+
 ## 介绍
 
 - 主机
@@ -11,10 +33,10 @@
   - howling: 服务器
 
 - 用户
-  - kanade: handsonic用户, 重软件多
-  - yuzuru: distortion用户, 重软件少
-  - yuri: overdrive用户, 服务器环境
-  - miyuki: howling用户, 服务器环境
+  - kanade: handsonic用户, 重软件多 (desktop-full)
+  - yuzuru: distortion用户, 重软件少 (desktop-lite)
+  - yuri: overdrive用户, 服务器环境 (server)
+  - miyuki: howling用户, 服务器环境 (server)
 
 ## TODO
 

@@ -1,10 +1,4 @@
-# DEPRECATED: This file is deprecated and will be removed in future versions
-# Use the new profile-based system instead:
-# - user/profiles/desktop-full.nix for complete desktop users
-# - user/profiles/desktop-lite.nix for lightweight desktop users  
-# - user/profiles/server.nix for server users
-# See DEVICE_SETUP.md for migration guide
-
+# Desktop user profile for portable laptops with lightweight software
 {
   inputs,
   outputs,
@@ -13,16 +7,11 @@
 }:
 {
   imports = [
+    ./base.nix
     inputs.stylix.homeModules.stylix
-    inputs.chaotic.homeManagerModules.default
-
-    outputs.homeModules
   ];
 
   home = {
-    # 系统版本号
-    stateVersion = "25.11";
-
     proxy.enable = true;
 
     desktop = {
@@ -56,8 +45,6 @@
 
     software = {
       docs.enable = true;
-      terminal.enable = true;
-      zsh.enable = true;
     };
 
     media = {
@@ -67,12 +54,6 @@
     };
 
     dev = {
-      git.enable = true;
-      gpg.enable = true;
-      nix.enable = true;
-      direnv.enable = true;
-      util.enable = true;
-
       editor = {
         vscode = true;
         nvim = true;
@@ -82,23 +63,19 @@
 
     util = {
       audio.enable = true;
-      gnu.enable = true;
-      ssh.enable = true;
-      disk.enable = true;
-      file.enable = true;
-      cli.enable = true;
     };
 
+    # 便携本减少专业软件
     pro = {
       audio.enable = true;
-      video.enable = false;
+      video.enable = false;  # 减少视频处理软件
       image.enable = true;
-      obs.enable = true;
-      electron.enable = false;
+      obs.enable = false;   # 不需要录屏软件
+      electron.enable = false;  # 减少大型 Electron 应用
     };
   };
 
-  # 主题
+  # 主题 - 与桌面版相同
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";

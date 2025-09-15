@@ -8,14 +8,7 @@
 with lib;
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
-    inputs.chaotic.nixosModules.default
-    inputs.impermanence.nixosModules.impermanence
-    inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.solaar.nixosModules.default
-    inputs.stylix.nixosModules.stylix
-
-    outputs.nixosModules
+    ../profiles/nas.nix
 
     ./overdrive/kernel.nix
     ./overdrive/filesystem.nix
@@ -23,55 +16,12 @@ with lib;
   ];
 
   sys = {
-    config = {
-      nix.enable = true;
-      kernel.enable = true;
-      locale.enable = true;
-    };
-
-    program = {
-    };
-
-    disk = {
-      persist.enable = true;
-      device.enable = true;
-    };
-
-    boot.systemd-boot.enable = true;
-
-    io = {
-      driver.enable = true;
-      network.enable = true;
-    };
-
-    program = {
-      shell.enable = true;
-      secure.enable = true;
-      nh.enable = true;
-      ld.enable = true;
-      proxy.enable = true;
-      zerotier.enable = true;
-      virtual.enable = true;
-      docker.enable = true;
-
-      ssh = {
-        enable = true;
-        user = "yuri";
-      };
-    };
+    # NAS 不需要额外的GPU配置，继承 server profile 配置
+    program.ssh.user = "yuri";
   };
-
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
-
-  # 系统版本
-  system.stateVersion = "25.11";
 
   # 主机名
   networking.hostName = "overdrive";
-
-  # 内核
-  boot.kernelPackages = mkForce pkgs.linuxPackages_cachyos-server;
 
   # 用户
   users.users = {

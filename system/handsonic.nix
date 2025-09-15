@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common.nix
+    ../profiles/gaming-laptop.nix
 
     ./handsonic/kernel.nix
     ./handsonic/filesystem.nix
@@ -34,9 +34,11 @@
   sys.program.ssh.user = "kanade";
 
   sys = {
+    # 游戏本特定配置
     gpu.nvidia.enable = true;
 
     program = {
+      # 游戏本启用所有功能，继承 gaming-laptop profile 配置
       virtual.enable = true;
       docker.enable = true;
     };

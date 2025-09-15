@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common.nix
+    ../profiles/portable-laptop.nix
 
     ./distortion/kernel.nix
     ./distortion/filesystem.nix
@@ -34,9 +34,11 @@
   sys.program.ssh.user = "yuzuru";
 
   sys = {
+    # 便携本特定配置
     gpu.intel.enable = true;
 
     program = {
+      # 便携本节省资源，继承 portable-laptop profile 配置
       virtual.enable = false;
       docker.enable = false;
     };

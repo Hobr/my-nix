@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {
-  imports = [ ./common.nix ];
+  imports = [ ./profiles/desktop-lite.nix ];
 
   home = {
     username = "yuzuru";
     homeDirectory = "/home/yuzuru";
 
+    # Portable laptop 特定的桌面配置
     desktop = {
       hypr = {
         nvidia = false;

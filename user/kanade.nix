@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {
-  imports = [ ./common.nix ];
+  imports = [ ./profiles/desktop-full.nix ];
 
   home = {
     username = "kanade";
     homeDirectory = "/home/kanade";
 
+    # Gaming laptop 特定的桌面配置
     desktop = {
       hypr = {
         nvidia = true;
@@ -14,9 +15,7 @@
           "eDP-1,2560x1440@165,auto,1.25"
         ];
       };
-
     };
-
   };
 
   # 壁纸

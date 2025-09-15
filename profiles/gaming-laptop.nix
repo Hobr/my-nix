@@ -1,11 +1,5 @@
-# DEPRECATED: This file is deprecated and will be removed in future versions
-# Use the new profile-based system instead:
-# - profiles/gaming-laptop.nix for gaming laptops  
-# - profiles/portable-laptop.nix for portable laptops
-# - profiles/server.nix for servers
-# - profiles/nas.nix for NAS devices
-# See DEVICE_SETUP.md for migration guide
-
+# Gaming laptop profile
+# For high-performance laptops with full desktop environment and gaming capabilities
 {
   inputs,
   outputs,
@@ -14,39 +8,13 @@
 }:
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
-    inputs.chaotic.nixosModules.default
-    inputs.disko.nixosModules.disko
-    inputs.impermanence.nixosModules.impermanence
-    inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.solaar.nixosModules.default
-    inputs.agenix.nixosModules.default
+    ./base.nix
     inputs.stylix.nixosModules.stylix
-
-    outputs.nixosModules
+    inputs.solaar.nixosModules.default
   ];
 
   sys = {
-    config = {
-      nix.enable = true;
-      kernel.enable = true;
-      locale.enable = true;
-    };
-
-    disk = {
-      persist.enable = true;
-      device.enable = true;
-    };
-
-    boot = {
-      systemd-boot.enable = true;
-      tpm.enable = true;
-      secure-boot.enable = true;
-    };
-
     io = {
-      driver.enable = true;
-      network.enable = true;
       audio.enable = true;
       bluetooth.enable = true;
     };
@@ -56,13 +24,10 @@
     };
 
     program = {
-      shell.enable = true;
-      secure.enable = true;
-      nh.enable = true;
       proxy.enable = true;
-      ld.enable = true;
-      ssh.enable = true;
       zerotier.enable = true;
+      virtual.enable = true;
+      docker.enable = true;
     };
   };
 
@@ -124,9 +89,4 @@
       noto-fonts-emoji
     ];
   };
-
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
-  # 系统版本
-  system.stateVersion = "25.11";
 }

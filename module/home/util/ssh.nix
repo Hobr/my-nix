@@ -31,19 +31,19 @@ in
         "kanade" = {
           hostname = "10.1.127.2";
           user = "kanade";
-          port = 443;
+          port = 22;
         };
 
         "yuri" = {
           hostname = "10.1.127.3";
           user = "yuri";
-          port = 443;
+          port = 22;
         };
 
         "yuzuru" = {
           hostname = "10.1.127.4";
           user = "yuzuru";
-          port = 443;
+          port = 22;
         };
       };
     };

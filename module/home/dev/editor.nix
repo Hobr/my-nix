@@ -45,7 +45,6 @@ in
         extensions =
           with pkgs.vscode-marketplace;
           with pkgs.vscode-marketplace-release;
-          with pkgs.open-vsx-release;
           [
             # 显示
             miguelsolorio.fluent-icons

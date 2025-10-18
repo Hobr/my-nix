@@ -2,6 +2,7 @@
   config,
   options,
   lib,
+  pkgs,
   ...
 }:
 with lib;
@@ -64,5 +65,9 @@ in
         git.overrideGpg = true;
       };
     };
+
+    home.packages = with pkgs; [
+      gh
+    ];
   };
 }

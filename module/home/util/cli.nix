@@ -126,6 +126,8 @@ in
       p7zip
       zip
       unzip
+      rar
+      unrar
     ];
   };
 }

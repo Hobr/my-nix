@@ -16,10 +16,6 @@ in
     programs.git = {
       enable = true;
 
-      # 用户
-      userName = "Hobr";
-      userEmail = "mail@hobr.site";
-
       # 签名
       signing = {
         format = "openpgp";
@@ -28,7 +24,13 @@ in
       };
 
       # 配置
-      extraConfig = {
+      settings = {
+        # 用户信息
+        user = {
+          name = "Hobr";
+          email = "mail@hobr.site";
+        };
+
         # 默认分支名
         init.defaultBranch = "main";
 
@@ -46,8 +48,7 @@ in
 
       # LFS
       lfs.enable = true;
-      # Diff
-      diff-so-fancy.enable = true;
+
       # 忽略
       ignores = [
         ".direnv"
@@ -56,6 +57,12 @@ in
         "result*"
         "venv"
       ];
+    };
+
+    # Diff
+    programs.diff-so-fancy = {
+      enable = true;
+      enableGitIntegration = true;
     };
 
     # LazyGit

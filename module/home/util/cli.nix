@@ -127,7 +127,6 @@ in
       zip
       unzip
       rar
-      unrar
     ];
   };
 }

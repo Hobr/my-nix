@@ -16,6 +16,8 @@ in
     home.packages = with pkgs; [
       kdePackages.kdenlive
       blender
+      aegisub
+      whisper-ctranslate2
     ];
   };
 }

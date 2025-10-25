@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 {
   imports = [ ./common.nix ];
 
@@ -17,6 +21,7 @@
 
     };
 
+    pro.video.enable = lib.mkForce true;
   };
 
   # 壁纸

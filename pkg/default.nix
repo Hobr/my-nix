@@ -1,3 +1,1 @@
-pkgs: {
-  aegisub = pkgs.callPackage ./aegisub { };
-}
+pkgs: { }

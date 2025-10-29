@@ -21,7 +21,6 @@ in
         batwatch
         batpipe
         batman
-        batgrep
         batdiff
       ];
     };

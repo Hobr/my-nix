@@ -19,7 +19,7 @@ in
       enable32Bit = true;
       extraPackages = with pkgs; [
         intel-media-driver
-        vaapiVdpau
+        libva-vdpau-driver
         libvdpau-va-gl
         intel-compute-runtime
         vaapiIntel

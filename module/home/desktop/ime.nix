@@ -21,10 +21,10 @@ in
         addons = with pkgs; [
           (fcitx5-rime.override { rimeDataPkgs = [ rime-ice ]; })
           fcitx5-mozc
-          fcitx5-chinese-addons
           fcitx5-gtk
-          fcitx5-configtool
           fcitx5-material-color
+          qt6Packages.fcitx5-chinese-addons
+          qt6Packages.fcitx5-configtool
         ];
       };
     };

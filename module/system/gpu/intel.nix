@@ -22,7 +22,7 @@ in
         libva-vdpau-driver
         libvdpau-va-gl
         intel-compute-runtime
-        vaapiIntel
+        intel-vaapi-driver
       ];
     };
 

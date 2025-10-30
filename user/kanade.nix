@@ -20,8 +20,6 @@
       };
 
     };
-
-    pro.video.enable = lib.mkForce true;
   };
 
   # 壁纸

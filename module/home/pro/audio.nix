@@ -16,6 +16,8 @@ in
     home.packages = with pkgs; [
       # 音频编辑
       audacity
+      # 字幕
+      whisper-ctranslate2
     ];
   };
 }

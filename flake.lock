@@ -753,15 +753,15 @@
         "snowfall-lib": "snowfall-lib"
       },
       "locked": {
-        "lastModified": 1761823620,
+        "lastModified": 1761840426,
         "narHash": "sha256-CprKgnLGKpNB0leamU9hw+ZgocRAsEFevyqIuY0FSiY=",
-        "owner": "Hobr",
+        "owner": "Svenum",
         "repo": "Solaar-Flake",
-        "rev": "1542c9b0f89666e9d6597e972ab5cd81bf0b3253",
+        "rev": "7b5e221d60195d77fda5c2d69087f7cd1b8d3c20",
         "type": "github"
       },
       "original": {
-        "owner": "Hobr",
+        "owner": "Svenum",
         "repo": "Solaar-Flake",
         "type": "github"
       }

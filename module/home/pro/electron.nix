@@ -21,7 +21,6 @@ in
       circt
       # 仿真
       yosys
-      inputs.nix-xilinx.packages.${pkgs.system}.vivado
       qucs-s
       # 模拟器
       qtrvsim

@@ -75,7 +75,6 @@ with lib;
       outputs.overlays.modifications
       outputs.overlays.stable-package
 
-      inputs.nix-xilinx.overlay
       inputs.nix-vscode-extensions.overlays.default
     ];
   };

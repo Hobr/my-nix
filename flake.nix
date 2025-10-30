@@ -37,11 +37,6 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ## Xilint
-    nix-xilinx = {
-      url = "gitlab:doronbehar/nix-xilinx";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     ## 罗技
     solaar = {
       url = "github:Svenum/Solaar-Flake";

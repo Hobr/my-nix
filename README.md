@@ -166,8 +166,8 @@ gpg --import secret-full-key.asc
 gpg --import public-key.asc
 
 # 重新TPM
-sudo cryptsetup luksKillSlot /dev/nvme0n1p4 1
-sudo cryptsetup token remove /dev/nvme0n1p4 --token-id 0
+sudo cryptsetup luksKillSlot /dev/nvme0n1 1
+sudo cryptsetup token remove /dev/nvme0n1 --token-id 0
 ```
 
 ## 参考资料

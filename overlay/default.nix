@@ -10,7 +10,7 @@
 
   stable-package = final: _prev: {
     stable = import inputs.nixpkgs-stable {
-      system = final.system;
+      system = final.stdenv.hostPlatform.system;
       config = {
         # 非自由软件
         allowUnfree = true;

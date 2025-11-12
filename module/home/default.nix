@@ -60,8 +60,6 @@ with lib;
     config = {
       # 非自由软件
       allowUnfree = true;
-      # 跨平台
-      allowUnsupportedSystem = true;
       # 破损软件
       allowBroken = true;
       # 漏洞软件

@@ -57,7 +57,6 @@ in
             ms-vscode.remote-server
             ms-vscode-remote.remote-ssh
             ms-vsliveshare.vsliveshare
-            visualstudioexptteam.vscodeintellicode
             christian-kohler.path-intellisense
             google.gemini-cli-vscode-ide-companion
 
@@ -211,7 +210,6 @@ in
 
           "python.languageServer" = "Pylance";
           "tinymist.formatterMode" = "typstyle";
-          "vsintellicode.modify.editor.suggestSelection" = "automaticallyOverrodeDefaultValue";
           "eslint.format.enable" = true;
           "breadcrumbs.enabled" = true;
           "redhat.telemetry.enabled" = true;

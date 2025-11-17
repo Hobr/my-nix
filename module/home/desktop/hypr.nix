@@ -94,9 +94,9 @@ in
           # 圆角半径
           rounding = 15;
           # 活动窗口不透明度
-          active_opacity = 0.95;
+          active_opacity = 1;
           # 不活动窗口不透明度
-          inactive_opacity = 0.5;
+          inactive_opacity = 1;
           # 全屏窗口不透明度
           fullscreen_opacity = 1.0;
 

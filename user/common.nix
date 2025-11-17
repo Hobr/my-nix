@@ -84,7 +84,7 @@
 
     pro = {
       audio.enable = true;
-      video.enable = false;
+      video.enable = true;
       image.enable = true;
       obs.enable = true;
       electron.enable = false;

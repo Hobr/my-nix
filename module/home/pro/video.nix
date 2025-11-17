@@ -17,6 +17,7 @@ in
       kdePackages.kdenlive
       blender
       aegisub
+      whisper-ctranslate2
     ];
   };
 }

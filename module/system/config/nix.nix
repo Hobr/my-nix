@@ -44,10 +44,10 @@ in
 
           # 镜像
           trusted-substituters = [
+            "https://nix-community.cachix.org"
             "https://chaotic-nyx.cachix.org/"
             "https://mirrors.ustc.edu.cn/nix-channels/store"
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-            "https://nix-community.cachix.org"
           ];
         };
 

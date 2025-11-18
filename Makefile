@@ -1,5 +1,5 @@
 os:
-	nh os boot -a . -- --max-jobs 4--cores 12
+	nh os boot -a . -- --max-jobs 4 --cores 12
 
 home:
 	nh home switch -a . -- --max-jobs 4 --cores 12

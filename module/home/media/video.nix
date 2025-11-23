@@ -46,6 +46,7 @@ in
         yt-dlp
         mkvtoolnix
         losslesscut-bin
+        aegisub
       ];
   };
 }

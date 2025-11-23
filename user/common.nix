@@ -83,10 +83,10 @@
     };
 
     pro = {
-      audio.enable = true;
-      video.enable = true;
+      audio.enable = false;
+      video.enable = false;
       image.enable = true;
-      obs.enable = true;
+      obs.enable = false;
       electron.enable = false;
     };
   };

@@ -65,7 +65,7 @@ with lib;
   nixpkgs.hostPlatform.system = "x86_64-linux";
 
   # 系统版本
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   # 主机名
   networking.hostName = "overdrive";

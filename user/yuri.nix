@@ -14,7 +14,7 @@
   home = {
     username = "yuri";
     homeDirectory = "/home/yuri";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
 
     proxy.enable = true;
     web.download.enable = true;

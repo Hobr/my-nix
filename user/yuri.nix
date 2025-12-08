@@ -19,6 +19,7 @@
     proxy.enable = true;
     web.download.enable = true;
     software.zsh.enable = true;
+    media.video.enable = true;
 
     dev = {
       git.enable = true;

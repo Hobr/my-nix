@@ -41,6 +41,9 @@ in
           "XDG_SESSION_TYPE,wayland"
           "SDL_VIDEODRIVER,wayland"
           "MOZ_ENABLE_WAYLAND,1"
+
+          # Clash Verge
+          "WEBKIT_DISABLE_DMABUF_RENDERER,1"
         ]
         # NVIDIA
         ++ optionals cfg.nvidia [

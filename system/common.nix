@@ -107,6 +107,9 @@
 
   fonts = {
     packages = with pkgs; [
+      nerd-fonts.fira-mono
+      nerd-fonts.mononoki
+
       sarasa-gothic
       twitter-color-emoji
 
@@ -119,6 +122,8 @@
       source-han-mono
       source-han-serif
       source-han-code-jp
+      source-han-sans-vf-otf
+      source-han-serif-vf-otf
 
       source-sans
       source-sans-pro

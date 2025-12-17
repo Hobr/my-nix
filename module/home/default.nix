@@ -70,9 +70,7 @@ with lib;
       # 破损软件
       allowBroken = true;
       # 漏洞软件
-      permittedInsecurePackages = [
-        "qtwebengine-5.15.19"
-      ];
+      permittedInsecurePackages = [ ];
     };
     # Overlays
     overlays = [

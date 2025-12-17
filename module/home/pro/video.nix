@@ -16,7 +16,7 @@ in
     home.packages = with pkgs; [
       kdePackages.kdenlive
       blender
-      stable.whisper-ctranslate2
+      whisper-ctranslate2
     ];
   };
 }

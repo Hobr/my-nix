@@ -236,6 +236,7 @@ in
     home.packages = with pkgs; [
       nano
       gemini-cli
+      github-copilot-cli
       (if cfg.nvim then neovide else null)
     ];
   };

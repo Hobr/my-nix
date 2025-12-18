@@ -17,6 +17,7 @@ in
       kdePackages.kdenlive
       blender
       whisper-ctranslate2
+      whisperx
     ];
   };
 }

@@ -159,9 +159,7 @@ in
           "[yaml]"."editor.defaultFormatter" = "redhat.vscode-yaml";
 
           "[markdown]"."editor.defaultFormatter" = "DavidAnson.vscode-markdownlint";
-          "[markdown]"."diffEditor.ignoreTrimWhitespace" = false;
 
-          "[python]"."diffEditor.ignoreTrimWhitespace" = false;
           "[typst]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
           "[typst-code]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
 
@@ -185,6 +183,7 @@ in
           "diffEditor.maxComputationTime" = 0;
           "diffEditor.ignoreTrimWhitespace" = false;
           "diffEditor.renderSideBySide" = false;
+          "diffEditor.hideUnchangedRegions.enabled" = true;
 
           "window.menuBarVisibility" = "compact";
           "window.titleBarStyle" = "custom";

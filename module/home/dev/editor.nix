@@ -182,7 +182,7 @@ in
 
           "diffEditor.maxComputationTime" = 0;
           "diffEditor.ignoreTrimWhitespace" = false;
-          "diffEditor.renderSideBySide" = false;
+          "diffEditor.renderSideBySide" = true;
           "diffEditor.hideUnchangedRegions.enabled" = true;
 
           "window.menuBarVisibility" = "compact";

@@ -45,7 +45,7 @@ in
     # NVIDIA驱动
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.latest;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
       open = false;
       modesetting.enable = true;
       powerManagement.enable = true;

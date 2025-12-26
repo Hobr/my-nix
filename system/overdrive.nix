@@ -9,7 +9,6 @@ with lib;
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    inputs.chaotic.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.solaar.nixosModules.default
@@ -69,9 +68,6 @@ with lib;
 
   # 主机名
   networking.hostName = "overdrive";
-
-  # 内核
-  boot.kernelPackages = mkForce pkgs.linuxPackages_cachyos-server;
 
   # 用户
   users.users = {

@@ -44,7 +44,6 @@ in
           substituters = [
             "https://cache.nixos-cuda.org"
             "https://nix-community.cachix.org"
-            "https://chaotic-nyx.cachix.org/"
             "https://mirrors.ustc.edu.cn/nix-channels/store"
             "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
             "https://cache.nixos.org/"
@@ -53,7 +52,6 @@ in
           trusted-public-keys = [
             "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
             "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-            "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
           ];
         };

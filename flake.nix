@@ -7,8 +7,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     ## 官方稳定
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Chaotic
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # 环境
     ## Rootless

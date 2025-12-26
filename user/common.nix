@@ -7,7 +7,6 @@
 {
   imports = [
     inputs.stylix.homeModules.stylix
-    inputs.chaotic.homeManagerModules.default
 
     outputs.homeModules
   ];

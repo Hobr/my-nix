@@ -16,7 +16,7 @@ in
     # 内核
     boot = {
       # 版本
-      kernelPackages = pkgs.linuxPackages_cachyos;
+      kernelPackages = pkgs.linuxPackages_latest;
 
       # 内核参数
       kernelParams = [ "systemd.gpt_auto=0" ];

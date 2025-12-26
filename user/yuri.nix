@@ -6,8 +6,6 @@
 }:
 {
   imports = [
-    inputs.chaotic.homeManagerModules.default
-
     outputs.homeModules
   ];
 

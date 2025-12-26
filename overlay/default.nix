@@ -10,7 +10,7 @@
       (python-final: python-prev: {
         whisperx = python-prev.whisperx.overridePythonAttrs (old: {
           patches = (old.patches or [ ]) ++ [
-            ./use_auth_token.patch
+            ./whisperx.patch
           ];
 
           propagatedBuildInputs = (old.propagatedBuildInputs or [ ]) ++ [

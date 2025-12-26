@@ -18,6 +18,7 @@ in
       blender
       whisper-ctranslate2
       whisperx
+      python313Packages.huggingface-hub
     ];
   };
 }

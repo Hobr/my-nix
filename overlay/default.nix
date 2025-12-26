@@ -6,16 +6,19 @@
   additions = final: prev: import ../pkg final.pkgs;
 
   modifications = final: prev: {
-    vscode-utils = prev.vscode-utils // {
-      buildVscodeMarketplaceExtension =
-        args:
-        prev.vscode-utils.buildVscodeMarketplaceExtension (
-          args
-          // {
-            nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [ prev.unzip ];
-          }
-        );
-    };
+    pythonPackagesExtensions = (prev.pythonPackagesExtensions or [ ]) ++ [
+      (python-final: python-prev: {
+        whisperx = python-prev.whisperx.overridePythonAttrs (old: {
+          patches = (old.patches or [ ]) ++ [
+            ./use_auth_token.patch
+          ];
+
+          propagatedBuildInputs = (old.propagatedBuildInputs or [ ]) ++ [
+            python-final.omegaconf
+          ];
+        });
+      })
+    ];
   };
 
   stable-package = final: _prev: {

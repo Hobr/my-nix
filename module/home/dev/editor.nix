@@ -219,7 +219,7 @@ in
             "**/.venv" = true;
             "**/.cargo" = true;
             "venv" = true;
-          }
+          };
 
           "terminal.integrated.commandsToSkipShell" = [
             "github.copilot.terminal.suggestCommand"

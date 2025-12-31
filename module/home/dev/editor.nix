@@ -214,6 +214,13 @@ in
           "breadcrumbs.enabled" = true;
           "redhat.telemetry.enabled" = true;
 
+          "search.exclude" = {
+            "**/.direnv" = true;
+            "**/.venv" = true;
+            "**/.cargo" = true;
+            "venv" = true;
+          }
+
           "terminal.integrated.commandsToSkipShell" = [
             "github.copilot.terminal.suggestCommand"
           ];

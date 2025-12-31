@@ -71,8 +71,6 @@ in
         general = {
           # 窗口边框大小
           border_size = 2;
-          # 不显示浮动窗口边框
-          no_border_on_floating = true;
           # 窗口间间隙
           gaps_in = 5;
           # 窗口与屏幕边框间隔

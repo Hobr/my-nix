@@ -21,7 +21,7 @@ in
     services.greetd = {
       enable = true;
       settings = rec {
-        initial_session.command = "Hyprland";
+        initial_session.command = "start-hyprland";
         default_session = initial_session;
       };
     };

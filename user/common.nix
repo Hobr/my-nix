@@ -103,7 +103,7 @@
     };
 
     # 图标
-    iconTheme = {
+    icons = {
       enable = true;
       dark = "Papirus";
       light = "Papirus";

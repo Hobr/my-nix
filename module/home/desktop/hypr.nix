@@ -22,7 +22,6 @@ in
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      xwayland.enable = true;
       systemd.enableXdgAutostart = true;
 
       # 设置

@@ -168,12 +168,6 @@ in
           ];
         };
 
-        windowrulev2 = [
-          "float,class:^(pavucontrol)$"
-          "float,class:^(blueman-manager)$"
-          "fullscreen,title:^(Ani)$"
-        ];
-
         "$mainMod" = "SUPER";
 
         bind = [

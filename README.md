@@ -5,16 +5,16 @@
 ## 介绍
 
 - 主机
-  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G,  双硬盘
-  - distortion: 便携触摸本, 联想 Yoga Duet 2020, Intel i5-10210U, Intel UHD630, 16G, 单硬盘
-  - overdrive: NAS, Intel E3-1230 v2, 8G, 4硬盘
+  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G, 双硬盘
   - howling: 服务器
+  - ~~distortion: 已出售~~
+  - ~~overdrive: 已出售~~
 
 - 用户
   - kanade: handsonic用户, 重软件多
-  - yuzuru: distortion用户, 重软件少
-  - yuri: overdrive用户, 服务器环境
   - miyuki: howling用户, 服务器环境
+  - ~~yuzuru: 已出售~~
+  - ~~yuri: 已出售~~
 
 ## TODO
 

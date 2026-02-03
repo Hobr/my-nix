@@ -14,7 +14,6 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      kdePackages.kdenlive
       blender
       whisper-ctranslate2
       whisperx

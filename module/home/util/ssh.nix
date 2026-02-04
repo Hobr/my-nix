@@ -33,18 +33,6 @@ in
           user = "kanade";
           port = 22;
         };
-
-        "yuri" = {
-          hostname = "10.1.127.3";
-          user = "yuri";
-          port = 22;
-        };
-
-        "yuzuru" = {
-          hostname = "10.1.127.4";
-          user = "yuzuru";
-          port = 22;
-        };
       };
     };
 

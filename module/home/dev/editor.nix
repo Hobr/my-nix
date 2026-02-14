@@ -211,6 +211,7 @@ in
 
           "python.languageServer" = "Pylance";
           "tinymist.formatterMode" = "typstyle";
+          "claudeCode.preferredLocation" = "panel";
           "eslint.format.enable" = true;
           "breadcrumbs.enabled" = true;
           "redhat.telemetry.enabled" = true;

@@ -142,9 +142,10 @@ in
             # Fortran
             fortran-lang.linter-gfortran
 
-            # Copilot
+            # AI
             github.copilot
             github.copilot-chat
+            anthropic.claude-code
           ];
 
         userSettings = {

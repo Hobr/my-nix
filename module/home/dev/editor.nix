@@ -217,10 +217,10 @@ in
           "redhat.telemetry.enabled" = true;
 
           "search.exclude" = {
+            "**/venv" = true;
             "**/.direnv" = true;
             "**/.venv" = true;
             "**/.cargo" = true;
-            "venv" = true;
           };
 
           "terminal.integrated.commandsToSkipShell" = [

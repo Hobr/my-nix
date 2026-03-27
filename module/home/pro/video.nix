@@ -15,9 +15,6 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       blender
-      whisper-ctranslate2
-      whisperx
-      python313Packages.huggingface-hub
     ];
   };
 }

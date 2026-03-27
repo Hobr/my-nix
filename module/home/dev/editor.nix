@@ -143,7 +143,6 @@ in
             fortran-lang.linter-gfortran
 
             # AI
-            github.copilot
             github.copilot-chat
             anthropic.claude-code
           ];

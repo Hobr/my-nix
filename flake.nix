@@ -30,6 +30,8 @@
     };
 
     # 软件
+    # 人工智能
+    llm-agents.url = "github:numtide/llm-agents.nix";
     # VS Code
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -62,8 +64,6 @@
         "x86_64-linux"
         "i686-linux"
         "aarch64-linux"
-        "aarch64-darwin"
-        "x86_64-darwin"
       ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in

@@ -240,13 +240,18 @@ in
       };
     };
 
-    home.packages = with pkgs; [
-      nano
-      claude-code
-      opencode
-      gemini-cli
-      github-copilot-cli
-      (if cfg.nvim then neovide else null)
-    ];
+    home.packages =
+      with pkgs;
+      [
+        nano
+        (if cfg.nvim then neovide else null)
+      ]
+      ++ (with llm-agents; [
+        opencode
+        oh-my-opencode
+        claude-code
+        copilot-cli
+        gemini-cli
+      ]);
   };
 }

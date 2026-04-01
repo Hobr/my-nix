@@ -245,9 +245,12 @@ in
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [
+        nodejs
+        cc-switch-cli
         opencode
         oh-my-opencode
         claude-code
+        codex
         copilot-cli
         gemini-cli
       ]);

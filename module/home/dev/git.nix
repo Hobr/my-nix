@@ -51,12 +51,19 @@ in
 
       # 忽略
       ignores = [
+        # Nix
         ".direnv"
+        "result*"
+
+        # 语言
+        "venv"
         ".venv"
         ".cargo"
-        "result*"
-        "venv"
+
+        # AI
         ".codex"
+        ".omc"
+        ".claude"
       ];
     };
 

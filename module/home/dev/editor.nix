@@ -59,7 +59,6 @@ in
             ms-vscode-remote.remote-ssh
             ms-vsliveshare.vsliveshare
             christian-kohler.path-intellisense
-            google.gemini-cli-vscode-ide-companion
 
             # 环境
             mkhl.direnv
@@ -247,12 +246,10 @@ in
       ]
       ++ (with llm-agents; [
         nodejs
-        opencode
-        oh-my-opencode
         claude-code
         codex
-        copilot-cli
-        gemini-cli
+        opencode
+        oh-my-opencode
       ]);
   };
 }

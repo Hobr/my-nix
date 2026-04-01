@@ -144,6 +144,7 @@ in
 
             # AI
             github.copilot-chat
+            anthropic.claude-code
           ];
 
         userSettings = {

@@ -56,6 +56,7 @@ in
         ".cargo"
         "result*"
         "venv"
+        ".codex"
       ];
     };
 

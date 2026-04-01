@@ -19,6 +19,7 @@ in
       gnused
       gnugrep
       gnutar
+      jq
     ];
   };
 }

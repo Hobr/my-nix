@@ -246,7 +246,6 @@ in
       ]
       ++ (with llm-agents; [
         nodejs
-        cc-switch-cli
         opencode
         oh-my-opencode
         claude-code

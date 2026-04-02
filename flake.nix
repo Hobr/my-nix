@@ -81,22 +81,6 @@
           };
           modules = [ ./system/handsonic.nix ];
         };
-
-        # Pad
-        distortion = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/distortion.nix ];
-        };
-
-        # NAS
-        overdrive = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/overdrive.nix ];
-        };
       };
 
       homeConfigurations = {
@@ -107,24 +91,6 @@
             inherit inputs outputs;
           };
           modules = [ ./user/kanade.nix ];
-        };
-
-        # Pad
-        "yuzuru@distortion" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/yuzuru.nix ];
-        };
-
-        # NAS
-        "yuri@overdrive" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/yuri.nix ];
         };
       };
     };

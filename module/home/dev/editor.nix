@@ -27,12 +27,6 @@ in
       vimdiffAlias = true;
     };
 
-    # Emacs
-    programs.emacs = {
-      enable = cfg.emacs;
-      package = pkgs.emacs30;
-    };
-
     # Visual Studio Code
     programs.vscode = {
       enable = cfg.vscode;

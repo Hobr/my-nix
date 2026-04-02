@@ -7,14 +7,15 @@
 }:
 with lib;
 let
-  cfg = config.home.util.tmux;
+  cfg = config.home.util.zellij;
 in
 {
-  options.home.util.tmux.enable = mkEnableOption "tmux";
+  options.home.util.zellij.enable = mkEnableOption "zellij";
 
   config = mkIf cfg.enable {
-    programs.tmux = {
+    programs.zellij = {
       enable = true;
+      enableZshIntegration = true;
     };
   };
 }

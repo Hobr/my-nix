@@ -61,13 +61,32 @@
   # 主题
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-cave-light.yaml";
 
     # 指针
     cursor = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
       size = 24;
+    };
+
+    # 图标
+    icons = {
+      enable = true;
+      dark = "Papirus";
+      light = "Papirus";
+      package = pkgs.catppuccin-papirus-folders.override {
+        accent = "lavender";
+        flavor = "latte";
+      };
+    };
+
+    # 透明
+    opacity = {
+      applications = 1.0;
+      desktop = 0.75;
+      popups = 0.75;
+      terminal = 0.75;
     };
 
     # 字体
@@ -103,29 +122,6 @@
         name = "Twemoji";
       };
     };
-  };
-
-  fonts = {
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.mononoki
-
-      sarasa-gothic
-      twitter-color-emoji
-
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
-      noto-fonts-color-emoji
-
-      source-han-sans
-      source-han-mono
-      source-han-serif
-      source-han-code-jp
-
-      source-sans
-      source-sans-pro
-    ];
   };
 
   # 平台

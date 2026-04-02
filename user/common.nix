@@ -1,6 +1,7 @@
 {
   inputs,
   outputs,
+  config,
   pkgs,
   ...
 }:
@@ -94,7 +95,7 @@
   # 主题
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-cave-light.yaml";
 
     # 指针
     cursor = {
@@ -112,6 +113,14 @@
         accent = "lavender";
         flavor = "latte";
       };
+    };
+
+    # 透明
+    opacity = {
+      applications = 1.0;
+      desktop = 0.75;
+      popups = 0.75;
+      terminal = 0.75;
     };
 
     # 字体
@@ -146,6 +155,33 @@
         package = pkgs.twitter-color-emoji;
         name = "Twemoji";
       };
+    };
+
+    # 终端字体
+    targets = {
+      vscode.fonts.override = {
+        serif = {
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font";
+        };
+
+        sansSerif = {
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font";
+        };
+
+        monospace = {
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font Mono";
+        };
+
+        emoji = {
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font";
+        };
+
+      };
+      kitty.fonts.override = config.stylix.targets.vscode.fonts.override;
     };
   };
 }

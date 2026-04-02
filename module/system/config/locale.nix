@@ -35,7 +35,6 @@ in
     fonts = {
       packages = with pkgs; [
         nerd-fonts.jetbrains-mono
-        nerd-fonts.mononoki
 
         sarasa-gothic
         twitter-color-emoji
@@ -59,22 +58,19 @@ in
         cache32Bit = true;
         defaultFonts = {
           serif = [
-            "Jetbrains Mono"
-            "Mononoki Nerd Font"
             "Sarasa UI SC"
             "Noto Serif CJK SC"
+            "JetBrainsMono Nerd Font"
           ];
           sansSerif = [
-            "Jetbrains Mono"
-            "Mononoki Nerd Font"
             "Sarasa UI SC"
             "Noto Sans CJK SC"
+            "JetBrainsMono Nerd Font"
           ];
           monospace = [
-            "Jetbrains Mono"
-            "Mononoki Nerd Font Mono"
             "Sarasa Mono SC"
             "Noto Sans Mono CJK SC"
+            "JetBrainsMono Nerd Font"
           ];
           emoji = [
             "Twemoji"

@@ -76,6 +76,7 @@
       audio.enable = true;
       gnu.enable = true;
       ssh.enable = true;
+      zellij.enable = true;
       disk.enable = true;
       file.enable = true;
       cli.enable = true;

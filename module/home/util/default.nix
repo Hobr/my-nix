@@ -6,5 +6,6 @@
     ./disk.nix
     ./gnu.nix
     ./ssh.nix
+    ./zellij.nix
   ];
 }

@@ -31,6 +31,7 @@
       gnu.enable = true;
       ssh.enable = true;
       disk.enable = true;
+      zellij.enable = true;
       cli.enable = true;
     };
   };

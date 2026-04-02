@@ -124,6 +124,8 @@ in
       zip
       unzip
       rar
+
+      openssl
     ];
   };
 }

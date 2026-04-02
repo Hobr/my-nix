@@ -61,7 +61,7 @@
   # 主题
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/atelier-cave-light.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/sakura.yaml";
 
     # 指针
     cursor = {

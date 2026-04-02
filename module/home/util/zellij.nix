@@ -17,6 +17,10 @@ in
       enable = true;
       enableZshIntegration = true;
       exitShellOnExit = true;
+      settings = {
+        # 启动时Tip
+        show_startup_tips = false;
+      };
     };
   };
 }

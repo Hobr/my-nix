@@ -17,9 +17,36 @@ in
       enable = true;
       enableZshIntegration = true;
       exitShellOnExit = true;
+
       settings = {
+        # 简化UI
+        simplified_ui = false;
+        # 自动布局调整
+        auto_layout = true;
+        # 显示窗格边框
+        pane_frames = true;
+        # 启用视觉提示
+        visual_bell = true;
+        # 启用样式化下划线
+        styled_underlines = true;
+
         # 启动时Tip
         show_startup_tips = false;
+        # 默认模式
+        default_mode = "normal";
+        # 默认shell
+        default_shell = "zsh";
+        # Kitty键盘协议
+        support_kitty_keyboard_protocol = true;
+
+        # 鼠标复制
+        copy_on_select = true;
+        # 启用鼠标
+        mouse_mode = true;
+        # 鼠标悬停效果
+        mouse_hover_effects = true;
+        # 鼠标跟随焦点
+        focus_follows_mouse = false;
       };
     };
   };

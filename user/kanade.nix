@@ -22,10 +22,7 @@
   };
 
   # 壁纸
-  stylix.image = pkgs.fetchurl {
-    url = "https://images5.alphacoders.com/941/941673.png";
-    hash = "sha256-nknMKEWpm2pyHbdW83x0/ixPmfbpWRfGt8Z12YYPAlE=";
-  };
+  stylix.image = ./wallpaper.jpg;
 
   nixpkgs.config.cudaSupport = true;
 }

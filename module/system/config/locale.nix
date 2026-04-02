@@ -34,7 +34,7 @@ in
     # 字体
     fonts = {
       packages = with pkgs; [
-        nerd-fonts.fira-mono
+        nerd-fonts.jetbrains-mono
         nerd-fonts.mononoki
 
         sarasa-gothic
@@ -59,19 +59,22 @@ in
         cache32Bit = true;
         defaultFonts = {
           serif = [
+            "Jetbrains Mono"
+            "Mononoki Nerd Font"
             "Sarasa UI SC"
             "Noto Serif CJK SC"
-            "Mononoki Nerd Font"
           ];
           sansSerif = [
+            "Jetbrains Mono"
+            "Mononoki Nerd Font"
             "Sarasa UI SC"
             "Noto Sans CJK SC"
-            "Mononoki Nerd Font"
           ];
           monospace = [
+            "Jetbrains Mono"
+            "Mononoki Nerd Font Mono"
             "Sarasa Mono SC"
             "Noto Sans Mono CJK SC"
-            "Mononoki Nerd Font Mono"
           ];
           emoji = [
             "Twemoji"

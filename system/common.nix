@@ -53,6 +53,7 @@
       proxy.enable = true;
       ld.enable = true;
       ssh.enable = true;
+      mosh.enable = true;
       zerotier.enable = true;
     };
   };

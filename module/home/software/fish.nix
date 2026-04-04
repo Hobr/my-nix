@@ -43,11 +43,6 @@ in
           name = "sponge";
           src = pkgs.fishPlugins.sponge.src;
         }
-        # 异步
-        {
-          name = "fish-async-prompt";
-          src = pkgs.fishPlugins.async-prompt.src;
-        }
         # alias提示
         {
           name = "fish-you-should-use";

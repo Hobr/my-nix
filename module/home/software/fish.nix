@@ -21,6 +21,10 @@ in
         cat = "bat";
         v = "vim";
       };
+
+      interactiveShellInit = ''
+        set -g fish_greeting
+      '';
     };
 
     home.shell.enableFishIntegration = true;

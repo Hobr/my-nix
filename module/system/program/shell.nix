@@ -15,6 +15,5 @@ in
   config = mkIf cfg.enable {
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
-    environment.pathsToLink = [ "/share/fish" ];
   };
 }

@@ -10,10 +10,10 @@ with lib;
 {
   imports = [
     ./desktop
+    ./software
     ./dev
     ./media
     ./pro
-    ./software
     ./util
     ./web
   ];

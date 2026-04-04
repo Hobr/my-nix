@@ -18,7 +18,7 @@
 
 ## TODO
 
-- ZSH Bindkey
+- Fish Bindkey
 - Rime
 - Emacs环境
 - Systemd-timesyncd resolved....

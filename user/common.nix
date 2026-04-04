@@ -50,7 +50,7 @@
     software = {
       docs.enable = true;
       terminal.enable = true;
-      zsh.enable = true;
+      fish.enable = true;
     };
 
     media = {

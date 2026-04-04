@@ -2,6 +2,6 @@
   imports = [
     ./docs.nix
     ./terminal.nix
-    ./zsh.nix
+    ./fish.nix
   ];
 }

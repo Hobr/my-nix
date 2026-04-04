@@ -6,32 +6,27 @@
 }:
 with lib;
 let
-  cfg = config.home.software.zsh;
+  cfg = config.home.software.fish;
 in
 {
-  options.home.software.zsh.enable = mkEnableOption "zsh";
+  options.home.software.fish.enable = mkEnableOption "fish";
 
   config = mkIf cfg.enable {
-    programs.zsh = {
+    programs.fish = {
       enable = true;
 
-      shellAliases = {
+      shellAbbrs = {
         pr = "proxychains4";
         rm = "trash-put";
         cat = "bat";
         v = "vim";
       };
-
-      # 插件
-      autosuggestion.enable = true;
-      enableCompletion = true;
-      autocd = true;
-      syntaxHighlighting.enable = true;
     };
+
+    home.shell.enableFishIntegration = true;
 
     programs.starship = {
       enable = true;
-      enableZshIntegration = true;
       presets = [
         "nerd-font-symbols"
         "jetpack"

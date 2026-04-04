@@ -15,7 +15,6 @@ in
   config = mkIf cfg.enable {
     programs.zellij = {
       enable = true;
-      enableZshIntegration = true;
       exitShellOnExit = true;
 
       settings = {
@@ -38,7 +37,7 @@ in
         # 默认模式
         default_mode = "locked";
         # 默认shell
-        default_shell = "zsh";
+        default_shell = "fish";
         # Kitty键盘协议
         support_kitty_keyboard_protocol = true;
 

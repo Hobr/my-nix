@@ -14,7 +14,6 @@ in
   config = mkIf cfg.enable {
     programs.kitty = {
       enable = true;
-      shellIntegration.enableZshIntegration = true;
     };
   };
 }

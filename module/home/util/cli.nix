@@ -26,35 +26,23 @@ in
     };
 
     # Zoxide(cd)
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    programs.zoxide.enable = true;
 
     # Broot(tree)
-    programs.broot = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    programs.broot.enable = true;
 
     # eza(ls)
     programs.eza = {
       enable = true;
-      enableZshIntegration = true;
       git = true;
       icons = "auto";
     };
 
     # 目录颜色
-    programs.dircolors = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    programs.dircolors.enable = true;
 
     # Ripgrep(grep)
-    programs.ripgrep = {
-      enable = true;
-    };
+    programs.ripgrep.enable = true;
 
     # Btop(top)
     programs.btop = {
@@ -66,7 +54,6 @@ in
     # fzf(fd)
     programs.fzf = {
       enable = true;
-      enableZshIntegration = true;
     };
 
     # less
@@ -96,10 +83,7 @@ in
     };
 
     # Nix-index
-    programs.nix-index = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+    programs.nix-index.enable = true;
 
     # Ranger
     programs.ranger.enable = true;

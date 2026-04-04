@@ -2,6 +2,7 @@
   config,
   options,
   lib,
+  pkgs,
   ...
 }:
 with lib;
@@ -25,6 +26,44 @@ in
       interactiveShellInit = ''
         set -g fish_greeting
       '';
+
+      plugins = [
+        # 自动补全括号引号
+        {
+          name = "autopair.fish";
+          src = pkgs.fishPlugins.autopair.src;
+        }
+        # 完成提示
+        {
+          name = "done";
+          src = pkgs.fishPlugins.done.src;
+        }
+        # 清除历史错误
+        {
+          name = "sponge";
+          src = pkgs.fishPlugins.sponge.src;
+        }
+        # 异步
+        {
+          name = "fish-async-prompt";
+          src = pkgs.fishPlugins.async-prompt.src;
+        }
+        # alias提示
+        {
+          name = "fish-you-should-use";
+          src = pkgs.fishPlugins.fish-you-should-use.src;
+        }
+        # Man页面着色
+        {
+          name = "colored_man_pages";
+          src = pkgs.fishPlugins.colored-man-pages.src;
+        }
+        # Bash兼容
+        {
+          name = "bass";
+          src = pkgs.fishPlugins.bass.src;
+        }
+      ];
     };
 
     home.shell.enableFishIntegration = true;

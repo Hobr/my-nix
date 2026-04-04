@@ -36,7 +36,7 @@ in
         # 启动时Tip
         show_startup_tips = false;
         # 默认模式
-        default_mode = "locked";
+        default_mode = "default";
         # 默认shell
         default_shell = "fish";
         # Kitty键盘协议

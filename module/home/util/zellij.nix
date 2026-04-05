@@ -15,8 +15,6 @@ in
   config = mkIf cfg.enable {
     programs.zellij = {
       enable = true;
-      exitShellOnExit = true;
-      enableFishIntegration = true;
 
       settings = {
         # 主题

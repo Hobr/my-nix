@@ -140,6 +140,9 @@ in
             # AI
             github.copilot-chat
             anthropic.claude-code
+
+            # CI
+            github.vscode-github-actions
           ];
 
         userSettings = {

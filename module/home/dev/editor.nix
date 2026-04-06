@@ -88,6 +88,8 @@ in
             firefox-devtools.vscode-firefox-debug
             vue.volar
             dbaeumer.vscode-eslint
+            svelte.svelte-vscode
+            astro-build.astro-vscode
 
             # Golang
             golang.go

@@ -139,7 +139,6 @@ in
 
             # AI
             github.copilot-chat
-            anthropic.claude-code
 
             # CI
             github.vscode-github-actions
@@ -247,10 +246,8 @@ in
       ]
       ++ (with llm-agents; [
         nodejs
-        claude-code
-        codex
         opencode
-        oh-my-opencode
+        ccusage-opencode
       ]);
   };
 }

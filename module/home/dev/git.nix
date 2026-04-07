@@ -59,6 +59,12 @@ in
         "venv"
         ".venv"
         ".cargo"
+
+        # AI
+        ".codex"
+        ".omc"
+        ".claude"
+        ".superpowers"
       ];
     };
 

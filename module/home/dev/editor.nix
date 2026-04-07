@@ -246,8 +246,7 @@ in
       ]
       ++ (with llm-agents; [
         nodejs
-        opencode
-        ccusage-opencode
+        codex
       ]);
   };
 }

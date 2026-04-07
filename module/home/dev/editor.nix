@@ -246,7 +246,9 @@ in
       ]
       ++ (with llm-agents; [
         nodejs
+        claude-code
         codex
+        opencode
       ]);
   };
 }

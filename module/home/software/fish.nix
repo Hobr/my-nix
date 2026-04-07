@@ -38,11 +38,6 @@ in
           name = "done";
           src = pkgs.fishPlugins.done.src;
         }
-        # 清除历史错误
-        {
-          name = "sponge";
-          src = pkgs.fishPlugins.sponge.src;
-        }
         # alias提示
         {
           name = "fish-you-should-use";

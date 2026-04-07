@@ -233,6 +233,8 @@ in
           "accessibility.signals.terminalBell" = {
             "sound" = "on";
           };
+
+          "svelte.enable-ts-plugin" = true;
         };
       };
     };

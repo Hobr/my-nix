@@ -58,7 +58,6 @@ in
             mkhl.direnv
             formulahendry.code-runner
             editorconfig.editorconfig
-            esbenp.prettier-vscode
 
             # Git
             eamodio.gitlens
@@ -90,6 +89,9 @@ in
             dbaeumer.vscode-eslint
             svelte.svelte-vscode
             astro-build.astro-vscode
+            vitest.explorer
+            oxc.oxc-vscode
+            esbenp.prettier-vscode
 
             # Golang
             golang.go

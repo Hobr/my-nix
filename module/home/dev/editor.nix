@@ -92,6 +92,7 @@ in
             vitest.explorer
             oxc.oxc-vscode
             esbenp.prettier-vscode
+            bradlc.vscode-tailwindcss
 
             # Golang
             golang.go

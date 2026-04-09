@@ -252,6 +252,7 @@ in
         claude-code
         codex
         opencode
+        cli-proxy-api
       ]);
   };
 }

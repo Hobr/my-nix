@@ -13,7 +13,11 @@ in
   options.sys.program.proxy.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    programs.clash-verge.enable = true;
+    programs.clash-verge = {
+      enable = true;
+      serviceMode = true;
+      tunMode = true;
+    };
 
     environment.systemPackages = with pkgs; [
       mihomo

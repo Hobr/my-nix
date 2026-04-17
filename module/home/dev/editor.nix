@@ -252,6 +252,7 @@ in
         claude-code
         codex
         opencode
+        copilot-cli
         cli-proxy-api
       ]);
   };

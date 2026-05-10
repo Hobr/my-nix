@@ -45,7 +45,6 @@ in
             "https://cache.numtide.com"
             "https://cache.nixos-cuda.org"
             "https://nix-community.cachix.org"
-            "https://mirror.sjtu.edu.cn/nix-channels/store"
             "https://mirrors.ustc.edu.cn/nix-channels/store"
             "https://cache.nixos.org/"
           ];

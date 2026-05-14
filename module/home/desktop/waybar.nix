@@ -29,12 +29,15 @@ in
         height = 5;
         margin-top = 5;
         margin-bottom = 0;
-        margin-left = 250;
-        margin-right = 250;
+        margin-left = 500;
+        margin-right = 500;
+
         modules-left = [
           "hyprland/workspaces"
         ];
-        modules-center = [ "clock" ];
+        modules-center = [
+          "clock"
+        ];
         modules-right = [
           "tray"
           "cpu"
@@ -43,6 +46,7 @@ in
           "pulseaudio"
           "network"
         ];
+
         clock = {
           format = "{:%H:%M}";
           tooltip = "true";
@@ -51,6 +55,7 @@ in
             <tt><small>{calendar}</small></tt>'';
           format-alt = "{:%d/%m}";
         };
+
         "hyprland/workspaces" = {
           active-only = false;
           disable-scroll = true;
@@ -69,6 +74,7 @@ in
             default = "";
             sort-by-number = true;
           };
+
           persistent-workspaces = {
             "1" = [ ];
             "2" = [ ];
@@ -77,21 +83,25 @@ in
             "5" = [ ];
           };
         };
+
         memory = {
           format = "󰟜 {}%";
           format-alt = "󰟜 {used} GiB"; # 
           interval = 2;
         };
+
         cpu = {
           format = "  {usage}%";
           format-alt = "  {avg_frequency} GHz";
           interval = 2;
         };
+
         disk = {
           # path = "/";
           format = "󰋊 {percentage_used}%";
           interval = 60;
         };
+
         network = {
           format-wifi = "  {signalStrength}%";
           format-ethernet = "󰀂 ";
@@ -99,10 +109,12 @@ in
           format-linked = "{ifname} (No IP)";
           format-disconnected = "󰖪 ";
         };
+
         tray = {
           icon-size = 20;
           spacing = 8;
         };
+        
         pulseaudio = {
           format = "{icon} {volume}%";
           format-muted = "󰖁 ";

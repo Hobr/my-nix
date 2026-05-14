@@ -23,6 +23,7 @@ in
     wayland.windowManager.hyprland = {
       enable = true;
       systemd.enableXdgAutostart = true;
+      configType = "hyprlang";
 
       # 设置
       settings = {
@@ -82,8 +83,6 @@ in
 
         # 二叉树布局
         dwindle = {
-          # 伪平铺
-          pseudotile = true;
           # 保持分割
           preserve_split = true;
           # 精确分割
@@ -182,10 +181,6 @@ in
           "$mainMod, X, killactive,"
           "$mainMod, M, exit,"
           "$mainMod, F, togglefloating,"
-
-          # Dwindle
-          "$mainMod, P, pseudo,"
-          "$mainMod, J, togglesplit,"
 
           "$mainMod, left, movefocus, l"
           "$mainMod, right, movefocus, r"

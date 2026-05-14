@@ -239,5 +239,11 @@ in
 
     # 壁纸
     services.hyprpaper.enable = true;
+
+    # Polkit
+    services.hyprpolkitagent.enable = true;
+
+    # 截图
+    programs.hyprshot.enable = true;
   };
 }

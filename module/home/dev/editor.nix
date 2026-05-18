@@ -245,6 +245,7 @@ in
       with pkgs;
       [
         nano
+        auggie
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [

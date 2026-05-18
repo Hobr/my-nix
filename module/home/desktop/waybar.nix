@@ -114,7 +114,7 @@ in
           icon-size = 20;
           spacing = 8;
         };
-        
+
         pulseaudio = {
           format = "{icon} {volume}%";
           format-muted = "󰖁 ";

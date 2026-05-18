@@ -1,1 +1,3 @@
-pkgs: { }
+pkgs: {
+  auggie = pkgs.callPackage ./auggie { };
+}

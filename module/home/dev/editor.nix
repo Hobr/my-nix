@@ -253,7 +253,7 @@ in
         codex
         opencode
         copilot-cli
-        cli-proxy-api
+        hermes-agent
       ]);
   };
 }

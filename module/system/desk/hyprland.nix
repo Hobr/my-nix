@@ -46,6 +46,13 @@ in
     # 能耗管理
     services.tlp = {
       enable = true;
+      pd.enable = true;
+
+      package = pkgs.tlp.override {
+        enableRDW = config.networking.networkmanager.enable;
+        x86_energy_perf_policy = pkgs.linuxPackages_latest.x86_energy_perf_policy;
+      };
+
       settings = {
         # 全局
         TLP_DEFAULT_MODE = "AC";

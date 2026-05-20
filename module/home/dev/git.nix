@@ -65,6 +65,7 @@ in
         ".omc"
         ".claude"
         ".superpowers"
+        ".codegraph"
       ];
     };
 

@@ -246,6 +246,7 @@ in
       [
         nano
         auggie
+        codegraph
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [

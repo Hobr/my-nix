@@ -16,6 +16,7 @@ in
     home.packages = with pkgs; [
       nixfmt
       nixpkgs-review
+      nix-prefetch-github
     ];
   };
 }

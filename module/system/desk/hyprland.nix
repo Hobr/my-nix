@@ -47,11 +47,7 @@ in
     services.tlp = {
       enable = true;
       pd.enable = true;
-
-      package = pkgs.tlp.override {
-        enableRDW = config.networking.networkmanager.enable;
-        x86_energy_perf_policy = pkgs.linuxPackages_latest.x86_energy_perf_policy;
-      };
+      package = pkgs.tlp.override { enableRDW = config.networking.networkmanager.enable; };
 
       settings = {
         # 全局

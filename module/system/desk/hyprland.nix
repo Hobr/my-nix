@@ -36,13 +36,6 @@ in
     xdg.portal.enable = true;
     environment.systemPackages = [ pkgs.xdg-utils ];
 
-    # Seatd
-    services.seatd = {
-      enable = true;
-      group = "wheel";
-      user = "root";
-    };
-
     # 能耗管理
     services.tlp = {
       enable = true;

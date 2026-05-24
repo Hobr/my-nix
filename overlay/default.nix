@@ -18,6 +18,8 @@
         }
       );
     });
+
+    linuxPackages = final.pkgs.linuxPackages_latest;
   };
 
   stable-package = final: _prev: {

@@ -7,16 +7,16 @@
 
 buildNpmPackage (finalAttrs: {
   pname = "codegraph";
-  version = "0.9.2";
+  version = "0.9.3";
 
   src = fetchFromGitHub {
     owner = "colbymchenry";
     repo = "codegraph";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-kmz2dmIvoJ/eGLsXSmGWb1jOhk+AIFIBeThi5dr8f8A=";
+    hash = "sha256-EapQQKH+GTcNWw0c/nypCOtpuoAgXnBgCbEVfQrLoL8=";
   };
 
-  npmDepsHash = "sha256-KiRTc6jHqIZkL2H5s5solYsAhK2Z1+ImEvBKtA0CWNc=";
+  npmDepsHash = "sha256-GJfqzykgrgD/KCtf8LupRw31S2cCmwGCF/0PMpzaCrk=";
 
   inherit nodejs;
   dontNpmCheck = true;

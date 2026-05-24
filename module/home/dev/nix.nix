@@ -17,6 +17,7 @@ in
       nixfmt
       nixpkgs-review
       nix-prefetch-github
+      nix-update
     ];
   };
 }

@@ -14,7 +14,7 @@
 
   home = {
     # 系统版本号
-    stateVersion = "26.05";
+    stateVersion = "26.11";
 
     proxy.enable = true;
 

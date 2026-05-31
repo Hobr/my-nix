@@ -6,6 +6,8 @@ home:
 
 update:
 	nix flake update
+	nix-update --flake auggie
+	nix-update --flake codegraph
 	git add flake.lock
 	git commit -m "Update"
 

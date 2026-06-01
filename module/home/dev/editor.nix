@@ -255,6 +255,7 @@ in
         nodejs
         claude-code
         opencode
+        codex
       ]);
   };
 }

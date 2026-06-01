@@ -241,12 +241,7 @@ in
       };
     };
 
-    programs.codexDesktopLinux = {
-      enable = true;
-      computerUseUi.enable = true;
-      remoteMobileControl.enable = false;
-      remoteControl.enable = false;
-    };
+    programs.codexDesktopLinux.enable = true;
 
     home.packages =
       with pkgs;

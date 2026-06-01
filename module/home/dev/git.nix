@@ -85,6 +85,7 @@ in
 
     home.packages = with pkgs; [
       gh
+      git-xet
     ];
   };
 }

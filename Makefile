@@ -5,7 +5,7 @@ home:
 	nh home switch -a . -- --max-jobs 4 --cores 12
 
 update:
-	nix flake update
+	nix flake update --access-tokens "github.com=$$(gh auth token)"
 	nix-update --flake auggie
 	nix-update --flake codegraph
 	git add flake.lock

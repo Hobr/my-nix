@@ -7,7 +7,7 @@
 
 buildNpmPackage (finalAttrs: {
   pname = "codegraph";
-  version = "0.9.7";
+  version = "0.9.8";
 
   src = fetchFromGitHub {
     owner = "colbymchenry";

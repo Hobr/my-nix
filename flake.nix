@@ -30,8 +30,10 @@
     };
 
     # 软件
-    # 人工智能
+    ## 人工智能
     llm-agents.url = "github:numtide/llm-agents.nix";
+    ## Codex
+    codex.url = "github:ilysenko/codex-desktop-linux";
     # VS Code
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";

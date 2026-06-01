@@ -8,6 +8,7 @@
 {
   imports = [
     inputs.stylix.homeModules.stylix
+    inputs.codex.homeManagerModules.default
 
     outputs.homeModules
   ];

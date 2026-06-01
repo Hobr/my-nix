@@ -241,6 +241,13 @@ in
       };
     };
 
+    programs.codexDesktopLinux = {
+      enable = true;
+      computerUseUi.enable = true;
+      remoteMobileControl.enable = false;
+      remoteControl.enable = false;
+    };
+
     home.packages =
       with pkgs;
       [
@@ -252,7 +259,6 @@ in
       ++ (with llm-agents; [
         nodejs
         claude-code
-        codex
         opencode
       ]);
   };

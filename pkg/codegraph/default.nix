@@ -13,10 +13,10 @@ buildNpmPackage (finalAttrs: {
     owner = "colbymchenry";
     repo = "codegraph";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-s1fV+x6NAPjcrr0MG4KqTNelo8gXwE6WvLUdQGwyEIA=";
+    hash = "sha256-DaVTUuaVsKS020HcIsD9R7jwxZw9yI1bgIsFOHyd/MY=";
   };
 
-  npmDepsHash = "sha256-svl9IrD3iisl66wYPzy3WzR5oa4yJ0dRSrVrJv4/A94=";
+  npmDepsHash = "sha256-xNMl8aWbRicefSR1vXozGk5to+GXh/ihFK2V+HNfPdw=";
 
   inherit nodejs;
   dontNpmCheck = true;

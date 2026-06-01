@@ -254,8 +254,6 @@ in
         claude-code
         codex
         opencode
-        copilot-cli
-        hermes-agent
       ]);
   };
 }

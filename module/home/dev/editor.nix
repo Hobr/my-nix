@@ -236,6 +236,12 @@ in
             "sound" = "on";
           };
 
+          "files.watcherExclude" = {
+            "**/.git/objects/**" = true;
+            "**/.git/subtree-cache/**" = true;
+            "**/node_modules/*/**" = true;
+          };
+
           "svelte.enable-ts-plugin" = true;
         };
       };

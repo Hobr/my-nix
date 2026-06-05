@@ -192,6 +192,7 @@ in
           "workbench.productIconTheme" = "fluent-icons";
           "workbench.startupEditor" = "newUntitledFile";
           "workbench.layoutControl.enabled" = false;
+          "workbench.browser.openLocalhostLinks" = false;
 
           "git.autofetch" = true;
           "git.confirmSync" = false;

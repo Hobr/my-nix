@@ -123,6 +123,7 @@
       };
     };
   };
+  stylix.targets.kmscon.enable = false;
 
   # 平台
   nixpkgs.hostPlatform.system = "x86_64-linux";

@@ -8,11 +8,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "auggie";
-  version = "0.28.0";
+  version = "0.29.0";
 
   src = fetchurl {
     url = "https://registry.npmjs.org/@augmentcode/auggie/-/auggie-${finalAttrs.version}.tgz";
-    hash = "sha256-SB3gUWzQVab0kJVphNEV6LOrLd2PMhPawtLEOvm4Bqo=";
+    hash = "sha256-BKDKCwjAIwOE7FPucFrNUZAOcBCgMuQ55bvG8vLxbCc=";
   };
 
   nativeBuildInputs = [ makeWrapper ];

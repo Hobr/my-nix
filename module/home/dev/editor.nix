@@ -254,11 +254,10 @@ in
       with pkgs;
       [
         nano
-        auggie
-        codegraph
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [
+        codegraph
         nodejs
         claude-code
         opencode

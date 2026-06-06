@@ -6,8 +6,6 @@ home:
 
 update:
 	nix flake update --access-tokens "github.com=$$(gh auth token)"
-	nix-update --flake auggie
-	nix-update --flake codegraph
 	git add flake.lock
 	git commit -m "Update"
 

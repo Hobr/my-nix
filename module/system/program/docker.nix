@@ -21,7 +21,7 @@ in
       daemon.settings = {
         experimental = true;
         live-restore = true;
-        registry-mirrors = [ "https://docker.m.daocloud.io" ];
+        registry-mirrors = [ "https://docker.mirrors.ustc.edu.cn/" ];
       };
     };
 

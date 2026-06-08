@@ -21,7 +21,7 @@ in
 
     home.packages = with pkgs; [
       # 文献
-      stable.zotero
+      zotero
       # 办公
       libreoffice
       # 阅读

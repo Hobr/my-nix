@@ -51,6 +51,10 @@ in
 
         source-sans
         source-sans-pro
+
+        corefonts
+        vista-fonts
+        vista-fonts-chs
       ];
 
       fontconfig = {

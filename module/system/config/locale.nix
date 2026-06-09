@@ -33,6 +33,8 @@ in
 
     # 字体
     fonts = {
+      enableDefaultPackages = true;
+
       packages = with pkgs; [
         nerd-fonts.jetbrains-mono
 

@@ -254,6 +254,8 @@ in
       with pkgs;
       [
         nano
+        texliveFull
+        poppler-utils
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [

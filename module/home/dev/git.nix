@@ -66,6 +66,7 @@ in
         ".claude"
         ".superpowers"
         ".codegraph"
+        ".aris"
       ];
     };
 

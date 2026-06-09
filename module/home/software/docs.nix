@@ -22,6 +22,7 @@ in
     home.packages = with pkgs; [
       # 文献
       zotero
+      zotero-mcp-server
       # 办公
       libreoffice
       # 阅读

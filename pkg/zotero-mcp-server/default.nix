@@ -32,34 +32,16 @@ python3Packages.buildPythonApplication (finalAttrs: {
     pyzotero
     requests
     unidecode
-  ];
 
-  optional-dependencies = with python3Packages; {
-    all = [
-      zotero-mcp
-    ];
-    dev = [
-      pytest
-      pytest-asyncio
-      pytest-timeout
-      ruff
-      zotero-mcp
-    ];
-    pdf = [
-      ebooklib
-      pymupdf
-    ];
-    scite = [
-      requests
-    ];
-    semantic = [
-      chromadb
-      google-genai
-      openai
-      sentence-transformers
-      tiktoken
-    ];
-  };
+    ebooklib
+    pymupdf
+    requests
+    chromadb
+    google-genai
+    openai
+    sentence-transformers
+    tiktoken
+  ];
 
   pythonImportsCheck = [
     "zotero_mcp"

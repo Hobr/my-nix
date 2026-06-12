@@ -248,7 +248,10 @@ in
       };
     };
 
-    programs.codexDesktopLinux.enable = true;
+    programs.codexDesktopLinux = {
+      enable = true;
+      cliPackage = pkgs.llm-agents.codex;
+    };
 
     home.packages =
       with pkgs;

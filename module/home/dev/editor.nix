@@ -97,6 +97,12 @@ in
             # Golang
             golang.go
 
+            # Java
+            vscjava.vscode-java-pack
+
+            # Kotlin
+            jetbrains.kotlin-server
+
             # Nix
             jnoortheen.nix-ide
             arrterian.nix-env-selector

@@ -61,9 +61,10 @@ in
         ".cargo"
 
         # AI
-        ".codex"
-        ".omc"
+        ".agents"
         ".claude"
+        ".codex"
+        ".opencode"
         ".superpowers"
         ".codegraph"
         ".aris"

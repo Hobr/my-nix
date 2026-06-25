@@ -271,14 +271,16 @@ in
         nano
         texliveFull
         poppler-utils
+        python3
+        nodejs
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [
         codegraph
-        nodejs
         claude-code
         opencode
         codex
+        trellis
       ]);
   };
 }

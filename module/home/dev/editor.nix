@@ -273,15 +273,14 @@ in
         poppler-utils
         python3
         nodejs
-        grok-search-rs
         trellis
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [
-        codegraph
         claude-code
         opencode
         codex
+        codegraph
       ]);
   };
 }

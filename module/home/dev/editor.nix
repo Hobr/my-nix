@@ -273,6 +273,7 @@ in
         poppler-utils
         python3
         nodejs
+        grok-search-rs
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [

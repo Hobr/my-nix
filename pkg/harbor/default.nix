@@ -1,15 +1,35 @@
 {
   lib,
-  python3Packages,
+  buildPythonApplication,
   fetchFromGitHub,
   nix-update-script,
+  python,
+  datasets,
+  dirhash,
+  fastapi,
+  filelock,
+  httpx,
+  jinja2,
+  litellm,
+  packaging,
+  pathspec,
+  platformdirs,
+  pydantic,
+  python-dotenv,
+  pyyaml,
+  requests,
+  rich,
+  shortuuid,
+  supabase,
+  tenacity,
+  toml,
+  typer,
+  uvicorn,
 }:
 
-python3Packages.buildPythonApplication (finalAttrs: {
+buildPythonApplication (finalAttrs: {
   pname = "harbor";
   version = "0.16.1";
-  pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "harbor-framework";
@@ -18,11 +38,44 @@ python3Packages.buildPythonApplication (finalAttrs: {
     hash = "sha256-liDWcVh689dpgbwVpVgAVkGt92JyGURWX+6wLrcss10=";
   };
 
-  build-system = [
-    python3Packages.uv-build
-  ];
+  # Harbor requires uv_build 0.8.x but nixpkgs has 0.10.x
+  # Disable pyproject build and install manually
+  format = "other";
 
-  dependencies = with python3Packages; [
+  dontBuild = true;
+
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p $out/${python.sitePackages}
+    cp -r src/harbor $out/${python.sitePackages}/
+
+    # Create dist-info for metadata
+    mkdir -p $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info
+    cat > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/METADATA << 'EOF'
+    Metadata-Version: 2.1
+    Name: harbor
+    Version: ${finalAttrs.version}
+    EOF
+
+    echo "harbor" > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/top_level.txt
+
+    mkdir -p $out/bin
+    cat > $out/bin/harbor << 'EOF'
+    #!${python}/bin/python
+    import sys
+    from harbor.cli.main import main
+
+    if __name__ == '__main__':
+        sys.exit(main())
+    EOF
+
+    chmod +x $out/bin/harbor
+
+    runHook postInstall
+  '';
+
+  dependencies = [
     datasets
     dirhash
     fastapi
@@ -45,83 +98,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     typer
     uvicorn
   ];
-
-  optional-dependencies = with python3Packages; {
-    adapter = [
-      claude-agent-sdk
-    ];
-    all = [
-      harbor
-    ];
-    blaxel = [
-      blaxel
-      dockerfile-parse
-    ];
-    cloud = [
-      harbor
-    ];
-    computer-1 = [
-      anthropic
-      google-genai
-      openai
-    ];
-    cua = [
-      cua-train
-    ];
-    cwsandbox = [
-      cwsandbox
-    ];
-    daytona = [
-      daytona
-    ];
-    dspy = [
-      dspy
-    ];
-    e2b = [
-      dockerfile-parse
-      e2b
-    ];
-    ec2 = [
-      boto3
-    ];
-    gke = [
-      kubernetes
-    ];
-    islo = [
-      dockerfile-parse
-      islo
-    ];
-    langsmith = [
-      harbor-langsmith
-      langsmith
-    ];
-    modal = [
-      modal
-    ];
-    novita = [
-      dockerfile-parse
-      novita-sandbox
-    ];
-    runloop = [
-      dockerfile-parse
-      runloop-api-client
-    ];
-    tensorlake = [
-      tensorlake
-    ];
-    tinker = [
-      tinker
-      tinker-cookbook
-      transformers
-    ];
-    use-computer = [
-      use-computer
-    ];
-    wandb = [
-      cwsandbox
-      wandb
-    ];
-  };
 
   pythonImportsCheck = [
     "harbor"

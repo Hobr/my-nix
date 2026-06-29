@@ -274,6 +274,7 @@ in
         python3
         nodejs
         trellis
+        harbor
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [

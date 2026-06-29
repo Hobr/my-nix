@@ -50,27 +50,62 @@ buildPythonApplication (finalAttrs: {
     mkdir -p $out/${python.sitePackages}
     cp -r src/harbor $out/${python.sitePackages}/
 
-    # Create dist-info for metadata
+    # Create proper dist-info for metadata
     mkdir -p $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info
-    cat > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/METADATA << 'EOF'
-    Metadata-Version: 2.1
-    Name: harbor
-    Version: ${finalAttrs.version}
-    EOF
+    cat > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/METADATA << 'EOFMETA'
+Metadata-Version: 2.1
+Name: harbor
+Version: ${finalAttrs.version}
+EOFMETA
 
     echo "harbor" > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/top_level.txt
 
+    # Create entry_points.txt for console scripts
+    cat > $out/${python.sitePackages}/harbor-${finalAttrs.version}.dist-info/entry_points.txt << 'EOFENTRY'
+[console_scripts]
+harbor = harbor.cli.main:app
+hr = harbor.cli.main:app
+hb = harbor.cli.main:app
+EOFENTRY
+
     mkdir -p $out/bin
-    cat > $out/bin/harbor << 'EOF'
-    #!${python}/bin/python
-    import sys
-    from harbor.cli.main import main
 
-    if __name__ == '__main__':
-        sys.exit(main())
-    EOF
-
+    # Create console script wrappers that call typer app
+    cat > $out/bin/harbor << 'EOFSCRIPT'
+#!${python}/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from harbor.cli.main import app
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', "", sys.argv[0])
+    sys.exit(app())
+EOFSCRIPT
     chmod +x $out/bin/harbor
+
+    cat > $out/bin/hr << 'EOFSCRIPT2'
+#!${python}/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from harbor.cli.main import app
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', "", sys.argv[0])
+    sys.exit(app())
+EOFSCRIPT2
+    chmod +x $out/bin/hr
+
+    cat > $out/bin/hb << 'EOFSCRIPT3'
+#!${python}/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from harbor.cli.main import app
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', "", sys.argv[0])
+    sys.exit(app())
+EOFSCRIPT3
+    chmod +x $out/bin/hb
 
     runHook postInstall
   '';

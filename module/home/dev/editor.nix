@@ -273,7 +273,6 @@ in
         poppler-utils
         python3
         nodejs
-        trellis
         harbor
         (if cfg.nvim then neovide else null)
       ]
@@ -282,6 +281,7 @@ in
         opencode
         codex
         codegraph
+        trellis
       ]);
   };
 }

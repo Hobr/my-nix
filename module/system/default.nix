@@ -21,7 +21,7 @@
       # 破损软件
       allowBroken = true;
       # 漏洞软件
-      permittedInsecurePackages = [ "pnpm-9.15.9" ];
+      permittedInsecurePackages = [ ];
     };
 
     # Overlays

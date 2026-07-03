@@ -29,13 +29,13 @@
 
 buildPythonApplication (finalAttrs: {
   pname = "harbor";
-  version = "0.16.1";
+  version = "0.17.0";
 
   src = fetchFromGitHub {
     owner = "harbor-framework";
     repo = "harbor";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-liDWcVh689dpgbwVpVgAVkGt92JyGURWX+6wLrcss10=";
+    hash = "sha256-LLeIeBaOo+YAkMscnRgwxhuhFvczh8MSQVUt4b6OHr0=";
   };
 
   # Harbor requires uv_build 0.8.x but nixpkgs has 0.10.x

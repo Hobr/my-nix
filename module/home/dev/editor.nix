@@ -3,11 +3,13 @@
   options,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 with lib;
 let
   cfg = config.home.dev.editor;
+  codexCli = inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   options.home.dev.editor = {
@@ -262,7 +264,7 @@ in
 
     programs.codexDesktopLinux = {
       enable = true;
-      cliPackage = pkgs.llm-agents.codex;
+      cliPackage = codexCli;
     };
 
     home.packages =
@@ -274,12 +276,12 @@ in
         python3
         nodejs
         harbor
+        codexCli
         (if cfg.nvim then neovide else null)
       ]
       ++ (with llm-agents; [
         claude-code
         opencode
-        codex
         codegraph
         trellis
       ]);

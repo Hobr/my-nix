@@ -34,6 +34,10 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
     ## Codex
     codex.url = "github:ilysenko/codex-desktop-linux";
+    codex-cli-nix = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # VS Code
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";

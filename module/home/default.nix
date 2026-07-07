@@ -46,6 +46,7 @@ with lib;
 
         # 镜像
         substituters = [
+          "https://codex-cli.cachix.org"
           "https://codex-desktop-linux.cachix.org"
           "https://cache.numtide.com"
           "https://cache.nixos-cuda.org"
@@ -55,6 +56,7 @@ with lib;
         ];
 
         trusted-public-keys = [
+          "codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="
           "codex-desktop-linux.cachix.org-1:nX/xy6AdK9hQE24A8ALGjkCKj2ObFmcnemiL5Cid4nk="
           "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
           "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="

@@ -102,8 +102,8 @@
 
     # 指针
     cursor = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
+      name = "Colloid";
+      package = pkgs.colloid-cursors;
       size = 24;
     };
 

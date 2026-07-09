@@ -95,6 +95,7 @@
     };
   };
 
+  home.pointerCursor.enable = true;
   # 主题
   stylix = {
     enable = true;

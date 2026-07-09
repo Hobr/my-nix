@@ -20,7 +20,6 @@
   requests,
   rich,
   shortuuid,
-  supabase,
   tenacity,
   toml,
   typer,
@@ -128,7 +127,7 @@ buildPythonApplication (finalAttrs: {
     requests
     rich
     shortuuid
-    supabase
+    # supabase excluded - has conflicting pyiceberg dep on rich<15
     tenacity
     toml
     typer

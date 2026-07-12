@@ -145,6 +145,9 @@ in
             # XML
             dotjoshjohnson.xml
 
+            # CSV
+            mechatroner.rainbow-csv
+
             # PDF
             tomoki1207.pdf
 

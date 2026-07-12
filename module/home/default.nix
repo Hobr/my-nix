@@ -81,7 +81,6 @@ with lib;
       outputs.overlays.modifications
       outputs.overlays.stable-package
 
-      inputs.llm-agents.overlays.default
       inputs.nix-vscode-extensions.overlays.default
     ];
   };

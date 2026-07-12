@@ -279,7 +279,7 @@ in
         codexCli
         (if cfg.nvim then neovide else null)
       ]
-      ++ (with llm-agents; [
+      ++ (with inputs.llm-agents.packages; [
         claude-code
         opencode
         codegraph

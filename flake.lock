@@ -160,6 +160,7 @@
       },
       "original": {
         "owner": "sadjow",
+        "ref": "main",
         "repo": "codex-cli-nix",
         "type": "github"
       }

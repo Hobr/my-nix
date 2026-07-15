@@ -35,7 +35,7 @@
     ## Codex
     codex.url = "github:ilysenko/codex-desktop-linux";
     codex-cli-nix = {
-      url = "github:sadjow/codex-cli-nix";
+      url = "github:sadjow/codex-cli-nix/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # VS Code

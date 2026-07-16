@@ -9,7 +9,6 @@
 with lib;
 let
   cfg = config.home.dev.editor;
-  codexCli = inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   options.home.dev.editor = {
@@ -276,7 +275,7 @@ in
 
     programs.codexDesktopLinux = {
       enable = true;
-      cliPackage = codexCli;
+      cliPackage = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex;
     };
 
     home.packages =
@@ -288,11 +287,11 @@ in
         python3
         nodejs
         harbor
-        codexCli
         (if cfg.nvim then neovide else null)
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
         claude-code
+        codex
         opencode
         codegraph
         trellis

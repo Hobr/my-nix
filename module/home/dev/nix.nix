@@ -16,6 +16,7 @@ in
     home.packages = with pkgs; [
       nixfmt
       nixpkgs-review
+      nixpkgs-vet
       nix-init
       nix-update
       nix-prefetch-github

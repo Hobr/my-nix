@@ -61,7 +61,6 @@ in
 
       fontconfig = {
         enable = true;
-        cache32Bit = true;
         defaultFonts = {
           serif = [
             "Sarasa UI SC"

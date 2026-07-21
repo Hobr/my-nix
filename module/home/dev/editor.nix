@@ -282,7 +282,6 @@ in
       with pkgs;
       [
         nano
-        texliveFull
         poppler-utils
         python3
         nodejs

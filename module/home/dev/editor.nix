@@ -286,7 +286,6 @@ in
         poppler-utils
         python3
         nodejs
-        harbor
         (if cfg.nvim then neovide else null)
       ]
       ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [

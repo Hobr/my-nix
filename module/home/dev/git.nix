@@ -64,6 +64,7 @@ in
         ".agents"
         ".claude"
         ".codex"
+        ".pi"
         ".opencode"
         ".superpowers"
         ".codegraph"

@@ -63,6 +63,7 @@
     };
 
     dev = {
+      agent.enable = true;
       git.enable = true;
       gpg.enable = true;
       nix.enable = true;

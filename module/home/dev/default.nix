@@ -1,5 +1,6 @@
 {
   imports = [
+    ./agent.nix
     ./direnv.nix
     ./editor.nix
     ./git.nix

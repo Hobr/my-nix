@@ -273,26 +273,12 @@ in
       };
     };
 
-    programs.codexDesktopLinux = {
-      enable = true;
-      cliPackage = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex;
-    };
-
-    home.packages =
-      with pkgs;
-      [
-        nano
-        poppler-utils
-        python3
-        nodejs
-        (if cfg.nvim then neovide else null)
-      ]
-      ++ (with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
-        claude-code
-        codex
-        opencode
-        codegraph
-        trellis
-      ]);
+    home.packages = with pkgs; [
+      nano
+      poppler-utils
+      python3
+      nodejs
+      (if cfg.nvim then neovide else null)
+    ];
   };
 }

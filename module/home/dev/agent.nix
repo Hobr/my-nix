@@ -19,10 +19,18 @@ in
       cliPackage = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex;
     };
 
+    programs.pi-coding-agent = {
+      enable = true;
+      package = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.pi;
+      extraPackages = with pkgs; [
+        nodejs
+        bun
+      ];
+    };
+
     home.packages = with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
       claude-code
       codex
-      pi
       opencode
       codegraph
       trellis

@@ -507,11 +507,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1784815796,
-        "narHash": "sha256-ndq1QylmYPw0BGQundB2cv0rVo1Fz6WIojcgyIQvSdY=",
+        "lastModified": 1784900651,
+        "narHash": "sha256-/0Y404sE9bpu6ktcaKVD3mxYktFBPJEjOWV0EY1HrJY=",
         "owner": "hobr",
         "repo": "nixpkgs",
-        "rev": "e343ba31941fd60bfc053cbd6b25dcfab3c9f753",
+        "rev": "f83cfbadb512b69f5ac9f048f08a8f0375e3dc06",
         "type": "github"
       },
       "original": {

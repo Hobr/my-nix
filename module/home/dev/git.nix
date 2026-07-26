@@ -66,6 +66,7 @@ in
         ".codex"
         ".pi"
         ".opencode"
+        ".worktrees"
         ".superpowers"
         ".codegraph"
         ".aris"

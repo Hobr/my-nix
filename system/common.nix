@@ -73,9 +73,12 @@
     # 图标
     icons = {
       enable = true;
-      dark = "Colloid";
-      light = "Colloid";
-      package = pkgs.colloid-icon-theme;
+      dark = "Papirus";
+      light = "Papirus";
+      package = pkgs.catppuccin-papirus-folders.override {
+        accent = "lavender";
+        flavor = "latte";
+      };
     };
 
     # 透明

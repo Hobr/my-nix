@@ -3,7 +3,6 @@
   options,
   lib,
   pkgs,
-  inputs,
   ...
 }:
 with lib;
@@ -16,19 +15,19 @@ in
   config = mkIf cfg.enable {
     programs.codexDesktopLinux = {
       enable = true;
-      cliPackage = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.codex;
+      cliPackage = pkgs.llm-agents.codex;
     };
 
     programs.pi-coding-agent = {
       enable = true;
-      package = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.pi;
+      package = pkgs.llm-agents.pi;
       extraPackages = with pkgs; [
         nodejs
         bun
       ];
     };
 
-    home.packages = with inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}; [
+    home.packages = with pkgs.llm-agents; [
       claude-code
       codex
       opencode

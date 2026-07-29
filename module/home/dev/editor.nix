@@ -52,13 +52,13 @@ in
             # 工具
             ms-vscode.remote-server
             ms-vscode-remote.remote-ssh
-            ms-vsliveshare.vsliveshare
             christian-kohler.path-intellisense
+            #ms-vsliveshare.vsliveshare
 
             # 环境
             mkhl.direnv
-            formulahendry.code-runner
             editorconfig.editorconfig
+            # formulahendry.code-runner
 
             # Git
             eamodio.gitlens
@@ -99,16 +99,16 @@ in
             golang.go
 
             # Java
-            vscjava.vscode-java-pack
-            redhat.java
-            vscjava.vscode-java-debug
-            vscjava.vscode-java-test
-            vscjava.vscode-maven
-            vscjava.vscode-gradle
-            vscjava.vscode-java-dependency
+            #vscjava.vscode-java-pack
+            #redhat.java
+            #vscjava.vscode-java-debug
+            #vscjava.vscode-java-test
+            #vscjava.vscode-maven
+            #vscjava.vscode-gradle
+            #vscjava.vscode-java-dependency
 
             # Kotlin
-            jetbrains.kotlin-server
+            #jetbrains.kotlin-server
 
             # Nix
             jnoortheen.nix-ide
@@ -121,7 +121,7 @@ in
             davidanson.vscode-markdownlint
 
             # Docker
-            ms-azuretools.vscode-docker
+            #ms-azuretools.vscode-docker
 
             # Makefile
             ms-vscode.makefile-tools
@@ -278,6 +278,15 @@ in
       poppler-utils
       python3
       nodejs
+      (stable.harbor.override {
+        computer1Support = true;
+        ec2Support = true;
+        gkeSupport = true;
+        wandbSupport = true;
+        langsmithSupport = true;
+        atif2otelSupport = true;
+      })
+      stable.harbor-rewardkit
       (if cfg.nvim then neovide else null)
     ];
   };

@@ -27,19 +27,23 @@ let
     ++ optional (bindOptions != null) bindOptions;
   };
 
-  mkExecBind = keys: command: mkBind keys "hl.dsp.exec_cmd(${toLua command})" null;
+  mkExecBindWith =
+    keys: command: bindOptions:
+    mkBind keys "hl.dsp.exec_cmd(${toLua command})" bindOptions;
+  mkExecBind = keys: command: mkExecBindWith keys command null;
   mkModKey = key: luaInline ''mainMod .. " + ${key}"'';
 
   workspaceBinds = concatMap (
     workspace:
     let
+      key = if workspace == 10 then "0" else toString workspace;
       number = toString workspace;
     in
     [
-      (mkBind (mkModKey number) ''hl.dsp.focus({ workspace = "${number}" })'' null)
-      (mkBind (mkModKey "SHIFT + ${number}") ''hl.dsp.window.move({ workspace = "${number}" })'' null)
+      (mkBind (mkModKey key) ''hl.dsp.focus({ workspace = "${number}" })'' null)
+      (mkBind (mkModKey "SHIFT + ${key}") ''hl.dsp.window.move({ workspace = "${number}" })'' null)
     ]
-  ) (range 1 9);
+  ) (range 1 10);
 in
 {
   options.home.desktop.hypr = {
@@ -88,7 +92,14 @@ in
       configType = "lua";
 
       settings = {
-        monitor = cfg.monitor;
+        monitor = cfg.monitor ++ [
+          {
+            output = "";
+            mode = "preferred";
+            position = "auto";
+            scale = "auto";
+          }
+        ];
 
         env = [
           # QT
@@ -108,13 +119,9 @@ in
         ]
         # NVIDIA
         ++ optionals cfg.nvidia [
-          (mkEnv "GBM_BACKEND" "nvidia-drm")
           (mkEnv "__GLX_VENDOR_LIBRARY_NAME" "nvidia")
           (mkEnv "LIBVA_DRIVER_NAME" "nvidia")
           (mkEnv "NVD_BACKEND" "direct")
-          (mkEnv "MOZ_X11_EGL" "1")
-          (mkEnv "MOZ_DISABLE_RDD_SANDBOX" "1")
-          (mkEnv "WLR_NO_HARDWARE_CURSORS" "1")
           (mkEnv "ELECTRON_OZONE_PLATFORM_HINT" "auto")
         ];
 
@@ -123,9 +130,6 @@ in
             "hyprland.start"
             (luaInline ''
               function()
-                hl.exec_cmd("cliphist wipe")
-                hl.exec_cmd("wl-paste --type text --watch cliphist store")
-                hl.exec_cmd("wl-paste --type image --watch cliphist store")
                 hl.exec_cmd("Telegram -startintray")
                 hl.exec_cmd("clash-verge")
               end
@@ -158,6 +162,7 @@ in
           decoration = {
             # 圆角半径
             rounding = 15;
+            rounding_power = 2;
             # 活动窗口不透明度
             active_opacity = 1;
             # 不活动窗口不透明度
@@ -170,9 +175,9 @@ in
               # 启用
               enabled = true;
               # 大小
-              size = 25;
+              size = 6;
               # 模糊程度
-              passes = 1;
+              passes = 2;
               # 优化
               new_optimizations = true;
               # 模糊菜单
@@ -187,6 +192,18 @@ in
               range = 2;
               # 清晰
               sharp = true;
+            };
+          };
+
+          input = {
+            follow_mouse = 1;
+            sensitivity = 0;
+
+            touchpad = {
+              disable_while_typing = true;
+              natural_scroll = false;
+              scroll_factor = 1.0;
+              tap_to_click = true;
             };
           };
 
@@ -220,62 +237,169 @@ in
           animations.enabled = true;
         };
 
-        curve = {
-          _args = [
-            "myBezier"
-            {
-              type = "bezier";
-              points = [
-                [
-                  0.05
-                  0.9
-                ]
-                [
-                  0.1
-                  1.05
-                ]
-              ];
-            }
-          ];
-        };
+        curve = [
+          {
+            _args = [
+              "easeOutQuint"
+              {
+                type = "bezier";
+                points = [
+                  [
+                    0.23
+                    1
+                  ]
+                  [
+                    0.32
+                    1
+                  ]
+                ];
+              }
+            ];
+          }
+          {
+            _args = [
+              "linear"
+              {
+                type = "bezier";
+                points = [
+                  [
+                    0
+                    0
+                  ]
+                  [
+                    1
+                    1
+                  ]
+                ];
+              }
+            ];
+          }
+          {
+            _args = [
+              "almostLinear"
+              {
+                type = "bezier";
+                points = [
+                  [
+                    0.5
+                    0.5
+                  ]
+                  [
+                    0.75
+                    1
+                  ]
+                ];
+              }
+            ];
+          }
+          {
+            _args = [
+              "quick"
+              {
+                type = "bezier";
+                points = [
+                  [
+                    0.15
+                    0
+                  ]
+                  [
+                    0.1
+                    1
+                  ]
+                ];
+              }
+            ];
+          }
+          {
+            _args = [
+              "easy"
+              {
+                type = "spring";
+                mass = 1;
+                stiffness = 238.1191;
+                dampening = 24.21279333;
+              }
+            ];
+          }
+        ];
 
         animation = [
           {
-            leaf = "windows";
-            enabled = true;
-            speed = 7;
-            bezier = "myBezier";
-          }
-          {
-            leaf = "windowsOut";
-            enabled = true;
-            speed = 7;
-            bezier = "default";
-            style = "popin 80%";
-          }
-          {
-            leaf = "border";
+            leaf = "global";
             enabled = true;
             speed = 10;
             bezier = "default";
           }
           {
-            leaf = "borderangle";
+            leaf = "windows";
             enabled = true;
-            speed = 8;
-            bezier = "default";
+            speed = 4.79;
+            spring = "easy";
+          }
+          {
+            leaf = "windowsIn";
+            enabled = true;
+            speed = 4.1;
+            spring = "easy";
+            style = "popin 87%";
+          }
+          {
+            leaf = "windowsOut";
+            enabled = true;
+            speed = 1.49;
+            bezier = "linear";
+            style = "popin 87%";
+          }
+          {
+            leaf = "border";
+            enabled = true;
+            speed = 5.39;
+            bezier = "easeOutQuint";
+          }
+          {
+            leaf = "fadeIn";
+            enabled = true;
+            speed = 1.73;
+            bezier = "almostLinear";
+          }
+          {
+            leaf = "fadeOut";
+            enabled = true;
+            speed = 1.46;
+            bezier = "almostLinear";
           }
           {
             leaf = "fade";
             enabled = true;
-            speed = 7;
-            bezier = "default";
+            speed = 3.03;
+            bezier = "quick";
+          }
+          {
+            leaf = "layers";
+            enabled = true;
+            speed = 3.81;
+            bezier = "easeOutQuint";
+          }
+          {
+            leaf = "layersIn";
+            enabled = true;
+            speed = 4;
+            bezier = "easeOutQuint";
+            style = "fade";
+          }
+          {
+            leaf = "layersOut";
+            enabled = true;
+            speed = 1.5;
+            bezier = "linear";
+            style = "fade";
           }
           {
             leaf = "workspaces";
             enabled = true;
-            speed = 6;
-            bezier = "default";
+            speed = 1.94;
+            bezier = "almostLinear";
+            style = "fade";
           }
         ];
 
@@ -283,6 +407,19 @@ in
           fingers = 3;
           direction = "horizontal";
           action = "workspace";
+        };
+
+        window_rule = {
+          name = "fix-xwayland-drags";
+          match = {
+            class = "^$";
+            title = "^$";
+            xwayland = true;
+            float = true;
+            fullscreen = false;
+            pin = false;
+          };
+          no_focus = true;
         };
 
         mainMod = {
@@ -299,13 +436,17 @@ in
 
           # 窗口
           (mkBind (mkModKey "X") "hl.dsp.window.close()" null)
-          (mkBind (mkModKey "M") "hl.dsp.exit()" null)
+          (mkExecBind (mkModKey "M") "wlogout")
           (mkBind (mkModKey "F") ''hl.dsp.window.float({ action = "toggle" })'' null)
 
           (mkBind (mkModKey "left") ''hl.dsp.focus({ direction = "left" })'' null)
           (mkBind (mkModKey "right") ''hl.dsp.focus({ direction = "right" })'' null)
           (mkBind (mkModKey "up") ''hl.dsp.focus({ direction = "up" })'' null)
           (mkBind (mkModKey "down") ''hl.dsp.focus({ direction = "down" })'' null)
+
+          # 特殊工作区
+          (mkBind (mkModKey "S") ''hl.dsp.workspace.toggle_special("magic")'' null)
+          (mkBind (mkModKey "SHIFT + S") ''hl.dsp.window.move({ workspace = "special:magic" })'' null)
 
         ]
         ++ workspaceBinds
@@ -314,18 +455,37 @@ in
           (mkBind (mkModKey "mouse_up") ''hl.dsp.focus({ workspace = "e-1" })'' null)
 
           # Pipewire
-          (mkExecBind "XF86AudioRaiseVolume" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%+")
-          (mkExecBind "XF86AudioLowerVolume" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-")
+          (mkExecBindWith "XF86AudioRaiseVolume" "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 3%+" {
+            locked = true;
+            repeating = true;
+          })
+          (mkExecBindWith "XF86AudioLowerVolume" "wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-" {
+            locked = true;
+            repeating = true;
+          })
+          (mkExecBindWith "XF86AudioMute" "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" {
+            locked = true;
+          })
+          (mkExecBindWith "XF86AudioMicMute" "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle" {
+            locked = true;
+          })
 
           # Brightness
-          (mkExecBind "XF86MonBrightnessDown" "brightnessctl set 5%-")
-          (mkExecBind "XF86MonBrightnessUp" "brightnessctl set 5%+")
+          (mkExecBindWith "XF86MonBrightnessDown" "brightnessctl -e4 -n2 set 5%-" {
+            locked = true;
+            repeating = true;
+          })
+          (mkExecBindWith "XF86MonBrightnessUp" "brightnessctl -e4 -n2 set 5%+" {
+            locked = true;
+            repeating = true;
+          })
 
           # Playerctl
-          (mkExecBind "XF86AudioPlay" "playerctl play-pause")
-          (mkExecBind "XF86AudioNext" "playerctl next")
-          (mkExecBind "XF86AudioPrev" "playerctl previous")
-          (mkExecBind "XF86AudioStop" "playerctl stop")
+          (mkExecBindWith "XF86AudioPlay" "playerctl play-pause" { locked = true; })
+          (mkExecBindWith "XF86AudioPause" "playerctl play-pause" { locked = true; })
+          (mkExecBindWith "XF86AudioNext" "playerctl next" { locked = true; })
+          (mkExecBindWith "XF86AudioPrev" "playerctl previous" { locked = true; })
+          (mkExecBindWith "XF86AudioStop" "playerctl stop" { locked = true; })
 
           # 鼠标
           (mkBind (mkModKey "mouse:272") "hl.dsp.window.drag()" { mouse = true; })

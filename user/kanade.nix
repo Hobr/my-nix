@@ -14,7 +14,12 @@
       hypr = {
         nvidia = true;
         monitor = [
-          "eDP-1,2560x1440@165,auto,1"
+          {
+            output = "eDP-1";
+            mode = "2560x1440@165";
+            position = "auto";
+            scale = 1;
+          }
         ];
       };
 

@@ -131,7 +131,6 @@ in
             (luaInline ''
               function()
                 hl.exec_cmd("Telegram -startintray")
-                hl.exec_cmd("clash-verge")
               end
             '')
           ];

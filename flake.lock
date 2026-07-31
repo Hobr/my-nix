@@ -130,11 +130,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1785509232,
-        "narHash": "sha256-T4HDkvLnhkgkd7WCUHzT5EF6gS0KUTFjhfftHG4PP5k=",
+        "lastModified": 1785513937,
+        "narHash": "sha256-N0jhccF+wHbYPVJ63WnFwRQozN8TQTXMNVO1OM18k3Y=",
         "owner": "ilysenko",
         "repo": "codex-desktop-linux",
-        "rev": "0f3ffbfc4260e3ab5b79900b3df6235ced953f0e",
+        "rev": "5b30c7716a8abea0cd0685370ae9772e27e30b59",
         "type": "github"
       },
       "original": {
@@ -710,11 +710,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1784676123,
-        "narHash": "sha256-ndyanKzw90yX2nUVFmTuYqXidUNymtMfgmIHyNdhht0=",
+        "lastModified": 1785513343,
+        "narHash": "sha256-INy87zD41adSUzpprLPA2p+YPnPLNID4cIdbDe0/kfY=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "66714e5ce44269ecc58c20d9196da8dbe1b27a31",
+        "rev": "23511df9b079bbfdff43b942d65a1b2a1c2ca6a7",
         "type": "github"
       },
       "original": {

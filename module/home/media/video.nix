@@ -45,6 +45,7 @@ in
         ffmpeg
         yt-dlp
         mkvtoolnix
+        n-m3u8dl-re
         losslesscut-bin
         aegisub
       ];

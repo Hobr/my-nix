@@ -46,6 +46,7 @@ in
         yt-dlp
         mkvtoolnix
         n-m3u8dl-re
+        dash-mpd-cli
         losslesscut-bin
         aegisub
       ];

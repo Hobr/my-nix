@@ -73,7 +73,7 @@
       editor = {
         vscode = true;
         nvim = true;
-        emacs = false;
+        emacs = true;
       };
     };
 
@@ -88,10 +88,10 @@
     };
 
     pro = {
-      audio.enable = false;
+      audio.enable = true;
       video.enable = true;
       image.enable = true;
-      obs.enable = false;
+      obs.enable = true;
       electron.enable = false;
     };
   };

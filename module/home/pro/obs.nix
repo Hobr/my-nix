@@ -18,9 +18,10 @@ in
 
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
-        obs-websocket
         obs-vaapi
+        obs-gstreamer
         obs-multi-rtmp
+        obs-vkcapture
       ];
     };
   };

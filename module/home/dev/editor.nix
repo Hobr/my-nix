@@ -53,6 +53,7 @@ in
             ms-vscode.remote-server
             ms-vscode-remote.remote-ssh
             christian-kohler.path-intellisense
+            vadimcn.vscode-lldb
             #ms-vsliveshare.vsliveshare
 
             # 环境

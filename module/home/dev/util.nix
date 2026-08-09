@@ -16,6 +16,7 @@ in
     home.packages = with pkgs; [
       # 工具
       cloc
+      gdbgui
 
       # 二进制
       ghex

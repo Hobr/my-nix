@@ -43,7 +43,6 @@ in
           with pkgs.vscode-marketplace-release;
           [
             # 显示
-            miguelsolorio.fluent-icons
             ms-ceintl.vscode-language-pack-zh-hans
             wayou.vscode-todo-highlight
             albert.tabout
@@ -209,7 +208,6 @@ in
           "window.titleBarStyle" = "custom";
           "window.commandCenter" = false;
 
-          "workbench.productIconTheme" = "fluent-icons";
           "workbench.startupEditor" = "newUntitledFile";
           "workbench.layoutControl.enabled" = false;
           "workbench.browser.openLocalhostLinks" = false;

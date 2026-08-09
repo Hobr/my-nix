@@ -67,6 +67,7 @@ in
             rust-lang.rust-analyzer
             cordx56.rustowl-vscode
             viper-admin.prusti-assistant
+            wcrichton.flowistry
             drkryz.rustautomod
             splo.vscode-bevy-inspector
             dioxuslabs.dioxus

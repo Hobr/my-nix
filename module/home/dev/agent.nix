@@ -15,7 +15,7 @@ in
   config = mkIf cfg.enable {
     programs.codexDesktopLinux = {
       enable = true;
-      cliPackage = pkgs.llm-agents.codex;
+      linuxFeatures = [ "read-aloud" ];
     };
 
     programs.pi-coding-agent = {

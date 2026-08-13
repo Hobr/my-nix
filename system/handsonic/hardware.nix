@@ -13,7 +13,7 @@
   services.printing.enable = false;
 
   # 罗技
-  services.solaar = {
+  programs.solaar = {
     enable = true;
     window = "hide";
   };

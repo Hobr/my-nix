@@ -10,7 +10,6 @@
     inputs.disko.nixosModules.disko
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.solaar.nixosModules.default
     inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
 

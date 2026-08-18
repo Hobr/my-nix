@@ -15,7 +15,10 @@
   # 罗技
   programs.solaar = {
     enable = true;
-    window = "hide";
+    userService = {
+      enable = true;
+      window = "hide";
+    };
   };
 
   # 电源管理

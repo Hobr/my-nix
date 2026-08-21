@@ -46,6 +46,11 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ## 罗技
+    openlogi = {
+      url = "github:AprilNEA/OpenLogi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

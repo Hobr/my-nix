@@ -12,6 +12,7 @@
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
+    inputs.openlogi.nixosModules.default
 
     outputs.nixosModules
   ];

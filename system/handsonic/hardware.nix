@@ -13,12 +13,9 @@
   services.printing.enable = false;
 
   # 罗技
-  programs.solaar = {
+  programs.openlogi = {
     enable = true;
-    userService = {
-      enable = true;
-      window = "hide";
-    };
+    launchAtLogin = true;
   };
 
   # 电源管理

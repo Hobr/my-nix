@@ -96,15 +96,9 @@ in
             esbenp.prettier-vscode
             bradlc.vscode-tailwindcss
 
-            # C Sharp
-            ms-dotnettools.csdevkit
-            ms-dotnettools.csharp
-            ms-dotnettools.vscode-dotnet-runtime
-
             # Godot
             alfish.godot-files
             geequlim.godot-tools
-            woberg.godot-dotnet-tools
 
             # Golang
             golang.go
@@ -283,20 +277,6 @@ in
 
           "svelte.enable-ts-plugin" = true;
 
-          "dotnetAcquisitionExtension.existingDotnetPath" = [
-            {
-              "extensionId" = "ms-dotnettools.csharp";
-              "path" = "${pkgs.dotnet-sdk_9}/bin";
-            }
-            {
-              "extensionId" = "ms-dotnettools.csdevkit";
-              "path" = "${pkgs.dotnet-sdk_9}/bin";
-            }
-            {
-              "extensionId" = "woberg.godot-dotnet-tools";
-              "path" = "${pkgs.dotnet-sdk_8}/bin";
-            }
-          ];
           "godotTools.lsp.serverPort" = 6005;
         };
       };
@@ -310,8 +290,7 @@ in
       python3
       nodejs
 
-      godot-mono
-      dotnetCorePackages.dotnet_9.sdk
+      godot
 
       (stable.harbor.override {
         computer1Support = true;

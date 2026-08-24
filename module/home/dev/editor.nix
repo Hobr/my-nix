@@ -163,7 +163,7 @@ in
             # CI
             github.vscode-github-actions
           ]
-          ++ (with pkgs.vscode-marketplace-universal; [
+          ++ (with pkgs.open-vsx-universal; [
             vadimcn.vscode-lldb
           ]);
 

@@ -57,7 +57,7 @@ in
             # 环境
             mkhl.direnv
             editorconfig.editorconfig
-            # formulahendry.code-runner
+            formulahendry.code-runner
 
             # Git
             eamodio.gitlens
@@ -95,10 +95,6 @@ in
             oxc.oxc-vscode
             esbenp.prettier-vscode
             bradlc.vscode-tailwindcss
-
-            # Godot
-            alfish.godot-files
-            geequlim.godot-tools
 
             # Golang
             golang.go

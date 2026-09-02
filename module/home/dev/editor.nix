@@ -283,16 +283,6 @@ in
 
       python3
       nodejs
-
-      (stable.harbor.override {
-        computer1Support = true;
-        ec2Support = true;
-        gkeSupport = true;
-        wandbSupport = true;
-        langsmithSupport = true;
-        atif2otelSupport = true;
-      })
-      stable.harbor-rewardkit
     ];
   };
 }

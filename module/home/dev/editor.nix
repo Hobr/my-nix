@@ -272,8 +272,6 @@ in
           };
 
           "svelte.enable-ts-plugin" = true;
-
-          "godotTools.lsp.serverPort" = 6005;
         };
       };
     };
@@ -285,8 +283,6 @@ in
 
       python3
       nodejs
-
-      godot
 
       (stable.harbor.override {
         computer1Support = true;

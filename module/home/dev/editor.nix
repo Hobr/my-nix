@@ -115,6 +115,9 @@ in
             jnoortheen.nix-ide
             arrterian.nix-env-selector
 
+            # Lisp
+            rheller.alive
+
             # Typst
             myriad-dreamin.tinymist
 

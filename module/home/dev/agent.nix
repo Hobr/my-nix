@@ -15,7 +15,13 @@ in
   config = mkIf cfg.enable {
     programs.codexDesktopLinux = {
       enable = true;
-      linuxFeatures = [ "read-aloud" ];
+      computerUseUi.enable = true;
+      linuxFeatures = [
+        "api-key-model-visibility"
+        "api-key-service-tier"
+        "mcp-helper-reaper"
+        "node-repl-reaper"
+      ];
     };
 
     programs.pi-coding-agent = {

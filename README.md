@@ -2,58 +2,6 @@
 
 个人的**NixOS**配置, 日常生活使用, 更新频率较高
 
-## 介绍
-
-- 主机
-  - handsonic: 游戏本, 机械革命 Umi Pro 3, Intel i7-11800H, RTX3060, 32G, 双硬盘
-  - howling: 服务器
-  - ~~distortion: 已出售~~
-  - ~~overdrive: 已出售~~
-
-- 用户
-  - kanade: handsonic用户, 重软件多
-  - miyuki: howling用户, 服务器环境
-  - ~~yuzuru: 已出售~~
-  - ~~yuri: 已出售~~
-
-## TODO
-
-- Fish Bindkey
-- Rime
-- Emacs环境
-- Systemd-timesyncd resolved....
-- 邮箱
-
-### Docker
-
-traefik
-gitea
-uptime-kuma
-Transmission
-Jackett
-Vaultwarden
-jellyfin
-Filebrowser
-ChineseSubFinder
-jackett
-syncthing
-PhotoPrism
-telegraf
-Navidrome
-music-tag-web
-n8n
-Musicn
-Gotify
-Calibre
-iptv-sources
-Portainer
-Nastools
-QD
-Komga/Bungumi
-
-tieba cloud sign
-blog
-
 ## 安装
 
 修改内容:
@@ -169,11 +117,3 @@ gpg --import public-key.asc
 sudo cryptsetup luksKillSlot /dev/nvme0n1 1
 sudo cryptsetup token remove /dev/nvme0n1 --token-id 0
 ```
-
-## 参考资料
-
-- [NixOS Wiki](https://nixos.wiki/)
-- [NixOS Search](https://search.nixos.org/packages)
-- [Home-Manager Option](https://mipmip.github.io/home-manager-option-search/)
-- [Misterio77/nix-starter-configs](https://github.com/Misterio77/nix-starter-configs)
-- [Chaotic's Nyx](https://www.nyx.chaotic.cx/)

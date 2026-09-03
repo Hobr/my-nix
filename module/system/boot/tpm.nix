@@ -15,8 +15,8 @@ in
     security.tpm2 = {
       enable = true;
       tctiEnvironment.enable = true;
-      pkcs11.enable = false;
-      abrmd.enable = false;
+      pkcs11.enable = true;
+      abrmd.enable = true;
     };
 
     boot.initrd = {

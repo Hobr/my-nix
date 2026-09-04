@@ -273,8 +273,6 @@ in
             "**/.git/subtree-cache/**" = true;
             "**/node_modules/*/**" = true;
           };
-
-          "svelte.enable-ts-plugin" = true;
         };
       };
     };

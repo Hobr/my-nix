@@ -16,12 +16,6 @@ in
     programs.codexDesktopLinux = {
       enable = true;
       computerUseUi.enable = true;
-      linuxFeatures = [
-        "api-key-model-visibility"
-        "api-key-service-tier"
-        "mcp-helper-reaper"
-        "node-repl-reaper"
-      ];
     };
 
     programs.pi-coding-agent = {

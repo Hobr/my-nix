@@ -32,8 +32,9 @@ in
       codex
       opencode
       codegraph
-      spec-kit
       trellis
+      spec-kit
+      openspec
     ];
   };
 }

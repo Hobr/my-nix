@@ -15,6 +15,7 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       # 工具
+      tokei
       cloc
       gdbgui
 

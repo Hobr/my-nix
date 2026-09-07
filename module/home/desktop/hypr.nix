@@ -436,6 +436,10 @@ in
           (mkExecBind (mkModKey "W") "rofi -show drun")
           (mkExecBind (mkModKey "V") "cliphist list | rofi -dmenu | cliphist decode | wl-copy")
 
+          # 截图
+          (mkExecBind (mkModKey "PRINT") "hyprshot -m region")
+          (mkExecBind "PRINT" "hyprshot -m output")
+
           # 窗口
           (mkBind (mkModKey "X") "hl.dsp.window.close()" null)
           (mkExecBind (mkModKey "M") "wlogout")

@@ -40,7 +40,7 @@ in
 
     # Gnome Keyring
     services.gnome.glib-networking.enable = true;
-    services.dbus.packages = [ pkgs.gcr_4 ];
+    services.dbus.packages = [ pkgs.gcr_3 ];
     programs.seahorse.enable = true;
 
     # Logind

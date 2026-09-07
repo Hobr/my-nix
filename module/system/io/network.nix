@@ -18,10 +18,10 @@ in
       settings = {
         Resolve = {
           # DNSSEC
-          dnssec = "allow-downgrade";
+          DNSSEC = "allow-downgrade";
 
           # 后备DNS
-          fallbackDns = [
+          FallbackDNS = [
             "8.8.8.8"
             "1.1.1.1"
           ];

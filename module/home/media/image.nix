@@ -15,10 +15,6 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      # 截图
-      slurp
-      grim
-      grimblast
       # 选色
       hyprpicker
       # 图片库

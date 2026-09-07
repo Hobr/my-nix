@@ -14,6 +14,7 @@ in
 
   config = mkIf cfg.enable {
     services.pulseaudio.enable = false;
+    services.upower.enable = true;
 
     # Pipewire
     services.pipewire = {

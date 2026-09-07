@@ -17,7 +17,6 @@ in
     security.rtkit.enable = true;
 
     # Polkit
-    environment.systemPackages = [ pkgs.polkit_gnome ];
     security.polkit.enable = true;
 
     # Sudo
@@ -47,8 +46,8 @@ in
     services.logind = {
       enable = true;
       settings.Login = {
-        lidSwitch = "suspend";
-        lidSwitchExternalPower = "lock";
+        HandleLidSwitch = "suspend";
+        HandleLidSwitchExternalPower = "lock";
         HandlePowerKey = "suspend";
       };
     };

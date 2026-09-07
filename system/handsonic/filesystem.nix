@@ -8,6 +8,7 @@
     "/boot" = {
       device = "/dev/nvme1n1p1";
       fsType = "vfat";
+      options = [ "umask=0077" ];
     };
 
     # 根目录

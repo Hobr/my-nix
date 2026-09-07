@@ -32,19 +32,25 @@ in
         enableGnomeKeyring = true;
         gnupg.enable = true;
       };
-      swaylock = { };
+      login = {
+        enableGnomeKeyring = true;
+        gnupg.enable = true;
+      };
     };
 
     # Gnome Keyring
     services.gnome.glib-networking.enable = true;
-    services.dbus.packages = [ pkgs.gcr ];
+    services.dbus.packages = [ pkgs.gcr_4 ];
     programs.seahorse.enable = true;
 
     # Logind
-    services.logind.settings.Login = {
-      lidSwitch = "suspend";
-      lidSwitchExternalPower = "lock";
-      HandlePowerKey = "suspend";
+    services.logind = {
+      enable = true;
+      settings.Login = {
+        lidSwitch = "suspend";
+        lidSwitchExternalPower = "lock";
+        HandlePowerKey = "suspend";
+      };
     };
   };
 }

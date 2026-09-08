@@ -13,11 +13,7 @@ in
 
   config = mkIf cfg.enable {
     boot.loader = {
-      systemd-boot = {
-        enable = true;
-        editor = false;
-        configurationLimit = 10;
-      };
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
       timeout = 3;
     };

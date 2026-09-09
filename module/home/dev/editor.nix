@@ -163,7 +163,6 @@ in
             ms-vscode.remote-server
             ms-vscode-remote.remote-ssh
             christian-kohler.path-intellisense
-            #ms-vsliveshare.vsliveshare
 
             # 环境
             mkhl.direnv
@@ -195,6 +194,7 @@ in
             ms-vscode.cpptools-extension-pack
             jeff-hykin.better-cpp-syntax
             ms-vscode.cpptools-themes
+            llvm-vs-code-extensions.lldb-dap
 
             # JS
             firefox-devtools.vscode-firefox-debug
@@ -210,6 +210,16 @@ in
             # Golang
             golang.go
 
+            # Lisp
+            rheller.alive
+
+            # Typst
+            myriad-dreamin.tinymist
+
+            # Nix
+            jnoortheen.nix-ide
+            arrterian.nix-env-selector
+
             # Java
             #vscjava.vscode-java-pack
             #redhat.java
@@ -222,18 +232,17 @@ in
             # Kotlin
             #jetbrains.kotlin-server
 
-            # Nix
-            jnoortheen.nix-ide
-            arrterian.nix-env-selector
-
             # Zig
-            ziglang.vscode-zig
+            # ziglang.vscode-zig
 
-            # Lisp
-            rheller.alive
+            # Fortran
+            # fortran-lang.linter-gfortran
 
-            # Typst
-            myriad-dreamin.tinymist
+            # Fountain
+            # piersdeseilligny.betterfountain
+
+            # WIT
+            # bytecodealliance.wit-idl
 
             # Markdown
             davidanson.vscode-markdownlint
@@ -241,23 +250,20 @@ in
             # Docker
             #ms-azuretools.vscode-docker
 
+            # Xmake
+            tboox.xmake-vscode
+
             # Makefile
             ms-vscode.makefile-tools
 
             # Stylua
             johnnymorganz.stylua
 
-            # Fountain
-            piersdeseilligny.betterfountain
-
             # Yaml
             redhat.vscode-yaml
 
             # Toml
             tombi-toml.tombi
-
-            # WIT
-            bytecodealliance.wit-idl
 
             # XML
             dotjoshjohnson.xml
@@ -270,9 +276,6 @@ in
 
             # Just
             nefrob.vscode-just-syntax
-
-            # Fortran
-            fortran-lang.linter-gfortran
 
             # AI
             github.copilot-chat

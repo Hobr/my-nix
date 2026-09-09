@@ -240,6 +240,8 @@ in
           "breadcrumbs.enabled" = true;
           "redhat.telemetry.enabled" = true;
 
+          "zig.zls.enabled" = "on";
+
           "search.exclude" = {
             "**/venv" = true;
             "**/.direnv" = true;

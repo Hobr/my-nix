@@ -115,6 +115,9 @@ in
             jnoortheen.nix-ide
             arrterian.nix-env-selector
 
+            # Zig
+            ziglang.vscode-zig
+
             # Lisp
             rheller.alive
 

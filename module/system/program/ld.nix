@@ -13,6 +13,12 @@ in
   options.sys.program.ld.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
-    programs.nix-ld.enable = true;
+    programs.nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        libsecret
+        glib
+      ];
+    };
   };
 }

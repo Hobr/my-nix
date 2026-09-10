@@ -220,6 +220,10 @@ in
             jnoortheen.nix-ide
             arrterian.nix-env-selector
 
+            # Elixir
+            jakebecker.elixir-ls
+            phoenixframework.phoenix
+
             # Java
             #vscjava.vscode-java-pack
             #redhat.java

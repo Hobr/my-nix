@@ -102,6 +102,10 @@ in
         ];
 
         env = [
+          # Cursor
+          (mkEnv "HYPRCURSOR_THEME" "rose-pine-hyprcursor")
+          (mkEnv "HYPRCURSOR_SIZE" "28")
+
           # QT
           (mkEnv "QT_QPA_PLATFORM" "wayland;xcb")
           (mkEnv "QT_WAYLAND_DISABLE_WINDOWDECORATION" "1")

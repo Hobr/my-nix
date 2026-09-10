@@ -64,9 +64,9 @@
 
     # 指针
     cursor = {
-      name = "Colloid";
-      package = pkgs.colloid-cursors;
-      size = 24;
+      name = "rose-pine-hyprcursor";
+      package = pkgs.rose-pine-hyprcursor;
+      size = 28;
     };
 
     # 图标

@@ -39,6 +39,7 @@ in
         nerd-fonts.jetbrains-mono
 
         sarasa-gothic
+        lxgw-wenkai
         twitter-color-emoji
 
         noto-fonts

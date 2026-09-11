@@ -18,14 +18,20 @@ in
       type = "fcitx5";
       fcitx5 = {
         waylandFrontend = true;
+
         addons = with pkgs; [
           (fcitx5-rime.override { rimeDataPkgs = [ rime-ice ]; })
           fcitx5-mozc
           fcitx5-gtk
-          fcitx5-material-color
+          fcitx5-mellow-themes
           qt6Packages.fcitx5-chinese-addons
           qt6Packages.fcitx5-configtool
         ];
+
+        settings.addons.classicui.globalSection = {
+          Theme = mkForce "mellow-sakura";
+          UseDarkTheme = false;
+        };
       };
     };
 

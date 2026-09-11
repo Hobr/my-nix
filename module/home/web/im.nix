@@ -20,6 +20,8 @@ in
       wechat
       feishu
       wemeet
+      discord
+      element-desktop
     ];
   };
 }

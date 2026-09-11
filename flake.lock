@@ -488,22 +488,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-jabref": {
-      "locked": {
-        "lastModified": 1788187440,
-        "narHash": "sha256-lSpUtHR1aNyBMPGj0hCegjCRWdLPECeZmGeWMUPTvYs=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "30d72149e421fc48b1a2713395f875f302bee9c4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "30d72149e421fc48b1a2713395f875f302bee9c4",
-        "type": "github"
-      }
-    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1789006805,
@@ -642,7 +626,6 @@
         "llm-agents": "llm-agents",
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_5",
-        "nixpkgs-jabref": "nixpkgs-jabref",
         "nixpkgs-stable": "nixpkgs-stable",
         "stylix": "stylix"
       }

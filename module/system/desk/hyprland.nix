@@ -39,19 +39,18 @@ in
     # 能耗管理
     services.tlp = {
       enable = true;
-      pd.enable = true;
+      pd.enable = false;
       package = pkgs.tlp.override { enableRDW = config.networking.networkmanager.enable; };
 
       settings = {
-        # 全局
-        TLP_DEFAULT_MODE = "AC";
+        # 性能
+        TLP_AUTO_SWITCH = 1;
+        TLP_PROFILE_DEFAULT = "PRF";
+        TLP_PROFILE_AC = "PRF";
+        TLP_PROFILE_BAT = "BAL";
+
         PLATFORM_PROFILE_ON_AC = "performance";
         PLATFORM_PROFILE_ON_BAT = "low-power";
-
-        # 网络
-        RESTORE_DEVICE_STATE_ON_STARTUP = 1;
-        WIFI_PWR_ON_AC = "off";
-        WIFI_PWR_ON_BAT = "on";
 
         # CPU
         CPU_SCALING_GOVERNOR_ON_AC = "performance";
@@ -65,6 +64,11 @@ in
 
         CPU_HWP_DYN_BOOST_ON_AC = 1;
         CPU_HWP_DYN_BOOST_ON_BAT = 0;
+
+        # 网络
+        RESTORE_DEVICE_STATE_ON_STARTUP = 1;
+        WIFI_PWR_ON_AC = "off";
+        WIFI_PWR_ON_BAT = "on";
       };
     };
   };

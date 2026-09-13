@@ -15,6 +15,12 @@
       charging-profile = "balanced";
     };
   };
+
+  hardware.tuxedo-rs = {
+    enable = true;
+    tailor-gui.enable = true;
+  };
+
   boot.kernelModules = [ "uniwill_wmi" ];
 
   # 主机名

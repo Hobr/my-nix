@@ -6,8 +6,9 @@
 
 修改内容:
 
-- *system\common\system\boot.nix* 暂时**systemd-boot.enable=true**
-- *system\common\system\secureboot.nix* 暂时**lanzaboote.enable=false**, 注释**loader.systemd-boot.enable**
+- _system\common\system\boot.nix_ 暂时**systemd-boot.enable=true**
+- _system\common\system\secureboot.nix_
+  暂时**lanzaboote.enable=false**, 注释**loader.systemd-boot.enable**
 
 ```bash
 sudo -i

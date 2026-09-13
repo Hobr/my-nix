@@ -9,13 +9,14 @@
 
   # Uniwill/Tongfang
   hardware.tuxedo-drivers = {
-    enable = true;
+    enable = false;
     settings.charging-profile = "balanced";
   };
 
+  # 临时取消
   hardware.tuxedo-rs = {
-    enable = true;
-    tailor-gui.enable = true;
+    enable = false;
+    tailor-gui.enable = false;
   };
 
   boot.kernelModules = [ "uniwill_wmi" ];

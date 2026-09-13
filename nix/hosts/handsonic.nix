@@ -2,9 +2,9 @@
   imports = [
     ./common.nix
 
-    ./handsonic/kernel.nix
-    ./handsonic/filesystem.nix
-    ./handsonic/hardware.nix
+    ../hardware/handsonic/kernel.nix
+    ../hardware/handsonic/filesystem.nix
+    ../hardware/handsonic/hardware.nix
   ];
 
   # Uniwill/Tongfang

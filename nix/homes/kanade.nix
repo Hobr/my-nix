@@ -27,7 +27,7 @@
   };
 
   # 壁纸
-  stylix.image = ./wallpaper.jpg;
+  stylix.image = ../assets/wallpaper.jpg;
 
   nixpkgs.config.cudaSupport = true;
 }

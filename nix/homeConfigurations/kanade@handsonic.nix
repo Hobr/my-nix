@@ -1,4 +1,4 @@
 {
   system = "x86_64-linux";
-  modules = [ ../../user/kanade.nix ];
+  modules = [ ../homes/kanade.nix ];
 }

@@ -9,7 +9,7 @@
     inputs.stylix.homeModules.stylix
     inputs.codex.homeManagerModules.default
 
-    ../nix/homeModules/_default.nix
+    ../homeModules/_default.nix
   ];
 
   fonts.fontconfig.enable = true;

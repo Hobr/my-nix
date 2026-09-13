@@ -1,4 +1,4 @@
 {
   system = "x86_64-linux";
-  modules = [ ../../system/handsonic.nix ];
+  modules = [ ../hosts/handsonic.nix ];
 }

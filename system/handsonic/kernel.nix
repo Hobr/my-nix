@@ -2,6 +2,7 @@
   # Module
   boot = {
     kernelModules = [ "kvm-intel" ];
+    blacklistedKernelModules = [ "asus_wmi" ];
     extraModulePackages = [ ];
 
     initrd = {

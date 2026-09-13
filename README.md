@@ -92,7 +92,7 @@ sudo bootctl status
 
 # TPM
 sudo systemd-cryptenroll --tpm2-device=list
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/nvme0n1
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/disk/by-uuid/532D-B974
 
 # Fwupd
 sudo fwupdmgr refresh
@@ -114,6 +114,6 @@ gpg --import secret-full-key.asc
 gpg --import public-key.asc
 
 # 重新TPM
-sudo cryptsetup luksKillSlot /dev/nvme0n1 1
-sudo cryptsetup token remove /dev/nvme0n1 --token-id 0
+sudo cryptsetup luksKillSlot /dev/disk/by-uuid/532D-B974 1
+sudo cryptsetup token remove /dev/disk/by-uuid/532D-B974 --token-id 0
 ```

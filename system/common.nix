@@ -1,6 +1,5 @@
 {
   inputs,
-  outputs,
   pkgs,
   ...
 }:
@@ -13,7 +12,7 @@
     inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
 
-    outputs.nixosModules.default
+    ../module/system
   ];
 
   sys = {
@@ -124,8 +123,6 @@
   };
   stylix.targets.kmscon.enable = false;
 
-  # 平台
-  nixpkgs.hostPlatform.system = "x86_64-linux";
   # 系统版本
   system.stateVersion = "26.11";
 }

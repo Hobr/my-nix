@@ -1,11 +1,6 @@
+{ inputs, ... }:
 {
-  inputs,
-  ...
-}:
-{
-  additions = final: prev: import ../pkg final.pkgs;
-
-  modifications = final: prev: {
+  modifications = final: _prev: {
     linuxPackages = final.pkgs.linuxPackages_latest;
   };
 
@@ -13,9 +8,7 @@
     stable = import inputs.nixpkgs-stable {
       system = final.stdenv.hostPlatform.system;
       config = {
-        # 非自由软件
         allowUnfree = true;
-        # 破损软件
         allowBroken = true;
       };
     };

@@ -1,12 +1,12 @@
 {
-  description = "Hobr NixOS";
-
   inputs = {
     # 软件源
     ## 官方
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     ## 官方稳定
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
+    ## Flakelight
+    flakelight.url = "github:nix-community/flakelight";
 
     # 环境
     ## Rootless
@@ -49,50 +49,8 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-      systems = [
-        "x86_64-linux"
-        "i686-linux"
-        "aarch64-linux"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in
-    {
-      packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
-      overlays = import ./overlay { inherit inputs; };
-      nixosModules = {
-        default = import ./module/system;
-      };
-      homeModules = {
-        default = import ./module/home;
-      };
-
-      nixosConfigurations = {
-        # Laptop
-        handsonic = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./system/handsonic.nix ];
-        };
-      };
-
-      homeConfigurations = {
-        # Laptop
-        "kanade@handsonic" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-          };
-          modules = [ ./user/kanade.nix ];
-        };
-      };
+    { flakelight, ... }@inputs:
+    flakelight ./. {
+      inherit inputs;
     };
 }

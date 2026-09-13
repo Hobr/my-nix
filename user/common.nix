@@ -1,6 +1,5 @@
 {
   inputs,
-  outputs,
   config,
   pkgs,
   ...
@@ -10,7 +9,7 @@
     inputs.stylix.homeModules.stylix
     inputs.codex.homeManagerModules.default
 
-    outputs.homeModules.default
+    ../module/home
   ];
 
   fonts.fontconfig.enable = true;

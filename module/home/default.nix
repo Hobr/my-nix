@@ -1,6 +1,5 @@
 {
   inputs,
-  outputs,
   lib,
   config,
   pkgs,
@@ -65,26 +64,6 @@ with lib;
         ];
       };
     };
-
-  nixpkgs = {
-    config = {
-      # 非自由软件
-      allowUnfree = true;
-      # 破损软件
-      allowBroken = true;
-      # 漏洞软件
-      permittedInsecurePackages = [ ];
-    };
-    # Overlays
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.stable-package
-
-      inputs.nix-vscode-extensions.overlays.default
-      inputs.llm-agents.overlays.shared-nixpkgs
-    ];
-  };
 
   # 文档
   manual = {

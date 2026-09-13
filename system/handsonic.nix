@@ -7,6 +7,16 @@
     ./handsonic/hardware.nix
   ];
 
+  # Uniwill/Tongfang
+  hardware.tuxedo-drivers = {
+    enable = true;
+    settings = {
+      fn-lock = true;
+      charging-profile = "balanced";
+    };
+  };
+  boot.kernelModules = [ "uniwill_wmi" ];
+
   # 主机名
   networking.hostName = "handsonic";
 

@@ -1,1 +1,77 @@
-import ../../module/home
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+with lib;
+{
+  imports = [
+    ./desktop
+    ./software
+    ./dev
+    ./media
+    ./pro
+    ./util
+    ./web
+  ];
+
+  nix =
+    let
+      flakeInputs = filterAttrs (_: isType "flake") inputs;
+    in
+    {
+      nixPath = mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+      registry = mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      package = pkgs.nix;
+
+      settings = {
+        flake-registry = "";
+        nix-path = config.nix.nixPath;
+
+        experimental-features = [
+          "cgroups"
+          "nix-command"
+          "flakes"
+        ];
+
+        system-features = [
+          "big-parallel"
+          "gccarch-x86-64-v2"
+          "gccarch-x86-64-v3"
+          "gccarch-x86-64-v4"
+        ];
+
+        # 镜像
+        substituters = [
+          "https://codex-cli.cachix.org"
+          "https://codex-desktop-linux.cachix.org"
+          "https://cache.numtide.com"
+          "https://cache.nixos-cuda.org"
+          "https://nix-community.cachix.org"
+          "https://mirrors.cernet.edu.cn/nix-channels/store"
+          "https://cache.nixos.org/"
+        ];
+
+        trusted-public-keys = [
+          "codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="
+          "codex-desktop-linux.cachix.org-1:nX/xy6AdK9hQE24A8ALGjkCKj2ObFmcnemiL5Cid4nk="
+          "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+          "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        ];
+      };
+    };
+
+  # 文档
+  manual = {
+    manpages.enable = false;
+    html.enable = false;
+    json.enable = false;
+  };
+
+  programs.home-manager.enable = true;
+  systemd.user.startServices = "sd-switch";
+}

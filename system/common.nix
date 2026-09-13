@@ -12,7 +12,7 @@
     inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
 
-    ../module/system
+    ../nix/nixosModules/_default.nix
   ];
 
   sys = {

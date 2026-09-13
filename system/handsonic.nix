@@ -10,10 +10,7 @@
   # Uniwill/Tongfang
   hardware.tuxedo-drivers = {
     enable = true;
-    settings = {
-      fn-lock = true;
-      charging-profile = "balanced";
-    };
+    settings.charging-profile = "balanced";
   };
 
   hardware.tuxedo-rs = {

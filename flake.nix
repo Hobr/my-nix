@@ -67,8 +67,12 @@
     {
       packages = forAllSystems (system: import ./pkg nixpkgs.legacyPackages.${system});
       overlays = import ./overlay { inherit inputs; };
-      nixosModules = import ./module/system;
-      homeModules = import ./module/home;
+      nixosModules = {
+        default = import ./module/system;
+      };
+      homeModules = {
+        default = import ./module/home;
+      };
 
       nixosConfigurations = {
         # Laptop

@@ -10,7 +10,7 @@
     inputs.stylix.homeModules.stylix
     inputs.codex.homeManagerModules.default
 
-    outputs.homeModules
+    outputs.homeModules.default
   ];
 
   fonts.fontconfig.enable = true;

@@ -23,13 +23,12 @@ in
           (fcitx5-rime.override { rimeDataPkgs = [ rime-ice ]; })
           fcitx5-mozc
           fcitx5-gtk
-          fcitx5-mellow-themes
           qt6Packages.fcitx5-chinese-addons
           qt6Packages.fcitx5-configtool
         ];
 
         settings.addons.classicui.globalSection = {
-          Theme = mkForce "mellow-sakura";
+          Theme = mkForce "plasma";
           UseDarkTheme = false;
         };
       };

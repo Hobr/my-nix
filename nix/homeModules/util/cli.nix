@@ -82,9 +82,6 @@ in
       };
     };
 
-    # Nix-index
-    programs.nix-index.enable = true;
-
     # Ranger
     programs.ranger.enable = true;
 

@@ -8,6 +8,7 @@
   imports = [
     inputs.stylix.homeModules.stylix
     inputs.codex.homeManagerModules.default
+    inputs.nix-index-database.homeModules.default
 
     ../homeModules/_default.nix
   ];

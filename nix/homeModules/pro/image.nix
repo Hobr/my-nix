@@ -15,7 +15,7 @@ in
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
       # 图片处理
-      gimp3-with-plugins
+      gimp3
       inkscape
       upscayl-ncnn
     ];

@@ -18,6 +18,8 @@ in
       tokei
       cloc
       gdbgui
+      python3Packages.huggingface-hub
+      python3Packages.hf-xet
 
       # 二进制
       ghex

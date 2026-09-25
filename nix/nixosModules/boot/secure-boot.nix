@@ -20,7 +20,7 @@ in
     boot.lanzaboote = {
       enable = true;
       autoGenerateKeys.enable = true;
-      configurationLimit = 8;
+      configurationLimit = 4;
       pkiBundle = "/etc/secureboot";
 
       autoEnrollKeys = {

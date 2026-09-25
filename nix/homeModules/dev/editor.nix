@@ -195,6 +195,7 @@ in
             jeff-hykin.better-cpp-syntax
             ms-vscode.cpptools-themes
             llvm-vs-code-extensions.lldb-dap
+            llvm-vs-code-extensions.vscode-clangd
 
             # JS
             firefox-devtools.vscode-firefox-debug

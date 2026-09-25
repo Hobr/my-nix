@@ -26,6 +26,7 @@ in
 
       # 抓包/逆向
       android-tools
+      apktool
       jadx
       frida-tools
       reqable

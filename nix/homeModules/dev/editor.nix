@@ -214,16 +214,19 @@ in
             # Lisp
             rheller.alive
 
-            # Typst
-            myriad-dreamin.tinymist
+            # Elixir
+            jakebecker.elixir-ls
+            phoenixframework.phoenix
+
+            # Kotlin
+            jetbrains.kotlin-server
+
+            # Zig
+            ziglang.vscode-zig
 
             # Nix
             jnoortheen.nix-ide
             arrterian.nix-env-selector
-
-            # Elixir
-            jakebecker.elixir-ls
-            phoenixframework.phoenix
 
             # Java
             #vscjava.vscode-java-pack
@@ -231,20 +234,17 @@ in
             #vscjava.vscode-java-debug
             #vscjava.vscode-java-test
             #vscjava.vscode-maven
-            #vscjava.vscode-gradle
             #vscjava.vscode-java-dependency
-
-            # Kotlin
-            #jetbrains.kotlin-server
-
-            # Zig
-            # ziglang.vscode-zig
+            vscjava.vscode-gradle
 
             # Fortran
             # fortran-lang.linter-gfortran
 
             # Fountain
             # piersdeseilligny.betterfountain
+
+            # Typst
+            myriad-dreamin.tinymist
 
             # WIT
             # bytecodealliance.wit-idl
@@ -256,7 +256,7 @@ in
             #ms-azuretools.vscode-docker
 
             # Xmake
-            tboox.xmake-vscode
+            # tboox.xmake-vscode
 
             # Makefile
             ms-vscode.makefile-tools

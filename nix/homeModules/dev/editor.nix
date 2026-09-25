@@ -228,12 +228,12 @@ in
             arrterian.nix-env-selector
 
             # Java
-            #vscjava.vscode-java-pack
-            #redhat.java
-            #vscjava.vscode-java-debug
-            #vscjava.vscode-java-test
-            #vscjava.vscode-maven
-            #vscjava.vscode-java-dependency
+            vscjava.vscode-java-pack
+            redhat.java
+            vscjava.vscode-java-debug
+            vscjava.vscode-java-test
+            vscjava.vscode-maven
+            vscjava.vscode-java-dependency
             vscjava.vscode-gradle
 
             # Fortran

@@ -20,10 +20,7 @@ in
     };
 
     # MPD歌词
-    services.mpd-mpris = {
-      enable = true;
-      mpd.useLocal = true;
-    };
+    services.mpd-mpris.enable = true;
 
     # ncmpcpp
     programs.ncmpcpp = {

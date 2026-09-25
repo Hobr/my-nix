@@ -18,14 +18,16 @@ in
       tokei
       cloc
       gdbgui
-      android-tools
       python3Packages.huggingface-hub
       python3Packages.hf-xet
 
       # 二进制
       ghex
 
-      # 抓包
+      # 抓包/逆向
+      android-tools
+      jadx
+      frida-tools
       reqable
       proxypin
     ];

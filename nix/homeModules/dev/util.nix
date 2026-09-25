@@ -18,6 +18,7 @@ in
       tokei
       cloc
       gdbgui
+      android-tools
       python3Packages.huggingface-hub
       python3Packages.hf-xet
 

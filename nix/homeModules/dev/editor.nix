@@ -254,10 +254,9 @@ in
             # Docker
             #ms-azuretools.vscode-docker
 
-            # Xmake
-            # tboox.xmake-vscode
-
-            # Makefile
+            # Make
+            tboox.xmake-vscode
+            ms-vscode.cmake-tools
             ms-vscode.makefile-tools
 
             # Stylua

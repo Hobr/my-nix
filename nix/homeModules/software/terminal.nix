@@ -14,6 +14,9 @@ in
   config = mkIf cfg.enable {
     programs.kitty = {
       enable = true;
+      extraConfig = ''
+        remember_window_size no
+      '';
     };
   };
 }

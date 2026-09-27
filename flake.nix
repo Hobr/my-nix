@@ -5,6 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     ## 官方稳定
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Chaotic-Nyx
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     ## Flakelight
     flakelight.url = "github:nix-community/flakelight";
 

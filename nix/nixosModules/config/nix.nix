@@ -44,16 +44,20 @@ in
           substituters = [
             "https://mirrors.cernet.edu.cn/nix-channels/store"
             "https://cache.nixos.org/"
+
             "https://cache.numtide.com"
             "https://nix-community.cachix.org"
             "https://cache.nixos-cuda.org"
+            "https://nyx-cache.chaotic.cx/"
           ];
 
           trusted-public-keys = [
             "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+
             "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
             "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
             "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+            "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
           ];
         };
 

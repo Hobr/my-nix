@@ -47,7 +47,7 @@ in
     # NVIDIA驱动
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
-      package = pkgs.nvidia_cachyos;
+      package = pkgs.nvidia_cachyos-bore;
       open = false;
       modesetting.enable = true;
       powerManagement.enable = true;

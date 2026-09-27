@@ -1,3 +1,0 @@
-{
-  builtinFormatters = false;
-}

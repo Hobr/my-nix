@@ -23,34 +23,36 @@ in
       ];
     };
 
-    environment.systemPackages = with pkgs; [
-      libva
-      mesa
+    environment.systemPackages =
+      with pkgs;
+      [
+        libva
+        mesa
 
-      # NVTop
-      nvtopPackages.nvidia
+        # NVTop
+        nvtopPackages.nvidia
 
-      # CUDA
-      cudatoolkit
-      cudaPackages.cudnn
-
-      # Vulkan
-      vulkan-loader
-      vulkan-validation-layers
-      vulkan-extension-layer
-      vulkan-tools
-    ];
+        # CUDA
+        cudatoolkit
+        cudaPackages.cudnn
+      ]
+      ++ (with pkgs.vulkanPackages_latest; [
+        vulkan-extension-layer
+        vulkan-loader
+        vulkan-tools
+        vulkan-validation-layers
+      ]);
 
     # NVIDIA驱动
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = pkgs.nvidia_cachyos;
       open = false;
       modesetting.enable = true;
       powerManagement.enable = true;
+      dynamicBoost.enable = true;
       powerManagement.finegrained = false;
       nvidiaSettings = false;
-      dynamicBoost.enable = true;
     };
 
     hardware.nvidia-container-toolkit = {

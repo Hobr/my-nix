@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   modifications = final: _prev: {
-    linuxPackages = final.pkgs.linuxPackages_latest;
+    linuxPackages = final.pkgs.linuxPackages_cachyos;
   };
 
   stable-package = final: _prev: {

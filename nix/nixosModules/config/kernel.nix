@@ -16,7 +16,7 @@ in
     # 内核
     boot = {
       # 版本
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_cachyos;
 
       # 内核参数
       kernelParams = [ "systemd.gpt_auto=0" ];
@@ -32,7 +32,7 @@ in
     services.ananicy = {
       enable = true;
       package = pkgs.ananicy-cpp;
-      rulesProvider = pkgs.ananicy-rules-cachyos;
+      rulesProvider = pkgs.ananicy-rules-cachyos_git;
     };
   };
 }

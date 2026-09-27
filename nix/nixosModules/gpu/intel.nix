@@ -26,16 +26,18 @@ in
     };
 
     # Vulkan
-    environment.systemPackages = with pkgs; [
-      libva
-      mesa
-
-      # Vulkan
-      vulkan-loader
-      vulkan-validation-layers
-      vulkan-extension-layer
-      vulkan-tools
-    ];
+    environment.systemPackages =
+      with pkgs;
+      [
+        libva
+        mesa
+      ]
+      ++ (with pkgs.vulkanPackages_latest; [
+        vulkan-extension-layer
+        vulkan-loader
+        vulkan-tools
+        vulkan-validation-layers
+      ]);
 
     # GPU驱动
     services.xserver.videoDrivers = [

@@ -160,8 +160,8 @@ in
             usernamehw.errorlens
 
             # 工具
-            ms-vscode.remote-server
-            ms-vscode-remote.remote-ssh
+            # ms-vscode.remote-server
+            # ms-vscode-remote.remote-ssh
             christian-kohler.path-intellisense
 
             # 环境
@@ -179,33 +179,33 @@ in
             viper-admin.prusti-assistant
             wcrichton.flowistry
             drkryz.rustautomod
-            splo.vscode-bevy-inspector
-            dioxuslabs.dioxus
+            # splo.vscode-bevy-inspector
+            # dioxuslabs.dioxus
 
             # Python
-            ms-python.python
             ms-python.vscode-pylance
+            ms-python.python
             ms-python.isort
             ms-python.debugpy
             charliermarsh.ruff
 
             # CPP
             ms-vscode.cpptools
+            ms-vscode.cpptools-themes
             ms-vscode.cpptools-extension-pack
             jeff-hykin.better-cpp-syntax
-            ms-vscode.cpptools-themes
             llvm-vs-code-extensions.lldb-dap
 
             # JS
-            firefox-devtools.vscode-firefox-debug
-            vue.volar
+            # firefox-devtools.vscode-firefox-debug
             dbaeumer.vscode-eslint
-            svelte.svelte-vscode
             astro-build.astro-vscode
-            vitest.explorer
             oxc.oxc-vscode
             esbenp.prettier-vscode
-            bradlc.vscode-tailwindcss
+            # svelte.svelte-vscode
+            # vue.volar
+            # vitest.explorer
+            # bradlc.vscode-tailwindcss
 
             # Golang
             golang.go
@@ -217,9 +217,6 @@ in
             jakebecker.elixir-ls
             phoenixframework.phoenix
 
-            # Kotlin
-            jetbrains.kotlin-server
-
             # Zig
             ziglang.vscode-zig
 
@@ -227,20 +224,20 @@ in
             jnoortheen.nix-ide
             arrterian.nix-env-selector
 
+            # Kotlin
+            # jetbrains.kotlin-server
+
             # Java
-            vscjava.vscode-java-pack
-            redhat.java
-            vscjava.vscode-java-debug
-            vscjava.vscode-java-test
-            vscjava.vscode-maven
-            vscjava.vscode-java-dependency
-            vscjava.vscode-gradle
+            #vscjava.vscode-java-pack
+            #redhat.java
+            #vscjava.vscode-java-debug
+            #vscjava.vscode-java-test
+            #vscjava.vscode-maven
+            #vscjava.vscode-java-dependency
+            #vscjava.vscode-gradle
 
             # Fortran
             # fortran-lang.linter-gfortran
-
-            # Fountain
-            # piersdeseilligny.betterfountain
 
             # Typst
             myriad-dreamin.tinymist
@@ -255,8 +252,8 @@ in
             #ms-azuretools.vscode-docker
 
             # Make
+            #ms-vscode.cmake-tools
             tboox.xmake-vscode
-            ms-vscode.cmake-tools
             ms-vscode.makefile-tools
 
             # Stylua
@@ -274,17 +271,20 @@ in
             # CSV
             mechatroner.rainbow-csv
 
+            # Fountain
+            # piersdeseilligny.betterfountain
+
             # PDF
             tomoki1207.pdf
 
             # Just
             nefrob.vscode-just-syntax
 
-            # AI
-            github.copilot-chat
-
             # CI
             github.vscode-github-actions
+
+            # AI
+            # github.copilot-chat
           ]
           ++ (with pkgs.open-vsx-universal; [
             vadimcn.vscode-lldb

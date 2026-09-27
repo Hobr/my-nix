@@ -36,6 +36,7 @@ in
         cudatoolkit
         cudaPackages.cudnn
       ]
+      # Vulkan
       ++ (with pkgs.vulkanPackages_latest; [
         vulkan-extension-layer
         vulkan-loader

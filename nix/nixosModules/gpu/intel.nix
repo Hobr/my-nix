@@ -25,7 +25,6 @@ in
       ];
     };
 
-    # Vulkan
     environment.systemPackages =
       with pkgs;
       [

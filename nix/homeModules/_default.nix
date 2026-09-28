@@ -1,7 +1,6 @@
 {
   inputs,
   lib,
-  config,
   pkgs,
   ...
 }:
@@ -22,13 +21,11 @@ with lib;
       flakeInputs = filterAttrs (_: isType "flake") inputs;
     in
     {
-      nixPath = mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
       registry = mapAttrs (_: flake: { inherit flake; }) flakeInputs;
       package = pkgs.nix;
 
       settings = {
         flake-registry = "";
-        nix-path = config.nix.nixPath;
 
         experimental-features = [
           "cgroups"

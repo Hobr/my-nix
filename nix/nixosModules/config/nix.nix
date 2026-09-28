@@ -19,13 +19,11 @@ in
         flakeInputs = filterAttrs (_: isType "flake") inputs;
       in
       {
-        nixPath = mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
         registry = mapAttrs (_: flake: { inherit flake; }) flakeInputs;
         channel.enable = false;
 
         settings = {
           flake-registry = "";
-          nix-path = config.nix.nixPath;
 
           experimental-features = [
             "cgroups"

@@ -149,11 +149,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1790762187,
-        "narHash": "sha256-gs5ACw/sJF21iiBhHO3RXEGiV36jvjs9rQhngPaZw+o=",
+        "lastModified": 1790763678,
+        "narHash": "sha256-3+D4kDImoXA8y09h6tQgHVQIMggAvyrW0tOao7GZc0s=",
         "owner": "ilysenko",
         "repo": "codex-desktop-linux",
-        "rev": "06a3603262e5b1b790f472619d38a2727ae2d807",
+        "rev": "84a7ca4c8f0fb0a34cbfd83c9164b39b84cb6612",
         "type": "github"
       },
       "original": {

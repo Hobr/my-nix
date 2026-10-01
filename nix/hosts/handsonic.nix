@@ -19,7 +19,7 @@
     tailor-gui.enable = false;
   };
 
-  boot.kernelModules = [ "uniwill_wmi" ];
+  # boot.kernelModules = [ "uniwill_wmi" ];
 
   # 主机名
   networking.hostName = "handsonic";

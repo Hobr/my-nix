@@ -9,6 +9,28 @@
 with lib;
 let
   cfg = config.home.dev.editor;
+
+  latestVscodeExtensions =
+    lib.zipAttrsWith
+      (
+        _: publishers:
+        lib.zipAttrsWith (
+          _: candidates: lib.head (lib.sort (a: b: lib.versionOlder b.version a.version) candidates)
+        ) publishers
+      )
+      (
+        with pkgs;
+        [
+          vscode-marketplace
+          vscode-marketplace-universal
+          vscode-marketplace-release
+          vscode-marketplace-release-universal
+          open-vsx
+          open-vsx-universal
+          open-vsx-release
+          open-vsx-release-universal
+        ]
+      );
 in
 {
   options.home.dev.editor = {
@@ -149,146 +171,141 @@ in
         enableUpdateCheck = false;
         enableMcpIntegration = true;
 
-        extensions =
-          with pkgs.vscode-marketplace;
-          with pkgs.vscode-marketplace-release;
-          [
-            # 显示
-            ms-ceintl.vscode-language-pack-zh-hans
-            wayou.vscode-todo-highlight
-            albert.tabout
-            usernamehw.errorlens
+        extensions = with latestVscodeExtensions; [
+          # 显示
+          ms-ceintl.vscode-language-pack-zh-hans
+          wayou.vscode-todo-highlight
+          albert.tabout
+          usernamehw.errorlens
 
-            # 工具
-            # ms-vscode.remote-server
-            # ms-vscode-remote.remote-ssh
-            christian-kohler.path-intellisense
+          # 工具
+          # ms-vscode.remote-server
+          # ms-vscode-remote.remote-ssh
+          christian-kohler.path-intellisense
 
-            # 环境
-            mkhl.direnv
-            editorconfig.editorconfig
-            formulahendry.code-runner
+          # 环境
+          mkhl.direnv
+          editorconfig.editorconfig
+          formulahendry.code-runner
 
-            # Git
-            eamodio.gitlens
-            donjayamanne.githistory
+          # Git
+          eamodio.gitlens
+          donjayamanne.githistory
 
-            # Rust
-            rust-lang.rust-analyzer
-            cordx56.rustowl-vscode
-            viper-admin.prusti-assistant
-            wcrichton.flowistry
-            drkryz.rustautomod
-            # splo.vscode-bevy-inspector
-            # dioxuslabs.dioxus
+          # Rust
+          rust-lang.rust-analyzer
+          cordx56.rustowl-vscode
+          viper-admin.prusti-assistant
+          wcrichton.flowistry
+          drkryz.rustautomod
+          # splo.vscode-bevy-inspector
+          # dioxuslabs.dioxus
 
-            # Python
-            ms-python.vscode-pylance
-            ms-python.python
-            ms-python.isort
-            ms-python.debugpy
-            charliermarsh.ruff
+          # Python
+          ms-python.vscode-pylance
+          ms-python.python
+          ms-python.isort
+          ms-python.debugpy
+          charliermarsh.ruff
 
-            # CPP
-            ms-vscode.cpptools
-            ms-vscode.cpptools-themes
-            ms-vscode.cpptools-extension-pack
-            jeff-hykin.better-cpp-syntax
-            llvm-vs-code-extensions.lldb-dap
+          # CPP
+          ms-vscode.cpptools
+          ms-vscode.cpptools-themes
+          ms-vscode.cpptools-extension-pack
+          jeff-hykin.better-cpp-syntax
+          llvm-vs-code-extensions.lldb-dap
+          vadimcn.vscode-lldb
 
-            # JS
-            # firefox-devtools.vscode-firefox-debug
-            dbaeumer.vscode-eslint
-            astro-build.astro-vscode
-            oxc.oxc-vscode
-            esbenp.prettier-vscode
-            # svelte.svelte-vscode
-            # vue.volar
-            # vitest.explorer
-            # bradlc.vscode-tailwindcss
+          # JS
+          # firefox-devtools.vscode-firefox-debug
+          dbaeumer.vscode-eslint
+          astro-build.astro-vscode
+          oxc.oxc-vscode
+          esbenp.prettier-vscode
+          # svelte.svelte-vscode
+          # vue.volar
+          # vitest.explorer
+          # bradlc.vscode-tailwindcss
 
-            # Golang
-            golang.go
+          # Golang
+          golang.go
 
-            # Lisp
-            rheller.alive
+          # Lisp
+          rheller.alive
 
-            # Elixir
-            jakebecker.elixir-ls
-            phoenixframework.phoenix
+          # Elixir
+          jakebecker.elixir-ls
+          phoenixframework.phoenix
 
-            # Zig
-            ziglang.vscode-zig
+          # Zig
+          ziglang.vscode-zig
 
-            # Nix
-            jnoortheen.nix-ide
-            arrterian.nix-env-selector
+          # Nix
+          jnoortheen.nix-ide
+          arrterian.nix-env-selector
 
-            # Kotlin
-            # jetbrains.kotlin-server
+          # Kotlin
+          # jetbrains.kotlin-server
 
-            # Java
-            #vscjava.vscode-java-pack
-            #redhat.java
-            #vscjava.vscode-java-debug
-            #vscjava.vscode-java-test
-            #vscjava.vscode-maven
-            #vscjava.vscode-java-dependency
-            #vscjava.vscode-gradle
+          # Java
+          #vscjava.vscode-java-pack
+          #redhat.java
+          #vscjava.vscode-java-debug
+          #vscjava.vscode-java-test
+          #vscjava.vscode-maven
+          #vscjava.vscode-java-dependency
+          #vscjava.vscode-gradle
 
-            # Fortran
-            # fortran-lang.linter-gfortran
+          # Fortran
+          # fortran-lang.linter-gfortran
 
-            # Typst
-            myriad-dreamin.tinymist
+          # Typst
+          myriad-dreamin.tinymist
 
-            # WIT
-            # bytecodealliance.wit-idl
+          # WIT
+          # bytecodealliance.wit-idl
 
-            # Markdown
-            davidanson.vscode-markdownlint
+          # Markdown
+          davidanson.vscode-markdownlint
 
-            # Docker
-            #ms-azuretools.vscode-docker
+          # Docker
+          #ms-azuretools.vscode-docker
 
-            # Make
-            #ms-vscode.cmake-tools
-            tboox.xmake-vscode
-            ms-vscode.makefile-tools
+          # Make
+          #ms-vscode.cmake-tools
+          tboox.xmake-vscode
+          ms-vscode.makefile-tools
 
-            # Stylua
-            johnnymorganz.stylua
+          # Stylua
+          johnnymorganz.stylua
 
-            # Yaml
-            redhat.vscode-yaml
+          # Yaml
+          redhat.vscode-yaml
 
-            # Toml
-            tombi-toml.tombi
+          # Toml
+          tombi-toml.tombi
 
-            # XML
-            dotjoshjohnson.xml
+          # XML
+          dotjoshjohnson.xml
 
-            # CSV
-            mechatroner.rainbow-csv
+          # CSV
+          mechatroner.rainbow-csv
 
-            # Fountain
-            # piersdeseilligny.betterfountain
+          # Fountain
+          # piersdeseilligny.betterfountain
 
-            # PDF
-            tomoki1207.pdf
+          # PDF
+          tomoki1207.pdf
 
-            # Just
-            nefrob.vscode-just-syntax
+          # Just
+          nefrob.vscode-just-syntax
 
-            # CI
-            github.vscode-github-actions
+          # CI
+          github.vscode-github-actions
 
-            # AI
-            # github.copilot-chat
-          ]
-          ++ (with pkgs.open-vsx-universal; [
-            vadimcn.vscode-lldb
-          ]);
+          # AI
+          # github.copilot-chat
+        ];
 
         userSettings = {
           "[c]"."editor.defaultFormatter" = "ms-vscode.cpptools";

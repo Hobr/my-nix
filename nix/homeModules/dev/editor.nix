@@ -209,12 +209,12 @@ in
           charliermarsh.ruff
 
           # CPP
-          ms-vscode.cpptools
-          ms-vscode.cpptools-themes
-          ms-vscode.cpptools-extension-pack
-          jeff-hykin.better-cpp-syntax
-          llvm-vs-code-extensions.lldb-dap
-          vadimcn.vscode-lldb
+          # ms-vscode.cpptools
+          # ms-vscode.cpptools-themes
+          # ms-vscode.cpptools-extension-pack
+          # jeff-hykin.better-cpp-syntax
+          # llvm-vs-code-extensions.lldb-dap
+          # vadimcn.vscode-lldb
 
           # JS
           # firefox-devtools.vscode-firefox-debug
@@ -228,7 +228,7 @@ in
           # bradlc.vscode-tailwindcss
 
           # Golang
-          golang.go
+          # golang.go
 
           # Lisp
           rheller.alive
@@ -238,7 +238,7 @@ in
           phoenixframework.phoenix
 
           # Zig
-          ziglang.vscode-zig
+          # ziglang.vscode-zig
 
           # Nix
           jnoortheen.nix-ide
@@ -276,6 +276,9 @@ in
           tboox.xmake-vscode
           ms-vscode.makefile-tools
 
+          # Just
+          # nefrob.vscode-just-syntax
+
           # Stylua
           johnnymorganz.stylua
 
@@ -296,9 +299,6 @@ in
 
           # PDF
           tomoki1207.pdf
-
-          # Just
-          nefrob.vscode-just-syntax
 
           # CI
           github.vscode-github-actions

@@ -259,6 +259,9 @@ in
           # Fortran
           # fortran-lang.linter-gfortran
 
+          # Quint
+          informal.quint-vscode
+
           # Typst
           myriad-dreamin.tinymist
 

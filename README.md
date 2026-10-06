@@ -93,7 +93,12 @@ sudo bootctl status
 
 # TPM
 sudo systemd-cryptenroll --tpm2-device=list
-sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrlock=/var/lib/systemd/pcrlock.json /dev/nvme0n1
+sudo systemd-cryptenroll \
+  --tpm2-device=auto \
+  --tpm2-with-pin=true \
+  --tpm2-pcrlock=/var/lib/systemd/pcrlock.json \
+  --wipe-slot=tpm2 \
+  /dev/nvme0n1
 
 # Fwupd
 sudo fwupdmgr refresh

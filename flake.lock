@@ -129,11 +129,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1791680094,
-        "narHash": "sha256-sf6AY2gVb8Jg854iiKOR4kgsjdbhllTwwALVtvwcFSE=",
+        "lastModified": 1791792158,
+        "narHash": "sha256-nTCvSFbLiTKeD1AxyP20C/zsFl3BMrqUHmZn+iDUhPw=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "5d5c74deddbce3248f7b6e622e10f78267bd88b4",
+        "rev": "e0d81bbeabf69ea6a5623efa1069288b818b19dd",
         "type": "github"
       },
       "original": {

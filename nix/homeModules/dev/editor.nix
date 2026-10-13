@@ -234,6 +234,7 @@ in
           rheller.alive
 
           # Elixir
+          expertlsp.expert
           jakebecker.elixir-ls
           phoenixframework.phoenix
 
@@ -326,6 +327,22 @@ in
 
           "[typst]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
           "[typst-code]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
+
+          "editor.bracketPairColorization.enabled" = true;
+          "[elixir]"."editor.language.colorizedBracketPairs" = [
+            [
+              "{"
+              "}"
+            ]
+            [
+              "["
+              "]"
+            ]
+            [
+              "("
+              ")"
+            ]
+          ];
 
           "editor.cursorSmoothCaretAnimation" = "on";
           "editor.formatOnType" = false;

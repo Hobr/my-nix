@@ -236,6 +236,7 @@ in
           # Elixir
           expertlsp.expert
           jakebecker.elixir-ls
+          vscode-elixir-credo
           phoenixframework.phoenix
 
           # Zig

@@ -272,7 +272,6 @@ in
 
           # Markdown
           davidanson.vscode-markdownlint
-          rvben.rumdl
 
           # Docker
           #ms-azuretools.vscode-docker

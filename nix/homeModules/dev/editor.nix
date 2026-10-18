@@ -235,7 +235,6 @@ in
 
           # Elixir
           expertlsp.expert
-          jakebecker.elixir-ls
           pantajoe.vscode-elixir-credo
           phoenixframework.phoenix
 

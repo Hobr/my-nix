@@ -2,9 +2,7 @@
   inputs = {
     # 软件源
     ## 官方
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Chaotic-Nyx
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
     ## Flakelight
     flakelight.url = "github:nix-community/flakelight";
 

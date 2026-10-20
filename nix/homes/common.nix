@@ -6,7 +6,6 @@
 }:
 {
   imports = [
-    inputs.chaotic.homeModules.default
     inputs.stylix.homeModules.stylix
     inputs.codex.homeManagerModules.default
     inputs.nix-index-database.homeModules.default

@@ -198,8 +198,8 @@ in
           viper-admin.prusti-assistant
           wcrichton.flowistry
           drkryz.rustautomod
+          dioxuslabs.dioxus
           # splo.vscode-bevy-inspector
-          # dioxuslabs.dioxus
 
           # Python
           ms-python.vscode-pylance
@@ -228,7 +228,7 @@ in
           # bradlc.vscode-tailwindcss
 
           # Golang
-          golang.go
+          # golang.go
 
           # Lisp
           # rheller.alive
@@ -281,7 +281,7 @@ in
           # ms-vscode.makefile-tools
 
           # Just
-          # nefrob.vscode-just-syntax
+          nefrob.vscode-just-syntax
 
           # Stylua
           johnnymorganz.stylua

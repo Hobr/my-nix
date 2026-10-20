@@ -228,15 +228,15 @@ in
           # bradlc.vscode-tailwindcss
 
           # Golang
-          # golang.go
+          golang.go
 
           # Lisp
-          rheller.alive
+          # rheller.alive
 
           # Elixir
-          expertlsp.expert
-          pantajoe.vscode-elixir-credo
-          phoenixframework.phoenix
+          # expertlsp.expert
+          # pantajoe.vscode-elixir-credo
+          # phoenixframework.phoenix
 
           # Zig
           # ziglang.vscode-zig
@@ -249,36 +249,36 @@ in
           # jetbrains.kotlin-server
 
           # Java
-          #vscjava.vscode-java-pack
-          #redhat.java
-          #vscjava.vscode-java-debug
-          #vscjava.vscode-java-test
-          #vscjava.vscode-maven
-          #vscjava.vscode-java-dependency
-          #vscjava.vscode-gradle
+          # vscjava.vscode-java-pack
+          # redhat.java
+          # vscjava.vscode-java-debug
+          # vscjava.vscode-java-test
+          # vscjava.vscode-maven
+          # vscjava.vscode-java-dependency
+          # vscjava.vscode-gradle
 
           # Fortran
           # fortran-lang.linter-gfortran
 
           # Quint
-          informal.quint-vscode
+          # informal.quint-vscode
 
           # Typst
           myriad-dreamin.tinymist
 
           # WIT
-          # bytecodealliance.wit-idl
+          bytecodealliance.wit-idl
 
           # Markdown
           davidanson.vscode-markdownlint
 
           # Docker
-          #ms-azuretools.vscode-docker
+          # ms-azuretools.vscode-docker
 
           # Make
-          #ms-vscode.cmake-tools
-          tboox.xmake-vscode
-          ms-vscode.makefile-tools
+          # ms-vscode.cmake-tools
+          # tboox.xmake-vscode
+          # ms-vscode.makefile-tools
 
           # Just
           # nefrob.vscode-just-syntax

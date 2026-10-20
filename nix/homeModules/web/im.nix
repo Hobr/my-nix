@@ -18,8 +18,6 @@ in
       telegram-desktop
       qq
       wechat
-      feishu
-      wemeet
       discord
       element-desktop
     ];

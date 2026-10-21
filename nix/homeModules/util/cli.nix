@@ -94,6 +94,7 @@ in
       iftop
       screen
       nitch
+      bpftools_full
 
       brightnessctl
       trash-cli

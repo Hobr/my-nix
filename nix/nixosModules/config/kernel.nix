@@ -16,7 +16,7 @@ in
     # 内核
     boot = {
       # 版本
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages_cachyos-bore;
 
       # 内核参数
       kernelParams = [ "systemd.gpt_auto=0" ];
@@ -26,6 +26,13 @@ in
     services.scx = {
       enable = true;
       scheduler = "scx_bpfland";
+    };
+
+    # Ananicy
+    services.ananicy = {
+      enable = true;
+      package = pkgs.ananicy-cpp;
+      rulesProvider = pkgs.ananicy-rules-cachyos_git;
     };
   };
 }

@@ -89,15 +89,16 @@
     };
 
     pro = {
-      audio.enable = true;
-      video.enable = true;
-      image.enable = true;
+      video.enable = false;
+      audio.enable = false;
+      image.enable = false;
       obs.enable = true;
       electron.enable = false;
     };
   };
 
   home.pointerCursor.enable = true;
+
   # 主题
   stylix = {
     enable = true;

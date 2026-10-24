@@ -25,6 +25,7 @@ in
       codegraph
       trellis
       spec-kit
+      openspec
     ];
   };
 }

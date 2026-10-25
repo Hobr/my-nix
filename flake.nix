@@ -34,7 +34,9 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
     ## Codex
     codex.url = "github:ilysenko/codex-desktop-linux";
-    # VS Code
+    ## Autolith
+    autolith.url = "github:luciusmagn/autolith";
+    ## VS Code
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,6 +1,7 @@
 {
   config,
   options,
+  inputs,
   lib,
   pkgs,
   ...
@@ -20,12 +21,17 @@ in
       package = pkgs.llm-agents.pi;
     };
 
-    home.packages = with pkgs.llm-agents; [
-      opencode
-      codegraph
-      trellis
-      spec-kit
-      openspec
-    ];
+    home.packages =
+      with pkgs.llm-agents;
+      [
+        opencode
+        codegraph
+        trellis
+        spec-kit
+        openspec
+      ]
+      ++ [
+        pkgs.inputs'.autolith.packages.autolith
+      ];
   };
 }

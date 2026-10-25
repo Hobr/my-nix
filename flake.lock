@@ -27,11 +27,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1792611842,
-        "narHash": "sha256-wf4cEJBCstqBJMFzCt1qfn9/R0h9W+dCDc5oicwvlo8=",
+        "lastModified": 1792915392,
+        "narHash": "sha256-GEKBSymxERf7WWqnatWEfOhVi65d5RYLZPQPFDXjdAk=",
         "owner": "luciusmagn",
         "repo": "autolith",
-        "rev": "41fd881ea5ff7f1699aa3bd810c9340d6cd032ac",
+        "rev": "4c1b31a56eca6df77bd617dc8048c6b4f777e6a4",
         "type": "github"
       },
       "original": {
@@ -543,11 +543,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792914573,
-        "narHash": "sha256-4cedrbI0yb84chrSNYPYN/p0B8G75ifbVoFyBgLfWWU=",
+        "lastModified": 1792915725,
+        "narHash": "sha256-v75hPw5NJ+mRRcwUzKi2OQtVSVv1hgq6ceAlPQB2kEE=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "2bd345b8d8e382610538933db4b10c5a97f3ceb5",
+        "rev": "93696586f3463024cceb089353539be95a38ae2b",
         "type": "github"
       },
       "original": {

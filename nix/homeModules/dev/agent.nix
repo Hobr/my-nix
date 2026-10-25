@@ -29,9 +29,6 @@ in
         trellis
         spec-kit
         openspec
-      ]
-      ++ [
-        pkgs.inputs'.autolith.packages.autolith
       ];
   };
 }

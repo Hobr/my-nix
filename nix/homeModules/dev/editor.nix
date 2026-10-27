@@ -198,6 +198,7 @@ in
           viper-admin.prusti-assistant
           wcrichton.flowistry
           drkryz.rustautomod
+          verus-lang.verus-analyzer
           dioxuslabs.dioxus
           # splo.vscode-bevy-inspector
 

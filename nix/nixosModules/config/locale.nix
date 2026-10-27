@@ -39,7 +39,6 @@ in
         nerd-fonts.jetbrains-mono
 
         sarasa-gothic
-        lxgw-wenkai
         twitter-color-emoji
 
         noto-fonts
@@ -55,9 +54,12 @@ in
         source-sans
         source-sans-pro
 
-        corefonts
-        vista-fonts
-        vista-fonts-chs
+        windows-fonts
+        justfont-fonts
+        lxgw-fonts
+
+        jikasei-fonts
+        buttaiwan-fonts
       ];
 
       fontconfig = {

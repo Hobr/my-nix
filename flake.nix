@@ -51,6 +51,8 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ## 字体
+    chinese-fonts-overlay.url = "github:brsvh/chinese-fonts-overlay/main";
   };
 
   outputs =

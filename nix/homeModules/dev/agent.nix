@@ -21,14 +21,12 @@ in
       package = pkgs.llm-agents.pi;
     };
 
-    home.packages =
-      with pkgs.llm-agents;
-      [
-        opencode
-        codegraph
-        trellis
-        spec-kit
-        openspec
-      ];
+    home.packages = with pkgs.llm-agents; [
+      opencode
+      codegraph
+      trellis
+      spec-kit
+      openspec
+    ];
   };
 }

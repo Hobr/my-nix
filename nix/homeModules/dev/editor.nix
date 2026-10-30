@@ -194,13 +194,12 @@ in
 
           # Rust
           rust-lang.rust-analyzer
-          cordx56.rustowl-vscode
-          viper-admin.prusti-assistant
-          wcrichton.flowistry
           drkryz.rustautomod
-          verus-lang.verus-analyzer
+          # cordx56.rustowl-vscode
+          # viper-admin.prusti-assistant
+          # wcrichton.flowistry
+          # verus-lang.verus-analyzer
           dioxuslabs.dioxus
-          # splo.vscode-bevy-inspector
 
           # Python
           ms-python.vscode-pylance

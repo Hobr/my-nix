@@ -415,18 +415,25 @@ in
           action = "workspace";
         };
 
-        window_rule = {
-          name = "fix-xwayland-drags";
-          match = {
-            class = "^$";
-            title = "^$";
-            xwayland = true;
+        window_rule = [
+          {
+            name = "fix-xwayland-drags";
+            match = {
+              class = "^$";
+              title = "^$";
+              xwayland = true;
+              float = true;
+              fullscreen = false;
+              pin = false;
+            };
+            no_focus = true;
+          }
+          {
+            name = "float-android-emulator";
+            match.class = "^Emulator$";
             float = true;
-            fullscreen = false;
-            pin = false;
-          };
-          no_focus = true;
-        };
+          }
+        ];
 
         mainMod = {
           _var = "SUPER";

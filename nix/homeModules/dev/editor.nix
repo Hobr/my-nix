@@ -179,9 +179,9 @@ in
           usernamehw.errorlens
 
           # 工具
+          christian-kohler.path-intellisense
           # ms-vscode.remote-server
           # ms-vscode-remote.remote-ssh
-          christian-kohler.path-intellisense
 
           # 环境
           mkhl.direnv
@@ -199,14 +199,14 @@ in
           # viper-admin.prusti-assistant
           # wcrichton.flowistry
           # verus-lang.verus-analyzer
-          dioxuslabs.dioxus
+          # dioxuslabs.dioxus
 
           # Python
-          ms-python.vscode-pylance
-          ms-python.python
-          ms-python.isort
-          ms-python.debugpy
-          charliermarsh.ruff
+          # ms-python.vscode-pylance
+          # ms-python.python
+          # ms-python.isort
+          # ms-python.debugpy
+          # charliermarsh.ruff
 
           # CPP
           # ms-vscode.cpptools
@@ -229,6 +229,10 @@ in
 
           # Golang
           # golang.go
+
+          # Dart/Flutter
+          # dart-code.dart-code
+          # dart-code.flutter
 
           # Lisp
           # rheller.alive

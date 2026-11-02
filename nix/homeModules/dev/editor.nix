@@ -228,7 +228,7 @@ in
           # bradlc.vscode-tailwindcss
 
           # Golang
-          # golang.go
+          golang.go
 
           # Dart/Flutter
           dart-code.dart-code

@@ -1,5 +1,8 @@
 { inputs, ... }:
 {
-  modifications = final: _prev: {
+  modifications = _final: prev: {
+    hyprland = prev.hyprland.override {
+      withUWSM = false;
+    };
   };
 }

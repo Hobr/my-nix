@@ -5,10 +5,10 @@
 }:
 let
   pname = "animeko";
-  version = "6.1.0";
+  version = "6.4.0";
   src = fetchurl {
     url = "https://github.com/open-ani/animeko/releases/download/v${version}/ani-${version}-linux-x86_64.appimage";
-    hash = "sha256-q+6rAdr0oIqxzXxNnGmZsXQaV32TrX4u8ouA6hIpaqc=";
+    hash = "sha256-VnnqjYaiOIPgIhVs8+7F4FrvRZ8ld89xDlp2b2QQTyc=";
   };
   contents = appimageTools.extract { inherit pname version src; };
 in

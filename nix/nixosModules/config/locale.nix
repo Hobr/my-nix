@@ -39,7 +39,6 @@ in
         nerd-fonts.jetbrains-mono
 
         sarasa-gothic
-        twitter-color-emoji
 
         noto-fonts
         noto-fonts-cjk-sans
@@ -81,7 +80,6 @@ in
             "JetBrainsMono Nerd Font"
           ];
           emoji = [
-            "Twemoji"
             "Noto Color Emoji"
           ];
         };

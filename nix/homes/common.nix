@@ -159,8 +159,8 @@
       };
 
       emoji = {
-        package = pkgs.twitter-color-emoji;
-        name = "Twemoji";
+        package = pkgs.noto-fonts-color-emoji;
+        name = "Noto Color Emoji";
       };
     };
 

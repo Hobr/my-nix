@@ -162,32 +162,5 @@
         name = "Noto Color Emoji";
       };
     };
-
-    # 终端字体
-    targets = {
-      vscode.fonts.override = {
-        serif = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
-        };
-
-        sansSerif = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
-        };
-
-        monospace = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font Mono";
-        };
-
-        emoji = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
-        };
-      };
-
-      kitty.fonts.override = config.stylix.targets.vscode.fonts.override;
-    };
   };
 }

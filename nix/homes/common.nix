@@ -72,8 +72,6 @@
 
       editor = {
         vscode = true;
-        zed = true;
-        nvim = true;
       };
     };
 

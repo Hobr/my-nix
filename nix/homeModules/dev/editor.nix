@@ -35,132 +35,9 @@ in
 {
   options.home.dev.editor = {
     vscode = mkEnableOption "vscode";
-    zed = mkEnableOption "zed";
-    nvim = mkEnableOption "nvim";
   };
 
   config = {
-    # NeoVim
-    programs.neovim = {
-      enable = cfg.nvim;
-      defaultEditor = false;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-    };
-
-    # Zed
-    programs.zed-editor = {
-      enable = cfg.zed;
-      defaultEditor = true;
-      enableMcpIntegration = true;
-      installRemoteServer = true;
-
-      extraPackages = with pkgs; [
-        nixd
-      ];
-
-      extensions = [
-        "git-firefly"
-        "symbols"
-
-        "nix"
-        "rust"
-        "zig"
-        "tsgo"
-        "kotlin"
-        "swift"
-        "svelte"
-        "fish"
-        "html"
-        "vue"
-        "lua"
-        "elixir"
-        "astro"
-        "latex"
-        "proto"
-        "typst"
-        "pylsp"
-        "ruff"
-        "julia"
-        "assembly"
-        "erlang"
-        "verilog"
-        "xml"
-        "sql"
-
-        "marksman"
-        "toml"
-        "env"
-        "ini"
-        "json5"
-        "log"
-        "csv"
-
-        "docker-compose"
-        "dockerfile"
-        "cargo-toml"
-        "make"
-        "justfile"
-        "meson"
-      ];
-
-      userSettings = {
-        auto_update = false;
-        hour_format = "hour24";
-        load_direnv = "shell_hook";
-        show_whitespaces = "all";
-
-        node = {
-          path = lib.getExe pkgs.nodejs;
-          npm_path = lib.getExe' pkgs.nodejs "npm";
-        };
-
-        lsp = {
-          rust-analyzer = {
-            binary = {
-              path_lookup = true;
-            };
-          };
-
-          nix = {
-            binary = {
-              path_lookup = true;
-            };
-          };
-        };
-
-        terminal = {
-          alternate_scroll = "off";
-          blinking = "off";
-          dock = "bottom";
-          detect_venv = {
-            on = {
-              directories = [
-                ".env"
-                "env"
-                ".venv"
-                "venv"
-              ];
-              activate_script = "default";
-            };
-          };
-          env = {
-            TERM = "alacritty";
-          };
-          shell = "system";
-          toolbar = {
-            title = true;
-          };
-          working_directory = "current_project_directory";
-        };
-
-        telemetry = {
-          metrics = false;
-        };
-      };
-    };
-
     # Visual Studio Code
     programs.vscode = {
       enable = cfg.vscode;
@@ -440,7 +317,6 @@ in
     };
 
     home.packages = with pkgs; [
-      (if cfg.nvim then neovide else null)
       nano
       poppler-utils
 

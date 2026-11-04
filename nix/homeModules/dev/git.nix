@@ -41,7 +41,7 @@ in
         http.proxy = mkIf config.home.proxy.enable "http://127.0.0.1:7891";
         https.proxy = mkIf config.home.proxy.enable "http://127.0.0.1:7891";
 
-        core.editor = "nvim";
+        core.editor = "nano";
         pull.rebase = true;
         branch.autosetuprebase = "always";
       };

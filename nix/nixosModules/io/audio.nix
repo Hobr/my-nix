@@ -27,7 +27,6 @@ in
       # 兼容
       alsa.enable = true;
       pulse.enable = true;
-      jack.enable = true;
     };
 
     environment.systemPackages = with pkgs; [

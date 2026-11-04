@@ -195,9 +195,8 @@ in
           # Rust
           rust-lang.rust-analyzer
           drkryz.rustautomod
-          # cordx56.rustowl-vscode
+          cordx56.rustowl-vscode
           # viper-admin.prusti-assistant
-          # wcrichton.flowistry
           # verus-lang.verus-analyzer
           # dioxuslabs.dioxus
 
@@ -217,7 +216,6 @@ in
           # vadimcn.vscode-lldb
 
           # JS
-          # firefox-devtools.vscode-firefox-debug
           dbaeumer.vscode-eslint
           astro-build.astro-vscode
           oxc.oxc-vscode
@@ -226,6 +224,7 @@ in
           # vue.volar
           # vitest.explorer
           # bradlc.vscode-tailwindcss
+          # firefox-devtools.vscode-firefox-debug
 
           # Golang
           golang.go
@@ -265,7 +264,7 @@ in
           # fortran-lang.linter-gfortran
 
           # Quint
-          # informal.quint-vscode
+          informal.quint-vscode
 
           # Typst
           myriad-dreamin.tinymist

@@ -36,9 +36,9 @@ in
       enableDefaultPackages = true;
 
       packages = with pkgs; [
-        nerd-fonts.jetbrains-mono
-
-        sarasa-gothic
+        maple-mono.truetype
+        maple-mono.NF-unhinted
+        maple-mono.NF-CN-unhinted
 
         noto-fonts
         noto-fonts-cjk-sans
@@ -48,36 +48,29 @@ in
         source-han-sans
         source-han-mono
         source-han-serif
-        source-han-code-jp
 
         source-sans
         source-sans-pro
 
         windows-fonts
-        justfont-fonts
-        lxgw-fonts
-
-        jikasei-fonts
-        buttaiwan-fonts
+        lxgwPackages.neo-zhisong
+        xiaomiPackages.misans
       ];
 
       fontconfig = {
         enable = true;
         defaultFonts = {
           serif = [
-            "Sarasa UI SC"
-            "Noto Serif CJK SC"
-            "JetBrainsMono Nerd Font"
+            "LXGW Neo ZhiSong Screen"
+            "Source Han Serif SC"
           ];
           sansSerif = [
-            "Sarasa UI SC"
-            "Noto Sans CJK SC"
-            "JetBrainsMono Nerd Font"
+            "MiSans"
+            "Source Han Sans SC"
           ];
           monospace = [
-            "Sarasa Mono SC"
-            "Noto Sans Mono CJK SC"
-            "JetBrainsMono Nerd Font"
+            "Maple Mono NF CN"
+            "Source Han Mono SC"
           ];
           emoji = [
             "Noto Color Emoji"

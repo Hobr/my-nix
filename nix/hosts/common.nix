@@ -102,18 +102,18 @@
       };
 
       serif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+        package = pkgs.lxgwPackages.neo-zhisong;
+        name = "LXGW Neo ZhiSong Screen";
       };
 
       sansSerif = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa UI SC";
+        package = pkgs.xiaomiPackages.misans;
+        name = "MiSans";
       };
 
       monospace = {
-        package = pkgs.sarasa-gothic;
-        name = "Sarasa Mono SC";
+        package = pkgs.maple-mono.NF-CN-unhinted;
+        name = "Maple Mono NF CN";
       };
 
       emoji = {

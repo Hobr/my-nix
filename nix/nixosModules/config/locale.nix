@@ -39,6 +39,7 @@ in
         maple-mono.truetype
         maple-mono.NF-unhinted
         maple-mono.NF-CN-unhinted
+        sarasa-gothic
 
         noto-fonts
         noto-fonts-cjk-sans
@@ -70,7 +71,7 @@ in
           ];
           monospace = [
             "Maple Mono NF CN"
-            "Source Han Mono SC"
+            "Sarasa Mono SC"
           ];
           emoji = [
             "Noto Color Emoji"

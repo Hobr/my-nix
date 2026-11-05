@@ -94,9 +94,9 @@ in
 
           # JS
           dbaeumer.vscode-eslint
-          astro-build.astro-vscode
-          oxc.oxc-vscode
           esbenp.prettier-vscode
+          oxc.oxc-vscode
+          astro-build.astro-vscode
           # svelte.svelte-vscode
           # vue.volar
           # vitest.explorer

@@ -148,11 +148,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1793076048,
-        "narHash": "sha256-KCHqMuOCjJu/jnTYXaFiJpZq8rNdcSbUmD4YlmxghL4=",
+        "lastModified": 1793847371,
+        "narHash": "sha256-iMFyl4uYdkmxSXdksvxO4MM7Vf5UMbxUjByWn7kI2JY=",
         "owner": "brsvh",
         "repo": "chinese-fonts-overlay",
-        "rev": "961c53595035ee50656c17e3b36e653ac5601b9e",
+        "rev": "a14d554299d1c8a5f4329a215d4d6217d99bf307",
         "type": "github"
       },
       "original": {
@@ -486,11 +486,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1793837165,
-        "narHash": "sha256-yqPCd/pPhocRFu3/LCKvaWfVygR4GOf+jRSX3LdA61A=",
+        "lastModified": 1793857327,
+        "narHash": "sha256-SF8AyHqWRxpYAuyOfSEDXk4nF1sfs3I9lQ4DqIPu1q0=",
         "owner": "numtide",
         "repo": "llm-agents.nix",
-        "rev": "98309b147b1c011b7d3c16d63402ca7b6805e952",
+        "rev": "fec78c6ea12b473a3e2ee7a2f2833c5e4d4ed541",
         "type": "github"
       },
       "original": {

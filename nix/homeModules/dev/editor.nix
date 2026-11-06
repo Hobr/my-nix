@@ -151,6 +151,9 @@ in
           # Markdown
           davidanson.vscode-markdownlint
 
+          # Arb(Translate)
+          google.arb-editor
+
           # Docker
           # ms-azuretools.vscode-docker
 

@@ -207,6 +207,15 @@ in
           "[typst]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
           "[typst-code]"."editor.wordSeparators" = "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?";
 
+          "[dart]" = {
+            "editor.formatOnSave" = true;
+            "editor.formatOnType" = true;
+            "editor.rulers" = [ 80 ];
+            "editor.selectionHighlight" = false;
+            "editor.tabCompletion" = "onlySnippets";
+            "editor.wordBasedSuggestions" = "off";
+          };
+
           "editor.bracketPairColorization.enabled" = true;
           "[elixir]"."editor.language.colorizedBracketPairs" = [
             [

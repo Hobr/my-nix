@@ -30,6 +30,7 @@ in
       [
         libva
         mesa
+        virtualgl
       ]
       ++ (with pkgs.vulkanPackages_latest; [
         vulkan-extension-layer

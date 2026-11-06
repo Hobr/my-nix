@@ -28,6 +28,7 @@ in
       [
         libva
         mesa
+        virtualgl
 
         # NVTop
         nvtopPackages.nvidia

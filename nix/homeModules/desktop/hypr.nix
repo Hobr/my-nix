@@ -12,13 +12,6 @@ let
   toLua = generators.toLua { };
   luaInline = generators.mkLuaInline;
 
-  mkEnv = name: value: {
-    _args = [
-      name
-      value
-    ];
-  };
-
   mkBind = keys: dispatcher: bindOptions: {
     _args = [
       keys
@@ -86,9 +79,37 @@ in
   };
 
   config = mkIf cfg.enable {
+    xdg.configFile."uwsm/env-hyprland".text = ''
+      # Cursor
+      export HYPRCURSOR_THEME=rose-pine-hyprcursor
+      export HYPRCURSOR_SIZE=28
+
+      # QT
+      export QT_QPA_PLATFORM='wayland;xcb'
+      export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+      export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+      # Wayland
+      export NIXOS_OZONE_WL=1
+      export GDK_BACKEND=wayland,x11
+      export XDG_SESSION_TYPE=wayland
+      export SDL_VIDEODRIVER=wayland
+      export MOZ_ENABLE_WAYLAND=1
+
+      # Clash Verge
+      export WEBKIT_DISABLE_DMABUF_RENDERER=1
+    ''
+    + optionalString cfg.nvidia ''
+      # NVIDIA
+      export __GLX_VENDOR_LIBRARY_NAME=nvidia
+      export LIBVA_DRIVER_NAME=nvidia
+      export NVD_BACKEND=direct
+      export ELECTRON_OZONE_PLATFORM_HINT=auto
+    '';
+
     wayland.windowManager.hyprland = {
       enable = true;
-      systemd.enableXdgAutostart = true;
+      systemd.enable = false;
       configType = "lua";
 
       settings = {
@@ -99,34 +120,6 @@ in
             position = "auto";
             scale = "auto";
           }
-        ];
-
-        env = [
-          # Cursor
-          (mkEnv "HYPRCURSOR_THEME" "rose-pine-hyprcursor")
-          (mkEnv "HYPRCURSOR_SIZE" "28")
-
-          # QT
-          (mkEnv "QT_QPA_PLATFORM" "wayland;xcb")
-          (mkEnv "QT_WAYLAND_DISABLE_WINDOWDECORATION" "1")
-          (mkEnv "QT_AUTO_SCREEN_SCALE_FACTOR" "1")
-
-          # Wayland
-          (mkEnv "NIXOS_OZONE_WL" "1")
-          (mkEnv "GDK_BACKEND" "wayland,x11")
-          (mkEnv "XDG_SESSION_TYPE" "wayland")
-          (mkEnv "SDL_VIDEODRIVER" "wayland")
-          (mkEnv "MOZ_ENABLE_WAYLAND" "1")
-
-          # Clash Verge
-          (mkEnv "WEBKIT_DISABLE_DMABUF_RENDERER" "1")
-        ]
-        # NVIDIA
-        ++ optionals cfg.nvidia [
-          (mkEnv "__GLX_VENDOR_LIBRARY_NAME" "nvidia")
-          (mkEnv "LIBVA_DRIVER_NAME" "nvidia")
-          (mkEnv "NVD_BACKEND" "direct")
-          (mkEnv "ELECTRON_OZONE_PLATFORM_HINT" "auto")
         ];
 
         on = {

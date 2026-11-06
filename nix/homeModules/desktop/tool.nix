@@ -23,7 +23,7 @@ in
     # 粘贴板
     services.cliphist = {
       enable = cfg.clipboard;
-      systemdTargets = [ "hyprland-session.target" ];
+      systemdTargets = [ config.wayland.systemd.target ];
     };
     home.packages = optionals cfg.clipboard [ pkgs.wl-clipboard ];
 

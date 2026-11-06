@@ -18,9 +18,7 @@ in
 
       systemd = {
         enable = true;
-        targets = [
-          "hyprland-session.target"
-        ];
+        targets = [ config.wayland.systemd.target ];
       };
 
       settings.mainBar = {

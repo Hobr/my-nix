@@ -50,7 +50,7 @@ in
         }
         {
           label = "logout";
-          action = "loginctl terminate-user $USER";
+          action = if config.home.desktop.hypr.enable then "uwsm stop" else "loginctl terminate-user $USER";
           text = "Logout";
           keybind = "e";
         }

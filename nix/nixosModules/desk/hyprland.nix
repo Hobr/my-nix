@@ -8,27 +8,29 @@
 with lib;
 let
   cfg = config.sys.desk.hyprland;
+  sessionCommand = "${lib.getExe config.programs.uwsm.package} start -e -D Hyprland hyprland.desktop";
 in
 {
   options.sys.desk.hyprland.enable = mkEnableOption "enable";
 
   config = mkIf cfg.enable {
     # Greet
-    environment.etc."greetd/environments".text = ''
-      Hyprland
-    '';
-
     services.greetd = {
       enable = true;
-      settings = rec {
-        initial_session.command = "start-hyprland";
-        default_session = initial_session;
+      useTextGreeter = true;
+      settings = {
+        initial_session.command = sessionCommand;
+        default_session = {
+          command = "${config.services.greetd.package}/bin/agreety --cmd ${escapeShellArg sessionCommand}";
+          user = "greeter";
+        };
       };
     };
 
     # Hyprland
     programs.hyprland = {
       enable = true;
+      withUWSM = true;
       xwayland.enable = true;
     };
 

@@ -108,7 +108,6 @@ in
 
           # Dart/Flutter
           dart-code.dart-code
-          dart-code.flutter
 
           # Lisp
           # rheller.alive

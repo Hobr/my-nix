@@ -37,6 +37,7 @@
         "dialout"
         "video"
         "docker"
+        "kvm"
         "qemu-libvirtd"
         "libvirtd"
       ];

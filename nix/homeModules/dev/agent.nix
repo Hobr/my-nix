@@ -22,6 +22,7 @@ in
     };
 
     home.packages = with pkgs.llm-agents; [
+      codex
       opencode
       codegraph
       trellis

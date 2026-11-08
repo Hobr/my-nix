@@ -23,7 +23,7 @@ in
 
     home.packages = with pkgs.llm-agents; [
       codex
-      opencode
+      opencode2
       codegraph
       trellis
       spec-kit

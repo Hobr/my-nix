@@ -125,7 +125,7 @@ in
           arrterian.nix-env-selector
 
           # Kotlin
-          # jetbrains.kotlin-server
+          jetbrains.kotlin-server
 
           # Java
           # vscjava.vscode-java-pack
@@ -134,7 +134,7 @@ in
           # vscjava.vscode-java-test
           # vscjava.vscode-maven
           # vscjava.vscode-java-dependency
-          # vscjava.vscode-gradle
+          vscjava.vscode-gradle
 
           # Fortran
           # fortran-lang.linter-gfortran

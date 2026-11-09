@@ -53,6 +53,11 @@ in
           name = "bass";
           src = pkgs.fishPlugins.bass.src;
         }
+        # fzf
+        {
+          name = "fzf-fish";
+          src = pkgs.fishPlugins.fzf-fish;
+        }
       ];
     };
 

@@ -14,12 +14,6 @@ in
   options.home.dev.agent.enable = mkEnableOption "agent";
 
   config = mkIf cfg.enable {
-    programs.codexDesktopLinux = {
-      enable = true;
-      cliPackage = pkgs.llm-agents.codex;
-      remoteMobileControl.enable = true;
-    };
-
     programs.pi-coding-agent = {
       enable = true;
       package = pkgs.llm-agents.pi;

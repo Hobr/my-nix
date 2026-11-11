@@ -15,6 +15,7 @@ in
   config = mkIf cfg.enable {
     programs.firefox = {
       enable = true;
+      package = pkgs.firefox-bin;
 
       languagePacks = [
         "zh-CN"

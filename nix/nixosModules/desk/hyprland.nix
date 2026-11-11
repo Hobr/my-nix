@@ -42,7 +42,11 @@ in
     services.tlp = {
       enable = true;
       pd.enable = false;
-      package = pkgs.tlp.override { enableRDW = config.networking.networkmanager.enable; };
+
+      package = pkgs.tlp.override {
+        enableRDW = config.networking.networkmanager.enable;
+        x86_energy_perf_policy = config.boot.kernelPackages.x86_energy_perf_policy;
+      };
 
       settings = {
         # 性能

@@ -15,7 +15,6 @@ in
   config = mkIf cfg.enable {
     programs.firefox = {
       enable = true;
-      package = pkgs.firefox-bin;
 
       languagePacks = [
         "zh-CN"
@@ -24,12 +23,23 @@ in
 
       # https://mozilla.github.io/policy-templates/
       policies = {
-        DisablePocket = true;
+        # Updates & Background Services
+        AppAutoUpdate = false;
+        BackgroundAppUpdate = false;
+
+        # Feature Disabling
         DisableFirefoxStudies = true;
+        DisablePocket = true;
+
+        # UI and Behavior
+        DontCheckDefaultBrowser = true;
+        HardwareAcceleration = true;
+
         FirefoxHome = {
           Pocket = false;
           Snippets = false;
         };
+
         UserMessaging = {
           ExtensionRecommendations = false;
           SkipOnboarding = true;
@@ -37,6 +47,9 @@ in
       };
     };
 
-    home.sessionVariables.BROWSER = "firefox";
+    home.sessionVariables = {
+      BROWSER = "firefox";
+      MOZ_USE_XINPUT2 = "1";
+    };
   };
 }

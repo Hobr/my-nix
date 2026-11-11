@@ -25,8 +25,6 @@ with lib;
       package = pkgs.nix;
 
       settings = {
-        flake-registry = "";
-
         experimental-features = [
           "cgroups"
           "nix-command"
@@ -35,6 +33,7 @@ with lib;
 
         system-features = [
           "big-parallel"
+          "kvm"
           "gccarch-x86-64-v2"
           "gccarch-x86-64-v3"
           "gccarch-x86-64-v4"
@@ -45,11 +44,8 @@ with lib;
           "https://mirrors.cernet.edu.cn/nix-channels/store"
           "https://cache.nixos.org/"
 
-          "https://codex-cli.cachix.org"
-          "https://codex-desktop-linux.cachix.org"
-
-          "https://cache.bingshan.org"
           "https://cache.numtide.com"
+          "https://cache.bingshan.org"
           "https://nix-community.cachix.org"
           "https://cache.nixos-cuda.org"
           "https://nyx-cache.chaotic.cx/"
@@ -57,16 +53,18 @@ with lib;
 
         trusted-public-keys = [
           "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-
-          "codex-cli.cachix.org-1:1Br3H1hHoRYG22n//cGKJOk3cQXgYobUel6O8DgSing="
-          "codex-desktop-linux.cachix.org-1:nX/xy6AdK9hQE24A8ALGjkCKj2ObFmcnemiL5Cid4nk="
-
-          "cache.bingshan.org-1:HqcG/vJ7jeSLU48jV4yg8Ot+rUPP2v0vIAAnDEqVSvk="
           "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="
+          "cache.bingshan.org-1:HqcG/vJ7jeSLU48jV4yg8Ot+rUPP2v0vIAAnDEqVSvk="
           "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
           "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
           "nyx-cache.chaotic.cx:dJxTrgMC3V3cFfyIiBQDQorG6k1LsqurH/srpMSq7qk="
         ];
+      };
+
+      # GC
+      gc = {
+        dates = "daily";
+        options = "--delete-older-than 3d";
       };
     };
 

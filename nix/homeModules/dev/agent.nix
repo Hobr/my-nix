@@ -16,16 +16,12 @@ in
   config = mkIf cfg.enable {
     programs.pi-coding-agent = {
       enable = true;
-      package = pkgs.llm-agents.pi;
+      package = pkgs.inputs'.llm-agents.packages.pi;
     };
 
-    home.packages = with pkgs.llm-agents; [
+    home.packages = with pkgs.inputs'.llm-agents.packages; [
       codex
-      opencode2
       codegraph
-      trellis
-      spec-kit
-      openspec
     ];
   };
 }

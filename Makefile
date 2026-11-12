@@ -1,8 +1,8 @@
 os:
-	nh os boot -a . -- --max-jobs 4 --cores 12
+	nh os boot -a . -- --max-jobs 2
 
 home:
-	nh home switch -a . -- --max-jobs 4 --cores 12
+	nh home switch -a . -- --max-jobs 2
 
 update:
 	nix flake update --access-tokens "github.com=$$(gh auth token)"

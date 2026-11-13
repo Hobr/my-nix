@@ -13,11 +13,6 @@
     impermanence.url = "github:nix-community/impermanence";
     ## 安全启动
     lanzaboote.url = "github:nix-community/lanzaboote";
-    # Bootvine
-    bootvine = {
-      url = "git+https://codeberg.org/wvhulle/bootvine";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     ## 用户
     home-manager = {
       url = "github:nix-community/home-manager";

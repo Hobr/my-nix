@@ -6,7 +6,6 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
-    inputs.bootvine.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote

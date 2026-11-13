@@ -6,11 +6,10 @@
 {
   imports = [
     inputs.chaotic.nixosModules.default
+    inputs.bootvine.nixosModules.default
     inputs.home-manager.nixosModules.home-manager
-    inputs.disko.nixosModules.disko
     inputs.impermanence.nixosModules.impermanence
     inputs.lanzaboote.nixosModules.lanzaboote
-    inputs.agenix.nixosModules.default
     inputs.stylix.nixosModules.stylix
 
     ../nixosModules/_default.nix
@@ -29,6 +28,7 @@
     };
 
     boot = {
+      bootvine.enable = true;
       systemd-boot.enable = true;
       tpm.enable = true;
       secure-boot.enable = true;

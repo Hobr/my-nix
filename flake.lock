@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "agenix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792507013,
-        "narHash": "sha256-8tKjSQajD3mUND1GaAuaWTcuyUpgcGsh5V+l4ibzC7U=",
-        "owner": "ryantm",
-        "repo": "agenix",
-        "rev": "5e5b88a0c8e56f291a108c2fe9934054d9745b2e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ryantm",
-        "repo": "agenix",
-        "type": "github"
-      }
-    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -86,6 +66,28 @@
         "repo": "base16-vim",
         "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
         "type": "github"
+      }
+    },
+    "bootvine": {
+      "inputs": {
+        "crane": "crane",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1794257658,
+        "narHash": "sha256-aPJtMiIqt8tb+ZsgKhVH3zmGWjRRzukUzXj64X1mhpI=",
+        "ref": "refs/heads/main",
+        "rev": "a7e33b453a82ecfe9e98d060008b3b20b6924f62",
+        "revCount": 101,
+        "type": "git",
+        "url": "https://codeberg.org/wvhulle/bootvine"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/wvhulle/bootvine"
       }
     },
     "bun2nix": {
@@ -177,23 +179,18 @@
         "type": "github"
       }
     },
-    "disko": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
+    "crane_2": {
       "locked": {
-        "lastModified": 1794328522,
-        "narHash": "sha256-h2BYMW4nTFpIqnMd8gwAPFmJAp/1wWLQ6vT0NfL5qt4=",
-        "owner": "nix-community",
-        "repo": "disko",
-        "rev": "1dd30c29c88d99ce295f15e27f93c49bc5fbae07",
+        "lastModified": 1790899423,
+        "narHash": "sha256-THGtz65UGJU+sonZidRboyCMk+9DclpMF7pwL4uDV4M=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "47b6b27ed9a3a9181415e4367d0c30ab2a0e0250",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "disko",
+        "owner": "ipetkov",
+        "repo": "crane",
         "type": "github"
       }
     },
@@ -421,10 +418,10 @@
     },
     "lanzaboote": {
       "inputs": {
-        "crane": "crane",
+        "crane": "crane_2",
         "nixpkgs": "nixpkgs_5",
         "pre-commit": "pre-commit",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay_2"
       },
       "locked": {
         "lastModified": 1794426370,
@@ -657,10 +654,9 @@
     },
     "root": {
       "inputs": {
-        "agenix": "agenix",
+        "bootvine": "bootvine",
         "chaotic": "chaotic",
         "chinese-fonts-overlay": "chinese-fonts-overlay",
-        "disko": "disko",
         "flakelight": "flakelight",
         "home-manager": "home-manager_2",
         "impermanence": "impermanence",
@@ -673,6 +669,27 @@
       }
     },
     "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "bootvine",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791707771,
+        "narHash": "sha256-w3m8HtAVCfGTHw+gcCTAy7jFHSdGbokm8NngbeFrkek=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "c1cfa7a2c809d364ac1a7e9b3ec418afa3f19793",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
           "lanzaboote",

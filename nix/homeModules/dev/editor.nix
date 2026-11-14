@@ -71,8 +71,8 @@ in
 
           # Rust
           rust-lang.rust-analyzer
-          drkryz.rustautomod
-          cordx56.rustowl-vscode
+          # drkryz.rustautomod
+          # cordx56.rustowl-vscode
           # viper-admin.prusti-assistant
           # verus-lang.verus-analyzer
           # dioxuslabs.dioxus

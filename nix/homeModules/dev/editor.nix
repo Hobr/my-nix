@@ -180,6 +180,9 @@ in
           # CSV
           mechatroner.rainbow-csv
 
+          # RON
+          a5huynh.vscode-ron
+
           # Fountain
           # piersdeseilligny.betterfountain
 

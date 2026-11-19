@@ -128,11 +128,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795030300,
-        "narHash": "sha256-EihMyDdkATAhvKh6ijU9h2GcF9hZ9hFVQStBsEfP2w0=",
+        "lastModified": 1795092273,
+        "narHash": "sha256-wM8elNuCpDhZRnOTjWk4sfdlqGLFe4vVZT/lWnQ99x8=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "64c38f7d2f117db3240bba3a86abb3ee3a00ccb1",
+        "rev": "a2de58d1bc7ff385e9607a3b270943ea65b15d34",
         "type": "github"
       },
       "original": {
@@ -517,11 +517,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1794750194,
-        "narHash": "sha256-1qOtz5nZG+3hsBEqeKtUx+T5gSaJ+hONlBWWSbH+mJ8=",
-        "rev": "1a08097fc1ed85575db39763b2c4a5d8970a37ba",
+        "lastModified": 1794890597,
+        "narHash": "sha256-vJoAj1xon3Mhfc8FZ5uBrPyZee9Eqa05gG/taXv6iZ8=",
+        "rev": "04906337b6d53e8bb0eaf0470ae9f070a4d4eb55",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1121687.1a08097fc1ed/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1122823.04906337b6d5/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",

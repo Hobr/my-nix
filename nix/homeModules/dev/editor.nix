@@ -194,6 +194,7 @@ in
 
           # AI
           google.google-antigravity
+          google.colab
           # github.copilot-chat
         ];
 

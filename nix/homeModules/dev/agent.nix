@@ -27,7 +27,6 @@ in
       ]
       ++ (with pkgs.inputs'.antigravity.packages; [
         google-antigravity-no-fhs
-        google-antigravity-ide
         google-antigravity-cli
       ]);
   };

@@ -193,6 +193,7 @@ in
           github.vscode-github-actions
 
           # AI
+          google.google-antigravity
           # github.copilot-chat
         ];
 

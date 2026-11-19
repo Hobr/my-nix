@@ -22,6 +22,8 @@
     # 软件
     ## 人工智能
     llm-agents.url = "github:numtide/llm-agents.nix";
+    ## Antigravity
+    antigravity.url = "github:jacopone/antigravity-nix";
     ## VS Code
     nix-vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";

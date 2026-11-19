@@ -19,9 +19,16 @@ in
       package = pkgs.inputs'.llm-agents.packages.pi;
     };
 
-    home.packages = with pkgs.inputs'.llm-agents.packages; [
-      codex
-      codegraph
-    ];
+    home.packages =
+      with pkgs.inputs'.llm-agents.packages;
+      [
+        codex
+        codegraph
+      ]
+      ++ (with pkgs.inputs'.antigravity.packages; [
+        google-antigravity-no-fhs
+        google-antigravity-ide
+        google-antigravity-cli
+      ]);
   };
 }

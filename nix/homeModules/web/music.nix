@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      netease-cloud-music-gtk
+      pear-desktop
       splayer-next
     ];
   };

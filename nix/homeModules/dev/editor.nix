@@ -78,11 +78,11 @@ in
           # dioxuslabs.dioxus
 
           # Python
-          # ms-python.vscode-pylance
-          # ms-python.python
-          # ms-python.isort
-          # ms-python.debugpy
-          # charliermarsh.ruff
+          ms-python.vscode-pylance
+          ms-python.python
+          ms-python.isort
+          ms-python.debugpy
+          charliermarsh.ruff
 
           # CPP
           # ms-vscode.cpptools

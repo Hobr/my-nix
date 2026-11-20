@@ -22,12 +22,10 @@ in
     home.packages =
       with pkgs.inputs'.llm-agents.packages;
       [
+        antigravity-cli
+        antigravity-hub
         codex
         codegraph
-      ]
-      ++ (with pkgs.inputs'.antigravity.packages; [
-        google-antigravity-no-fhs
-        google-antigravity-cli
-      ]);
+      ];
   };
 }

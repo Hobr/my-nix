@@ -14,7 +14,18 @@ in
 
   config = mkIf cfg.enable {
     # Chrome
-    home.packages =  [ pkgs.google-chrome];
+    home.packages = [
+      (pkgs.google-chrome.override {
+        commandLineArgs = [
+          "--enable-features=AcceleratedVideoDecodeLinuxGL,VaapiOnNvidiaGPUs,AcceleratedVideoEncoder,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo"
+          "--ignore-gpu-blocklist"
+          "--enable-zero-copy"
+          "--use-gl=angle"
+          "--use-angle=gl"
+        ];
+      })
+    ];
+
     home.sessionVariables.BROWSER = "google-chrome";
 
     # Firefox

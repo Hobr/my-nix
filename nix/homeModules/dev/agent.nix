@@ -19,13 +19,11 @@ in
       package = pkgs.inputs'.llm-agents.packages.pi;
     };
 
-    home.packages =
-      with pkgs.inputs'.llm-agents.packages;
-      [
-        antigravity-cli
-        antigravity-hub
-        codex
-        codegraph
-      ];
+    home.packages = with pkgs.inputs'.llm-agents.packages; [
+      antigravity-cli
+      antigravity-hub
+      codex
+      codegraph
+    ];
   };
 }

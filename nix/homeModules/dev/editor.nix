@@ -93,6 +93,7 @@ in
           # vadimcn.vscode-lldb
 
           # JS
+          ms-vscode.js-debug
           dbaeumer.vscode-eslint
           esbenp.prettier-vscode
           oxc.oxc-vscode
@@ -101,7 +102,6 @@ in
           # vue.volar
           # vitest.explorer
           # bradlc.vscode-tailwindcss
-          # firefox-devtools.vscode-firefox-debug
 
           # Golang
           golang.go

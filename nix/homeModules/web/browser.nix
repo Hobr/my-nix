@@ -13,8 +13,13 @@ in
   options.home.web.browser.enable = mkEnableOption "browser";
 
   config = mkIf cfg.enable {
+    # Chrome
+    home.packages =  [ pkgs.google-chrome];
+    home.sessionVariables.BROWSER = "google-chrome";
+
+    # Firefox
     programs.firefox = {
-      enable = true;
+      enable = false;
       package = pkgs.firefox-bin;
 
       languagePacks = [
@@ -48,9 +53,6 @@ in
       };
     };
 
-    home.sessionVariables = {
-      BROWSER = "firefox";
-      MOZ_USE_XINPUT2 = "1";
-    };
+    home.sessionVariables.MOZ_USE_XINPUT2 = "1";
   };
 }

@@ -435,7 +435,7 @@ in
         bind = [
           # 软件
           (mkExecBind (mkModKey "Q") "kitty")
-          (mkExecBind (mkModKey "A") "firefox")
+          (mkExecBind (mkModKey "A") "google-chrome")
           (mkExecBind (mkModKey "E") "code")
           (mkExecBind (mkModKey "W") "rofi -show drun")
           (mkExecBind (mkModKey "V") "cliphist list | rofi -dmenu | cliphist decode | wl-copy")

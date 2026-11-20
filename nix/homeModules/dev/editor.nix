@@ -139,6 +139,14 @@ in
           # Fortran
           # fortran-lang.linter-gfortran
 
+          # Jupyter
+          ms-toolsai.jupyter
+          ms-toolsai.jupyter-keymap
+          ms-toolsai.jupyter-renderers
+          ms-toolsai.vscode-jupyter-slideshow
+          ms-toolsai.vscode-jupyter-cell-tags
+          google.colab
+
           # Quint
           informal.quint-vscode
 
@@ -194,7 +202,6 @@ in
 
           # AI
           google.google-antigravity
-          google.colab
           # github.copilot-chat
         ];
 

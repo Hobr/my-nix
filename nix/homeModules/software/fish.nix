@@ -56,7 +56,7 @@ in
         # fzf
         {
           name = "fzf-fish";
-          src = pkgs.fishPlugins.fzf-fish;
+          src = pkgs.fishPlugins.fzf-fish.src;
         }
       ];
     };

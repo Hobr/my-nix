@@ -47,7 +47,7 @@ in
 
         clock = {
           format = "{:%H:%M}";
-          tooltip = "true";
+          tooltip = true;
           tooltip-format = ''
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
@@ -57,10 +57,11 @@ in
         "hyprland/workspaces" = {
           active-only = false;
           disable-scroll = true;
+          sort-by = "number";
           format = "{icon}";
           on-click = "activate";
           on-scroll-up = "hyprctl dispatch workspace e+1";
-          on-scroll-dow = "hyprctl dispatch workspace e-1";
+          on-scroll-down = "hyprctl dispatch workspace e-1";
           format-icons = {
             "1" = "󰈹";
             "2" = "";
@@ -70,7 +71,6 @@ in
             "6" = "";
             urgent = "";
             default = "";
-            sort-by-number = true;
           };
 
           persistent-workspaces = {

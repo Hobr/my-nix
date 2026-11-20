@@ -1,3 +1,5 @@
+.PHONY: os home update history clean
+
 os:
 	nh os boot -a . -- --max-jobs 2
 
@@ -14,6 +16,3 @@ history:
 
 clean:
 	nh clean all
-
-fmt:
-	nixfmt ./

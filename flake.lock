@@ -128,11 +128,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795270043,
-        "narHash": "sha256-lNmRliY+g43fOIgSCdqdQWxs4M6AMzVpNjrs17IWQ8U=",
+        "lastModified": 1795273138,
+        "narHash": "sha256-4+W99Dgo6bdjF/6h5GQHB2OIbatqFKEyjDFP9tHOPZo=",
         "owner": "brsvh",
         "repo": "chinese-fonts-overlay",
-        "rev": "c4a2ef0586e4fd3fef794f08deba6d38b8f745c6",
+        "rev": "c0b1234c599a417b9004aa59cec2a1fdbff5caf8",
         "type": "github"
       },
       "original": {

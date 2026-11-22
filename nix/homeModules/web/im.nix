@@ -19,7 +19,6 @@ in
       qq
       wechat
       discord
-      element-desktop
     ];
   };
 }

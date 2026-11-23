@@ -48,7 +48,7 @@ in
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
       package = pkgs.nvidia_cachyos-bore;
-      open = false;
+      open = true;
       modesetting.enable = true;
       powerManagement.enable = true;
       dynamicBoost.enable = true;

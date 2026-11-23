@@ -61,7 +61,6 @@ in
           # ms-vscode-remote.remote-ssh
 
           # 环境
-          mkhl.direnv
           editorconfig.editorconfig
           formulahendry.code-runner
 
@@ -123,6 +122,7 @@ in
           # Nix
           jnoortheen.nix-ide
           arrterian.nix-env-selector
+          mkhl.direnv
 
           # Kotlin
           jetbrains.kotlin-server

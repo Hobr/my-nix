@@ -124,5 +124,5 @@
   stylix.targets.kmscon.enable = false;
 
   # 系统版本
-  system.stateVersion = "26.11";
+  system.stateVersion = "27.05";
 }

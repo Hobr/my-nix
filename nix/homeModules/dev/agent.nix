@@ -22,7 +22,6 @@ in
     home.packages = with pkgs.inputs'.llm-agents.packages; [
       antigravity-cli
       antigravity-hub
-      codex
       codegraph
     ];
   };

@@ -128,11 +128,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795766921,
-        "narHash": "sha256-TZGrOq72YV13NBHaEoPT3pZbOzj77afgLmHH7HYUDQ8=",
+        "lastModified": 1795847503,
+        "narHash": "sha256-TozM+K7Ddmmb1EDE1WEGnMKlv1T87vxa+zVHHBBZXyk=",
         "owner": "brsvh",
         "repo": "chinese-fonts-overlay",
-        "rev": "831146c12664ed9386d3f3f0e6a5323064fc922a",
+        "rev": "de3e3ae680212bd8c77d1cbf9531bd39765cf762",
         "type": "github"
       },
       "original": {
@@ -449,11 +449,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795765558,
-        "narHash": "sha256-YcBOSEQg4qAyac1O+KfedhXarKqD6+92Wvy1mXpeJmE=",
+        "lastModified": 1795849926,
+        "narHash": "sha256-StfzUSyoKJrjfFfPAfY4vH/Rcl9OzRYGTA+cPPD8mV4=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "66aeb00dbf70ce532322ca13049c21f1ae646313",
+        "rev": "8ae3f97693cc51cc310107083b88c3c21c2050c7",
         "type": "github"
       },
       "original": {
@@ -477,11 +477,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1793977579,
-        "narHash": "sha256-WrSODdZFVIs/Hh2NzC0bY+ROByi0bATg8WfePX8dPj8=",
+        "lastModified": 1795371335,
+        "narHash": "sha256-oa2P5WZer1A4wuhatl92JyHHEjrrOdIyuvTuI5LUi9Q=",
         "ref": "nixpkgs-unstable",
-        "rev": "4fe25e12eb9f4c744966dd3de5a05246cf098601",
-        "revCount": 1109744,
+        "rev": "619c39f6eac5d1ed6b8f073a9414baf7034b2356",
+        "revCount": 1126808,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs.git"
       },
